@@ -10,13 +10,13 @@
 			<key>filename</key>
 			<string>backwatertest.py</string>
 			<key>lastUsed</key>
-			<date>2008-02-27T14:58:01Z</date>
+			<date>2008-06-12T04:58:18Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>backwater.py</string>
 			<key>lastUsed</key>
-			<date>2008-04-07T14:17:24Z</date>
+			<date>2008-06-12T05:01:19Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -25,6 +25,12 @@
 			<string>backwaterfeeds.sh</string>
 			<key>lastUsed</key>
 			<date>2008-02-27T04:59:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>config.yaml</string>
+			<key>lastUsed</key>
+			<date>2008-06-12T05:01:19Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -36,14 +42,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>52</integer>
+				<integer>49</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>21</integer>
+			<integer>17</integer>
 		</dict>
 		<key>backwatertest.py</key>
 		<dict>
@@ -59,15 +65,30 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>config.yaml</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>50</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>backwater.py</string>
+		<string>config.yaml</string>
 		<string>backwatertest.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{116, 82}, {889, 750}}</string>
+	<string>{{238, 99}, {889, 750}}</string>
 </dict>
 </plist>
