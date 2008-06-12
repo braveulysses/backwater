@@ -14,6 +14,9 @@ import sys
 import getopt
 import yaml
 
+version_message = '''Backwater v%s
+2008, %s''' % (__version__, __author__)
+
 help_message = '''
 The help message goes here.
 '''
@@ -60,45 +63,58 @@ def get_configuration(config_file):
     finally:
         f.close()
 
-class Usage(Exception):
-	def __init__(self, msg):
-		self.msg = msg
+class Version(Exception):
+    def __init__(self, msg):
+        self.msg = msg
 
+class Usage(Exception):
+    def __init__(self, msg):
+        self.msg = msg
 
 def main(argv=None):
-	if argv is None:
-		argv = sys.argv
-	try:
-		try:
-			opts, args = getopt.getopt(argv[1:], "ho:v", ["help", "output="])
-		except getopt.error, msg:
-			raise Usage(msg)
-	
-		# Option processing
-		for option, value in opts:
-			if option == "-v":
-				verbose = True
-			if option in ("-h", "--help"):
-				raise Usage(help_message)
-			if option in ("-o", "--output"):
-				output = value
-				
-		# Okay, GO
-		# Read configuration
-		config = get_configuration('config.yaml')
-		print yaml.dump(config)
-		# Get feeds
-		# Get tumblelogs
-		# Get twitters
-		# Get photos
-		# Merge, sort, and collate
-		# Write output
-	
-	except Usage, err:
-		print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
-		print >> sys.stderr, "\t for help use --help"
-		return 2
+    if argv is None:
+        argv = sys.argv
+    try:
+        try:
+            opts, args = getopt.getopt(argv[1:], "Vho:vc:", ["version", "help", "output=", "config="])
+        except getopt.error, msg:
+            raise Usage(msg)
+    
+        # Option processing
+        for option, value in opts:
+            if option in ("-V", "--version"):
+                raise Version(version_message)
+            if option == "-v":
+                verbose = True
+            if option in ("-h", "--help"):
+                raise Usage(help_message)
+            if option in ("-o", "--output"):
+                output = value
+            if option in ("-c", "--config"):
+                config_file = value
+    
+        # Okay, GO
+        # Read configuration
+        try:
+            config = get_configuration('config.yaml')
+            print yaml.dump(config)
+        except:
+            raise
+        # Get feeds
+        # Get tumblelogs
+        # Get twitters
+        # Get photos
+        # Merge, sort, and collate
+        # Write output
+    
+    except Version, err:
+        print str(err.msg)
+    
+    except Usage, err:
+        print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
+        print >> sys.stderr, "\t for help use --help"
+        return 2
 
 
 if __name__ == "__main__":
-	sys.exit(main())
+    sys.exit(main())
