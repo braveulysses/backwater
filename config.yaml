@@ -14,7 +14,7 @@ imageCacheDir: /home/chompy/images/cache/
 secretWord: scramasax
 flickrKey: 9c9ea0afe69f35a7a9156683593e9377
 
-wlimit: 90
+wordLimit: 90
 
 sources:
     # Jacob's stuff
@@ -30,7 +30,7 @@ sources:
       url: http://twitter.com/cobralibre 
     
     - name: golden hours
-      type: tumblr
+      type: tumblelog
       owner: c.libre
       url: http://golden.cpl593h.net/
       
@@ -48,12 +48,12 @@ sources:
       feedUrl: http://chompy.net/blogs/pogo/atom.xml
       
     - name: The Longest Train I Ever Saw
-      type: tumblr
+      type: tumblelog
       owner: pogo
       url: http://thelongesttrainieversaw.tumblr.com/
       
     - name: tiddly links
-      type: linkblog
+      type: linklog
       owner: pogo
       url: http://www.chompy.net/blogs/pogo/links/
       feedUrl: http://www.chompy.net/blogs/pogo/links/atom.xml
@@ -71,12 +71,12 @@ sources:
       
     # Mike's stuff
     - name: distiller cobbler cabinetmaker
-      type: tumblr
+      type: tumblelog
       owner: sentry
       url: http://industry.tumblr.com/
       
     - name: tenorune
-      type: tumblr
+      type: twitter
       owner: sentry
       url: http://twitter.com/tenorune
       
@@ -158,7 +158,7 @@ sources:
     
     # Dakota's stuff
     - name: del.icio.us/dakotasmith
-      type: linkblog
+      type: linklog
       owner: Dakota
       url: http://del.icio.us/dakotasmith
       feedUrl: http://del.icio.us/rss/dakotasmith
@@ -182,7 +182,7 @@ sources:
       feedUrl: http://www.headcrab.org/feed/atom/
     
     - name: del.icio.us/seanmason
-      type: linkblog
+      type: linklog
       owner: Sean
       url: http://del.icio.us/seanmason
       feedUrl: http://del.icio.us/rss/seanmason
