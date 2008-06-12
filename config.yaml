@@ -1,0 +1,246 @@
+---
+application: backwater
+version: 1
+url: http://chompy.net/
+name: chompy.net
+owner: SNF Labs
+
+botName: chompybot
+botUrl: http://labs.spaceshipnofuture.org/backwater/
+
+logDir: /home/chompy/backwater/logs/
+imageCacheDir: /home/chompy/images/cache/
+
+secretWord: scramasax
+flickrKey: 9c9ea0afe69f35a7a9156683593e9377
+
+wlimit: 90
+
+sources:
+    # Jacob's stuff
+    - name: remake/remodel
+      type: weblog
+      owner: jacob
+      url: http://chompy.net/blogs/jacob/
+      feedUrl: http://chompy.net/blogs/jacob/feeds/index.atom
+
+    - name: cobralibre
+      type: twitter
+      owner: c.libre
+      url: http://twitter.com/cobralibre 
+    
+    - name: golden hours
+      type: tumblr
+      owner: c.libre
+      url: http://golden.cpl593h.net/
+      
+    - name: cobra libre's photostream
+      type: flickr
+      owner: cobra libre
+      flickrId: 
+      url: http://www.flickr.com/photos/cobra/
+      
+    # Tamara's stuff
+    - name: peeny wally
+      type: weblog
+      owner: pogo
+      url: http://chompy.net/blogs/pogo/
+      feedUrl: http://chompy.net/blogs/pogo/atom.xml
+      
+    - name: The Longest Train I Ever Saw
+      type: tumblr
+      owner: pogo
+      url: http://thelongesttrainieversaw.tumblr.com/
+      
+    - name: tiddly links
+      type: linkblog
+      owner: pogo
+      url: http://www.chompy.net/blogs/pogo/links/
+      feedUrl: http://www.chompy.net/blogs/pogo/links/atom.xml
+      
+    - name: pogococonino
+      type: twitter
+      owner: pogo
+      url: http://twitter.com/pogococonino
+    
+    - name: pogo coconino's photostream
+      type: flickr
+      owner: flickr
+      flickrId: 
+      url: http://www.flickr.com/photos/pogococonino/
+      
+    # Mike's stuff
+    - name: distiller cobbler cabinetmaker
+      type: tumblr
+      owner: sentry
+      url: http://industry.tumblr.com/
+      
+    - name: tenorune
+      type: tumblr
+      owner: sentry
+      url: http://twitter.com/tenorune
+      
+    - name: tenorune's photostream
+      type: flickr
+      owner: tenorune
+      flickrId: 98749297@N00
+      url: http://www.flickr.com/photos/lightseed/
+      
+    # Hazel's stuff
+    - name: Spinning Away
+      type: weblog
+      owner: Fortunate Hazel
+      url: http://chompy.net/blogs/chris/
+      feedUrl: http://chompy.net/blogs/chris/atom.xml
+    
+    - name: Lord Ragdoll Kitten's photostream
+      type: flickr
+      owner: Lord Ragdoll Kitten
+      flickrId: 46348833@N00
+      url: http://www.flickr.com/photos/46348833@N00/
+    
+    # Nathalie's stuff
+    - name: a tiger pounces on my heart
+      type: weblog
+      owner: Nathalie
+      url: http://chompy.net/blogs/nathalie/
+      feedUrl: http://chompy.net/blogs/nathalie/atom.xml
+      
+    - name: CHO2007's photostream
+      type: flickr
+      owner: CHO2007
+      flickrId: 
+      url: http://www.flickr.com/photos/nathalie/
+    
+    # Seth's stuff
+    - name: Carefully Selected Garbage
+      type: weblog
+      owner: Seth
+      url: http://www.carefullyselectedgarbage.com/
+      feedUrl: http://www.carefullyselectedgarbage.com/feeds/posts/default
+
+    - name: setholdmixon
+      type: twitter
+      owner: Seth
+      url: http://twitter.com/setholdmixon
+      
+    - name: setholdmixon's photostream
+      type: flickr
+      owner: setholdmixon
+      flickrId: 
+      url: http://www.flickr.com/photos/setholdmixon/
+    
+    # Sarah Looney's stuff
+    - name: saraholdmixon
+      type: twitter
+      owner: Sarah
+      url: http://twitter.com/saraholdmixon
+      
+    - name: sarahloo's photostream
+      type: flickr
+      owner: sarahloo
+      flickrId: 
+      url: http://www.flickr.com/photos/sarahloo/
+    
+    # Sarah Knight's stuff
+    - name: cyndi laupest's photostream
+      type: flickr
+      owner: cyndi laupest
+      flickrId: 78616686@N00
+      url: http://www.flickr.com/photos/78616686@N00/
+    
+    # Scott Talkington's stuff
+    - name: junklab's photostream
+      type: flickr
+      owner: junklab
+      flickrId: 24472191@N00
+      url: http://www.flickr.com/photos/junklab/
+    
+    # Dakota's stuff
+    - name: del.icio.us/dakotasmith
+      type: linkblog
+      owner: Dakota
+      url: http://del.icio.us/dakotasmith
+      feedUrl: http://del.icio.us/rss/dakotasmith
+    
+    - name: dakotasmith
+      type: twitter
+      owner: Dakota
+      url: http://twitter.com/dakotasmith
+      
+    - name: dakota smith's photostream
+      type: flickr
+      owner: dakota smith
+      flickrId: 51379940@N00
+      url: http://www.flickr.com/photos/dakotasmith/
+    
+    # Smason's stuff
+    - name: Rubbish, With Occasional Music
+      type: weblog
+      owner: Sean
+      url: http://www.headcrab.org/
+      feedUrl: http://www.headcrab.org/feed/atom/
+    
+    - name: del.icio.us/seanmason
+      type: linkblog
+      owner: Sean
+      url: http://del.icio.us/seanmason
+      feedUrl: http://del.icio.us/rss/seanmason
+      
+    - name: pusgums' photostream
+      type: flickr
+      owner: pusgums
+      flickrId: 29193619@N00
+      url: http://www.flickr.com/photos/smason/
+      
+    # Karla's stuff
+    - name: Confessions of a Grade School Role Model
+      type: weblog
+      owner: Karla
+      url: http://savagepencil.typepad.com/confessions/
+      feedUrl: http://savagepencil.typepad.com/confessions/index.rdf
+      
+    - name: Charlie Letters
+      type: weblog
+      owner: Karla
+      url: http://savagepencil.typepad.com/
+      feedUrl: http://savagepencil.typepad.com/charlieletters/index.rdf
+      
+    - name: iamedithpiaf's photostream
+      type: flickr
+      owner: iamedithpiaf
+      flickrId: 89984665@N00
+      url: http://www.flickr.com/photos/89984665@N00/
+      
+    # Alan Hampton's stuff
+    - name: austin tx's photostream
+      type: flickr
+      owner: austin tx
+      flickrId: 
+      url: http://www.flickr.com/photos/austintx/
+    
+    # Spaceship No Future
+    - name: Spaceship No Future
+      type: weblog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/
+      feedUrl: http://www.spaceshipnofuture.org/grueyorktimes/feeds/atom.xml
+    
+    - name: 15 Ways
+      type: weblog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/15ways/
+      feedUrl: http://www.spaceshipnofuture.org/15ways/feeds/atom/
+    
+    - name: CHOMP
+      url: http://www.spaceshipnofuture.org/ubb/
+    
+    - name: link-o-matic
+      type: linklog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/linkomatic/
+      feedUrl: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
+    
+    - name: Shoplifters, Unite
+      url: http://www.spaceshipnofuture.org/shoplifters/
+    
