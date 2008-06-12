@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:cc="http://web.resource.org/cc/" xmlns="http://purl.org/rss/1.0/">
+    <channel rdf:about="http://savagepencil.typepad.com/charlieletters/">
+        <title>Charlie letters</title>
+        <link>http://savagepencil.typepad.com/charlieletters/</link>
+        <description>a history of my great-grandfather</description>
+        <dc:language>en-US</dc:language>
+        <dc:creator/>
+        <dc:date>2008-02-16T11:48:32-06:00</dc:date>
+        <admin:generatorAgent rdf:resource="http://www.typepad.com/"/>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://savagepencil.typepad.com/charlieletters/2007/12/august-22-1918.html"/>
+                <rdf:li rdf:resource="http://savagepencil.typepad.com/charlieletters/2007/12/october-14-1918.html"/>
+                <rdf:li rdf:resource="http://savagepencil.typepad.com/charlieletters/2007/12/august-25-1915.html"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <item rdf:about="http://savagepencil.typepad.com/charlieletters/2007/12/august-22-1918.html">
+        <title>August 22, 1918</title>
+        <link>http://savagepencil.typepad.com/charlieletters/2007/12/august-22-1918.html</link>
+        <description>(From Richvale, California) (To Camp Lewis, Washington) My Dear Soldier Brother, I will again try to write you a few lines, received from your postal. Every Body is fine only Marie and Madaline have the whooping cough, they came home...</description>
+        <content:encoded>(From Richvale, California)&lt;br&gt;
+
+(To Camp Lewis, Washington)&lt;/p&gt;
+
+&lt;p&gt;My Dear Soldier Brother,&lt;/p&gt;
+
+&lt;p&gt;I will again try to write you a few lines, received from your postal.&amp;nbsp; Every Body is fine only Marie and Madaline have the whooping cough, they came home last Monday from Wheatland.&amp;nbsp; Did you get my other letters you never said whether you received them or not. &lt;/p&gt;
+
+&lt;p&gt;We got some pictures of Hilda yesterday they sure are real good, the boys say that she looks like me so no wonder but what they are good ha, she sure looks big she wears her dresses clear to her shoe tops so it makes her look like 18 yrs instead of 15.&lt;/p&gt;
+
+&lt;p&gt;Aunt Emma lefted yesterday for Richmond she was here a week &amp;amp; at harvest she &amp;amp; Axel are going to try and come to help us.&amp;nbsp; She said she would do the cooking so then I can do whatever I want to, don't know wether I will be able to work in the rice fields or not but shall try.&amp;nbsp; Hope you can get off for harvest Albin &amp;amp; Mr. Erickson are going to try and see what good they will do to see if they can get you &amp;amp; Walt off.&lt;/p&gt;
+
+&lt;p&gt;Mabel Peterson &amp;amp; Erickson's were here Sunday to see your soldier picture.&amp;nbsp; Nearly every person in R. has been here to see it.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;u&gt;Dyer Cafe&lt;/u&gt; in Chico is the picture of Art P., Metzger, John K.(?), and Albert H.&amp;nbsp; They all look very sad except Art, there isnt more than about a hundred boys on there picture.&lt;/p&gt;
+
+&lt;p&gt;Rick is helping Oscar haul hay today. Albin is irrigating M'tains.&amp;nbsp; Dad is patching sacks.&amp;nbsp; I guess you know just about what I am doing.&lt;/p&gt;
+
+&lt;p&gt;Mabel P. has left the hotel now and is staying with Rosie P. in Chico, from what I here she is going to work for Dahlstroms this winter.&lt;/p&gt;
+
+&lt;p&gt;Swimming is nearly over now the water is rather cold.&lt;/p&gt;
+
+&lt;p&gt;You ought to be in R. now, several pretty girls dropped in, a sister to Pete Swenson and Mrs. H. Rystroms has to sister here, and all of Jeps(?) relatives are on the way here.&amp;nbsp; There is 2 or 3 girls there, they are coming in &lt;u&gt;Fords&lt;/u&gt; so there must be several coming.&lt;/p&gt;
+
+&lt;p&gt;Dear Brother I must close.&lt;/p&gt;
+
+&lt;p&gt;With love to you from your Dear Little Sis. Esther&lt;/p&gt;
+
+&lt;p&gt;Hope this letter will find you well &amp;amp; happy and as strong as ever.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Ans. soon&lt;/u&gt;&lt;/p&gt;</content:encoded>
+        <dc:subject>1918</dc:subject>
+        <dc:creator>Karla  Steffen</dc:creator>
+        <dc:date>2008-02-16T11:48:32-06:00</dc:date>
+    </item>
+    <item rdf:about="http://savagepencil.typepad.com/charlieletters/2007/12/october-14-1918.html">
+        <title>October 14, 1918</title>
+        <link>http://savagepencil.typepad.com/charlieletters/2007/12/october-14-1918.html</link>
+        <description>(From Richvale, California) (To Camp Lewis, Washington) Dear Brother, I thought I would write you a few lines this evening as we are going to start harvesting tomorrow and I will be to busy to write very much, we are...</description>
+        <content:encoded>&lt;p&gt;(From Richvale, California)&lt;br /&gt;(To Camp Lewis, Washington)&lt;/p&gt;
+
+
+
+&lt;p&gt;Dear Brother,&lt;/p&gt;
+
+&lt;p&gt;I thought I would write you a few lines this evening as we are going to start harvesting tomorrow and I will be to busy to write very much, we are feeling first rate now.&lt;/p&gt;
+
+&lt;p&gt;We got a card totday from the Exemption Board saying that your furlough has been denied, the reason being Interference with military training.&amp;nbsp; We sure were disipointed as we were almost expecting to see you roll in and surprise us one of these days.&amp;nbsp; It has been about 2 weeks since we sent in our application.&lt;/p&gt;
+
+&lt;p&gt;I got a letter from Axel a few days ago saying that he would come some time this week and help us in the harvest but(?) were sure glad to have him come, we are expecting him every day now.&amp;nbsp; Oscar has hired Urisley(?) you know Culvers vegetable man he has not started work for him yet.&amp;nbsp; Oscar started cutting rice today.&lt;/p&gt;
+
+&lt;p&gt;I was over to see him this afternoon, he was on the second check then so it is going pretty good.&lt;/p&gt;
+
+&lt;p&gt;Lofgrens started this morning and Grells(?) started on Saturday 12th. Say how did you get that insurance policy fixed up.&lt;/p&gt;
+
+&lt;p&gt;We were going to Chico the same day as we got your letter about it so we thought it a good idea to let Harry Davids fix it up but he said he culd not do anything without the policy, and this happened to be a Holiday so we could not get in the bank so daddie went to Chico the next day and brought the policy, to his office, but he was not at home that day, we did not find out whether we should send any money or not.&amp;nbsp; Adolph Samuelson has been called for the 21th Oct. I do not know which camp he is going to but it will be one back east I think.&lt;/p&gt;
+
+&lt;p&gt;How is Walter making it now, glad to hear he can get around on crutches already.&lt;/p&gt;
+
+&lt;p&gt;We are well fixed for drains at home now. The dredger what started in that canal west of Rystroms has passed our land on the south now and is at the corner south of Paul Lofgrens.&lt;/p&gt;
+
+&lt;p&gt;They are going to make a ditch north of our land to out to Joe Lundbergs. Well that is all I can think of for this time so I will close.&lt;/p&gt;
+
+&lt;p&gt;With greetings from us all,&lt;br /&gt;Albin L. Peterson&lt;br /&gt;(Charlie's brother)&lt;/p&gt;</content:encoded>
+        <dc:subject>1918</dc:subject>
+        <dc:creator>Karla  Steffen</dc:creator>
+        <dc:date>2007-12-16T11:32:48-06:00</dc:date>
+    </item>
+    <item rdf:about="http://savagepencil.typepad.com/charlieletters/2007/12/august-25-1915.html">
+        <title>August 25, 1915</title>
+        <link>http://savagepencil.typepad.com/charlieletters/2007/12/august-25-1915.html</link>
+        <description>(From Funk, Nebraska) (To Richvale, California) Dear friend Charlie, I had intended to answer your letter soon this time, so I guess I'll have to do that tonight, because if I wait to do it come Sunday afternoon I'm afraid...</description>
+        <content:encoded>&lt;p&gt;(From Funk, Nebraska)&lt;br /&gt;(To Richvale, California)&lt;/p&gt;
+
+
+
+&lt;p&gt;Dear friend Charlie,&lt;/p&gt;
+
+&lt;p&gt;I had intended to answer your letter soon this time, so I guess I'll have to do that tonight, because if I wait to do it come Sunday afternoon I'm afraid it will take a long time till you get it, because on Sundays it is most generly warm weather so I have to go down by the drink(?) and swim.&amp;nbsp; The water is so deep over the grade that at first it nearly went up in the buggy when we drove across, but now it just goes up to the hubs, so it make fine swimming in the ditch, water even with the shoulders.&amp;nbsp; &lt;/p&gt;
+
+&lt;p&gt;Since April 1st weve had around 36 inches of rain.&amp;nbsp; There's lots of ducks over here so just what I'm waiting for is for the season to open.&amp;nbsp; We are not done stacking yet, a couple days left.&amp;nbsp; The corn grows like sixty(?) when its dry and warm weather.&amp;nbsp; Weve traded our old gas engine off for an &lt;a href="http://www.agmuseum.com/mogul2.htm" target="_blank"&gt;8-16 Mogul&lt;/a&gt;, with which we intend to plow, it pulls three plows.&amp;nbsp; I've plowed 1/2 day with it, it was fun and it worked fine.&lt;/p&gt;
+
+&lt;p&gt;Im glad to hear you can throw some fancy curves when you try to.&amp;nbsp; We didnt have any rain through harvest, but as soon as we got done we got 4 inch in about 35 minutes, thats what filled the ponds.&amp;nbsp; I suppose you will soon start to cut rice now.&amp;nbsp; Martin and Family have been house visiting a few weeks, but he left yesterday again he made the trip in auto, from Elbow Lake Minn.&lt;/p&gt;
+
+&lt;p&gt;Just a few lines to let you know we are alive and with good health.&lt;/p&gt;
+
+&lt;p&gt;Greeting from us all.&amp;nbsp; Duzinia says greet him from me.&lt;/p&gt;
+
+&lt;p&gt;Your pal,&lt;br /&gt;Emil G.&lt;/p&gt;
+
+&lt;p&gt;Write soon.&lt;/p&gt;</content:encoded>
+        <dc:subject>1915</dc:subject>
+        <dc:creator>Karla  Steffen</dc:creator>
+        <dc:date>2007-12-16T11:17:53-06:00</dc:date>
+    </item>
+</rdf:RDF>
+<!-- ph=1 -->

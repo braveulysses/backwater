@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xml:base="http://www.tbray.org/ongoing/ongoing.atom" xml:lang="en-us">
+    <title>ongoing</title>
+    <id>http://www.tbray.org/ongoing/</id>
+    <link href="./"/>
+    <link rel="self" href=""/>
+    <link rel="replies" thr:count="101" href="/home/tbray.org/www/html/ongoing/comments.atom"/>
+    <logo>rsslogo.jpg</logo>
+    <icon>/favicon.ico</icon>
+    <updated>2008-02-26T08:03:20-08:00</updated>
+    <author>
+        <name>Tim Bray</name>
+    </author>
+    <subtitle>ongoing fragmented essay by Tim Bray</subtitle>
+    <rights>All content written by Tim Bray and photos by Tim Bray Copyright Tim Bray, some rights reserved, see /ongoing/misc/Copyright</rights>
+    <generator uri="/misc/Colophon">Generated from XML source code using Perl, Expat, Emacs, Mysql, Ruby, Java, and ImageMagick.  Industrial-strength technology, baby.</generator>
+    <entry xml:base="When/200x/2008/02/26/">
+        <title>That Was Quick</title>
+        <link href="MySQL-etc"/>
+        <link rel="replies" thr:count="0" type="application/xhtml+xml" href="MySQL-etc#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/26/MySQL-etc</id>
+        <published>2008-02-26T01:00:00-08:00</published>
+        <updated>2008-02-26T08:03:16-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business/Sun"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Sun"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Wow, the Sun-MySQL deal
+<a href="http://www.sun.com/aboutsun/media/presskits/2008-0116/index.jsp">just closed</a>.  That’s amazingly quick work for a
+corporate transaction of this size.  Mind you, our Chief Counsel
+<a href="http://blogs.sun.com/dillon/entry/the_best_offense_is_a">crushes
+patent trolls</a> before breakfast.  Now we can actually start sharing the
+nefarious plots we’ve been cooking up for Sun+MySQL; I hope those guys have
+been hatching some too.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/24/">
+        <title>Geneva</title>
+        <link href="Geneva"/>
+        <link rel="replies" thr:count="4" type="application/xhtml+xml" href="Geneva#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/24/Geneva</id>
+        <published>2008-02-24T01:00:00-08:00</published>
+        <updated>2008-02-24T23:38:48-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Places/Geneva"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Places"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Geneva"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Standards"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Standards"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Well, here I am.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Well, here I am.</p>
+                <img src="R0010160.png" alt="Geneva street with photographer’s shadow"/>
+                <div class="caption">
+                    <p>It’s spring here!</p>
+                </div>
+                <p>The reason, of course, is to attend the
+<a href="http://www.iso.org/iso/pressrelease.htm?refid=Ref1114">DIS29500 (OOXML) BRM</a>.
+If you want to know more, there’s the
+<a href="http://adjb.net/">meeting convenor’s blog</a> and an
+<a href="http://www.jtc1sc34.org/repository/0932.htm">organizers’ FAQ</a>.
+Oh, you want <em>flavor</em>.  For pro-OOXML words, visit
+<a href="http://blogs.msdn.com/brian_jones/default.aspx">Brian Jones</a> and
+<a href="http://www.oreillynet.com/pub/au/1712">Rick Jelliffe</a>.  On the
+Anti side,
+<a href="http://www.robweir.com/blog/">Rob Weir</a> provides comprehensive
+one-stop shopping.</p>
+                <p>And that’s <em>all</em> I’m going to say about the subject under debate
+until, well, somewhat later.</p>
+                <h2 id="p-1">Travel</h2>
+                <p>The trans-Atlantic slog from Vancouver is unpleasant, but then
+the transfer gates at Frankfurt were like a hundred feet apart, and the hop to
+Geneva is nothing.
+At the airport there’s a machine that’ll print you a public-transit
+ticket good for anywhere in the city.  I looked at the sun outside and thought
+“screw taxis” and was downtown in minutes.  I thought the train station would
+be pretty near the hotel, so I bought a map and sallied forth, was baffled in
+half a block.</p>
+                <p>I summoned up my courage, shook some rust off the internal French-language
+gears, and approached a policeman.  He was friendly and helpful; even walked
+me a couple of blocks in the right direction.  And the French worked
+better than I’d hoped.
+Over in the German-speaking part of Switzerland, the German sounds funny.  But
+the French here sounds ordinary to me.</p>
+                <h2 id="p-2">The Venue</h2>
+                <p>I thought I’d do a trial walk from my hotel to the meeting location.
+Are there ever a lot of glass-faced buildings around here.</p>
+                <img src="R0010167.png" alt="Glass-faced building in Geneva"/>
+                <p>Anyhow, when I got back to the hotel I realized I’d snapped the building on
+the wrong side of the street from where the meeting is, but hey, it’s the
+<a href="http://www.itu.int/">ITU</a> world headquarters.  In the
+neighborhood, more ways than one.</p>
+                <img src="R0010168.png" alt="The ITU headquarters in Geneva"/>
+                <p>For my sanity’s sake I’ll try to find something else to write about this
+week.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/23/">
+        <title>iMixTape</title>
+        <link href="iMixTape"/>
+        <link rel="replies" thr:count="5" type="application/xhtml+xml" href="iMixTape#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/23/iMixTape</id>
+        <published>2008-02-23T01:00:00-08:00</published>
+        <updated>2008-02-24T21:37:45-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Music/Recordings"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Music"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Recordings"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Gadgets"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Gadgets"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">I see they’ve dropped the price of the basic iPod Shuffle to $49. That’s the only iPod I have.  It’s a remarkable device, with enough songs and enough juice to get you over the Pacific and back.  You just have to remember to auto-fill and recharge before you go. The ergonomics are minimal and kind of perfect. Now, everybody knows that the best gift for anyone is one you make yourself. It seems to me that a pre-loaded Shuffle qualifies, at a reasonable price-point.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>I see they’ve dropped the price of the basic iPod Shuffle to $49.
+That’s the only iPod I have.  It’s a remarkable device, with enough songs and
+enough juice to get you over the Pacific and back.  You just have to remember
+to auto-fill and recharge before you go.
+The ergonomics are minimal
+and kind of perfect.
+Now, everybody knows that the best gift for anyone is one you make yourself.
+It seems to me that a pre-loaded Shuffle qualifies, at a reasonable
+price-point.</p>
+                <p>A couple of years ago, I gave shuffles to a nephew and two nieces.  I
+thought of pre-loading them, but they wouldn’t be able to refresh them from
+their own computers without blanking the music, so what would be the point?</p>
+                <p>At $49, it makes sense.  It presupposes you’ve got a computer with a few
+dozen hours of music on it; many of us have.  You go and buy a handful of
+shuffles for your friends and loved ones, and for each one, you pick out 16
+hours of songs you think they might like, and let ’er rip.</p>
+                <p>If they don’t like your taste in music, they’ve got a little iPod they can
+put their own on.  If they do, that’s a very personal gift.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/23/">
+        <title>Bejeweled Ape</title>
+        <link href="Ape-Gem"/>
+        <link rel="replies" thr:count="0" type="application/xhtml+xml" href="Ape-Gem#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/23/Ape-Gem</id>
+        <published>2008-02-23T01:00:00-08:00</published>
+        <updated>2008-02-23T14:27:00-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Atom"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Atom"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Ruby"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Ruby"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Open Source"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Open Source"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>I am delighted to announce that my collaborators (now including
+<a href="http://systemisdown.net/">Brandon Mitchell</a>) have been wrangling
+the Ape and it is
+<a href="http://thinkincode.net/2008/2/22/the-ape-meets-ruby-gems">now a Ruby
+Gem</a>.  Wow.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/22/">
+        <title>Northern Voice</title>
+        <link href="Photo-Camp"/>
+        <link rel="replies" thr:count="0" type="application/xhtml+xml" href="Photo-Camp#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/22/Photo-Camp</id>
+        <published>2008-02-22T01:00:00-08:00</published>
+        <updated>2008-02-22T14:40:54-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Photos"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">I’m at <a href="http://northernvoice.pbwiki.com/PhotoCamp2008">PhotoCamp2008</a> at <a href="http://northernvoice.pbwiki.com/MooseCamp2008">MooseCamp2008</a>, an unconference within an unconference.  It’s great; I’m learning so much!</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>I’m at
+<a href="http://northernvoice.pbwiki.com/PhotoCamp2008">PhotoCamp2008</a> at
+<a href="http://northernvoice.pbwiki.com/MooseCamp2008">MooseCamp2008</a>, an
+unconference within an unconference.  It’s great; I’m learning so much!</p>
+                <p>Here, <a href="http://alexwaterhousehayward.com/">Alex Waterhouse-Hayward</a>
+says wise things about lighting.</p>
+                <img src="R0010132.png" alt="Alex Waterhouse-Hayward at PhotoCamp2008"/>
+                <p>A couple of shots of the audience.  I’m still struggling to get comfy with
+the Ricoh.</p>
+                <img src="R0010133.png" alt="Audience at PhotoCamp2008"/>
+                <img src="R0010134.png" alt="Audience at PhotoCamp2008"/>
+                <p>This is just the <em>nicest</em> little conference.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/21/">
+        <title>Hey, Nick!</title>
+        <link href="Hey-Nick"/>
+        <link rel="replies" thr:count="1" type="application/xhtml+xml" href="Hey-Nick#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/21/Hey-Nick</id>
+        <published>2008-02-21T01:00:00-08:00</published>
+        <updated>2008-02-21T16:33:16-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business/Sun"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Sun"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Web"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Web"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>There’s this guy named
+<a href="http://bahumbug.wordpress.com/">Nick Kew</a> whom I’d never heard of
+till last year, when I started working on
+<a href="http://www.tbray.org/ongoing/misc/Software#p-5">mod-atom</a>.  He’s
+one of the core
+<a href="http://httpd.apache.org/">httpd</a> gurus, and
+<a href="http://www.apachetutor.org/">wrote the book</a> on Apache Modules,
+which is what mod-atom is.  So he politely tolerated a flurry of
+clueless-newbie questions from me, and I feel guilty that I didn’t buy the
+book.
+Anyhow, he’s just
+<a href="http://bahumbug.wordpress.com/2008/02/21/servant-to-a-new-master/">come
+to work for Sun</a>.  I’ve already told him gleefully that I shall now feel
+guilt-free about the questions.  But seriously, it makes me happy to be
+bringing some more httpd expertise on board, given that it’s perhaps the
+single most important software component of the whole World Wide Web.
+Welcome aboard, Nick!</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/19/">
+        <title>Odd Partnerships</title>
+        <link href="Odd-Partnerships"/>
+        <link rel="replies" thr:count="10" type="application/xhtml+xml" href="Odd-Partnerships#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/19/Odd-Partnerships</id>
+        <published>2008-02-19T01:00:00-08:00</published>
+        <updated>2008-02-19T23:39:54-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Politics"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Politics"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">First, <a href="http://www.gcn.com/print/27_2/45710-1.html">Library of Congress taps Silverlight to enhance access</a>.  Second, <a href="http://jeremy.zawodny.com/blog/archives/009989.html">Republicans Kiss Google's Ass...</a>.  Spot a pattern?</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>First,
+<a href="http://www.gcn.com/print/27_2/45710-1.html">Library of Congress taps
+Silverlight to enhance access</a>.  Second,
+<a href="http://jeremy.zawodny.com/blog/archives/009989.html">Republicans Kiss
+Google's Ass...</a>.  Spot a pattern?</p>
+                <p>The first is easy to understand, because we’ve seen it so many times
+before.  I remember the relentless campaigns over the last decade, first
+to turn the Internet from a Navigator app into an Explorer app, and second to
+beat back the demons of Open Source.
+There were all sorts of incentives to adopt cool Web-site features that were
+IE-only, and the nicest imaginable Microsoft evangelists to explain the
+advantages, and fatherly business types to pooh-pooh objections from any of
+those scuzzy Open-Source commie hippies.</p>
+                <p>The formula goes: you find some organization,
+not all that clueful about technology, you dazzle ’em with shiny
+goodies, and you lock in another little piece of the Internet.
+Well, it’s sad that the Library of Congress doesn’t want any visitors who run
+Linux, or aren’t affluent enough to have upgraded to an Intel Mac.
+Sad, sad, sad.</p>
+                <p>Now, Google and the Republicans.  That’s too complicated for me to figure
+out, but it smells rotten (granted that in 2008, everything in
+the neighborhood of the Republican party smells rotten).
+Anyhow, read Jeremy Zawodny’s take, linked above.
+I’d forgotten that when the time is right,
+he can be one of your really superior flamers.  And the time does seem
+right.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/18/">
+        <title>Atomic News</title>
+        <link href="Atomic"/>
+        <link rel="replies" thr:count="5" type="application/xhtml+xml" href="Atomic#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/18/Atomic</id>
+        <published>2008-02-18T01:00:00-08:00</published>
+        <updated>2008-02-18T15:31:14-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Web"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Web"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Atom"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Atom"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Herewith a few random Atompub pointers.  Each month that goes by, I’m happier with the way Atompub came out.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Herewith a few random Atompub pointers.  Each month
+that goes by, I’m happier with the way Atompub came out.</p>
+                <h2 id="p-1">AtomSub?</h2>
+                <p>Brian McCallister, in
+<a href="http://kasparov.skife.org/blog/src/atomsub.html">AtomSub</a>, raised
+a fascinating idea: “Would be nice to push an AtomPub endpoint to a service as
+a callback for events... Instead of polling a site for updates, post a
+subscription with an AtomPub endpoint as the entry and let the service push to
+you.”  I would never have thought of such a thing; hmmmm.</p>
+                <h2 id="p-2">Servers?</h2>
+                <p>Erik Wilde asks
+<a href="http://dret.typepad.com/dretblog/2008/02/atompub-servers.html">AtomPub Servers Anywhere?</a>,
+which says some smart things.  Mind you, he then follows some complaints about
+the 
+“frustration” of searching for Atompub server-side implementations with a list of
+five, all in different languages.</p>
+                <p>Including
+<a href="http://www.tbray.org/ongoing/misc/Software#p-5">mod-atom</a>.
+One reason I’ve been blogging less is actually because I’ve been working on
+mod-atom, and frankly, it’s of no general interest whatsoever.  Yeah, I think
+mod-atom or something like it is potentially an important piece of the
+infrastructure, but its actual engineering, inside, is pretty boring.
+I’ve figured out a trick for creating and destroying publications without
+hacking the Apache config file.
+Since then I’ve spent a few days, actually, thinking about how, in the
+maybe-processes-but-maybe-threads httpd environment, best to keep track of all
+the active publications when you’re adding and deleting them.  Which is pretty
+hard to do efficiently.  But nobody would call it <em>interesting</em>.</p>
+                <p>While we’re digressing into the subject of my own software, Simon Rozet has
+been
+<a href="http://atonie.org/2008/02/ape-test.html">thinking about how to test
+the Ape</a>.  I hang my head in lasting shame in that I haven’t been able to
+figure out how to unit-test the sucker; let’s hope Simon is smarter.</p>
+                <h2 id="p-3">Astoria</h2>
+                <p>Dare Obasanjo gives us
+<a href="http://www.25hoursaday.com/weblog/2008/02/16/ADONETDataServicesAstoriaAdoptsAtomPub.aspx">ADO.NET Data Services (Astoria) Adopts AtomPub</a>,
+linking to
+<a href="http://blogs.msdn.com/astoriateam/archive/2008/02/13/atompub-support-in-the-ado-net-data-services-framework.aspx">Pablo
+Castro’s write-up</a>, which is also interesting.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/18/">
+        <title>Online Data</title>
+        <link href="Online-Data"/>
+        <link rel="replies" thr:count="3" type="application/xhtml+xml" href="Online-Data#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/18/Online-Data</id>
+        <published>2008-02-18T01:00:00-08:00</published>
+        <updated>2008-02-18T14:13:42-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Internet"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Internet"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Storage"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Storage"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>That S3 outage sure concentrated people’s minds.  And almost
+simultaneously, EMC announces that they’re getting into cloud storage.  
+It’s obvious to me that we’re nowhere near having worked out the economics and
+safety and performance issues around where to put your data.  There are some
+areas of clarity; geek über-photog
+<a href="http://duncandavidson.com/">James Duncan Davidson</a>, in
+<a href="http://blogs.oreilly.com/lightroom/2008/01/the-economics-of-online-backup.html">The Economics of Online Backup</a>,
+shows that for a person with a ton of personal data, the online option is
+really unattractive.  And you do hear <i>sotto voce</i> rumbles about going
+online in the geek hallways, for example “Amazon web services: 3x the price,
+0.5x the reliability, and lower scalability than DYI. Buy only for the low
+capex and lead time.” 
+That’s from <a href="http://twitter.com/shalunov/statuses/721464672">Stanislav
+Shalunov</a>, who by the way is a damn fine Twitterer.
+The big questions remain open.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/18/">
+        <title>Granville Island</title>
+        <link href="Granville-Island"/>
+        <link rel="replies" thr:count="9" type="application/xhtml+xml" href="Granville-Island#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/18/Granville-Island</id>
+        <published>2008-02-18T01:00:00-08:00</published>
+        <updated>2008-02-18T00:41:05-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Places/Vancouver"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Places"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Vancouver"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">In single-Dad mode on this brilliant Sunday morning, I decided to pack the urchins up after breakfast and take them down to <a href="http://www.granvilleisland.com/">Granville Island</a>.  It’s one of Vancouver’s nicest things and too often we abandon it to the tourists (In fact, on this occasion I helped a posse of Germans figure out the parking-ticket machine).  Well, and I had a <a href="/ongoing/When/200x/2008/02/14/Ricoh-GX100">new camera</a> burning a hole in my pocket.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>In single-Dad mode on this brilliant Sunday morning, I decided to pack the
+urchins up after breakfast and take them down to
+<a href="http://www.granvilleisland.com/">Granville Island</a>.  It’s one of
+Vancouver’s nicest things and too often we abandon it to the tourists
+(In fact, on this occasion I helped a posse of Germans figure out the
+parking-ticket machine).  Well, and I had a
+<a href="/ongoing/When/200x/2008/02/14/Ricoh-GX100">new camera</a> burning a
+hole in my pocket.</p>
+                <p>First, let it be recorded that the trip was a smashing success.  I got new
+slippers at
+<a href="http://www.circlecraft.net/page128.htm">Circle Craft</a> (which is
+really very good), the boy got a new rocket at the toy store, and the girl got
+to toddle around, drop pebbles in the ocean, and chase birds; plus a
+cookie.</p>
+                <p>While she and her brother were dropping things into this narrow gap between
+the docks, I was pointing the camera into it. 
+Puzzle:  Why are the reflected words in the second shot not mirror-imaged?</p>
+                <img src="R0010053.png" alt="Looking down between the docks at Granville Island, Vancouver"/>
+                <img src="R0010054.png" alt="Looking down between the docks at Granville Island, Vancouver"/>
+                <p>Any Granville Island visit with children <em>must</em> include the
+<a href="http://www.kidsmarket.ca/">Kids’
+Market</a>, and there’s a store there that sells kites (and lots of other stuff,
+including the rocket the boy got) which I’ve always found beautiful.</p>
+                <img src="R0010055.png" alt="Toy store at Granville Island Kids’ Market"/>
+                <img src="R0010056.png" alt="Toy store at Granville Island Kids’ Market"/>
+                <p>Oh, and the camera.  What do you think?</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/17/">
+        <title>Linux Aggro</title>
+        <link href="Linux-Aggro"/>
+        <link rel="replies" thr:count="7" type="application/xhtml+xml" href="Linux-Aggro#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/17/Linux-Aggro</id>
+        <published>2008-02-17T01:00:00-08:00</published>
+        <updated>2008-02-18T00:01:07-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business/Open Source"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Open Source"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">This is getting a little weird.  Twice in the last couple of years, Linus Torvalds has gone out of his way to diss Solaris, the OS technology and Sun corporately. Now, anyone who’s spent time on a mailing list with Linus knows that his opinions are sharp-edged and rarely withheld.  But now we have a pure  <a href="http://www.linux-foundation.org/weblogs/amanda/2008/02/17/hey-jonathan-the-l-in-lamp-is-literal/">attack piece</a> from Amanda McPherson, identified as “the marketing director of the Linux Foundation”.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>This is getting a little weird.  Twice in the last couple of years, Linus
+Torvalds has gone out of his way to diss Solaris, the OS technology and Sun
+corporately.
+Now, anyone who’s spent time on a mailing list with Linus knows that
+his opinions are sharp-edged and rarely withheld.  But now we have a
+pure 
+<a href="http://www.linux-foundation.org/weblogs/amanda/2008/02/17/hey-jonathan-the-l-in-lamp-is-literal/">attack piece</a>
+from Amanda McPherson, identified as “the marketing director of the Linux
+Foundation”.</p>
+                <p>She goes on about how the L in LAMP is Linux and Literal; and how Sun in
+general and Jonathan in particular are hopeless losers because there are more
+of them than of us.  Oh, and because there’s a nasty little dispute in the
+OpenSolaris community.</p>
+                <p>Well, let me be clear: I like GNU/Linux, in particular the GNU userland
+part which I’m delighted to see the Solaris guys finally warming up to.  The
+blog you’re reading runs on a Debian box and I use Ubuntu in my living room.
+And I run Solaris for concurrency work and when I need NetBeans to go really
+fast.  And it’s all just fine.</p>
+                <p>And yeah, the OpenSolaris community has had some foot-stomping of
+late, and IMHO the Governing Board needs to do some Governing PDQ.
+But, uh, flare-ups around personalities and naming and
+so on are not exactly earth-shaking news in any of the OSS communities that
+I’ve lived in. (Well, except for Ruby.  But I digress).  Perhaps GNU/Linux has
+been blessedly free of such things?</p>
+                <p>But whatever.  Yes, there are more Linuxians at the moment.  I’m one myself
+from time to time.  The software is good.  There is competition now.  This is
+also good.  The childish sneering?  Not good.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/17/">
+        <title>F.C.o.t.Y</title>
+        <link href="First-Crocus-of-the-Year"/>
+        <link rel="replies" thr:count="1" type="application/xhtml+xml" href="First-Crocus-of-the-Year#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/17/First-Crocus-of-the-Year</id>
+        <published>2008-02-17T01:00:00-08:00</published>
+        <updated>2008-02-17T23:43:45-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Garden"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Garden"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Photos"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">“First Crocus of the Year”, I mean to say.  For me it’s a major transition when, after the months of grey, our garden starts to have some colour in it. Not the best crocus photo ever, and probably not the best crocuses either. But they’re important to me.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>“First Crocus of the Year”, I mean to say.  For me it’s a major transition
+when, after the months of grey, our garden starts to have some colour in it.
+Not the best crocus photo ever, and probably not the best crocuses either.
+But they’re important to me.</p>
+                <img src="R0010060.png" alt="The first crocus of 2008"/>
+                <p>They’re late this year—all that unaccustomed snow—but once they started,
+came up amazingly fast.  Just barely above-ground a week ago, showing a little
+purple yesterday, and this morning as we went down the front path in the early
+morning light I told my son “Those flowers will be out when we get back here
+at noon.”</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/17/">
+        <title>Hey, Kosovo!</title>
+        <link href="Kosovo"/>
+        <link rel="replies" thr:count="7" type="application/xhtml+xml" href="Kosovo#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/17/Kosovo</id>
+        <published>2008-02-17T01:00:00-08:00</published>
+        <updated>2008-02-17T15:01:17-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Politics"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Politics"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>In principle, when a substantial group of people want to have their
+own country, trying to stop them is expensive, bloody, and futile.  So, good
+on ya,
+<a href="http://en.wikipedia.org/wiki/Kosovo">Kosovo</a>.  Hmm, the government
+seems to be online at 
+<a href="http://www.ks-gov.net/">ks-gov.net</a>, which suggests they’d like to
+have <code>.ks</code> for their top-level-domain.
+<a href="http://iana.org/root-whois/index.html">It’s available</a>.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/17/">
+        <title>Clink</title>
+        <link href="Clink"/>
+        <link rel="replies" thr:count="4" type="application/xhtml+xml" href="Clink#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/17/Clink</id>
+        <published>2008-02-17T01:00:00-08:00</published>
+        <updated>2008-02-17T13:52:45-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Puzzling Evidence"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Puzzling Evidence"/>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>It was late, everyone else long asleep.  I was walking between the dining
+table and the kitchen counter (not a very wide space) when, from the
+counter-top, I heard a soft little discrete clinking sound, some electronic
+device wanting attention.  It would not be surprising for such a thing to be
+found on our kitchen counter, but I didn’t recognize the sound.  It would be a
+little more surprising, but not very, if the device on the counter
+were unknown to me.  So I turned back and around where I could see the
+counter, which was only moderately cluttered, and spotted no electronics at
+all aside from a couple of battery chargers.  They multiply like bunny
+rabbits
+when you’re not looking, producing slightly variant hybrids that don’t work
+with whatever needs charging next; then the original wanders away.  But I
+digress.  I was puzzled but decided to let it pass, and returned to my
+original errand.  <i>Soft discrete clink.</i>  I looked again: cookie jar,
+bottle of wine, butter, chargers, extension cord draped over the back of
+the counter, toaster.  Well, whatever.  Turn around, step, <i>clink</i>.  Wait
+a second, there’s a pattern.  I was brushing the cord and its end was
+swinging against the wine bottle.  It sounded amazingly like a friendly alert
+envisioned and sculptured by a spiky-haired User Experience engineer in
+Shibuya.  Real imitating fake, there you go.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/16/">
+        <title>The HTTP Sweet Spot</title>
+        <link href="HTTP-Sweet-Spot"/>
+        <link rel="replies" thr:count="7" type="application/xhtml+xml" href="HTTP-Sweet-Spot#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/16/HTTP-Sweet-Spot</id>
+        <published>2008-02-16T01:00:00-08:00</published>
+        <updated>2008-02-16T15:47:18-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Web"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Web"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Publishing"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Publishing"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">We seem to have pretty widespread consensus, these days, that HTTP, or perhaps the  RESTful approach it exemplifies, offers a pretty sweet substrate for pushing and pulling data around at Web scale.  We got further evidence this week when a bunch of smart people stepped slightly outside its sweet spot, into deep tangly weeds.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>We seem to have pretty widespread consensus, these days, that HTTP, or
+perhaps the 
+RESTful approach it exemplifies, offers a pretty sweet substrate for pushing
+and pulling data around at Web scale.  We got further evidence this week when
+a bunch of smart people stepped slightly outside its sweet spot, into deep
+tangly weeds.</p>
+                <p>First, Joe Gregorio of Google, in
+<a href="http://bitworking.org/news/296/How-To-Do-RESTful-Partial-Updates">How
+to do RESTful Partial Updates</a>, proposed overloading PUT to
+update resources in a way that’s constrained using
+<a href="http://bitworking.org/projects/URI-Templates/">URI
+templates</a>.</p>
+                <p>He got push-back from
+<a href="http://intertwingly.net/blog/2008/02/15/Embrace-Extend-then-Innovate">Sam
+Ruby</a> and (more severely)
+<a href="http://www.snellspace.com/wp/?p=889">James Snell</a>.  There is
+thoughtful commentary from
+<a href="http://www.mnot.net/blog/2008/02/17/post_patch">Mark Nottingham</a>,
+<a href="http://blog.mozilla.com/rob-sayre/2008/02/15/restful-partial-updates/">Rob
+Sayre</a>, and
+<a href="http://www.25hoursaday.com/weblog/2008/02/16/ThoughtsOnGooglesProposalForGranularUpdatesInAtomPub.aspx">Dare
+Obasanjo</a>.
+I have three observations.</p>
+                <h2 id="p-1">Wikipedia No</h2>
+                <p>I think Joe’s analogy with Wikipedia is bogus.  At Wikipedia, each entry is a
+resource.  So is each section and sub-section and sub-sub-section and so on.
+There’s nothing at all in REST to say that resources can’t be part of other
+resources, and there’s no ambiguity at all what’s going on at Wikipedia.
+Unfortunately, at Wikipedia there’s no way to do what Joe’s trying to: update
+more than one disjoint section at a time.</p>
+                <h2 id="p-2">It’s Important</h2>
+                <p>The problem Joe’s trying to solve keeps coming up.  Despite my skepticism
+about the analogy, I think his URI-templates approach is potentially
+a winner.  Like Sam, I’m not crazy about verbs in URIs, but maybe, seen
+correctly, these are adverbs.</p>
+                <p>There’s some history here, private and public.  Way back in 2004 I was
+trying to get Google to buy into the APP idea, and had a meeting with Adam
+Bosworth and Mark Lucovsky, who are obviously both heavyweights.
+They both were friendly to the idea, but had an immediate question: You’ve got
+a decent way to create or update a Web resource, but what if you want to
+update ten thousand, can you avoid doing an HTTP exchange for each?
+What about the idea of POSTing an Atom feed rather than an Atom entry?</p>
+                <p>I thought that sounded plausible; Google joined the Atompub WG and in
+fairly short order the POST-a-feed idea came up.  And in fairly short order
+after that, it got shot down.  People thought up all sorts of corner cases and
+problems.  The two that stick to my mind were authorization and error
+handling. Can you specify different auth data for each of the ten thousand
+entries in the feed, and how do you react when twenty-seven of the ten
+thousand fail to update for some reason or another?</p>
+                <p>I was disappointed, but thought “Well, YAGNI, maybe.”
+Since then, there’s been Yaron Goland’s
+<a href="http://dev.live.com/livedata/web3s.htm">Web3S</a> proposal, whose
+<i>raison d’etre</i> was update at other than the singular-resource level.
+(Hmm, wondering what happened to Web3S?)</p>
+                <p>So this is something that obviously keeps coming up.</p>
+                <h2 id="p-3">It’s Hard</h2>
+                <p>I have the advantage here of having spent three years
+co-chairing an IETF Working Group, a role whose chief function is to discern
+or decree the existence of consensus.  Speaking on the basis of that
+experience, I can tell you authoritatively that we do <em>not</em> have
+consensus here; rough, smooth, or any other kind.</p>
+                <p>But it’s <em>totally</em> worth arguing about.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/13/">
+        <title>The Big Switch</title>
+        <link href="The-Big-Shift"/>
+        <link rel="replies" thr:count="5" type="application/xhtml+xml" href="The-Big-Shift#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/13/The-Big-Shift</id>
+        <published>2008-02-13T01:00:00-08:00</published>
+        <updated>2008-02-15T01:16:32-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Books"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Books"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Business"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World/Life Online"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="The World"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Life Online"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Clearly,  <a href="http://www.roughtype.com/">Nicholas Carr</a> disapproves of much of the culture in which I’ve immersed myself and which I nearly-wholly embrace, to which I would apply labels such as “online” or “Web” or “Internet” or “Twenty-first century”. (Carr and I have written <a href="/ongoing/When/200x/2006/08/09/Carr">back</a> and  <a href="http://www.roughtype.com/archives/2006/08/ongoing.php">forth</a> already on the generalities.) So it would be reasonable to suspect me of bias in writing about his  recent <a href="http://www.nicholasgcarr.com/bigswitch/">The Big Switch—Rewiring the world, from Edison to Google</a>. And indeed, I do think that several of its key arguments are, well, <em>wrong</em>.  But it’s a good book anyhow;  well written and extremely apposite.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Clearly, 
+<a href="http://www.roughtype.com/">Nicholas Carr</a> disapproves of much of the culture in which
+I’ve immersed myself and which I nearly-wholly embrace, to which I would apply
+labels such as “online” or “Web” or “Internet” or “Twenty-first century”.
+(Carr and I have written
+<a href="/ongoing/When/200x/2006/08/09/Carr">back</a> and 
+<a href="http://www.roughtype.com/archives/2006/08/ongoing.php">forth</a>
+already on the generalities.)
+So it would be reasonable to suspect me of bias in writing about his 
+recent <a href="http://www.nicholasgcarr.com/bigswitch/">The Big
+Switch—Rewiring the world, from Edison to Google</a>.
+And indeed, I do think that several of its key arguments are, well,
+<em>wrong</em>.  But it’s a good book anyhow; 
+well written and extremely apposite.</p>
+                <h2 id="p-1">Outline</h2>
+                <p>The book embeds three themes, quite loosely
+intertwined.
+<i>First</i>, on the Really Big Analogy between Electricity and Information
+Technology.  <i>Second</i>, on whether this Internet thingie is a Really Good
+Idea or a Really Bad Idea.  <i>Third</i>, on whether the Net is an
+Emergent Artificial Intelligence, and if so whether We Ought To Be Scared.</p>
+                <p>The first is the most interesting.  Jonathan Schwartz has riffed at length
+on this theme as well, and the analogies between the electrical industry back
+then and IT today are pretty compelling.  My disappointment here is that Carr
+seems to have stopped before getting to the end of the argument.  Nobody in,
+say, a small manufacturing business is going to write their own payroll
+system.  On the other hand, nobody in the financial industry is going to
+outsource all their modeling and risk work to someone else’s software and
+infrastructure.  The interesting question is, where’s the dividing line, what
+is the underlying pattern?  What decision procedure should a manager follow
+to address the own-or-outsource question?
+Planning a sequel, Prof. Carr?</p>
+                <h2 id="p-2">Emancipation or Control?</h2>
+                <p>The book has two halves: the second, <cite>Living in the Cloud</cite>,
+opens with several chapters outlining the surprising reach of the Net and Web
+in 2008.  This would contain no surprises for <span class="o">ongoing</span>
+readers, but is well-presented and likely useful for a general audience.</p>
+                <p>Then the fun starts, as Carr considers whether the Net embodies
+“technologies of emancipation” or “technologies of control”.  His conclusion,
+unsurprisingly, is that it’s about control.  The argument is worth reading
+but I found it entirely unconvincing.  The Internet is about <em>people</em>
+and that’s all it’s about.  People’s behavior is sometimes noble and sometimes
+shitty, and the Internet doesn’t change that.  Given the chance to accrue
+power, individuals and groups will usually take it.  When they misuse it,
+other individuals and groups will try to break that power.  Sometimes they’ll
+succeed and sometimes they won’t. There’ll be tyrannies and collectives and
+complacency and insurgencies and wealth and poverty wherever there are people,
+and I just don’t see how the Net makes any qualitative difference.</p>
+                <p>Hold on... I think what we have here is Prof. Carr predicting a sea-change
+and me saying “Nah, nothing really new.”  Good.</p>
+                <h2 id="p-3">Intelligence?</h2>
+                <p>The closing section considers whether the Net constitutes an emergent
+intelligence.  It’s pretty disappointing; Carr obviously hasn’t researched the
+miserable decades-long failure of the Artificial Intelligence project. He even
+uncritically relays the exciting news from some AI lab: the researchers have
+“already succeeded in creating a software program that can, at a very basic
+level, ‘read’ sentences on Web pages and extract meaning from them—without
+requiring any tags from programmers.”  Wow!  Stop the presses!  Someone call
+Doug Lenat!</p>
+                <p>I’ve
+<a href="/ongoing/When/200x/2003/06/24/IntelligentSearch">written about this
+before</a>, but the core point is worth re-emphasizing: If we actually
+understood what intelligence was and how it worked, we could maybe replicate
+it.  We don’t, so we can’t.  (I suspect that someday we will; I’m not a victim
+of the
+<a href="http://en.wikipedia.org/wiki/Chinese_room">Chinese-Room</a>
+illusion).</p>
+                <p>Anyhow, it seems that I’ve been grumbling and grouching here, mostly.  But
+to some degree that’s a compliment: if I weren’t engaged by the narrative I
+wouldn’t have taken the time to go through it, take notes, and write this. I
+think that most people who enjoy <span class="o">ongoing</span> would enjoy
+reading <cite>The Big Switch</cite>.</p>
+                <p>And the epilogue, <cite>Flame and Filament</cite>, is a perfect little
+two-page jewel: startling, clear-eyed, and beautifully written; perhaps
+itself worth the price of the whole book.  I’m going to quote the last
+sentence: “It’s in this way that progress covers its tracks, perpetually
+refreshing the illusion that where we are is where we were meant to be.”
+Which is true even if you lose the “were”.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/14/">
+        <title>Ricoh GX100</title>
+        <link href="Ricoh-GX100"/>
+        <link rel="replies" thr:count="5" type="application/xhtml+xml" href="Ricoh-GX100#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/14/Ricoh-GX100</id>
+        <published>2008-02-14T01:00:00-08:00</published>
+        <updated>2008-02-14T23:46:41-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Photos/Cameras"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Cameras"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Officially that’s the <a href="http://www.ricoh.com/r_dc/caplio/gx100/index.html">Ricoh Caplio GX100</a>, but a camera shouldn’t need a middle name.  Mine arrived yesterday.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Officially that’s the
+<a href="http://www.ricoh.com/r_dc/caplio/gx100/index.html">Ricoh Caplio
+GX100</a>, but a camera shouldn’t need a middle name.  Mine arrived
+yesterday.</p>
+                <img src="IMG_0012.png" alt="Ricoh Caplio GX100"/>
+                <h2 id="p-1">Why?</h2>
+                <p>You just gotta have a pocket camera, because the single greatest factor in
+taking good photos is being ready to shoot when opportunity knocks.  I still
+regret my deceased Canon S70, and while I got some OK shots with the
+<a href="/ongoing/When/200x/2007/04/27/Canon-A710-IS">Canon A710</a>, I never
+actually <em>liked</em> it that much; the ergonomics were so-so and it
+wouldn’t shoot RAW and the shutter lag was irritating.</p>
+                <p>On paper, the Ricohs scratch a few of those itches, then when I was
+in Tokyo last year, it 
+<a href="/ongoing/When/200x/2007/06/15/Cameras">became obvious</a> that the
+Ricohs are the preferred camera flavor among the Japanese geek contingent; I got
+to fool with a couple of them and liked the feel.</p>
+                <p>If you look at
+<a href="http://www.dpreview.com/reviews/ricohgx100/">DPReview’s take</a>,
+it’s pretty negative, but the lines aren’t hard to read between: on the
+upside, the
+ergonomics are great, the wide-angle is huge, the thing reacts fast, and the
+lens is good.  On the downside, the JPEG conversion is second-rate in anything
+but really excellent light; and the dynamic range is not that great, it’s easy
+to blow out the highlights.</p>
+                <p>Well, I’d normally shoot RAW rather than JPEG anyhow, so the really big
+downside isn’t that big an issue.  There is another issue in that the RAW
+write speed is sluggish, so you can’t shoot a whole bunch in a row.</p>
+                <p>Another alternative would be the much-ballyhooed
+<a href="http://www.ricoh.com/r_dc/gr/gr_digital2/index.html">Ricoh GR Digital
+II</a>,
+with all the same ergonomic goodness and a neato prime lens too;
+lately I’ve become a bit of a prime-lens junkie.</p>
+                <p>I spent some time poking around the
+<a href="http://ricohforum.com/">Ricoh Forum</a>, and it seems that the GX100
+lens is not significantly behind the D2 where it matters, plus it’s a little
+more resistant to highlight burnout.  And damn it, a pocket camera’s about
+convenience, so why not a zoom?</p>
+                <h2 id="p-2">Impressions</h2>
+                <p>I unpacked it, I charged it up, I turned it on... nothing.  Talk about a
+mood-destroyer.  Had to go out, when I came back an hour later it was fine.
+Go figure.  So, late at night, the lights low, I jammed the ISO over to 800
+and took the first shot at what I could see from where I was sitting.</p>
+                <img src="R0010001.png" alt="Interior low-light test shot with Ricoh GX100"/>
+                <p>Hey, the image stabilization is pretty good, that’s at 1/13 of a second.</p>
+                <p>So I snuck up on the cat and balanced the camera on a stool: ¼-second
+shutter.  Fortunately, the cat held still.</p>
+                <img src="R0010004.png" alt="Cat in low light by Ricoh GX100"/>
+                <p>Yeah, there’s a lot of luminance noise in those, but... usable, I’d
+say.</p>
+                <p>Today I was pinned by the phone/chat/email torrent from the moment I got
+breakfast stuffed into the 
+kids until like three PM, so after I got my shower I grabbed the Ricoh and
+went around the block.</p>
+                <p>The first crocuses are starting to think about showing their faces.</p>
+                <img src="R0010014.png" alt="Young crocuses in dim light with Ricoh GX100"/>
+                <p>I shot that one with both RAW and JPEG, and there’s no doubt that Lightroom
+does a better job than the idiot software in the camera.  Don’t know how
+visible it would be at screen resolutions.  Also, they’re right about the
+sensitivity, I managed to blow out highlights even under the cloudy sky.
+There are EV compensation tricks that the Ricoh Forum experts recommend, have
+to learn them.</p>
+                <p>The ergonomics, even in the first 24 hours, are wonderful!  It’s easier to
+switch ISO and resolution and so on than with my Pentax.  And in decent light,
+the shutter lag is amazing, up there in SLR territory.</p>
+                <p>Hey, it even does <i>bokeh</i>!  The macro setting is <em>slow</em> but slick.</p>
+                <img src="R0010024.png" alt="Yellow early-spring flower with the Ricoh GX100"/>
+                <p>Obviously there’s quite a bit of learning that’ll need to happen.  I’m in
+California and Geneva over the next two weeks, and I’ll leave the SLR at home;
+forced education.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/13/">
+        <title>Virtual Indiana</title>
+        <link href="Indy-Again"/>
+        <link rel="replies" thr:count="0" type="application/xhtml+xml" href="Indy-Again#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/13/Indy-Again</id>
+        <published>2008-02-13T01:00:00-08:00</published>
+        <updated>2008-02-13T14:49:36-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Solaris"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Solaris"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Open Source"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Open Source"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Mac OS X"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Mac OS X"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">I got the networking working on yesterday’s Indiana + VirtualBox + Mac install, but not well. I think <a href="http://homepage2.nifty.com/mrym3/taiyodo/ae-2.6.0a.tar.gz#../ae-2.6.0a.tar.gz">that driver</a> needs some work,  it seems to lock up on big data transfers.  Anyhow, just for fun, I brought over a 22-meg 5782×3946 JPG (a slide scan, the first picture <a href="/ongoing/When/200x/2008/01/26/Fifties-Pix">here</a>), and opened it up with the Gimp under Indiana under VirtualBox under OS X. And it worked.  It sure ain’t as fast as Lightroom, but then nothing is as fast as Lightroom.  I pulled out the Levels tool and and blackened the shadows a bit and twiddled the white balance.  You could live with it if you had to.  That VirtualBox is more than a little OK.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>I got the networking working on yesterday’s Indiana + VirtualBox + Mac
+install, but not well. I think
+<a href="http://homepage2.nifty.com/mrym3/taiyodo/ae-2.6.0a.tar.gz#../ae-2.6.0a.tar.gz">that driver</a> needs some work, 
+it seems to lock up on big data
+transfers.  Anyhow, just for fun, I brought over a 22-meg 5782×3946 JPG (a
+slide scan, the first picture
+<a href="/ongoing/When/200x/2008/01/26/Fifties-Pix">here</a>), and opened it
+up with the Gimp under Indiana under VirtualBox under OS X.
+And it worked.  It sure ain’t as fast as Lightroom, but then nothing is as
+fast as Lightroom.  I pulled out the Levels tool and and blackened the
+shadows a bit and twiddled the white balance.  You could live with it if you
+had to.  That VirtualBox is more than a little OK.</p>
+                <p>And I have to say, Indiana feels pretty nice too.  Unlike any previous
+Solaris experience, I didn’t have to, you know, <em>think</em> about the
+infrastructure.  The shell worked like I expected.  Commands like
+<code>tar</code> and
+<code>make</code> and so on worked like I expected. Gnome worked like I
+expected. Those guys are on the right track.</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/13/">
+        <title>VirtualBox and Solaris</title>
+        <link href="VirtualBox-Solaris"/>
+        <link rel="replies" thr:count="8" type="application/xhtml+xml" href="VirtualBox-Solaris#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/13/VirtualBox-Solaris</id>
+        <published>2008-02-13T01:00:00-08:00</published>
+        <updated>2008-02-13T10:16:53-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Solaris"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Solaris"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Servers"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Servers"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Wow, we must have some pretty sharp M&amp;A people.  I’m no virtualization guru, but I thought that at least I knew about the serious players.  But now we’re  <a href="http://blogs.sun.com/tpm/entry/virtualbox">buying innotek</a>, who make VirtualBox; I’d never heard of ’em but the reviews look good.  I tried it out and learned a couple things.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Wow, we must have some pretty sharp M&amp;A people.  I’m no virtualization
+guru, but I thought that at least I knew about the serious players.  But now
+we’re 
+<a href="http://blogs.sun.com/tpm/entry/virtualbox">buying innotek</a>, who
+make VirtualBox; I’d never heard of ’em but the reviews look good.  I tried it
+out and learned a couple things.</p>
+                <p>First, there’s an OS X version which has a “Beta” label, but it downloads
+fast (only 21M!), installs easy, and is 100% Mac-flavored, seems to more or
+less Just Work.</p>
+                <p>The defaults are silly though; 128M of memory and 8G of disk.  Neither 
+<a href="http://www.nexenta.org/os/Download">Nexenta 1.0</a>
+nor the 
+<a href="http://opensolaris.org/os/project/indiana/resources/getit/">Indiana
+Developer Preview</a> worked, nor did either provide useful error messages.
+Cranking the memory to 1024M and the disk to 20G got them both to install.</p>
+                <p>Nexenta couldn’t get out of console mode into X, but it seemed like a
+perfectly functional Unix system.  Bug filed.</p>
+                <p>Indiana had Gnome running, felt perfectly snappy, but couldn’t see my
+Airport network.  I filed the bug and there was a workaround posted this
+morning.</p>
+                <p>VirtualBox tickles my fancy: small, lightweight, works.  Hmm... I wonder
+how the Orange Box games will run on my Mac?</p>
+            </div>
+        </content>
+    </entry>
+    <entry xml:base="When/200x/2008/02/12/">
+        <title>Them Bits</title>
+        <link href="Slides-Done"/>
+        <link rel="replies" thr:count="10" type="application/xhtml+xml" href="Slides-Done#comments"/>
+        <id>http://www.tbray.org/ongoing/When/200x/2008/02/12/Slides-Done</id>
+        <published>2008-02-12T01:00:00-08:00</published>
+        <updated>2008-02-12T00:26:01-08:00</updated>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts/Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Arts"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Photos"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology/Storage"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Technology"/>
+        <category scheme="http://www.tbray.org/ongoing/What/" term="Storage"/>
+        <summary type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">Earlier this evening, I finished scanning the slides I have that <a href="http://www.textuality.com/BillBray/">my Dad</a> took.  That’s a lot of slides and a lot of bits.  With observations about Wal-Mart and Ubuntu and the end of optical storage.</div>
+        </summary>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <p>Earlier this evening, I finished scanning the slides I have that
+<a href="http://www.textuality.com/BillBray/">my Dad</a> took.  That’s a lot
+of slides and a lot of bits.  With observations about Wal-Mart and Ubuntu and
+the end of optical storage.</p>
+                <p>I’ve written about this scanning project
+<a href="/ongoing/When/200x/2003/03/02/Scanner">here</a> and
+<a href="/ongoing/When/200x/2003/03/27/Scanner">here</a> and repeatedly
+<a href="http://www.google.com/search?as_q=fss&amp;as_sitesearch=tbray.org">here</a>
+and most recently
+<a href="/ongoing/When/200x/2008/01/26/Fifties-Pix">here</a>.</p>
+                <p>It’s a milestone.  There are still some left from my pre-digicam years
+with Lauren, and I’m looking forward to those.  But, five years in, I’m way
+more than half-way through the job.</p>
+                <p>So I scan ’em on WinXP on a Sun Ultra using the laughably-ugly NikonScan
+software that I’ve become pretty deft with.  Then I switch to Ubuntu to blast
+’em onto DVDs.  On Ubuntu everything’s faster and there are no irritating
+popups and
+<a href="/ongoing/When/200x/2006/10/19/Ubuntu-DVD-Writer">writing DVDs Just Works</a>, and I suffer cognitive dissonance while
+noting which of these is ubiquitous and which is geeky.</p>
+                <p>Except for, I ran out of writeable DVDs last time I dumped.
+Coincidentally, Lauren and I had to go into a Wal-Mart the other day, the
+first time in years, and my whole nervous system just about imploded.  The
+amount of stuff in those places, who could possibly need it all?  Anyhow I
+figured they’d have to have DVD blanks, and they did, except for the price for
+50 was only a buck more than the price for 20 so that’s what I had to buy.</p>
+                <p>And I’m thinking, maybe this is the last writeable optical media I’ll ever
+buy.  USB keys are getting close in size and you can write ’em a whole lot
+faster, and they don’t occupy any more space, really.  The notion of using
+them for long-term storage hasn’t caught on, but it’s only a matter of time.</p>
+            </div>
+        </content>
+    </entry>
+</feed>

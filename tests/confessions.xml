@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="http://savagepencil.typepad.com/confessions/">
+<title>Confessions of a Grade School Role Model</title>
+<link>http://savagepencil.typepad.com/confessions/</link>
+<description></description>
+<dc:language>en-US</dc:language>
+<dc:creator></dc:creator>
+<dc:date>2008-02-26T23:27:06-06:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.typepad.com/" />
+
+
+<items>
+<rdf:Seq><rdf:li rdf:resource="http://savagepencil.typepad.com/confessions/2007/11/big-bend-texas.html" />
+<rdf:li rdf:resource="http://savagepencil.typepad.com/confessions/2007/07/california-june.html" />
+<rdf:li rdf:resource="http://savagepencil.typepad.com/confessions/2007/03/i_have_started_.html" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="http://savagepencil.typepad.com/confessions/2007/11/big-bend-texas.html">
+<title>Big Bend, Texas, November 2007</title>
+<link>http://savagepencil.typepad.com/confessions/2007/11/big-bend-texas.html</link>
+<description></description>
+<content:encoded>&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2694.jpg&quot;&gt;&lt;img alt=&quot;Img_2694&quot; title=&quot;Img_2694&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2694.jpg&quot; width=&quot;400&quot; height=&quot;300&quot; border=&quot;0&quot;  /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2692.jpg&quot;&gt;&lt;img alt=&quot;Img_2692&quot; title=&quot;Img_2692&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2692.jpg&quot; width=&quot;270&quot; height=&quot;359&quot; border=&quot;0&quot;  /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2816.jpg&quot;&gt;&lt;img width=&quot;270&quot; height=&quot;359&quot; border=&quot;0&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2816.jpg&quot; alt=&quot;Img_2816&quot; title=&quot;Img_2816&quot; /&gt;&lt;/a&gt; &lt;/p&gt;
+
+
+
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2825_13.jpg&quot;&gt;&lt;img width=&quot;270&quot; height=&quot;359&quot; border=&quot;0&quot; alt=&quot;Img_2825_13&quot; title=&quot;Img_2825_13&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2825_13.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2840.jpg&quot;&gt;&lt;img width=&quot;400&quot; height=&quot;300&quot; border=&quot;0&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2840.jpg&quot; title=&quot;Img_2840&quot; alt=&quot;Img_2840&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2783.jpg&quot;&gt;&lt;img width=&quot;270&quot; height=&quot;359&quot; border=&quot;0&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2783.jpg&quot; title=&quot;Img_2783&quot; alt=&quot;Img_2783&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2812.jpg&quot;&gt;&lt;img width=&quot;400&quot; height=&quot;300&quot; border=&quot;0&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2812.jpg&quot; title=&quot;Img_2812&quot; alt=&quot;Img_2812&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/11/26/img_2893.jpg&quot;&gt;&lt;img width=&quot;270&quot; height=&quot;359&quot; border=&quot;0&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/11/26/img_2893.jpg&quot; title=&quot;Img_2893&quot; alt=&quot;Img_2893&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</content:encoded>
+
+
+<dc:subject>Photos</dc:subject>
+
+<dc:creator>Karla  Steffen</dc:creator>
+<dc:date>2008-02-26T23:27:06-06:00</dc:date>
+</item>
+<item rdf:about="http://savagepencil.typepad.com/confessions/2007/07/california-june.html">
+<title>California, June 2007</title>
+<link>http://savagepencil.typepad.com/confessions/2007/07/california-june.html</link>
+<description>Elephant lions, San Simeon Golden Gate Bridge Painted Ladies, San Francisco</description>
+<content:encoded>&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/07/19/img_1616_5.jpg&quot;&gt;&lt;img title=&quot;Img_1616_5&quot; height=&quot;300&quot; alt=&quot;Img_1616_5&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/07/19/img_1616_5.jpg&quot; width=&quot;400&quot; border=&quot;0&quot; /&gt;&lt;/a&gt; &lt;br /&gt;&lt;em&gt;Elephant lions, San Simeon &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/07/19/img_2135.jpg&quot;&gt;&lt;img title=&quot;Img_2135&quot; height=&quot;300&quot; alt=&quot;Img_2135&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/07/19/img_2135.jpg&quot; width=&quot;400&quot; border=&quot;0&quot; /&gt;&lt;/a&gt; &lt;br /&gt;&lt;em&gt;Golden Gate Bridge &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://savagepencil.typepad.com/photos/uncategorized/2007/07/19/img_2026_2.jpg&quot;&gt;&lt;img title=&quot;Img_2026_2&quot; height=&quot;359&quot; alt=&quot;Img_2026_2&quot; src=&quot;http://savagepencil.typepad.com/confessions/images/2007/07/19/img_2026_2.jpg&quot; width=&quot;270&quot; border=&quot;0&quot; /&gt;&lt;/a&gt; &lt;br /&gt;&lt;em&gt;Painted Ladies, San Francisco&lt;/em&gt;&lt;/p&gt;</content:encoded>
+
+
+<dc:subject>Photos</dc:subject>
+
+<dc:creator>Karla  Steffen</dc:creator>
+<dc:date>2007-07-19T22:31:28-05:00</dc:date>
+</item>
+<item rdf:about="http://savagepencil.typepad.com/confessions/2007/03/i_have_started_.html">
+<title></title>
+<link>http://savagepencil.typepad.com/confessions/2007/03/i_have_started_.html</link>
+<description>I have started a new blog, here, called &quot;Charlie Letters.&quot; Pretty banner and improved graphics are forthcoming. I may occasionally still post on the blog here, but will probably concentrate my attentions for a while at the new site. Be sure to read the &quot;About&quot; page first, link at top...</description>
+<content:encoded>&lt;p&gt;I have started a new blog, &lt;a href=&quot;http://savagepencil.typepad.com/charlieletters/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;, called &amp;quot;Charlie Letters.&amp;quot;&amp;nbsp; Pretty banner and improved graphics are forthcoming.&amp;nbsp; I may occasionally still post on the blog here, but will probably concentrate my attentions for a while at the new site.&amp;nbsp; Be sure to read the &amp;quot;About&amp;quot; page first, link at top right, the new site will make far more sense after you do.&amp;nbsp; This is a project I&#39;ve been wanting to do for ages, and finally started just last night.&amp;nbsp; Come on by!&lt;/p&gt;</content:encoded>
+
+
+<dc:subject>Web/news/politics</dc:subject>
+
+<dc:creator>Karla  Steffen</dc:creator>
+<dc:date>2007-03-27T20:34:49-05:00</dc:date>
+</item>
+
+
+</rdf:RDF>
+<!-- ph=1 -->

@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://feeds.feedburner.com/~d/styles/rss2full.xsl" type="text/xsl" media="screen"?>
+<?xml-stylesheet href="http://feeds.feedburner.com/~d/styles/itemcontent.css" type="text/css" media="screen"?>
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+    <channel>
+        <title>It's Not For Everyone.</title>
+        <link>http://wileywiggins.blogspot.com/</link>
+        <language>en</language>
+        <managingEditor>noemail@noemail.org (Wiley)</managingEditor>
+        <lastBuildDate>Tue, 26 Feb 2008 21:27:20 -0600</lastBuildDate>
+        <generator>Blogger http://www.blogger.com</generator>
+        <openSearch:totalResults xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/">2045</openSearch:totalResults>
+        <openSearch:startIndex xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/">1</openSearch:startIndex>
+        <openSearch:itemsPerPage xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/">25</openSearch:itemsPerPage>
+        <description/>
+        <media:copyright>cc attribution non-commercial 2005 Wiley Wiggins</media:copyright>
+        <media:thumbnail url="http://wileywiggins.com/notd.jpg"/>
+        <media:keywords>movies,music,weird,wiley,wiggins</media:keywords>
+        <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Arts/Performing Arts</media:category>
+        <itunes:owner>
+            <itunes:email>weevil@wileywiggins.com</itunes:email>
+            <itunes:name>Wiley Wiggins</itunes:name>
+        </itunes:owner>
+        <itunes:author>Wiley Wiggins</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="http://wileywiggins.com/notd.jpg"/>
+        <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+        <itunes:subtitle>Audio and video suppliments from The News of the Dead, by Wiley Wiggins</itunes:subtitle>
+        <itunes:summary>Audio and video suppliments from The News of the Dead, by Wiley Wiggins</itunes:summary>
+        <itunes:category text="Arts">
+            <itunes:category text="Performing Arts"/>
+        </itunes:category>
+        <geo:lat>30.332506</geo:lat>
+        <geo:long>-97.705714</geo:long>
+        <image>
+            <link>http://wileywiggins.blogspot.com</link>
+            <url>http://www.wileywiggins.com/notd.jpg</url>
+            <title>News of the dead</title>
+        </image>
+        <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" href="http://wileywiggins.blogspot.com/rss/blogger_rss.xml" type="application/rss+xml"/>
+        <feedburner:browserFriendly>This is an XML content feed. It is intended to be viewed in a newsreader or syndicated to another site.</feedburner:browserFriendly>
+        <item>
+            <title>Under The Microscope  » Blog Archive   » Your Screen. On A Screen. On Screen! [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241863781/</link>
+            <category>appletv cool mac</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 26 Feb 2008 21:27:20 -0600</pubDate>
+            <guid isPermaLink="false">http://www.rogueamoeba.com/utm/2008/02/21/your-screen-on-a-screen-on-screen/</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/mac"/>
+                    <rdf:li resource="http://del.icio.us/tag/cool"/>
+                    <rdf:li resource="http://del.icio.us/tag/appletv"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.rogueamoeba.com/utm/2008/02/21/your-screen-on-a-screen-on-screen/</feedburner:origLink>
+        </item>
+        <item>
+            <title>Animal Superpowers - we make money not art [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241616288/how-does-the-bird-device.php</link>
+            <category>enhanced kids reality,</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 26 Feb 2008 11:42:55 -0600</pubDate>
+            <guid isPermaLink="false">http://www.we-make-money-not-art.com/archives/2008/02/how-does-the-bird-device.php</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/enhanced"/>
+                    <rdf:li resource="http://del.icio.us/tag/reality%2C"/>
+                    <rdf:li resource="http://del.icio.us/tag/kids"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.we-make-money-not-art.com/archives/2008/02/how-does-the-bird-device.php</feedburner:origLink>
+        </item>
+        <item>
+            <title>TV's "Monte" [Flickr]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241202335/</link>
+            <category>monte</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Mon, 25 Feb 2008 19:10:33 -0600</pubDate>
+            <guid isPermaLink="false">tag:flickr.com,2005:/photo/2292080313</guid>
+            <creativeCommons:license>http://creativecommons.org/licenses/by/2.0/deed.en</creativeCommons:license>
+            <description>&lt;p&gt;&lt;a href="http://www.flickr.com/people/wwiggins/"&gt;weevil&lt;/a&gt; posted a photo:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.flickr.com/photos/wwiggins/2292080313/" title="TV's &amp;quot;Monte&amp;quot;"&gt;&lt;img src="http://farm3.static.flickr.com/2130/2292080313_7b23a222a7_m.jpg" width="180" height="240" alt="TV's &amp;quot;Monte&amp;quot;" /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+            <enclosure url="http://farm3.static.flickr.com/2130/2292080313_4b9ccbb8be_o.jpg" length="0" type="image/jpeg"/>
+            <dc:date.Taken xmlns:dc="http://purl.org/dc/elements/1.1/">2008-02-25T14:44:53-08:00</dc:date.Taken>
+            <feedburner:origLink>http://www.flickr.com/photos/wwiggins/2292080313/</feedburner:origLink>
+        </item>
+        <item>
+            <title>Diego Gravinese's Paintings [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237948329/</link>
+            <category>art painting</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 19 Feb 2008 21:29:43 -0600</pubDate>
+            <guid isPermaLink="false">http://paintalicious.org/2007/11/07/diego-gravineses-paintings/</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/art"/>
+                    <rdf:li resource="http://del.icio.us/tag/painting"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://paintalicious.org/2007/11/07/diego-gravineses-paintings/</feedburner:origLink>
+        </item>
+        <item>
+            <title>Video Thing: Japanese Pixelvision cameras [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237801497/japanese-pixelvision-cameras.html</link>
+            <category>consumer japan pixelvision toy video videothing</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 19 Feb 2008 15:32:47 -0600</pubDate>
+            <guid isPermaLink="false">http://videothing.blogspot.com/2008/02/japanese-pixelvision-cameras.html</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/videothing"/>
+                    <rdf:li resource="http://del.icio.us/tag/pixelvision"/>
+                    <rdf:li resource="http://del.icio.us/tag/consumer"/>
+                    <rdf:li resource="http://del.icio.us/tag/toy"/>
+                    <rdf:li resource="http://del.icio.us/tag/video"/>
+                    <rdf:li resource="http://del.icio.us/tag/japan"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://videothing.blogspot.com/2008/02/japanese-pixelvision-cameras.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Custom View-Master™ [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237705142/</link>
+            <category>3d photo viewmaster</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 19 Feb 2008 11:44:37 -0600</pubDate>
+            <guid isPermaLink="false">http://www.customviewmaster.com/</guid>
+            <description>custom view master reels</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/viewmaster"/>
+                    <rdf:li resource="http://del.icio.us/tag/photo"/>
+                    <rdf:li resource="http://del.icio.us/tag/3d"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.customviewmaster.com/</feedburner:origLink>
+        </item>
+        <item>
+            <title>DNATube.com Scientific Video Site [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/235100815/</link>
+            <category>science video</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Thu, 14 Feb 2008 12:21:50 -0600</pubDate>
+            <guid isPermaLink="false">http://www.dnatube.com/</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/science"/>
+                    <rdf:li resource="http://del.icio.us/tag/video"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.dnatube.com/</feedburner:origLink>
+        </item>
+        <item>
+            <title>videotrace - Google Search [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/230550218/search</link>
+            <category>3d object recognition video</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 06 Feb 2008 15:54:29 -0600</pubDate>
+            <guid isPermaLink="false">http://www.google.com/search?q=videotrace</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/video"/>
+                    <rdf:li resource="http://del.icio.us/tag/3d"/>
+                    <rdf:li resource="http://del.icio.us/tag/recognition"/>
+                    <rdf:li resource="http://del.icio.us/tag/object"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.google.com/search?q=videotrace</feedburner:origLink>
+        </item>
+        <item>
+            <title>Sundance Review: Goliath - Cinematical [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/229842419/</link>
+            <category>cinematical film goliath sundance sxsw zellner</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 05 Feb 2008 15:24:56 -0600</pubDate>
+            <guid isPermaLink="false">http://www.cinematical.com/2008/02/03/sundance-review-goliath/</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/film"/>
+                    <rdf:li resource="http://del.icio.us/tag/zellner"/>
+                    <rdf:li resource="http://del.icio.us/tag/cinematical"/>
+                    <rdf:li resource="http://del.icio.us/tag/goliath"/>
+                    <rdf:li resource="http://del.icio.us/tag/sxsw"/>
+                    <rdf:li resource="http://del.icio.us/tag/sundance"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.cinematical.com/2008/02/03/sundance-review-goliath/</feedburner:origLink>
+        </item>
+        <item>
+            <title>1986 Classic making a Return? [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/227524151/4061</link>
+            <category>80's childhood darkcastle games mac</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Fri, 01 Feb 2008 17:26:36 -0600</pubDate>
+            <guid isPermaLink="false">http://macmegasite.com/node/4061</guid>
+            <description>dark castle!!</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/games"/>
+                    <rdf:li resource="http://del.icio.us/tag/80%27s"/>
+                    <rdf:li resource="http://del.icio.us/tag/mac"/>
+                    <rdf:li resource="http://del.icio.us/tag/childhood"/>
+                    <rdf:li resource="http://del.icio.us/tag/darkcastle"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://macmegasite.com/node/4061</feedburner:origLink>
+        </item>
+        <item>
+            <title>Johnny Chung Lee - Projects - Wii [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/226210658/</link>
+            <category>hack interactiondesign wii</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 18:44:43 -0600</pubDate>
+            <guid isPermaLink="false">http://www.cs.cmu.edu/~johnny/projects/wii/</guid>
+            <description>wii remote experiments</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/wii"/>
+                    <rdf:li resource="http://del.icio.us/tag/interactiondesign"/>
+                    <rdf:li resource="http://del.icio.us/tag/hack"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.cs.cmu.edu/~johnny/projects/wii/</feedburner:origLink>
+        </item>
+        <item>
+            <title>Woody Allen's typography — Kit·blog — Cristian ·Kit· Paul [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/226092356/woody_allens_typography.html</link>
+            <category>film typography</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 14:24:35 -0600</pubDate>
+            <guid isPermaLink="false">http://kitblog.com/2007/12/woody_allens_typography.html</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/typography"/>
+                    <rdf:li resource="http://del.icio.us/tag/film"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://kitblog.com/2007/12/woody_allens_typography.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>God on the brain | Science &amp; Consciousness Review [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225990947/</link>
+            <category>neurobiology religion</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 10:43:50 -0600</pubDate>
+            <guid isPermaLink="false">http://sci-con.org/2008/01/god-on-the-brain/</guid>
+            <description>Temporal Lobe Epilepsy and religious visions</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/neurobiology"/>
+                    <rdf:li resource="http://del.icio.us/tag/religion"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://sci-con.org/2008/01/god-on-the-brain/</feedburner:origLink>
+        </item>
+        <item>
+            <title>MacUpdate: MovieChapterizer 2.6 [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225984450/screenshot.php</link>
+            <category>metadata movies quicktime</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 10:27:57 -0600</pubDate>
+            <guid isPermaLink="false">http://www.macupdate.com/screenshot.php?id=23322</guid>
+            <description>add chapter markers to quicktime movies</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/quicktime"/>
+                    <rdf:li resource="http://del.icio.us/tag/movies"/>
+                    <rdf:li resource="http://del.icio.us/tag/metadata"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.macupdate.com/screenshot.php?id=23322</feedburner:origLink>
+        </item>
+        <item>
+            <title>Clive Thompson on Why Sci-Fi Is the Last Bastion of Philosophical Writing [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225984451/st_thompson</link>
+            <category>DistantFuture SF philosophy</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 10:19:59 -0600</pubDate>
+            <guid isPermaLink="false">http://www.wired.com/techbiz/people/magazine/16-02/st_thompson</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/SF"/>
+                    <rdf:li resource="http://del.icio.us/tag/DistantFuture"/>
+                    <rdf:li resource="http://del.icio.us/tag/philosophy"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.wired.com/techbiz/people/magazine/16-02/st_thompson</feedburner:origLink>
+        </item>
+        <item>
+            <title>Subtitles - download DivX subtitles from the biggest open subtitles database [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225367603/en</link>
+            <category>fansubs video</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Tue, 29 Jan 2008 11:44:56 -0600</pubDate>
+            <guid isPermaLink="false">http://www.opensubtitles.com/en</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/fansubs"/>
+                    <rdf:li resource="http://del.icio.us/tag/video"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.opensubtitles.com/en</feedburner:origLink>
+        </item>
+        <item>
+            <title>NPR: Big Movie, Small Cat Star at Sundance [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/224760030/story.php</link>
+            <category>goliath zellner</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Mon, 28 Jan 2008 13:50:26 -0600</pubDate>
+            <guid isPermaLink="false">http://www.npr.org/templates/story/story.php?storyId=18328932</guid>
+            <description>Goliath piece on NPR</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/goliath"/>
+                    <rdf:li resource="http://del.icio.us/tag/zellner"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.npr.org/templates/story/story.php?storyId=18328932</feedburner:origLink>
+        </item>
+        <item>
+            <title>Submerge - mac software for download at iusethis [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/224760031/submerge</link>
+            <category>appletv subtitles</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 09 Jan 2008 14:51:14 -0600</pubDate>
+            <guid isPermaLink="false">http://osx.iusethis.com/app/submerge</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/appletv"/>
+                    <rdf:li resource="http://del.icio.us/tag/subtitles"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://osx.iusethis.com/app/submerge</feedburner:origLink>
+        </item>
+        <item>
+            <title>VIDVOX [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/213972099/</link>
+            <category>video videothing visualization</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 09 Jan 2008 13:50:24 -0600</pubDate>
+            <guid isPermaLink="false">http://www.vidvox.net/</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/video"/>
+                    <rdf:li resource="http://del.icio.us/tag/visualization"/>
+                    <rdf:li resource="http://del.icio.us/tag/videothing"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.vidvox.net/</feedburner:origLink>
+        </item>
+        <item>
+            <title>The Do-It-Yourself Giallo Generator [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/213957932/giallo_intro.html</link>
+            <category>film funny italian nerd</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Wed, 09 Jan 2008 13:08:15 -0600</pubDate>
+            <guid isPermaLink="false">http://www.braineater.com/misc/giallo_intro.html</guid>
+            <description/>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/funny"/>
+                    <rdf:li resource="http://del.icio.us/tag/film"/>
+                    <rdf:li resource="http://del.icio.us/tag/italian"/>
+                    <rdf:li resource="http://del.icio.us/tag/nerd"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://www.braineater.com/misc/giallo_intro.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>G O L A I T H [del.icio.us]</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/212741583/trailer.html</link>
+            <category>goliath movie trailer zellner</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil</dc:creator>
+            <pubDate>Mon, 07 Jan 2008 12:58:36 -0600</pubDate>
+            <guid isPermaLink="false">http://goliathismissing.com/trailer.html</guid>
+            <description>Goliath, by the Zellner Brothers</description>
+            <taxo:topics xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+                <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:li resource="http://del.icio.us/tag/movie"/>
+                    <rdf:li resource="http://del.icio.us/tag/zellner"/>
+                    <rdf:li resource="http://del.icio.us/tag/trailer"/>
+                    <rdf:li resource="http://del.icio.us/tag/goliath"/>
+                </rdf:Bag>
+            </taxo:topics>
+            <feedburner:origLink>http://goliathismissing.com/trailer.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>I want this for christmas.</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/197862191/i-want-this-for-christmas.html</link>
+            <category>shoegaze</category>
+            <category>music</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Sun, 09 Dec 2007 22:25:57 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-5597006717167070942</guid>
+            <description>&lt;a href="http://www.amazon.com/Brit-Box-Shoegaze-Brit-Pop-Millennium/dp/B000TXNBDG/ref=pd_bbs_sr_1?ie=UTF8&amp;s=music&amp;qid=1196607979&amp;sr=8-1"&gt;The Brit Box: U.K. Indie, Shoegaze, and Brit-Pop Gems of the Last Millennium [SPECIAL EDITION]&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=QJvlrZC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=QJvlrZC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=CsUcNgC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=CsUcNgC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=THHZCuC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=THHZCuC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=xh8TKRC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=xh8TKRC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=68eLqfC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=68eLqfC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=UW8oMNc"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=UW8oMNc" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2007/12/i-want-this-for-christmas.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Diagonals and White Denim at OK Mountain, Saturday</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/198700024/diagonals-and-white-denim-at-ok.html</link>
+            <category>diagonals</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 11 Dec 2007 10:24:16 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-5834308166773175437</guid>
+            <description>&lt;img src="http://a462.ac-images.myspacecdn.com/images01/111/l_53bfdbe8790db41669e22b5bf6bcd865.jpg" width="420"&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=v8uyBtC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=v8uyBtC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=m40nNrC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=m40nNrC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=O44SJXC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=O44SJXC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=LeFyt8C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=LeFyt8C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=8kiFz2C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=8kiFz2C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=CtpKSbc"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=CtpKSbc" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2007/12/diagonals-and-white-denim-at-ok.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Rabbi Papa (?!)</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/198301285/rabbi-papa.html</link>
+            <category>film</category>
+            <category>weird</category>
+            <category>Japan</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 13 Dec 2007 00:06:27 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-7637709368290934017</guid>
+            <description>&lt;embed src="http://services.brightcove.com/services/viewer/federated_f8/1214128517" bgcolor="#FFFFFF" flashVars="videoId=1311198044&amp;playerId=1214128517&amp;viewerSecureGatewayURL=https://services.brightcove.com/services/amfgateway&amp;servicesURL=http://services.brightcove.com/services&amp;cdnURL=http://admin.brightcove.com&amp;domain=embed&amp;autoStart=false&amp;" base="http://admin.brightcove.com" name="flashObj" width="440" height="380" seamlesstabbing="false" type="application/x-shockwave-flash" swLiveConnect="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"&gt;&lt;/embed&gt;&lt;br /&gt;&lt;br /&gt;WAAAAAAAHHHHH?&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=VEjsBOC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=VEjsBOC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=t2f5f6C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=t2f5f6C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=pMb9p8C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=pMb9p8C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=kEtxeNC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=kEtxeNC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=O9kIThC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=O9kIThC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=vpKwhec"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=vpKwhec" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://services.brightcove.com/services/viewer/federated_f8/1214128517" length="54334" type="application/x-shockwave-flash"/>
+            <media:content url="http://services.brightcove.com/services/viewer/federated_f8/1214128517" fileSize="54334" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:subtitle> WAAAAAAAHHHHH?</itunes:subtitle>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:summary> WAAAAAAAHHHHH?</itunes:summary>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2007/12/rabbi-papa.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Death to Myspace</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/205326311/death-to-myspace.html</link>
+            <category>personal</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Sun, 23 Dec 2007 19:55:22 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-5809646801010478718</guid>
+            <description>I killed my myspace account in a fit of aggravation today... I had been pretty good about keeping personal posts on there and movie/art/gizmo related stuff on here, but now that I no longer have that as an outlet, don't be surprised if I occasionally have a little more candor on this blog. &lt;br /&gt;&lt;br /&gt;The new website is really truly almost finished then I'll be trying out weekly pieces of questionable and confusing video. We'll see if it works out.
+&lt;p&gt;&lt;map name="google_ad_map_bhraJrWbJ4HN.KfQJNpiDGSAd94_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/bhraJrWbJ4HN.KfQJNpiDGSAd94_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_bhraJrWbJ4HN.KfQJNpiDGSAd94_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=bhraJrWbJ4HN.KfQJNpiDGSAd94_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2007%2F12%2Fdeath-to-myspace.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=m2jkCWC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=m2jkCWC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=eCRzfkC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=eCRzfkC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=ujeSwnC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=ujeSwnC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EEunKvC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EEunKvC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=FrNsg7C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=FrNsg7C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=OGXua9c"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=OGXua9c" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2007/12/death-to-myspace.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>COLOSSUS: THE FORBIN PROJECT</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/205949285/colossus-forbin-project.html</link>
+            <category>ai</category>
+            <category>colossus</category>
+            <category>70's film</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 25 Dec 2007 18:07:58 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-1886098651475773928</guid>
+            <description>&lt;img src="http://wileywiggins.com/forbin.png" width="420"&gt;&lt;br /&gt;I Watched this great 70's cold war SF flick a few nights ago. Aside from the irresistible 70's punchcard-and-magnetic reel computer porn of it, The plot, pacing, and acting have a lot of appeal. A real gem. &lt;br /&gt;&lt;br /&gt; &lt;a href="http://www.eccentric-cinema.com/cult_movies/colossus.htm"&gt;Eccentric cinema: COLOSSUS: THE FORBIN PROJECT&lt;/a&gt;&lt;br /&gt;&lt;a href="http://cinemageddon.org/details.php?id=5581"&gt;Cinemageddon: Colossus...&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;img src="http://wileywiggins.com/require.png" width="420"&gt;&lt;br /&gt;&lt;br /&gt;Dave Brasgalla has made some excellent Colossus icons and desktops for OS X. &lt;br /&gt;You can find them here:&lt;br /&gt;&lt;br /&gt;&lt;a href="http://www.pixelhuset.se/pixelhuset.html"&gt;http://www.pixelhuset.se&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;object width="425" height="355"&gt;&lt;param name="movie" value="http://www.youtube.com/v/W7Rq-PEW5qM&amp;rel=1"&gt;&lt;/param&gt;&lt;param name="wmode" value="transparent"&gt;&lt;/param&gt;&lt;embed src="http://www.youtube.com/v/W7Rq-PEW5qM&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=To5rhqC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=To5rhqC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=4DpTwdC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=4DpTwdC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=yDpvU9C"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=yDpvU9C" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=fM4o8PC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=fM4o8PC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=GV5F7WC"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=GV5F7WC" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=O4rYSOc"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=O4rYSOc" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://www.youtube.com/v/W7Rq-PEW5qM&amp;rel=1" length="715" type="application/x-shockwave-flash"/>
+            <media:content url="http://www.youtube.com/v/W7Rq-PEW5qM&amp;rel=1" fileSize="715" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:subtitle> I Watched this great 70's cold war SF flick a few nights ago. Aside from the irresistible 70's punchcard-and-magnetic reel computer porn of it, The plot, pacing, and acting have a lot of appeal. A real gem. Eccentric cinema: COLOSSUS: THE FORBIN PROJECT </itunes:subtitle>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:summary> I Watched this great 70's cold war SF flick a few nights ago. Aside from the irresistible 70's punchcard-and-magnetic reel computer porn of it, The plot, pacing, and acting have a lot of appeal. A real gem. Eccentric cinema: COLOSSUS: THE FORBIN PROJECT Cinemageddon: Colossus... Dave Brasgalla has made some excellent Colossus icons and desktops for OS X. You can find them here: http://www.pixelhuset.se </itunes:summary>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2007/12/colossus-forbin-project.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Goliath is missing</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/212741584/goliath-is-missing.html</link>
+            <category>goliath</category>
+            <category>zellner</category>
+            <category>sundance08</category>
+            <category>movie</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Fri, 11 Jan 2008 10:55:03 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-5116731179327958390</guid>
+            <description>&lt;embed src="http://www.goliathismissing.com/flvplayer.swf" width="420" height="255" allowfullscreen="true" allowscriptaccess="always" flashvars="&amp;file=http://www.goliathismissing.com/goliath_trailer.flv&amp;height=255&amp;width=420" /&gt;&lt;/embed&gt;
+&lt;p&gt;&lt;map name="google_ad_map_.J-ukgNmHGlmpTFpbJZUHStYMU8_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/.J-ukgNmHGlmpTFpbJZUHStYMU8_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_.J-ukgNmHGlmpTFpbJZUHStYMU8_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=.J-ukgNmHGlmpTFpbJZUHStYMU8_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F01%2Fgoliath-is-missing.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=2k9XrhD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=2k9XrhD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=HLcPJbD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=HLcPJbD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=a2tnjvD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=a2tnjvD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=ldJu3ID"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=ldJu3ID" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=9Y68wpD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=9Y68wpD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=x1HeNJd"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=x1HeNJd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://www.goliathismissing.com/goliath_trailer.flv&amp;height=380&amp;width=640" length="0" type="application/x-shockwave-flash"/>
+            <media:content url="http://www.goliathismissing.com/goliath_trailer.flv&amp;height=380&amp;width=640" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/goliath-is-missing.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Diagonals, Friday the 11th at Beerland</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/212717747/diagonals-friday-11th-at-beerland.html</link>
+            <category>diagonals</category>
+            <category>music</category>
+            <category>austin</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Fri, 11 Jan 2008 10:55:20 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-6213956162029315234</guid>
+            <description>&lt;a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://a658.ac-images.myspacecdn.com/images01/22/l_4c48cef2ff2d20d08def5b348274e6a9.jpg"&gt;&lt;img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 400px;" src="http://a658.ac-images.myspacecdn.com/images01/22/l_4c48cef2ff2d20d08def5b348274e6a9.jpg" border="0" alt="" /&gt;&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EZnARND"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EZnARND" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=hFsQ2vD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=hFsQ2vD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=VjRXdsD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=VjRXdsD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=YoZ1aaD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=YoZ1aaD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=zWQ4AZD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=zWQ4AZD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=jocyUXd"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=jocyUXd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/diagonals-friday-11th-at-beerland.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>LAist: Vampira Goes to the Great Beyond</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/215641632/laist-vampira-goes-to-great-beyond.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Sat, 12 Jan 2008 14:10:24 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-5487048774883668460</guid>
+            <description>&lt;blockquote&gt; Hollywood has lost another legend. Maila Nurmi, who became synonymous with her character, Vampira, passed away in her sleep yesterday at the age of 86.&lt;/blockquote&gt;&lt;br /&gt;&lt;a href="http://laist.com/2008/01/11/vampira_goes_to.php"&gt;LAist: Vampira Goes to the Great Beyond&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=AtTaIcD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=AtTaIcD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=7I04uKD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=7I04uKD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=JKWWDyD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=JKWWDyD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=9sEeMgD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=9sEeMgD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=jr3s6UD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=jr3s6UD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=JRkPJsd"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=JRkPJsd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/laist-vampira-goes-to-great-beyond.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Off to the festival!</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/219062027/off-to-festival.html</link>
+            <category>sundance08</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Fri, 18 Jan 2008 14:49:25 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-1205165990699268882</guid>
+            <description>Getting on a plane to Utah in a couple of hours, I'll post anything interesting while I'm there!&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=JCujdyD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=JCujdyD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=acdJ1dD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=acdJ1dD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=L2k1C9D"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=L2k1C9D" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=AWqQwXD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=AWqQwXD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=uf31KFD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=uf31KFD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=bkG743d"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=bkG743d" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/off-to-festival.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Back</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/222396982/back.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 24 Jan 2008 11:05:14 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-2996054062938477626</guid>
+            <description>I'm back from Park City, sick (is it possible to go to Sundance and &lt;i&gt;not&lt;/i&gt; get sick?) I had a good time, met some very cool people from &lt;a href="http://www.wholphindvd.com/"&gt;Wholphen&lt;/a&gt; and &lt;a href="http://www.rooftopfilms.com/"&gt;Rooftop films&lt;/a&gt;, and also &lt;a href="http://www.cinevegas.com/"&gt;Cinevegas&lt;/a&gt; programmer &lt;A href="http://www.cinevegas.com/cv/index.php?option=com_myblog&amp;blogger=Mike+Plante&amp;Itemid=240"&gt;Mike Plante&lt;/a&gt;, who curated this year's Frontier Lounge, which was one of the highlights of the festival for me. On display in the lounge were a couple of really nice installations by &lt;a href="http://www.smoothware.com/danny/"&gt;Daniel Rozen&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;I didn't get to see many films (again), just two showings of The Zellner's heartbreaking, funny &lt;a href="http://goliathismissing.com"&gt;Goliath&lt;/a&gt; (one of four movies total that has ever made me cry. Never you mind what the others are). A swedish film called &lt;i&gt;King of Ping-Pong&lt;/i&gt; and The Duplass' &lt;I&gt;Baghead&lt;/I&gt;. &lt;br /&gt;&lt;br /&gt;I've started working on this vaporous podcast that I keep telling myself I will be cranking out weekly, but it's been very hard to decide on tone and content. I'm hoping it will be a collaborative thing with all my friends, but everyone always seems so busy, it's difficult to get momentum.
+&lt;p&gt;&lt;map name="google_ad_map_TQoGOjQajRyfjUTwq8LWyZupSUk_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/TQoGOjQajRyfjUTwq8LWyZupSUk_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_TQoGOjQajRyfjUTwq8LWyZupSUk_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=TQoGOjQajRyfjUTwq8LWyZupSUk_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F01%2Fback.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=hZnxZWD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=hZnxZWD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=nGgjQ5D"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=nGgjQ5D" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Kw6m7DD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Kw6m7DD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=5cYs31D"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=5cYs31D" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=28JpcZD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=28JpcZD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=15gJoJd"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=15gJoJd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/back.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Awthumfest 2008</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/223246833/awthumfest-2008.html</link>
+            <category>austin</category>
+            <category>awthum</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Fri, 25 Jan 2008 18:59:52 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-3654675475834188978</guid>
+            <description>&lt;object width="425" height="355"&gt;&lt;param name="movie" value="http://www.youtube.com/v/2rDZADEnzJM&amp;rel=1"&gt;&lt;/param&gt;&lt;param name="wmode" value="transparent"&gt;&lt;/param&gt;&lt;embed src="http://www.youtube.com/v/2rDZADEnzJM&amp;rel=1" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Qek0HsD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Qek0HsD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=baT1GFD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=baT1GFD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Oip6VCD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Oip6VCD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=frhiVAD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=frhiVAD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=fS3Bt7D"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=fS3Bt7D" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=pFS5a1d"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=pFS5a1d" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://www.youtube.com/v/2rDZADEnzJM&amp;rel=1" length="715" type="application/x-shockwave-flash"/>
+            <media:content url="http://www.youtube.com/v/2rDZADEnzJM&amp;rel=1" fileSize="715" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/awthumfest-2008.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Mind Hacks: Polanski and the Professor</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225363665/mind-hacks-polanski-and-professor.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 29 Jan 2008 11:25:04 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-3036584967597994383</guid>
+            <description>&lt;blockquote&gt;It was 1970, and a white Rolls Royce was gliding through the streets of London. Inside were the obviously disturbed Roman Polanski, the film director still reeling from the murder of his wife, and Richard Gregory, the legendary cognitive psychologist.&lt;br /&gt;&lt;br /&gt;Polanski had discovered Gregory's work on visual perception through his book Eye and Brain and decided he wanted to enlist Gregory's help to create a 3D horror movie.&lt;br /&gt;&lt;br /&gt;The movie was intended to be revolutionary, taking advantage of the brain's perceptual quirks to make a truly disturbing visual experience.&lt;br /&gt;&lt;br /&gt;[...]Interestingly, Gregory also mentions that Polanksi also wanted to use the techniques they developed to make a 3D erotic movie.&lt;/blockquote&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="http://www.mindhacks.com/blog/2008/01/polanski_and_the_pro.html"&gt;Mind Hacks: Polanski and the Professor&lt;/a&gt;
+&lt;p&gt;&lt;map name="google_ad_map_HaDz85Pso9QSHt13yB9vF1y0yCo_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/HaDz85Pso9QSHt13yB9vF1y0yCo_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_HaDz85Pso9QSHt13yB9vF1y0yCo_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=HaDz85Pso9QSHt13yB9vF1y0yCo_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F01%2Fmind-hacks-polanski-and-professor.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EOjBmOD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EOjBmOD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=pjmxYhD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=pjmxYhD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=UTbfxlD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=UTbfxlD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=bG1MDfD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=bG1MDfD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=qbyXgqD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=qbyXgqD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=GfOY63d"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=GfOY63d" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/mind-hacks-polanski-and-professor.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Yoshitaka Amano : Galerie Michael Janssen</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/225992447/yoshitaka-amano-galerie-michael-janssen.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Wed, 30 Jan 2008 10:39:42 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-1399985665305097120</guid>
+            <description>&lt;style type="text/css"&gt;.flickr-photo { border: solid 2px #000000; }.flickr-yourcomment { }.flickr-frame { text-align: left; padding: 3px; }.flickr-caption { font-size: 0.8em; margin-top: 0px; }&lt;/style&gt;&lt;div class="flickr-frame"&gt; &lt;a href="http://www.flickr.com/photos/nearnearfuture/2228621400/" title="photo sharing"&gt;&lt;img src="http://farm3.static.flickr.com/2049/2228621400_ec0baa08ca.jpg" class="flickr-photo" width="418" alt="" /&gt;&lt;/a&gt;&lt;br /&gt; &lt;span class="flickr-caption"&gt;&lt;a href="http://www.flickr.com/photos/nearnearfuture/2228621400/"&gt;P1000308&lt;/a&gt;, originally uploaded by &lt;a href="http://www.flickr.com/people/nearnearfuture/"&gt;we-make-money-not-art&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;    &lt;p class="flickr-yourcomment"&gt; There's some nice images from the &lt;a href="http://www.galeriemichaeljanssen.de/index.php?/exhibition/yoshitaka-amano/"&gt;Yoshitaka Amano &lt;/a&gt; (Gatchaman, Final Fantasy) exhibit in Berlin on &lt;i&gt;We-make-money-not-art&lt;/i&gt;'s &lt;a href="http://www.flickr.com/photos/nearnearfuture/tags/amano/"&gt;Flickr Page&lt;/a&gt;&lt;/p&gt;.&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=HhanOpD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=HhanOpD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=5tHMsxD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=5tHMsxD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=x8qQPND"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=x8qQPND" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=YPVzncD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=YPVzncD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=VK1JKqD"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=VK1JKqD" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=bGuMsqd"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=bGuMsqd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/01/yoshitaka-amano-galerie-michael-janssen.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Alamo Drafthouse Cinema - DEVILS ANGELS with Davie Allan live!</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237227014/alamo-drafthouse-cinema-devils-angels.html</link>
+            <category>alamo</category>
+            <category>davie allan</category>
+            <category>devil's angels</category>
+            <category>cassavetes</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Mon, 18 Feb 2008 16:51:58 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-9062137357305309913</guid>
+            <description>From Thomas:&lt;br /&gt;&lt;blockquote&gt;If you dont know who Davie Allan is - that's alright - there's probably some Voxtrot show you can go cry at.&lt;br /&gt;If you do know the name of the Fuzz Lord, have known his sting, or you wanna see John Cassavetes motorcycling cop faces into the pavement&lt;br /&gt;&lt;br /&gt;THE DEVILS ANGELS (1967) in 35MM&lt;br /&gt;w/ DAVIE ALLAN + THE ARROWS &lt;b&gt;LIVE&lt;/b&gt;&lt;br /&gt;ALAMO DOWNTOWN&lt;br /&gt;WED FEB 20TH&lt;br /&gt;&lt;br /&gt;TIX (IF THERES ANY LEFT) HERE:&lt;br /&gt;&lt;br /&gt;&lt;a href="http://www.originalalamo.com/Show.aspx?id=5041"&gt;Alamo Drafthouse Cinema - DEVILS ANGELS with Davie Allan live!&lt;/a&gt;&lt;/blockquote&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=9YHCoJE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=9YHCoJE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=zTeeOPE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=zTeeOPE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=28OQkhE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=28OQkhE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=6Imdf9E"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=6Imdf9E" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Co11nPE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Co11nPE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=XTOneWe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=XTOneWe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/alamo-drafthouse-cinema-devils-angels.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Droolworthy Japanese Blow Up poster</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237980285/droolworthy-japanese-blow-up-poster.html</link>
+            <category>posters</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 19 Feb 2008 23:03:41 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-2164227466298754268</guid>
+            <description>&lt;img src="http://wileywiggins.com/tJ5LjV6yo5l6c2b1nszf13zv_500.jpg" width="420"&gt;&lt;br /&gt;&lt;br /&gt;Found Via &lt;a href="http://stevemakesnoise.tumblr.com/"&gt;steve makes noise&lt;/a&gt;
+&lt;p&gt;&lt;map name="google_ad_map_9FPd9q5qKoBQ-YcLDNuRpkFFIz8_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/9FPd9q5qKoBQ-YcLDNuRpkFFIz8_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_9FPd9q5qKoBQ-YcLDNuRpkFFIz8_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=9FPd9q5qKoBQ-YcLDNuRpkFFIz8_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Fdroolworthy-japanese-blow-up-poster.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=VbekY7E"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=VbekY7E" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=uPsDO1E"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=uPsDO1E" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=JknWSqE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=JknWSqE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=lDwHUYE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=lDwHUYE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=3jDjaTE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=3jDjaTE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=aj8gywe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=aj8gywe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/droolworthy-japanese-blow-up-poster.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Bud Cort! 2001, The Thing! I love the Alamo Drafthouse.</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/238530024/bud-cort-2001-thing-christ-i-love.html</link>
+            <category>the thing</category>
+            <category>brewster mccloud</category>
+            <category>alamodrafthouse</category>
+            <category>alamo</category>
+            <category>march</category>
+            <category>bud cort</category>
+            <category>2001</category>
+            <category>film</category>
+            <category>mash</category>
+            <category>blade runner</category>
+            <category>harold and maude</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 21 Feb 2008 13:39:35 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-100182045541857840</guid>
+            <description>The Alamo Drafthouse is bringing &lt;a href="http://imdb.com/name/nm0001069/"&gt;Bud Cort&lt;/a&gt; to town for screenings of &lt;i&gt;Brewster McCloud&lt;/i&gt; and &lt;i&gt;Harold and Maude&lt;/i&gt; on March 18th. I've always had a soft spot for Bud Cort, who had a string of interesting roles (that unfortunately typecast him as a slightly creepy pretty-boy) in the 70's and survived a terrible car wreck before the 80's began, leaving him dealing with multiple plastic surgeries and rehab during what should have been the height of his career. He's held strong and continues to do great character work (Wes Anderson finally got to take his Hal Ashby fixation to it's logical conclusion by giving Bud a role as the kidnapped functionary in &lt;i&gt;The Life Aquatic&lt;/i&gt;).  &lt;br /&gt;&lt;br /&gt;It looks like The Drafthouse and Red Bull are going to be putting on another outdoor showing of Dazed and Confused on March 12th (the last one was a reunion show in 2003 that got a good chunk of the original cast to show up). I'll be helping host, but I don't have a lot of details yet. Christ, I just love seeing myself prance around and grab my face as a fifteen year old over and over for the rest of my life. :) Let's all get toasty and re-live the magic.&lt;br /&gt;&lt;br /&gt;April is going to bring screenings of 2001: A Space Odyssey, The Thing, and Blade Runner: The Final Cut. I haven't seen what print they've got of 2001, but I'm sure if they are having an event for it that it's probably pristine. I'm pretty sure I've seen the Thing print they've got at the last Cinemuerte festival and it was in great condition. If you missed the new cleaned up Blade Runner at the Paramount, make sure and catch it at the Alamo, it's really wonderful. &lt;br /&gt;&lt;br /&gt;I've barely cracked the new Alamo Calandar and I'm already very excited.
+&lt;p&gt;&lt;map name="google_ad_map_0DAPf6acv.yZtSu0WZj57wSouio_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/0DAPf6acv.yZtSu0WZj57wSouio_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_0DAPf6acv.yZtSu0WZj57wSouio_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=0DAPf6acv.yZtSu0WZj57wSouio_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Fbud-cort-2001-thing-christ-i-love.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=K8GXWnE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=K8GXWnE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=YbUr6WE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=YbUr6WE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=KIMpnOE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=KIMpnOE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=hc2hFiE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=hc2hFiE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Pbm2cIE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Pbm2cIE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=uRvOVHe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=uRvOVHe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/bud-cort-2001-thing-christ-i-love.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Beach House at Emo's (Austin) on 7 Mar 2008 – Last.fm</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/239041817/beach-house-at-emos-austin-on-7-mar.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 21 Feb 2008 15:50:17 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-8139896320050138823</guid>
+            <description>&lt;a href="http://www.last.fm/event/444081"&gt;Beach House at Emo&amp;#39;s (Austin) on 7 Mar 2008 – Last.fm&lt;/a&gt;
+&lt;p&gt;&lt;map name="google_ad_map_XaDuU5ADiFI4oYi7onX.-y5kbH0_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/XaDuU5ADiFI4oYi7onX.-y5kbH0_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_XaDuU5ADiFI4oYi7onX.-y5kbH0_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=XaDuU5ADiFI4oYi7onX.-y5kbH0_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Fbeach-house-at-emos-austin-on-7-mar.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=MRJZKpE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=MRJZKpE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=hWe4HZE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=hWe4HZE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=49JUnNE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=49JUnNE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=6skH6dE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=6skH6dE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=ITbLzUE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=ITbLzUE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=ipkdyte"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=ipkdyte" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/beach-house-at-emos-austin-on-7-mar.html</feedburner:origLink>
+        </item>
+        <item>
+            <title/>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/239062807/blog-post.html</link>
+            <category>horse plus donkey</category>
+            <category>diagonals</category>
+            <category>austin</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 21 Feb 2008 16:46:19 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-3310557558318338298</guid>
+            <description>&lt;img src="http://wileywiggins.com/l_0ef6a423eb46638444784d4c0ac57ae2.jpg" width="420" border="1"&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=OehmFeE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=OehmFeE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=KGyi5CE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=KGyi5CE" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/blog-post.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>A Hidden World of Awesomeness</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/239231101/hidden-world-of-awesomeness.html</link>
+            <category>bradneely</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 21 Feb 2008 23:54:06 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-8408613266061789024</guid>
+            <description>&lt;object width="400" height="350"&gt;&lt;param name="allowFullScreen" value="true" /&gt;&lt;param name="movie" value="http://www.superdeluxe.com/static/swf/share_vidplayer.swf" /&gt;&lt;param name="FlashVars" value="id=D81F2344BF5AC7BB6DA00743F7EF05381BEE8F743AF987B1" /&gt;&lt;embed src="http://www.superdeluxe.com/static/swf/share_vidplayer.swf" FlashVars="id=D81F2344BF5AC7BB6DA00743F7EF05381BEE8F743AF987B1" type="application/x-shockwave-flash" width="420" height="360" allowFullScreen="true" &gt;&lt;/embed&gt;&lt;/object&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=e78CdJE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=e78CdJE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=KawKtoE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=KawKtoE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=RlOhYzE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=RlOhYzE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=WUXuLLE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=WUXuLLE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=fr8oGTE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=fr8oGTE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=tS1wKMe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=tS1wKMe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/hidden-world-of-awesomeness.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>R.I.P. Polaroid instant film</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/237871675/rip-polaroid-instant-film.html</link>
+            <category>polaroid</category>
+            <category>film</category>
+            <category>cramps</category>
+            <category>sad</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Thu, 21 Feb 2008 23:57:40 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-4884341756224603099</guid>
+            <description>&lt;embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=-4166037905967564527&amp;hl=en" flashvars=""&gt; &lt;/embed&gt;&lt;br /&gt;&lt;i&gt;Found Via Kottke.org&lt;/i&gt;
+&lt;p&gt;&lt;map name="google_ad_map_ohY18PHalcPuowyRbLwIZm3xmz0_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/ohY18PHalcPuowyRbLwIZm3xmz0_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_ohY18PHalcPuowyRbLwIZm3xmz0_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=ohY18PHalcPuowyRbLwIZm3xmz0_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Frip-polaroid-instant-film.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=cPRX4aE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=cPRX4aE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=iLZKVlE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=iLZKVlE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Li522eE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Li522eE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=i8BvFCE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=i8BvFCE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EIZmYFE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EIZmYFE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=kDXExJe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=kDXExJe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://video.google.com/googleplayer.swf?docId=-4166037905967564527&amp;hl=en" length="110080" type="application/x-shockwave-flash"/>
+            <media:content url="http://video.google.com/googleplayer.swf?docId=-4166037905967564527&amp;hl=en" fileSize="110080" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:subtitle> Found Via Kottke.org</itunes:subtitle>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:summary> Found Via Kottke.org</itunes:summary>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/rip-polaroid-instant-film.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Filmmaking Frenzy! BeastMaster</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/239137435/filmmaking-frenzy-beastmaster.html</link>
+            <category>be kind rewind</category>
+            <category>alamo</category>
+            <category>black magic rollercoaster</category>
+            <category>filmmaking frenzy</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Fri, 22 Feb 2008 10:31:03 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-8490839699772731159</guid>
+            <description>&lt;!-- Start of Brightcove Player --&gt;&lt;br /&gt;&lt;embed src="http://services.brightcove.com/services/viewer/federated_f8/1321361479" bgcolor="#FFFFFF" flashVars="videoId=1408010552&amp;playerId=1321361479&amp;viewerSecureGatewayURL=https://services.brightcove.com/services/amfgateway&amp;servicesURL=http://services.brightcove.com/services&amp;cdnURL=http://admin.brightcove.com&amp;domain=embed&amp;autoStart=false&amp;" base="http://admin.brightcove.com" name="flashObj" width="420" height="390" seamlesstabbing="false" type="application/x-shockwave-flash" swLiveConnect="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"&gt;&lt;/embed&gt;&lt;br /&gt;&lt;br /&gt;My friend Thomas, who I've helped on a few Alamo filmmaking contests, has posted his entry to the &lt;a href="http://originalalamo.blogspot.com/2008/02/rewind-kindly-swede-filmmaking.html2"&gt;Be Kind Rewind!&lt;/a&gt; contest. If you think it's as funny as I do, log onto the &lt;a href="http://beta.filmmakingfrenzy.com/SITES/FILMFRENZY_BETA/ViewFilm.aspx?FilmId=157"&gt;filmmaking frenzy site&lt;/a&gt; and give it a good rating so more people will see it!&lt;br /&gt;&lt;font color="red"&gt;Update: Looks like Thomas has won the competition! Congrats!&lt;/font&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EU80FQE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EU80FQE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=LUDjghE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=LUDjghE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=qJeqChE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=qJeqChE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=qhJND6E"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=qhJND6E" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=twTshSE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=twTshSE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=n824r7e"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=n824r7e" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <enclosure url="http://services.brightcove.com/services/viewer/federated_f8/1321361479" length="43498" type="application/x-shockwave-flash"/>
+            <media:content url="http://services.brightcove.com/services/viewer/federated_f8/1321361479" fileSize="43498" type="application/x-shockwave-flash"/>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:subtitle> My friend Thomas, who I've helped on a few Alamo filmmaking contests, has posted his entry to the Be Kind Rewind! contest. If you think it's as funny as I do, log onto the filmmaking frenzy site and give it a good rating so more people will see it! Updat</itunes:subtitle>
+            <itunes:author>Wiley Wiggins</itunes:author>
+            <itunes:summary> My friend Thomas, who I've helped on a few Alamo filmmaking contests, has posted his entry to the Be Kind Rewind! contest. If you think it's as funny as I do, log onto the filmmaking frenzy site and give it a good rating so more people will see it! Update: Looks like Thomas has won the competition! Congrats!</itunes:summary>
+            <itunes:keywords>movies,music,weird,wiley,wiggins</itunes:keywords>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/filmmaking-frenzy-beastmaster.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>SXSW 2008</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/240999256/sxsw-2008.html</link>
+            <category>sxsw2008</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Mon, 25 Feb 2008 11:42:02 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-7619669944355601124</guid>
+            <description>So I'm attending every part of SXSW this year, I was on the interactive advisory board, I have a little part in one of the films, and I just found out that the band I am in is playing a day show. Who is coming to town, and who is going to what? email/twitter/im me as stuff develops. I'm going to start putting my calendar together today.
+&lt;p&gt;&lt;map name="google_ad_map_mhZ9umCbLzndFVCIOLUbZaxDYSQ_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/mhZ9umCbLzndFVCIOLUbZaxDYSQ_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_mhZ9umCbLzndFVCIOLUbZaxDYSQ_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=mhZ9umCbLzndFVCIOLUbZaxDYSQ_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Fsxsw-2008.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=WFxZ8VE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=WFxZ8VE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=0sPfrlE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=0sPfrlE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=6arCzxE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=6arCzxE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=piLz5nE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=piLz5nE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=TVqD7eE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=TVqD7eE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=OFSRfSe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=OFSRfSe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/sxsw-2008.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Vintage anime: Evil Mickey Mouse invasion! ::: Pink Tentacle</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241598559/vintage-anime-evil-mickey-mouse.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 26 Feb 2008 11:13:59 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-2587612083699335313</guid>
+            <description>&lt;img src="http://www.wileywiggins.com/mickey_mouse_army.jpg" width="420"&gt;&lt;br /&gt;&lt;blockquote&gt;&lt;a href="http://www.youtube.com/watch?v=lIyEi0OIUX4"&gt;"Toy Box Series, Episode 3: Picture Book 1936”&lt;/a&gt; (Omocha-Bako Series, Dai-3-Wa: Ehon 1936) is a 1934 propaganda-ish film about a future (1936) conflict started by a swarm of evil, bat-riding Mickey Mouse clones that descend on a tiny island inhabited by peace-loving dolls and cats (including a Felix lookalike)...&lt;br /&gt;&lt;a href="http://www.pinktentacle.com/2008/02/vintage-anime-evil-mickey-mouse-invasion/"&gt;Read full article&lt;/a&gt;&lt;br /&gt;&lt;/blockquote&gt;&lt;br /&gt;&lt;i&gt;Found on &lt;a href="http://www.pinktentacle.com/"&gt;Pink Tentacle&lt;/a&gt;&lt;/i&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=uLrAqnE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=uLrAqnE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=OrdXtBE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=OrdXtBE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=3dXl4uE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=3dXl4uE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=FC1K7BE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=FC1K7BE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=M5K8NHE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=M5K8NHE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=1L2fZWe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=1L2fZWe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/vintage-anime-evil-mickey-mouse.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Filmmaking Frenzy: BPM</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241747538/filmmaking-frenzy-fiew-frenzy.html</link>
+            <category>diagonals</category>
+            <category>red bull</category>
+            <category>alamo</category>
+            <category>dazed and confused</category>
+            <category>filmmaking frenzy</category>
+            <category>austin</category>
+            <category>sxsw2008</category>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 26 Feb 2008 16:32:57 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-3792154141575587269</guid>
+            <description>I'll be announcing the winning BPM Filmmaking Frenzy video the night of the Dazed and Confused screening (March 12th) at the Red Bull Moon Tower. I just found out that it's the same day that Diagonals are playing a day show, so it will be a busy day for me on top of a just generally crazy festival.&lt;br /&gt;&lt;blockquote&gt;On Friday, Feb 29, all registered Austin teams will meet up at the preparty (location TBA). At 7:00 PM teams will be handed a CD containing two tracks. Your team must conceive, shoot, edit and output a music video for one of the two tracks on the CD. Out of town teams will have access to a downloadable MP3 beginning at 7:00 PM CST. &lt;br /&gt;&lt;br /&gt;Local teams must deliver a finished DVD to the afterparty (location TBD) by 7:00 PM CST on Sunday, Mar 2 and have the exact same film uploaded to the Filmmaking Frenzy website by noon the following day. Out of town teams must finish their upload to filmmakingfrenzy.com by 7:30 PM CST. Out of town teams must also send a DVD of their finished film, postmaked by March 3, to: Filmmaking Frenzy, attention Brad Parrett, 1120 South Lamar Blvd, Austin, TX 78704.&lt;br /&gt;&lt;br /&gt;The top 40 ranked teams will be given 4 passes each to the Wednesday, March 12 "Dazed and Confused" night of Red Bull Moon Tower. The awards will be given out at this party and choice clips from the competition will be played on the Rolling Roadshow screen during set breaks of the bands. Wiley Wiggins, star of Dazed and Confused, will choose the winning film from the top 40 videos in the contest. The same videos will be posted on the Red Bull Moon Tower page on Facebook. Check out the Filmmaking Frenzy page on Facebook for more updates, songs, photos, videos and news.&lt;/blockquote&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="http://beta.filmmakingfrenzy.com/SITES/FILMFRENZY_BETA/ViewFrenzy.aspx?FrenzyId=7"&gt;Filmmaking Frenzy: Fiew Frenzy&lt;/a&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=OiB35dE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=OiB35dE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Ge6HQfE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Ge6HQfE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=5OsPN3E"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=5OsPN3E" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=ZPUK5OE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=ZPUK5OE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=pLKNpeE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=pLKNpeE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=EgkSkke"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=EgkSkke" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/filmmaking-frenzy-fiew-frenzy.html</feedburner:origLink>
+        </item>
+        <item>
+            <title>Cocoia Blog � The first Photoshop icon.</title>
+            <link>http://feeds.feedburner.com/~r/NewsOfTheDead/~3/241859256/cocoia-blog-first-photoshop-icon.html</link>
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">weevil@wileywiggins.com (Wiley Wiggins)</dc:creator>
+            <pubDate>Tue, 26 Feb 2008 21:22:46 -0600</pubDate>
+            <guid isPermaLink="false">tag:blogger.com,1999:blog-3337413.post-7550350082857068055</guid>
+            <description>&lt;a href="http://blog.cocoia.com/2008/02/23/the-first-photoshop-icon/"&gt;Cocoia Blog � The first Photoshop icon.&lt;/a&gt;
+&lt;p&gt;&lt;map name="google_ad_map_cQQQXQ2zrcOqdWd8x6M.Nl31FC4_"&gt;&lt;area shape="rect" href="http://imageads.googleadservices.com/pagead/imgclick/cQQQXQ2zrcOqdWd8x6M.Nl31FC4_?pos=0" coords="1,2,367,28"/&gt;&lt;area shape="rect" href="http://services.google.com/feedback/abg" coords="384,10,453,23"/&gt;&lt;/map&gt;&lt;img usemap="#google_ad_map_cQQQXQ2zrcOqdWd8x6M.Nl31FC4_" border="0" src="http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=ca-wwiggins@mac.com&amp;output=png&amp;cuid=cQQQXQ2zrcOqdWd8x6M.Nl31FC4_&amp;url=http%3A%2F%2Fwileywiggins.blogspot.com%2F2008%2F02%2Fcocoia-blog-first-photoshop-icon.html"/&gt;&lt;/p&gt;&lt;div class="feedflare"&gt;
+&lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=9I40BCE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=9I40BCE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=IgSkhoE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=IgSkhoE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Igxp3BE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Igxp3BE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=Q7TOxaE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=Q7TOxaE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=5EkNLvE"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=5EkNLvE" border="0"&gt;&lt;/img&gt;&lt;/a&gt; &lt;a href="http://feeds.feedburner.com/~f/NewsOfTheDead?a=S0P9mQe"&gt;&lt;img src="http://feeds.feedburner.com/~f/NewsOfTheDead?i=S0P9mQe" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+            <creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</creativeCommons:license>
+            <feedburner:origLink>http://wileywiggins.blogspot.com/2008/02/cocoia-blog-first-photoshop-icon.html</feedburner:origLink>
+        </item>
+        <copyright>cc attribution non-commercial 2005 Wiley Wiggins</copyright>
+        <media:credit role="author">Wiley Wiggins</media:credit>
+        <media:rating>nonadult</media:rating>
+        <feedburner:awareness>http://api.feedburner.com/awareness/1.0/GetFeedData?uri=NewsOfTheDead</feedburner:awareness>
+    </channel>
+</rss>
