@@ -79,6 +79,9 @@ def main(argv=None):
             opts, args = getopt.getopt(argv[1:], "Vho:vc:", ["version", "help", "output=", "config="])
         except getopt.error, msg:
             raise Usage(msg)
+        
+        # Default config file
+        config_file = 'config.yaml'
     
         # Option processing
         for option, value in opts:
@@ -96,7 +99,7 @@ def main(argv=None):
         # Okay, GO
         # Read configuration
         try:
-            config = get_configuration('config.yaml')
+            config = get_configuration(config_file)
             print yaml.dump(config)
         except:
             raise
