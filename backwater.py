@@ -35,7 +35,7 @@ class Tumblelog(Source): pass
 
 class Photostream(Source): pass
 
-class Twitter(Source): pass
+class TwitterStatus(Source): pass
 
 # Entries and subtypes of entries.
 
