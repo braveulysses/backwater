@@ -21,7 +21,7 @@ help_message = '''
 The help message goes here.
 '''
 
-#################################################
+#############################################################################
 
 # Sources (feeds) and subtypes of sources.
 
@@ -53,15 +53,17 @@ class Video(Entry): pass
 
 class Photo(Entry): pass
 
-#################################################
+#############################################################################
 
 def get_configuration(config_file):
     try:
         f = open(config_file, 'r')
         config = yaml.load(f)
-        return config
-    finally:
         f.close()
+        return config
+    except IOError:
+        print >> sys.stderr, "Couldn't load the config file %s!" % (config_file)
+        raise
 
 class Version(Exception):
     def __init__(self, msg):
@@ -101,6 +103,8 @@ def main(argv=None):
         try:
             config = get_configuration(config_file)
             print yaml.dump(config)
+        except IOError:
+            return 1
         except:
             raise
         # Get feeds
@@ -111,7 +115,8 @@ def main(argv=None):
         # Write output
     
     except Version, err:
-        print str(err.msg)
+        print >> sys.stderr, str(err.msg)
+        return 2
     
     except Usage, err:
         print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
