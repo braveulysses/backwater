@@ -8,7 +8,9 @@ owner: SNF Labs
 botName: chompybot
 botUrl: http://labs.spaceshipnofuture.org/backwater/
 
-logDir: /home/chompy/backwater/logs/
+cacheDir: /home/chompy/backwater/data/cache/
+outputDir: /home/chompy/backwater/data/output/
+logDir: /home/chompy/backwater/data/logs/
 imageCacheDir: /home/chompy/images/cache/
 
 secretWord: scramasax

@@ -8,15 +8,19 @@
 	<array>
 		<dict>
 			<key>filename</key>
-			<string>backwatertest.py</string>
-			<key>lastUsed</key>
-			<date>2008-06-12T04:58:18Z</date>
+			<string>__init__.py</string>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>backwater.py</string>
 			<key>lastUsed</key>
-			<date>2008-06-12T14:28:16Z</date>
+			<date>2008-06-22T23:37:50Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>backwatertest.py</string>
+			<key>lastUsed</key>
+			<date>2008-06-12T04:58:18Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -28,9 +32,31 @@
 			<key>filename</key>
 			<string>config.yaml</string>
 			<key>lastUsed</key>
-			<date>2008-06-12T14:28:16Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2008-06-22T23:38:03Z</date>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>publish</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>publish</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>spider</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>spider</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>tests</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>tests</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -42,14 +68,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>49</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>31</integer>
 		</dict>
 		<key>backwatertest.py</key>
 		<dict>
@@ -70,25 +96,24 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>16</integer>
 				<key>line</key>
-				<integer>50</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>206</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>backwater.py</string>
 		<string>config.yaml</string>
-		<string>backwatertest.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{85, 128}, {889, 750}}</string>
+	<string>{{356, 118}, {759, 759}}</string>
 </dict>
 </plist>

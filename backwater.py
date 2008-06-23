@@ -23,19 +23,15 @@ The help message goes here.
 
 #############################################################################
 
-# Sources (feeds) and subtypes of sources.
+# Sources (feeds) and subtypes of sources
 
-class Source: pass
-
-class Weblog(Source): pass
-
-class Linklog(Source): pass
-
-class Tumblelog(Source): pass
-
-class Photostream(Source): pass
-
-class TwitterStatus(Source): pass
+from spider.source import Source
+from spider.weblog import Weblog
+from spider.linklog import Linklog
+from spider.commentlog import Commentlog
+from spider.tumblelog import Tumblelog
+from spider.photostream import Photostream
+from spider.twitterstatus import TwitterStatus
 
 # Entries and subtypes of entries.
 
@@ -46,6 +42,8 @@ class Post(Entry): pass
 class Link(Entry): pass
 
 class Quote(Entry): pass
+
+class Conversation(Entry): pass
 
 class Song(Entry): pass
 
