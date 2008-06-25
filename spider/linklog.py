@@ -14,6 +14,7 @@ class Linklog(Weblog):
     def __init__(self, name, owner, url, feedUrl):
         super(Linklog, self).__init__(name, owner, url, feedUrl)
         self.type = 'linklog'
+        self.entryType = 'link'
 
 def main():
     pass

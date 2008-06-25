@@ -37,7 +37,7 @@ sources:
       url: http://golden.cpl593h.net/
       
     - name: cobra libre's photostream
-      type: flickr
+      type: photostream
       owner: cobra libre
       flickrId: 
       url: http://www.flickr.com/photos/cobra/
@@ -66,7 +66,7 @@ sources:
       url: http://twitter.com/pogococonino
     
     - name: pogo coconino's photostream
-      type: flickr
+      type: photostream
       owner: flickr
       flickrId: 
       url: http://www.flickr.com/photos/pogococonino/
@@ -83,7 +83,7 @@ sources:
       url: http://twitter.com/tenorune
       
     - name: tenorune's photostream
-      type: flickr
+      type: photostream
       owner: tenorune
       flickrId: 98749297@N00
       url: http://www.flickr.com/photos/lightseed/
@@ -96,7 +96,7 @@ sources:
       feedUrl: http://chompy.net/blogs/chris/atom.xml
     
     - name: Lord Ragdoll Kitten's photostream
-      type: flickr
+      type: photostream
       owner: Lord Ragdoll Kitten
       flickrId: 46348833@N00
       url: http://www.flickr.com/photos/46348833@N00/
@@ -109,7 +109,7 @@ sources:
       feedUrl: http://chompy.net/blogs/nathalie/atom.xml
       
     - name: CHO2007's photostream
-      type: flickr
+      type: photostream
       owner: CHO2007
       flickrId: 
       url: http://www.flickr.com/photos/nathalie/
@@ -127,7 +127,7 @@ sources:
       url: http://twitter.com/setholdmixon
       
     - name: setholdmixon's photostream
-      type: flickr
+      type: photostream
       owner: setholdmixon
       flickrId: 
       url: http://www.flickr.com/photos/setholdmixon/
@@ -139,21 +139,21 @@ sources:
       url: http://twitter.com/saraholdmixon
       
     - name: sarahloo's photostream
-      type: flickr
+      type: photostream
       owner: sarahloo
       flickrId: 
       url: http://www.flickr.com/photos/sarahloo/
     
     # Sarah Knight's stuff
     - name: cyndi laupest's photostream
-      type: flickr
+      type: photostream
       owner: cyndi laupest
       flickrId: 78616686@N00
       url: http://www.flickr.com/photos/78616686@N00/
     
     # Scott Talkington's stuff
     - name: junklab's photostream
-      type: flickr
+      type: photostream
       owner: junklab
       flickrId: 24472191@N00
       url: http://www.flickr.com/photos/junklab/
@@ -171,7 +171,7 @@ sources:
       url: http://twitter.com/dakotasmith
       
     - name: dakota smith's photostream
-      type: flickr
+      type: photostream
       owner: dakota smith
       flickrId: 51379940@N00
       url: http://www.flickr.com/photos/dakotasmith/
@@ -190,7 +190,7 @@ sources:
       feedUrl: http://del.icio.us/rss/seanmason
       
     - name: pusgums' photostream
-      type: flickr
+      type: photostream
       owner: pusgums
       flickrId: 29193619@N00
       url: http://www.flickr.com/photos/smason/
@@ -209,14 +209,14 @@ sources:
       feedUrl: http://savagepencil.typepad.com/charlieletters/index.rdf
       
     - name: iamedithpiaf's photostream
-      type: flickr
+      type: photostream
       owner: iamedithpiaf
       flickrId: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
       
     # Alan Hampton's stuff
     - name: austin tx's photostream
-      type: flickr
+      type: photostream
       owner: austin tx
       flickrId: 
       url: http://www.flickr.com/photos/austintx/

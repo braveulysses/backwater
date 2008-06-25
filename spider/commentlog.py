@@ -14,6 +14,7 @@ class Commentlog(Weblog):
     def __init__(self, name, owner, url, feedUrl):
         super(Commentlog, self).__init__(name, owner, url, feedUrl)
         self.type = 'commentlog'
+        self.entryType = 'quote'
 
 def main():
     pass

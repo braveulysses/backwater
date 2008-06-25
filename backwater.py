@@ -53,6 +53,8 @@ class Photo(Entry): pass
 
 #############################################################################
 
+class UnknownSourceTypeError(Exception): pass
+
 def get_configuration(config_file):
     try:
         f = open(config_file, 'r')
@@ -62,6 +64,32 @@ def get_configuration(config_file):
     except IOError:
         print >> sys.stderr, "Couldn't load the config file %s!" % (config_file)
         raise
+
+def get_sources(config):
+    sources = []
+    for src in config['sources']:
+        s = None
+        try:
+            if src['type'] == 'weblog':
+                s = Weblog(src['name'], src['owner'], src['url'], src['feedUrl'])
+            elif src['type'] == 'linklog':
+                s = Linklog(src['name'], src['owner'], src['url'], src['feedUrl'])
+            elif src['type'] == 'commentlog':
+                s = Commentlog(src['name'], src['owner'], src['url'], src['feedUrl'])
+            elif src['type'] == 'tumblelog':
+                s = Tumblelog(src['name'], src['owner'], src['url'])
+            elif src['type'] == 'photostream':
+                s = Photostream(src['name'], src['owner'], src['url'], src['flickrId'])
+            elif src['type'] == 'twitter':
+                s = TwitterStatus(src['name'], src['owner'], src['url'])
+            else:
+                raise UnknownSourceTypeError
+            sources.append(s)
+        except KeyError:
+            print "Problem parsing: %s" % (src)
+        except UnknownSourceTypeError:
+            print "Unknown source type encountered: %s" % (src)
+    return sources
 
 class Version(Exception):
     def __init__(self, msg):
@@ -100,17 +128,19 @@ def main(argv=None):
         # Read configuration
         try:
             config = get_configuration(config_file)
-            print yaml.dump(config)
         except IOError:
             return 1
+        # Parse configuration and instantiate sources
+        try:
+            sources = get_sources(config)
+            for src in sources:
+                # Spider and parse sources
+                print src
+                src.parse()
+                # Merge, sort, and collate
+                # Write output
         except:
             raise
-        # Get feeds
-        # Get tumblelogs
-        # Get twitters
-        # Get photos
-        # Merge, sort, and collate
-        # Write output
     
     except Version, err:
         print >> sys.stderr, str(err.msg)

@@ -13,6 +13,7 @@ class Photostream(Source):
     def __init__(self, name, owner, url, flickrId):
         super(Photostream, self).__init__(name, owner, url)
         self.type = 'photostream'
+        self.entryType = 'photo'
         self.flickrId = flickrId
 
 def main():
