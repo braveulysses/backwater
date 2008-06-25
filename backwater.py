@@ -55,6 +55,11 @@ class Photo(Entry): pass
 
 class UnknownSourceTypeError(Exception): pass
 
+class Configuration(object):
+    """Backwater configuration."""
+    def __init__(self, arg):
+        super(Configuration, self).__init__()
+
 def get_configuration(config_file):
     try:
         f = open(config_file, 'r')
@@ -136,7 +141,7 @@ def main(argv=None):
             for src in sources:
                 # Spider and parse sources
                 print src
-                src.parse()
+                #src.parse()
                 # Merge, sort, and collate
                 # Write output
         except:

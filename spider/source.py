@@ -7,7 +7,7 @@ Created by Jacob C. on 2008-06-22.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
-from text import u
+#from text import u
 
 class Source(object):
     def __init__(self, name, owner, url):
@@ -18,6 +18,7 @@ class Source(object):
         self.owner = owner
         self.url = url
         self.entries = []
+        self.httpContent = None
         self.httpResponse = None
 
     def __str__(self):
