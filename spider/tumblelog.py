@@ -13,13 +13,13 @@ import tumblr
 
 class Tumblelog(Weblog):
     def __init__(self, name, owner, url):
-        super(Tumblelog, self).__init__(name, owner, url, feedUrl=None)
+        super(Tumblelog, self).__init__(name, owner, url, feed_url=None)
         self.type = 'tumblelog'
-        self.entryType = None
-        self.apiUrl = url + 'api/read'
+        self.entry_type = None
+        self.api_url = url + 'api/read'
 
     def parse(self):
-        t = tumblr.parse(self.apiUrl)
+        t = tumblr.parse(self.api_url)
         print t.posts[0].content
 
 def main():

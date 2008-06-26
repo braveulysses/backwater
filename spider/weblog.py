@@ -11,14 +11,14 @@ from source import Source
 import feedparser
 
 class Weblog(Source):
-    def __init__(self, name, owner, url, feedUrl):
+    def __init__(self, name, owner, url, feed_url):
         super(Weblog, self).__init__(name, owner, url)
         self.type = 'weblog'
-        self.feedUrl = feedUrl
+        self.feed_url = feed_url
         self.entryType = 'post'
 
     def parse(self):
-        feed_data = feedparser.parse(self.feedUrl)
+        feed_data = feedparser.parse(self.feed_url)
         print feed_data.entries[0].title
 
 def main():

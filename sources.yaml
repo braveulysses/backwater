@@ -1,30 +1,11 @@
 ---
-application: backwater
-version: 1
-url: http://chompy.net/
-name: chompy.net
-owner: SNF Labs
-
-botName: chompybot
-botUrl: http://labs.spaceshipnofuture.org/backwater/
-
-cacheDir: /home/chompy/backwater/data/cache/
-outputDir: /home/chompy/backwater/data/output/
-logDir: /home/chompy/backwater/data/logs/
-imageCacheDir: /home/chompy/images/cache/
-
-secretWord: scramasax
-flickrKey: 9c9ea0afe69f35a7a9156683593e9377
-
-wordLimit: 90
-
 sources:
     # Jacob's stuff
     - name: remake/remodel
       type: weblog
       owner: jacob
       url: http://chompy.net/blogs/jacob/
-      feedUrl: http://chompy.net/blogs/jacob/feeds/index.atom
+      feed_url: http://chompy.net/blogs/jacob/feeds/index.atom
 
     - name: cobralibre
       type: twitter
@@ -39,7 +20,7 @@ sources:
     - name: cobra libre's photostream
       type: photostream
       owner: cobra libre
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/cobra/
       
     # Tamara's stuff
@@ -47,7 +28,7 @@ sources:
       type: weblog
       owner: pogo
       url: http://chompy.net/blogs/pogo/
-      feedUrl: http://chompy.net/blogs/pogo/atom.xml
+      feed_url: http://chompy.net/blogs/pogo/atom.xml
       
     - name: The Longest Train I Ever Saw
       type: tumblelog
@@ -58,7 +39,7 @@ sources:
       type: linklog
       owner: pogo
       url: http://www.chompy.net/blogs/pogo/links/
-      feedUrl: http://www.chompy.net/blogs/pogo/links/atom.xml
+      feed_url: http://www.chompy.net/blogs/pogo/links/atom.xml
       
     - name: pogococonino
       type: twitter
@@ -68,7 +49,7 @@ sources:
     - name: pogo coconino's photostream
       type: photostream
       owner: flickr
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/pogococonino/
       
     # Mike's stuff
@@ -85,7 +66,7 @@ sources:
     - name: tenorune's photostream
       type: photostream
       owner: tenorune
-      flickrId: 98749297@N00
+      flickr_id: 98749297@N00
       url: http://www.flickr.com/photos/lightseed/
       
     # Hazel's stuff
@@ -93,12 +74,12 @@ sources:
       type: weblog
       owner: Fortunate Hazel
       url: http://chompy.net/blogs/chris/
-      feedUrl: http://chompy.net/blogs/chris/atom.xml
+      feed_url: http://chompy.net/blogs/chris/atom.xml
     
     - name: Lord Ragdoll Kitten's photostream
       type: photostream
       owner: Lord Ragdoll Kitten
-      flickrId: 46348833@N00
+      flickr_id: 46348833@N00
       url: http://www.flickr.com/photos/46348833@N00/
     
     # Nathalie's stuff
@@ -106,12 +87,12 @@ sources:
       type: weblog
       owner: Nathalie
       url: http://chompy.net/blogs/nathalie/
-      feedUrl: http://chompy.net/blogs/nathalie/atom.xml
+      feed_url: http://chompy.net/blogs/nathalie/atom.xml
       
     - name: CHO2007's photostream
       type: photostream
       owner: CHO2007
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/nathalie/
     
     # Seth's stuff
@@ -119,7 +100,7 @@ sources:
       type: weblog
       owner: Seth
       url: http://www.carefullyselectedgarbage.com/
-      feedUrl: http://www.carefullyselectedgarbage.com/feeds/posts/default
+      feed_url: http://www.carefullyselectedgarbage.com/feeds/posts/default
 
     - name: setholdmixon
       type: twitter
@@ -129,7 +110,7 @@ sources:
     - name: setholdmixon's photostream
       type: photostream
       owner: setholdmixon
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/setholdmixon/
     
     # Sarah Looney's stuff
@@ -141,21 +122,21 @@ sources:
     - name: sarahloo's photostream
       type: photostream
       owner: sarahloo
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/sarahloo/
     
     # Sarah Knight's stuff
     - name: cyndi laupest's photostream
       type: photostream
       owner: cyndi laupest
-      flickrId: 78616686@N00
+      flickr_id: 78616686@N00
       url: http://www.flickr.com/photos/78616686@N00/
     
     # Scott Talkington's stuff
     - name: junklab's photostream
       type: photostream
       owner: junklab
-      flickrId: 24472191@N00
+      flickr_id: 24472191@N00
       url: http://www.flickr.com/photos/junklab/
     
     # Dakota's stuff
@@ -163,7 +144,7 @@ sources:
       type: linklog
       owner: Dakota
       url: http://del.icio.us/dakotasmith
-      feedUrl: http://del.icio.us/rss/dakotasmith
+      feed_url: http://del.icio.us/rss/dakotasmith
     
     - name: dakotasmith
       type: twitter
@@ -173,7 +154,7 @@ sources:
     - name: dakota smith's photostream
       type: photostream
       owner: dakota smith
-      flickrId: 51379940@N00
+      flickr_id: 51379940@N00
       url: http://www.flickr.com/photos/dakotasmith/
     
     # Smason's stuff
@@ -181,18 +162,18 @@ sources:
       type: weblog
       owner: Sean
       url: http://www.headcrab.org/
-      feedUrl: http://www.headcrab.org/feed/atom/
+      feed_url: http://www.headcrab.org/feed/atom/
     
     - name: del.icio.us/seanmason
       type: linklog
       owner: Sean
       url: http://del.icio.us/seanmason
-      feedUrl: http://del.icio.us/rss/seanmason
+      feed_url: http://del.icio.us/rss/seanmason
       
     - name: pusgums' photostream
       type: photostream
       owner: pusgums
-      flickrId: 29193619@N00
+      flickr_id: 29193619@N00
       url: http://www.flickr.com/photos/smason/
       
     # Karla's stuff
@@ -200,25 +181,25 @@ sources:
       type: weblog
       owner: Karla
       url: http://savagepencil.typepad.com/confessions/
-      feedUrl: http://savagepencil.typepad.com/confessions/index.rdf
+      feed_url: http://savagepencil.typepad.com/confessions/index.rdf
       
     - name: Charlie Letters
       type: weblog
       owner: Karla
       url: http://savagepencil.typepad.com/
-      feedUrl: http://savagepencil.typepad.com/charlieletters/index.rdf
+      feed_url: http://savagepencil.typepad.com/charlieletters/index.rdf
       
     - name: iamedithpiaf's photostream
       type: photostream
       owner: iamedithpiaf
-      flickrId: 89984665@N00
+      flickr_id: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
       
     # Alan Hampton's stuff
     - name: austin tx's photostream
       type: photostream
       owner: austin tx
-      flickrId: 
+      flickr_id: 
       url: http://www.flickr.com/photos/austintx/
     
     # Spaceship No Future
@@ -226,13 +207,13 @@ sources:
       type: weblog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/
-      feedUrl: http://www.spaceshipnofuture.org/grueyorktimes/feeds/atom.xml
+      feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/atom.xml
     
     - name: 15 Ways
       type: weblog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/15ways/
-      feedUrl: http://www.spaceshipnofuture.org/15ways/feeds/atom/
+      feed_url: http://www.spaceshipnofuture.org/15ways/feeds/atom/
     
     - name: CHOMP
       url: http://www.spaceshipnofuture.org/ubb/
@@ -241,7 +222,7 @@ sources:
       type: linklog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/linkomatic/
-      feedUrl: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
+      feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
     
     - name: Shoplifters, Unite
       url: http://www.spaceshipnofuture.org/shoplifters/

@@ -55,46 +55,38 @@ class Photo(Entry): pass
 
 class UnknownSourceTypeError(Exception): pass
 
-class Configuration(object):
-    """Backwater configuration."""
-    def __init__(self, arg):
-        super(Configuration, self).__init__()
-
-def get_configuration(config_file):
+def get_sources(sources_file):
+    sources = []
     try:
-        f = open(config_file, 'r')
-        config = yaml.load(f)
+        f = open(sources_file, 'r')
+        y = yaml.load(f)
         f.close()
-        return config
+        for src in y['sources']:
+            s = None
+            try:
+                if src['type'] == 'weblog':
+                    s = Weblog(src['name'], src['owner'], src['url'], src['feed_url'])
+                elif src['type'] == 'linklog':
+                    s = Linklog(src['name'], src['owner'], src['url'], src['feed_url'])
+                elif src['type'] == 'commentlog':
+                    s = Commentlog(src['name'], src['owner'], src['url'], src['feed_url'])
+                elif src['type'] == 'tumblelog':
+                    s = Tumblelog(src['name'], src['owner'], src['url'])
+                elif src['type'] == 'photostream':
+                    s = Photostream(src['name'], src['owner'], src['url'], src['flickr_id'])
+                elif src['type'] == 'twitter':
+                    s = TwitterStatus(src['name'], src['owner'], src['url'])
+                else:
+                    raise UnknownSourceTypeError
+                sources.append(s)
+            except KeyError:
+                print "Problem parsing: %s" % (src)
+            except UnknownSourceTypeError:
+                print "Unknown source type encountered: %s" % (src)
+        return sources
     except IOError:
         print >> sys.stderr, "Couldn't load the config file %s!" % (config_file)
         raise
-
-def get_sources(config):
-    sources = []
-    for src in config['sources']:
-        s = None
-        try:
-            if src['type'] == 'weblog':
-                s = Weblog(src['name'], src['owner'], src['url'], src['feedUrl'])
-            elif src['type'] == 'linklog':
-                s = Linklog(src['name'], src['owner'], src['url'], src['feedUrl'])
-            elif src['type'] == 'commentlog':
-                s = Commentlog(src['name'], src['owner'], src['url'], src['feedUrl'])
-            elif src['type'] == 'tumblelog':
-                s = Tumblelog(src['name'], src['owner'], src['url'])
-            elif src['type'] == 'photostream':
-                s = Photostream(src['name'], src['owner'], src['url'], src['flickrId'])
-            elif src['type'] == 'twitter':
-                s = TwitterStatus(src['name'], src['owner'], src['url'])
-            else:
-                raise UnknownSourceTypeError
-            sources.append(s)
-        except KeyError:
-            print "Problem parsing: %s" % (src)
-        except UnknownSourceTypeError:
-            print "Unknown source type encountered: %s" % (src)
-    return sources
 
 class Version(Exception):
     def __init__(self, msg):
@@ -109,12 +101,12 @@ def main(argv=None):
         argv = sys.argv
     try:
         try:
-            opts, args = getopt.getopt(argv[1:], "Vho:vc:", ["version", "help", "output=", "config="])
+            opts, args = getopt.getopt(argv[1:], "Vho:vs:", ["version", "help", "output=", "sources="])
         except getopt.error, msg:
             raise Usage(msg)
         
-        # Default config file
-        config_file = 'config.yaml'
+        # Default sources file
+        sources_file = 'sources.yaml'
     
         # Option processing
         for option, value in opts:
@@ -126,24 +118,21 @@ def main(argv=None):
                 raise Usage(help_message)
             if option in ("-o", "--output"):
                 output = value
-            if option in ("-c", "--config"):
+            if option in ("-s", "--sources"):
                 config_file = value
     
         # Okay, GO
-        # Read configuration
+        # Parse sources.yaml and instantiate sources
         try:
-            config = get_configuration(config_file)
-        except IOError:
-            return 1
-        # Parse configuration and instantiate sources
-        try:
-            sources = get_sources(config)
+            sources = get_sources(sources_file)
             for src in sources:
                 # Spider and parse sources
                 print src
                 #src.parse()
                 # Merge, sort, and collate
                 # Write output
+        except IOError:
+            return 1
         except:
             raise
     

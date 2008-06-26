@@ -10,11 +10,11 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 from source import Source
 
 class Photostream(Source):
-    def __init__(self, name, owner, url, flickrId):
+    def __init__(self, name, owner, url, flickr_id):
         super(Photostream, self).__init__(name, owner, url)
         self.type = 'photostream'
-        self.entryType = 'photo'
-        self.flickrId = flickrId
+        self.entry_type = 'photo'
+        self.flickr_id = flickr_id
 
 def main():
     pass

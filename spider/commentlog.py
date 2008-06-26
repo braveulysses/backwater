@@ -11,10 +11,10 @@ from source import Source
 from weblog import Weblog
 
 class Commentlog(Weblog):
-    def __init__(self, name, owner, url, feedUrl):
-        super(Commentlog, self).__init__(name, owner, url, feedUrl)
+    def __init__(self, name, owner, url, feed_url):
+        super(Commentlog, self).__init__(name, owner, url, feed_url)
         self.type = 'commentlog'
-        self.entryType = 'quote'
+        self.entry_type = 'quote'
 
 def main():
     pass

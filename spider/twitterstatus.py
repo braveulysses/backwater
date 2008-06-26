@@ -13,7 +13,7 @@ class TwitterStatus(Source):
     def __init__(self, name, owner, url):
         super(TwitterStatus, self).__init__(name, owner, url)
         self.type = 'twitterstatus'
-        self.entryType = 'quote'
+        self.entry_type = 'quote'
 
 def main():
     pass
