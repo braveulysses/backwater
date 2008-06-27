@@ -12,15 +12,6 @@ import getopt
 import yaml
 import config
 
-version_message = '''Backwater v%s
-2008, %s''' % (config.__version__, config.__author__)
-
-help_message = '''
-The help message goes here.
-'''
-
-#############################################################################
-
 # Sources (feeds) and subtypes of sources
 
 from spider.source import Source
@@ -33,27 +24,41 @@ from spider.twitterstatus import TwitterStatus
 
 # Entries and subtypes of entries.
 
-class Entry: pass
+from entries import Entry
+from entries import Post
+from entries import Link
+from entries import Quote
+from entries import Conversation
+from entries import Song
+from entries import Video
+from entries import Photo
 
-class Post(Entry): pass
+#############################################################################
 
-class Link(Entry): pass
+from config import __version__
+from config import __author__
 
-class Quote(Entry): pass
+version_message = '''Backwater v%s
+2008, %s''' % (__version__, __author__)
 
-class Conversation(Entry): pass
+help_message = """Usage: python %s
+Update the chompy.net aggregator.
 
-class Song(Entry): pass
-
-class Video(Entry): pass
-
-class Photo(Entry): pass
+    -h, --help              show this help message
+    -V, --version           show version number
+    -v, --verbose           execute with verbose output
+    -s, --sources=FILE      specify alternate sources file 
+                            (default is 'sources.yaml')
+    -f, --flush             flush the cache
+    -l, --list              list all sources
+""" % sys.argv[0]
 
 #############################################################################
 
 class UnknownSourceTypeError(Exception): pass
 
 def get_sources(sources_file):
+    """Retrieves and parses the sources.yaml file for source information."""
     sources = []
     try:
         f = open(sources_file, 'r')
@@ -63,17 +68,45 @@ def get_sources(sources_file):
             s = None
             try:
                 if src['type'] == 'weblog':
-                    s = Weblog(src['name'], src['owner'], src['url'], src['feed_url'])
+                    s = Weblog(
+                        src['name'], 
+                        src['owner'], 
+                        src['url'], 
+                        src['feed_url']
+                    )
                 elif src['type'] == 'linklog':
-                    s = Linklog(src['name'], src['owner'], src['url'], src['feed_url'])
+                    s = Linklog(
+                        src['name'], 
+                        src['owner'], 
+                        src['url'], 
+                        src['feed_url']
+                    )
                 elif src['type'] == 'commentlog':
-                    s = Commentlog(src['name'], src['owner'], src['url'], src['feed_url'])
+                    s = Commentlog(
+                        src['name'], 
+                        src['owner'], 
+                        src['url'], 
+                        src['feed_url']
+                    )
                 elif src['type'] == 'tumblelog':
-                    s = Tumblelog(src['name'], src['owner'], src['url'])
+                    s = Tumblelog(
+                        src['name'], 
+                        src['owner'], 
+                        src['url']
+                    )
                 elif src['type'] == 'photostream':
-                    s = Photostream(src['name'], src['owner'], src['url'], src['flickr_id'])
+                    s = Photostream(
+                        src['name'], 
+                        src['owner'], 
+                        src['url'], 
+                        src['flickr_id']
+                    )
                 elif src['type'] == 'twitter':
-                    s = TwitterStatus(src['name'], src['owner'], src['url'])
+                    s = TwitterStatus(
+                        src['name'], 
+                        src['owner'], 
+                        src['url']
+                    )
                 else:
                     raise UnknownSourceTypeError
                 sources.append(s)
@@ -87,19 +120,32 @@ def get_sources(sources_file):
         raise
 
 class Version(Exception):
+    """Outputs version information."""
     def __init__(self, msg):
         self.msg = msg
 
 class Usage(Exception):
+    """Outputs a command-line usage message."""
     def __init__(self, msg):
         self.msg = msg
 
 def main(argv=None):
+    update = True
     if argv is None:
         argv = sys.argv
     try:
         try:
-            opts, args = getopt.getopt(argv[1:], "Vho:vs:", ["version", "help", "output=", "sources="])
+            opts, args = getopt.getopt(
+                argv[1:], 
+                "Vho:vs:fl", 
+                [ "version", 
+                  "verbose", 
+                  "help", 
+                  "output=", 
+                  "sources=", 
+                  "flush", 
+                  "list" ]
+            )
         except getopt.error, msg:
             raise Usage(msg)
         
@@ -118,17 +164,27 @@ def main(argv=None):
                 output = value
             if option in ("-s", "--sources"):
                 config_file = value
+            if option in ("-f", "--flush"):
+                pass
+            if option in ("-l", "--list"):
+                update = False
     
         # Okay, GO
         # Parse sources.yaml and instantiate sources
         try:
             sources = get_sources(sources_file)
-            for src in sources:
-                # Spider and parse sources
-                print src
-                src.parse()
-                # Merge, sort, and collate
-                # Write output
+            if update:
+                # Update sources
+                for src in sources:
+                    # Spider and parse sources
+                    print src.name
+                    src.parse()
+                    # Merge, sort, and collate
+                    # Write output
+            else:
+                # List sources but don't do anything else
+                for src in sources:
+                    print src
         except IOError:
             return 1
         except:
@@ -139,8 +195,7 @@ def main(argv=None):
         return 2
     
     except Usage, err:
-        print >> sys.stderr, sys.argv[0].split("/")[-1] + ": " + str(err.msg)
-        print >> sys.stderr, "\t for help use --help"
+        print >> sys.stderr, str(err.msg)
         return 2
 
 

@@ -19,6 +19,7 @@ class Weblog(Source):
         self.type = 'weblog'
         self.feed_url = feed_url
         self.entryType = 'post'
+        self.tagline = ''
 
     def parse(self):
         feed_data = feedparser.parse(self.feed_url)

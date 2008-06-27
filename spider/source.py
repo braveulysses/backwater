@@ -10,6 +10,12 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 #from text import u
 import config
 
+def source_string(name, type, owner, url):
+    return """%s
+  Type: %s
+  Owner: %s
+  URL: %s""" % (name, type, owner, url)
+
 class Source(object):
     def __init__(self, name, owner, url):
         super(Source, self).__init__()
@@ -23,7 +29,7 @@ class Source(object):
         self.http_response = None
 
     def __str__(self):
-        return "%s: %s" % (self.type, self.name)
+        return source_string(self.name, self.type, self.owner, self.url)
 
     def fetch(self): pass
 
