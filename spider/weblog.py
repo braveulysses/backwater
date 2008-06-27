@@ -8,7 +8,10 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 from source import Source
+import config
 import feedparser
+
+feedparser.USER_AGENT = config.BOT_USER_AGENT
 
 class Weblog(Source):
     def __init__(self, name, owner, url, feed_url):
@@ -19,7 +22,7 @@ class Weblog(Source):
 
     def parse(self):
         feed_data = feedparser.parse(self.feed_url)
-        print feed_data.entries[0].title
+        print "\t" + feed_data.entries[0].title
 
 def main():
     pass

@@ -20,7 +20,7 @@ class Tumblelog(Weblog):
 
     def parse(self):
         t = tumblr.parse(self.api_url)
-        print t.posts[0].content
+        print "\t" + t.posts[0].content
 
 def main():
     pass

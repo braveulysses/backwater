@@ -7,15 +7,13 @@ Created by Jacob C. on 2008-02-19.
 Copyright (c) 2008 SNF Labs. All rights reserved.
 """
 
-__version__ = '0.1'
-__author__ = "SNF Labs <jacob@spaceshipnofuture.org>"
-
 import sys
 import getopt
 import yaml
+import config
 
 version_message = '''Backwater v%s
-2008, %s''' % (__version__, __author__)
+2008, %s''' % (config.__version__, config.__author__)
 
 help_message = '''
 The help message goes here.
@@ -128,7 +126,7 @@ def main(argv=None):
             for src in sources:
                 # Spider and parse sources
                 print src
-                #src.parse()
+                src.parse()
                 # Merge, sort, and collate
                 # Write output
         except IOError:
