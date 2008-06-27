@@ -224,6 +224,9 @@ sources:
       url: http://www.spaceshipnofuture.org/linkomatic/
       feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
     
-    - name: Shoplifters, Unite
-      url: http://www.spaceshipnofuture.org/shoplifters/
+#    - name: Shoplifters, Unite
+#      type: linklog
+#      owner: SNF Labs
+#      url: http://www.spaceshipnofuture.org/shoplifters/
+#      feed_url: http://www.spaceshipnofuture.org/shoplifters/feeds/atom/
     
