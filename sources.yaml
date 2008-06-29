@@ -6,6 +6,12 @@ sources:
       owner: jacob
       url: http://chompy.net/blogs/jacob/
       feed_url: http://chompy.net/blogs/jacob/feeds/index.atom
+      
+#    - name: dark entries
+#      type: linklog
+#      owner: jacob
+#      url: http://chompy.net/blogs/jacob/darkentries/
+#      feed_url: http://chompy.net/blogs/jacob/feeds/darkentries.atom
 
     - name: cobralibre
       type: twitter
@@ -208,21 +214,39 @@ sources:
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/
       feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/atom.xml
-    
+
+    - name: Grue York Times: Letters to the Editor
+      type: commentlog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/grueyorktimes/
+      feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/comments/atom.xml
+
     - name: 15 Ways
       type: weblog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/15ways/
       feed_url: http://www.spaceshipnofuture.org/15ways/feeds/atom/
-    
-    - name: CHOMP
-      url: http://www.spaceshipnofuture.org/ubb/
+
+    - name: 15 Ways Comments
+      type: commentlog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/15ways/comments/
+      feed_url: http://www.spaceshipnofuture.org/15ways/feeds/atom/comments
+
+#    - name: CHOMP
+#      url: http://www.spaceshipnofuture.org/ubb/
     
     - name: link-o-matic
       type: linklog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/linkomatic/
       feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
+
+   - name: link-o-matic comments
+     type: commentlog
+     owner: SNF Labs
+     url: http://www.spaceshipnofuture.org/linkomatic/comments/
+     feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/comments
     
 #    - name: Shoplifters, Unite
 #      type: linklog
