@@ -26,7 +26,7 @@ sources:
     - name: cobra libre's photostream
       type: photostream
       owner: cobra libre
-      flickr_id: 
+      flickr_id: 35034350056@N01
       url: http://www.flickr.com/photos/cobra/
       
     # Tamara's stuff
@@ -55,7 +55,7 @@ sources:
     - name: pogo coconino's photostream
       type: photostream
       owner: flickr
-      flickr_id: 
+      flickr_id: 98698771@N00
       url: http://www.flickr.com/photos/pogococonino/
       
     # Mike's stuff
@@ -98,7 +98,7 @@ sources:
     - name: CHO2007's photostream
       type: photostream
       owner: CHO2007
-      flickr_id: 
+      flickr_id: 28183076@N00
       url: http://www.flickr.com/photos/nathalie/
     
     # Seth's stuff
@@ -116,7 +116,7 @@ sources:
     - name: setholdmixon's photostream
       type: photostream
       owner: setholdmixon
-      flickr_id: 
+      flickr_id: 30872993@N00
       url: http://www.flickr.com/photos/setholdmixon/
     
     # Sarah Looney's stuff
@@ -128,7 +128,7 @@ sources:
     - name: sarahloo's photostream
       type: photostream
       owner: sarahloo
-      flickr_id: 
+      flickr_id: 66594479@N00
       url: http://www.flickr.com/photos/sarahloo/
     
     # Sarah Knight's stuff
@@ -205,7 +205,7 @@ sources:
     - name: austin tx's photostream
       type: photostream
       owner: austin tx
-      flickr_id: 
+      flickr_id: 33356186@N00
       url: http://www.flickr.com/photos/austintx/
     
     # Spaceship No Future
@@ -215,11 +215,11 @@ sources:
       url: http://www.spaceshipnofuture.org/
       feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/atom.xml
 
-    - name: Grue York Times: Letters to the Editor
+    - name: Grue York Times Letters to the Editor
       type: commentlog
       owner: SNF Labs
       url: http://www.spaceshipnofuture.org/grueyorktimes/
-      feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/comments/atom.xml
+      feed_url: http://www.spaceshipnofuture.org/grueyorktimes/feeds/comments.atom.xml
 
     - name: 15 Ways
       type: weblog
@@ -242,11 +242,11 @@ sources:
       url: http://www.spaceshipnofuture.org/linkomatic/
       feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/
 
-   - name: link-o-matic comments
-     type: commentlog
-     owner: SNF Labs
-     url: http://www.spaceshipnofuture.org/linkomatic/comments/
-     feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/comments
+    - name: link-o-matic comments
+      type: commentlog
+      owner: SNF Labs
+      url: http://www.spaceshipnofuture.org/linkomatic/comments/
+      feed_url: http://www.spaceshipnofuture.org/linkomatic/feeds/atom/comments
     
 #    - name: Shoplifters, Unite
 #      type: linklog
