@@ -45,28 +45,16 @@ class Weblog(Source):
             else:
                 e = Post()
             # Title
-            try:
-                e.title = entry.title
-            except AttributeError:
-                e.title = ''
+            e.title = entry.get('title', '')
             self.logger.info("Entry title: '%s'" % e.title)
             # Author
-            try:
-                e.author = entry.author
-            except AttributeError:
-                e.author = ''
+            e.author = entry.get('author', '')
             # Summary
-            try:
-                e.summary = entry.summary
-            except AttributeError:
-                e.summary = ''
+            e.summary = entry.get('summary', '')
             # Content
-            try:
-                e.content = entry.content
-            except AttributeError:
-                e.content = e.summary
+            e.content = entry.get('content', e.summary)
             # URL
-            e.url = entry.link
+            e.url = entry.get('link', '')
             # Done parsing this entry
             self.entries.append(e)
 
