@@ -7,9 +7,19 @@ Created by Jacob C. on 2008-02-19.
 Copyright (c) 2008 SNF Labs. All rights reserved.
 """
 
+__TODO__ = """Things left to do:
+
+* Filtering, sanitizing
+* Output
+* Catching HTTP exceptions
+* --no-cache flag doesn't work
+
+"""
+
 import sys
 import getopt
 import yaml
+import logging
 import config
 
 # Sources (feeds) and subtypes of sources
@@ -41,6 +51,7 @@ from config import __author__
 version_message = '''Backwater v%s
 2008, %s''' % (__version__, __author__)
 
+# Keep this in sync with the call to getopt.getopt() down in main()
 help_message = """Usage: python %s
 Update the chompy.net aggregator.
 
@@ -49,9 +60,27 @@ Update the chompy.net aggregator.
     -v, --verbose           execute with verbose output
     -s, --sources=FILE      specify alternate sources file 
                             (default is 'sources.yaml')
+    -n, --no-cache          ignore the cache
     -f, --flush             flush the cache
     -l, --list              list all sources
 """ % sys.argv[0]
+
+#############################################################################
+
+# Set up logging
+logger = logging.getLogger("backwater")
+logger.setLevel(logging.DEBUG)
+# File logger
+fh = logging.FileHandler(config.LOG_DIR + config.LOG_NAME)
+fh.setLevel(config.FH_LOG_LEVEL)
+# Console logger
+ch = logging.StreamHandler()
+ch.setLevel(config.CH_LOG_LEVEL)
+formatter = logging.Formatter(config.LOG_FORMAT)
+fh.setFormatter(formatter)
+ch.setFormatter(formatter)
+logger.addHandler(fh)
+logger.addHandler(ch)
 
 #############################################################################
 
@@ -61,7 +90,9 @@ def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
     sources = []
     try:
+        logger.debug("Opening '%s'" % sources_file)
         f = open(sources_file, 'r')
+        logger.debug("Loading YAML")
         y = yaml.load(f)
         f.close()
         for src in y['sources']:
@@ -111,13 +142,17 @@ def get_sources(sources_file):
                     raise UnknownSourceTypeError
                 sources.append(s)
             except KeyError:
-                print "Problem parsing: %s" % (src)
+                logger.error("Problem parsing: %s" % src)
             except UnknownSourceTypeError:
-                print "Unknown source type encountered: %s" % (src)
+                logger.error("Unknown source type encountered: %s" % src)
         return sources
     except IOError:
-        print >> sys.stderr, "Couldn't load the config file %s!" % (config_file)
+        logger.critical("Couldn't load the sources file '%s'!" % sources_file)
         raise
+
+class FlushCache(Exception):
+    """Flushes the content cache."""
+    pass      
 
 class Version(Exception):
     """Outputs version information."""
@@ -137,12 +172,13 @@ def main(argv=None):
         try:
             opts, args = getopt.getopt(
                 argv[1:], 
-                "Vho:vs:fl", 
+                "Vho:vs:nfl", 
                 [ "version", 
                   "verbose", 
                   "help", 
                   "output=", 
                   "sources=", 
+                  "no-cache"
                   "flush", 
                   "list" ]
             )
@@ -163,33 +199,45 @@ def main(argv=None):
             if option in ("-o", "--output"):
                 output = value
             if option in ("-s", "--sources"):
-                config_file = value
+                sources_file = value
+            if option in ("-n", "--no-cache"):
+                config.HTTP_USE_CACHE = False
             if option in ("-f", "--flush"):
-                pass
+                raise FlushCache()
             if option in ("-l", "--list"):
                 update = False
     
         # Okay, GO
         # Parse sources.yaml and instantiate sources
         try:
+            logger.debug("Reading sources from '%s'" % sources_file)
             sources = get_sources(sources_file)
             if update:
                 # Update sources
+                logger.debug("Starting parsing run")
                 for src in sources:
                     # Spider and parse sources
-                    print src.name
+                    logger.info("Parsing '%s'" % src.name)
                     src.parse()
+                    for entry in src.entries:
+                        pass
                     # Merge, sort, and collate
                     # Write output
             else:
                 # List sources but don't do anything else
+                logger.debug("Listing sources; no parsing")
                 for src in sources:
                     print src
         except IOError:
             return 1
         except:
+            logger.exception("Unknown exception encountered")
             raise
-    
+
+    except FlushCache:
+        print "Flushing cache... (unimplemented)"
+        return 0
+
     except Version, err:
         print >> sys.stderr, str(err.msg)
         return 2

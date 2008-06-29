@@ -7,20 +7,35 @@ Created by Jacob C. on 2008-06-22.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
+import logging
+import config
+import tumblr
 from source import Source
 from weblog import Weblog
-import tumblr
+
+tumblr.USER_AGENT = config.BOT_USER_AGENT
+
+module_logger = logging.getLogger("backwater.tumblelog")
 
 class Tumblelog(Weblog):
     def __init__(self, name, owner, url):
         super(Tumblelog, self).__init__(name, owner, url, feed_url=None)
+        self.logger = logging.getLogger("backwater.tumblelog.Tumblelog")
+        self.logger.debug("Created an instance of Tumblelog: '%s'" % self.name)
         self.type = 'tumblelog'
         self.entry_type = None
         self.api_url = url + 'api/read'
 
     def parse(self):
+        self.logger.info("Fetching API data at '%s'" % self.api_url)
+        self.fetch(self.api_url)
+        self.logger.info("Parsing API data for entries...")
         t = tumblr.parse(self.api_url)
-        print "\t" + t.posts[0].content
+        for post in t.posts:
+            try:
+                self.logger.info("Entry title: '%s'" % post.title)
+            except AttributeError:
+                pass
 
 def main():
     pass

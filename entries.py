@@ -10,6 +10,8 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 class Entry(object):
     def __init__(self):
         super(Entry, self).__init__()
+        self.source_name = ''
+        self.source_url = ''
         self.title = ''
         self.author = ''
         self.summary = ''
@@ -19,14 +21,14 @@ class Entry(object):
         self.published = None
         self.created = None
         self.updated = None
-
-class Post(Entry):
-    def __init__(self):
-        super(Post, self).__init__()
         self.comments = None
         self.enclosures = None
         self.tags = None
         self.via = None
+
+class Post(Entry):
+    def __init__(self):
+        super(Post, self).__init__()
 
 class Link(Entry):
     def __init__(self):
