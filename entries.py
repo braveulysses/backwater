@@ -7,6 +7,11 @@ Created by Jacob C. on 2008-06-26.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
+import logging
+import config
+
+module_logger = logging.getLogger("backwater.entries")
+
 class Entry(object):
     def __init__(self):
         super(Entry, self).__init__()
@@ -56,12 +61,16 @@ class Video(Entry):
 class Photo(Entry):
     def __init__(self):
         super(Photo, self).__init__()
+        self.logger = logging.getLogger("backwater.entries.Photo")
         self.id = ''
         self.secret = ''
         self.server = ''
         # self.photo_url is a URL for the photo itself
         # self.url is a URL for the photo's web page
         self.photostream_url = ''
+
+    def cache():
+        pass
 
 def main():
     pass

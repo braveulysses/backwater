@@ -27,12 +27,15 @@ class Photostream(Source):
         """Get recent photos from a photostream."""
         self.logger.debug("Contacting Flickr Services")
         flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
-        extras = 'date_upload,owner_name'
+        extras = 'date_upload,owner_name,media'
         self.logger.info("Getting photos for %s" % self.owner)
         photos = flickr.people_getPublicPhotos(user_id=self.flickr_id, extras=extras)
         for photo in photos:
             e = Photo()
             p = photo.find('photo')
+            #if p.get('media') == 'video':
+            #    self.logger.info("Skipping Flickr video")
+            #    continue
             e.title = p.get('title')
             self.logger.info("Photo title: '%s'" % e.title)
             e.id = p.get('id')
@@ -42,6 +45,7 @@ class Photostream(Source):
             self.logger.debug("Photo image URL: '%s'" % e.photo_url)
             e.url = 'http://www.flickr.com/photos/%s/%s/' % (self.flickr_id, e.id)
             self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
+            self.entries.append(e)
 
 def main():
     pass

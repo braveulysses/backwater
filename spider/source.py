@@ -115,7 +115,7 @@ class Source(object):
             pass
         else:
             msg = "Unsupported HTTP Content-Type: '%s'" % content_type
-            self.logger.exception(msg)
+            self.logger.error(msg)
             raise UnsupportedContentTypeError(msg)
         self.http_response = resp
         self.http_content = content
