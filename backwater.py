@@ -16,10 +16,12 @@ __TODO__ = """Things left to do:
 
 """
 
+import os
 import sys
 import getopt
 import yaml
 import logging
+import logging.handlers
 import config
 
 # Sources (feeds) and subtypes of sources
@@ -70,17 +72,22 @@ Update the chompy.net aggregator.
 # Set up logging
 logger = logging.getLogger("backwater")
 logger.setLevel(logging.DEBUG)
-# File logger
-fh = logging.FileHandler(config.LOG_DIR + config.LOG_NAME)
+# File handler
+fn = config.LOG_DIR + config.LOG_NAME
+if os.path.exists(config.LOG_DIR):
+    fh = logging.handlers.RotatingFileHandler(fn, config.MAX_LOG_SIZE, config.MAX_LOGS)
+else:
+    raise "Log directory does not exist: '%s'" % config.LOG_DIR
+    sys.exit(1)
 fh.setLevel(config.FH_LOG_LEVEL)
-# Console logger
-ch = logging.StreamHandler()
-ch.setLevel(config.CH_LOG_LEVEL)
+# Console handler
+#ch = logging.StreamHandler(sys.stderr)
+#ch.setLevel(config.CH_LOG_LEVEL)
 formatter = logging.Formatter(config.LOG_FORMAT)
 fh.setFormatter(formatter)
-ch.setFormatter(formatter)
+#ch.setFormatter(formatter)
 logger.addHandler(fh)
-logger.addHandler(ch)
+#logger.addHandler(ch)
 
 #############################################################################
 
@@ -245,6 +252,10 @@ def main(argv=None):
     except Usage, err:
         print >> sys.stderr, str(err.msg)
         return 2
+    
+    except KeyboardInterrupt:
+        print >> sys.stderr, "Manually terminated."
+        return 3
 
 
 if __name__ == "__main__":
