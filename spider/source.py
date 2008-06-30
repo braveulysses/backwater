@@ -21,7 +21,10 @@ def source_string(name, type, owner, url):
 
 class BackwaterHTTPError(Exception): pass
 class InternalServerError(BackwaterHTTPError): pass
+class BadGatewayError(BackwaterHTTPError): pass
 class ServiceUnavailableError(BackwaterHTTPError): pass
+class BadRequestError(BackwaterHTTPError): pass
+class NotAuthorizedError(BackwaterHTTPError): pass
 class URLNotFoundError(BackwaterHTTPError): pass
 class URLForbiddenError(BackwaterHTTPError): pass
 class URLGoneError(BackwaterHTTPError): pass
@@ -89,6 +92,10 @@ class Source(object):
             self.logger.error("IOError when fetching content!")
             raise
         # Deal with various HTTP error states
+        if resp.status == 400:
+            raise BadRequestError
+        if resp.status == 401:
+            raise NotAuthorizedError
         if resp.status == 403:
             raise URLForbiddenError
         if resp.status == 404:
@@ -97,6 +104,8 @@ class Source(object):
             raise URLGoneError
         if resp.status == 500:
             raise InternalServerError
+        if resp.status == 502:
+            raise BadGatewayError
         if resp.status == 503:
             raise ServiceUnavailableError
         # Bail if proper content-type not given

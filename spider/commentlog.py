@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import logging
 from source import Source
 from weblog import Weblog
+from entries import Quote
 
 class Commentlog(Weblog):
     def __init__(self, name, owner, url, feed_url):

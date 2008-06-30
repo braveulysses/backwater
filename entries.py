@@ -26,6 +26,9 @@ class Entry(object):
         self.tags = None
         self.via = None
 
+    def __str__(self):
+        return "'" + self.title + ",' by " + self.author
+
 class Post(Entry):
     def __init__(self):
         super(Post, self).__init__()
@@ -56,8 +59,8 @@ class Photo(Entry):
         self.id = ''
         self.secret = ''
         self.server = ''
-        # self.url is a URL for the photo itself
-        # self.photostream_url is a URL for the photo's web page
+        # self.photo_url is a URL for the photo itself
+        # self.url is a URL for the photo's web page
         self.photostream_url = ''
 
 def main():

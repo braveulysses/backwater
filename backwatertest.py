@@ -8,10 +8,6 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import unittest
-import backwater.feed as feed
-import backwater.photo as photo
-import backwater.tumblelog as tumblelog
-
 
 class SanityTestCase(unittest.TestCase):
     def setUp(self):
