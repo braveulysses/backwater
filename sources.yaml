@@ -54,7 +54,7 @@ sources:
     
     - name: pogo coconino's photostream
       type: photostream
-      owner: flickr
+      owner: pogo coconino
       flickr_id: 98698771@N00
       url: http://www.flickr.com/photos/pogococonino/
       

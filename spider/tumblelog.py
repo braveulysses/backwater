@@ -12,6 +12,14 @@ import config
 import tumblr
 from source import Source
 from weblog import Weblog
+from entries import Entry
+from entries import Post
+from entries import Link
+from entries import Quote
+from entries import Conversation
+from entries import Song
+from entries import Video
+from entries import Photo
 
 tumblr.USER_AGENT = config.BOT_USER_AGENT
 

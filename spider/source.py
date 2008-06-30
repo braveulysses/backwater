@@ -8,7 +8,10 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import httplib2
+import logging
 import config
+
+module_logger = logging.getLogger("backwater.source")
 
 def source_string(name, type, owner, url):
     return """%s
@@ -22,12 +25,17 @@ class ServiceUnavailableError(BackwaterHTTPError): pass
 class URLNotFoundError(BackwaterHTTPError): pass
 class URLForbiddenError(BackwaterHTTPError): pass
 class URLGoneError(BackwaterHTTPError): pass
-class UnsupportedContentTypeError(BackwaterHTTPError): pass
+
+class UnsupportedContentTypeError(BackwaterHTTPError):
+    def __init__(self, msg):
+        self.msg = msg
+    
 class BadContentTypeError(BackwaterHTTPError): pass
 
 class Source(object):
     def __init__(self, name, owner, url):
         super(Source, self).__init__()
+        self.logger = logging.getLogger("backwater.source.Source")
         self.type = 'source'
         self.entry_type = None
         self.name = name
@@ -97,7 +105,9 @@ class Source(object):
             # Weird: using not in the above test doesn't work
             pass
         else:
-            raise UnsupportedContentTypeError
+            msg = "Unsupported HTTP Content-Type: '%s'" % content_type
+            self.logger.exception(msg)
+            raise UnsupportedContentTypeError(msg)
         self.http_response = resp
         self.http_content = content
 

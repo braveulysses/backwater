@@ -53,6 +53,12 @@ class Video(Entry):
 class Photo(Entry):
     def __init__(self):
         super(Photo, self).__init__()
+        self.id = ''
+        self.secret = ''
+        self.server = ''
+        # self.url is a URL for the photo itself
+        # self.photostream_url is a URL for the photo's web page
+        self.photostream_url = ''
 
 def main():
     pass
