@@ -36,6 +36,7 @@ class Tumblelog(Weblog):
         self.api_url = url + 'api/read'
 
     def parse(self):
+        """Fetches Tumblr API data and parses it."""
         self.logger.info("Fetching API data at '%s'" % self.api_url)
         self.http_response, self.http_content = spider.fetch(self.api_url)
         self.logger.info("Parsing API data for entries...")

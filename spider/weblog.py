@@ -28,34 +28,38 @@ class Weblog(Source):
         #self.logger.debug("Created an instance of Weblog: '%s'" % self.name)
         self.type = 'weblog'
         self.feed_url = feed_url
-        self.entryType = 'post'
+        self.entry_type = 'post'
         self.tagline = ''
 
     def parse(self):
+        """Fetches the contents of the weblog's feed and parses it.
+        Each entry in the feed becomes an Entry object, and each entry attribute
+        is normalized."""
         self.logger.info("Fetching feed '%s'" % self.feed_url)
         self.http_response, self.http_content = spider.fetch(self.feed_url)
         self.logger.info("Parsing feed for entries...")
         feed_data = feedparser.parse(self.feed_url)
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
-            # sources, so instantiate the appropriate entry class
+            # sources; because we assume that the only difference between 
+            # feeds of type Weblog, Linklog, and Commentlog is the presentation of 
+            # their entries, instantiating the appropriate entry class here means that 
+            # we don't have to write new parse() methods for Linklog and Commentlog.
             if self.type == 'linklog':
                 e = Link()
             elif self.type == 'commentlog':
                 e = Quote()
             else:
                 e = Post()
-            # Title
             e.title = entry.get('title', '')
             self.logger.info("Entry title: '%s'" % e.title)
-            # Author
             e.author = entry.get('author', '')
-            # Summary
             e.summary = entry.get('summary', '')
-            # Content
             e.content = entry.get('content', e.summary)
-            # URL
+            # TODO: normalize URLs
             e.url = entry.get('link', '')
+            # TODO: get via URL
+            # TODO: dates
             # Done parsing this entry
             self.entries.append(e)
 

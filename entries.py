@@ -15,6 +15,7 @@ import spider
 module_logger = logging.getLogger("backwater.entries")
 
 class Entry(object):
+    """Generic Entry object from which weblog posts, links, photos, etc. descend."""
     def __init__(self):
         super(Entry, self).__init__()
         self.source_name = ''

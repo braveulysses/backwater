@@ -9,6 +9,7 @@ Copyright (c) 2008 SNF Labs. All rights reserved.
 
 __TODO__ = """Things left to do:
 
+* Smarter caching
 * Filtering, sanitizing
 * Output
 * Catching HTTP exceptions
@@ -44,6 +45,19 @@ from entries import Conversation
 from entries import Song
 from entries import Video
 from entries import Photo
+
+# HTTP exceptions
+
+from spider import BackwaterHTTPError
+from spider import InternalServerError
+from spider import BadGatewayError
+from spider import ServiceUnavailableError
+from spider import BadRequestError
+from spider import NotAuthorizedError
+from spider import URLNotFoundError
+from spider import URLForbiddenError
+from spider import URLGoneError
+from spider import UnsupportedContentTypeError
 
 #############################################################################
 
@@ -224,10 +238,15 @@ def main(argv=None):
                 logger.debug("Starting parsing run")
                 for src in sources:
                     # Spider and parse sources
-                    logger.info("Parsing '%s'" % src.name)
-                    src.parse()
-                    for entry in src.entries:
-                        pass
+                    try:
+                        logger.info("Parsing '%s'" % src.name)
+                        src.parse()
+                        for entry in src.entries:
+                            pass
+                    except UnsupportedContentTypeError, err:
+                        logger.exception(err)
+                    except BackwaterHTTPError:
+                        logger.exception("HTTP error occurred!")
                     # Merge, sort, and collate
                     # Write output
             else:

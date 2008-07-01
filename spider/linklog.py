@@ -18,7 +18,7 @@ class Linklog(Weblog):
         super(Linklog, self).__init__(name, owner, url, feedUrl)
         self.logger = logging.getLogger("backwater.linklog.Linklog")
         self.type = 'linklog'
-        self.entryType = 'link'
+        self.entry_type = 'link'
 
 def main():
     pass

@@ -19,6 +19,7 @@ def source_string(name, type, owner, url):
   URL: %s""" % (name, type, owner, url)
 
 class Source(object):
+    """Generic Source object from which weblogs, tumblelogs, etc. descend."""
     def __init__(self, name, owner, url):
         super(Source, self).__init__()
         self.logger = logging.getLogger("backwater.source.Source")
@@ -34,7 +35,10 @@ class Source(object):
     def __str__(self):
         return source_string(self.name, self.type, self.owner, self.url)
 
-    def parse(self): pass
+    def parse(self):
+        """This is a kind of abstract method that does nothing.  Intended to be
+        defined by child objects and called when parsing feeds or other data sources."""
+        pass
 
 def main():
 	pass

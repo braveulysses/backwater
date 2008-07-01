@@ -2,7 +2,10 @@ import httplib2
 import logging
 import config
 
-class BackwaterHTTPError(Exception): pass
+class BackwaterHTTPError(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+
 class InternalServerError(BackwaterHTTPError): pass
 class BadGatewayError(BackwaterHTTPError): pass
 class ServiceUnavailableError(BackwaterHTTPError): pass
@@ -15,8 +18,6 @@ class URLGoneError(BackwaterHTTPError): pass
 class UnsupportedContentTypeError(BackwaterHTTPError):
     def __init__(self, msg):
         self.msg = msg
-    
-class BadContentTypeError(BackwaterHTTPError): pass
 
 module_logger = logging.getLogger("backwater.spider")
 
@@ -34,7 +35,7 @@ def parse_content_type(ct):
     return content_type, charset
 
 def fetch(url, valid_content_types=None):
-    """Requests the given URL and deals with any HTTP-related errors.
+    """Requests the given URL and throws HTTP errors left and right.
 
     Returns both an httplib2 Response object and the content."""
     # Default valid content types are generic XML or XML feed types
@@ -47,7 +48,7 @@ def fetch(url, valid_content_types=None):
             'application/rdf+xml'
         ]
     http_headers = { "User-Agent": config.BOT_USER_AGENT }
-    # Setting this tells httplib2 to ignore its cache
+    # Setting HTTP_USE_CACHE to false tells httplib2 to ignore its cache
     if config.HTTP_USE_CACHE == False:
         module_logger.debug("Skipping the httplib2 cache")
         http_headers['cache-control'] = 'no-cache'
@@ -60,7 +61,7 @@ def fetch(url, valid_content_types=None):
         # For now, just re-raise the exception.
         module_logger.error("IOError when fetching content!")
         raise
-    # Deal with various HTTP error states
+    # Throw exceptions for various HTTP error codes
     if resp.status == 400:
         raise BadRequestError
     if resp.status == 401:
@@ -80,7 +81,7 @@ def fetch(url, valid_content_types=None):
     # Bail if proper content-type not given
     content_type, charset = parse_content_type(resp['content-type'])
     if content_type in valid_content_types:
-        # Weird: using not in the above test doesn't work
+        # Weird: using 'not' in the above test doesn't work
         pass
     else:
         msg = "Unsupported HTTP Content-Type: '%s'" % content_type

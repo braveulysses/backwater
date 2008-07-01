@@ -24,8 +24,11 @@ class Photostream(Source):
         self.flickr_id = flickr_id
 
     def parse(self):
-        """Get recent photos from a photostream."""
+        """Gets recent photos from a photostream, caches and thumbnails them."""
         self.logger.debug("Contacting Flickr Services")
+        # Using flickrapi's 'etree' options requires ElementTree, which is standard with 
+        # Python 2.5, but a separate install with Python 2.4.  The flickrapi module must 
+        # also be patched using 'patches/flickrapi.patch' when using Python 2.4.
         flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
         extras = 'date_upload,owner_name,media'
         self.logger.info("Getting photos for %s" % self.owner)
@@ -46,6 +49,7 @@ class Photostream(Source):
             e.url = 'http://www.flickr.com/photos/%s/%s/' % (self.flickr_id, e.id)
             self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
             e.cache()
+            # TODO: Make photo thumbnails
             self.entries.append(e)
 
 def main():
