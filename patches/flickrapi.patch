@@ -1,0 +1,21 @@
+--- flickrapi-1.1/flickrapi/__init__.py	2008-04-15 10:18:51.000000000 -0700
++++ flickrapi-1.1-patched/flickrapi/__init__.py	2008-07-01 08:51:05.000000000 -0700
+@@ -242,10 +242,15 @@ class FlickrAPI:
+     def parse_etree(self, rest_xml):
+         '''Parses a REST XML response from Flickr into an ElementTree object.'''
+ 
+-        # Only import it here, to maintain Python 2.4 compatibility
+-        import xml.etree.ElementTree
++        try:
++            import xml.etree.ElementTree
+ 
+-        rsp = xml.etree.ElementTree.fromstring(rest_xml)
++            rsp = xml.etree.ElementTree.fromstring(rest_xml)
++        except ImportError:
++            # For Python 2.4 compatibility:
++            import elementtree.ElementTree
++
++            rsp = elementtree.ElementTree.fromstring(rest_xml)
+         if rsp.attrib['stat'] == 'ok' or not self.fail_on_error:
+             return rsp
+         
