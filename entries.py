@@ -7,6 +7,7 @@ Created by Jacob C. on 2008-06-26.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
+import os
 import logging
 import config
 

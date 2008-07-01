@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import config
 import feedparser
 import logging
+import spider
 from source import Source
 from entries import Entry
 from entries import Post
@@ -32,7 +33,7 @@ class Weblog(Source):
 
     def parse(self):
         self.logger.info("Fetching feed '%s'" % self.feed_url)
-        self.fetch(self.feed_url)
+        self.http_response, self.http_content = spider.fetch(self.feed_url)
         self.logger.info("Parsing feed for entries...")
         feed_data = feedparser.parse(self.feed_url)
         for entry in feed_data.entries:

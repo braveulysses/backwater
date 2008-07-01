@@ -36,7 +36,7 @@ class Photostream(Source):
             #if p.get('media') == 'video':
             #    self.logger.info("Skipping Flickr video")
             #    continue
-            e.title = p.get('title')
+            e.title = p.get('title', 'untitled')
             self.logger.info("Photo title: '%s'" % e.title)
             e.id = p.get('id')
             e.secret = p.get('secret')

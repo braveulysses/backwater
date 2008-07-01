@@ -9,6 +9,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import logging
 import config
+import spider
 import tumblr
 from source import Source
 from weblog import Weblog
@@ -36,7 +37,7 @@ class Tumblelog(Weblog):
 
     def parse(self):
         self.logger.info("Fetching API data at '%s'" % self.api_url)
-        self.fetch(self.api_url)
+        self.http_response, self.http_content = spider.fetch(self.api_url)
         self.logger.info("Parsing API data for entries...")
         t = tumblr.parse(self.api_url)
         for post in t.posts:
