@@ -45,6 +45,7 @@ class Photostream(Source):
             self.logger.debug("Photo image URL: '%s'" % e.photo_url)
             e.url = 'http://www.flickr.com/photos/%s/%s/' % (self.flickr_id, e.id)
             self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
+            e.cache()
             self.entries.append(e)
 
 def main():

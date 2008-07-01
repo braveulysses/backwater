@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import os
 import logging
 import config
+import spider
 
 module_logger = logging.getLogger("backwater.entries")
 
@@ -68,10 +69,30 @@ class Photo(Entry):
         self.server = ''
         # self.photo_url is a URL for the photo itself
         # self.url is a URL for the photo's web page
-        self.photostream_url = ''
+        self.photo_url = ''
 
-    def cache():
-        pass
+    def get_cached_original_fn(self):
+        return "%s%s_%s_orig.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+
+    def get_cached_thumbnail_fn(self):
+        return "%s%s_%s_thumb.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+
+    def cache(self):
+        try:
+            self.logger.info("Fetching and caching photo '%s'" % self.title)
+            content_types = [
+                'image/jpeg',
+                'image/gif'
+            ]
+            resp, content = spider.fetch(self.photo_url, valid_content_types=content_types)
+            self.logger.debug('HTTP Status: %s' % str(resp.status))
+            if resp.status == 200:
+                self.logger.debug('Saving photo to cache')
+                f = open(self.get_cached_original_fn(), 'w')
+                f.write(content)
+                f.close()
+        except:
+            self.logger.exception("Problem caching photo!")
 
 def main():
     pass
