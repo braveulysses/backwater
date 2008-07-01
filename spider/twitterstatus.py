@@ -7,6 +7,7 @@ Created by Jacob C. on 2008-06-22.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
+import urllib2
 import httplib
 import twitter
 import logging
@@ -46,6 +47,8 @@ class TwitterStatus(Source):
                 self.date = status.created_at
         except httplib.BadStatusLine:
             self.logger.exception("Twitter.com unexpectedly closed the connection!")
+        except urllib2.HTTPError, err:
+            self.logger.exception("HTTP error: '%s'" % err)
         except:
             self.logger.exception("Unknown error while fetching Twitter status!")
 
