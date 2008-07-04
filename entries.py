@@ -66,6 +66,7 @@ class Photo(Entry):
         super(Photo, self).__init__()
         self.logger = logging.getLogger("backwater.entries.Photo")
         self.id = ''
+        self.farm_id = ''
         self.secret = ''
         self.server = ''
         # self.photo_url is a URL for the photo itself
