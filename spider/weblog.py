@@ -51,6 +51,8 @@ class Weblog(Source):
                 e = Quote()
             else:
                 e = Post()
+            e.source_name = self.name
+            e.source_url = self.url
             e.title = entry.get('title', '')
             self.logger.info("Entry title: '%s'" % e.title)
             e.author = entry.get('author', '')
@@ -59,6 +61,7 @@ class Weblog(Source):
             # TODO: normalize URLs
             e.url = entry.get('link', '')
             # TODO: get via URL
+            # TODO: get comments URL
             # TODO: dates
             # Done parsing this entry
             self.entries.append(e)

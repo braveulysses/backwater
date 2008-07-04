@@ -25,6 +25,9 @@ class Entry(object):
         self.summary = ''
         self.content = ''
         self.url = ''
+        self.related = None
+        self.via = None
+        self.comments = None
         self.date = None
         self.published = None
         self.created = None
@@ -32,7 +35,6 @@ class Entry(object):
         self.comments = None
         self.enclosures = None
         self.tags = None
-        self.via = None
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
@@ -48,6 +50,9 @@ class Link(Entry):
 class Quote(Entry):
     def __init__(self):
         super(Quote, self).__init__()
+        # This is awkward, but since 'source' is already taken...
+        # citation = source of the quote
+        self.citation = ''
 
 class Conversation(Entry):
     def __init__(self):

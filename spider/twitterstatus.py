@@ -7,8 +7,8 @@ Created by Jacob C. on 2008-06-22.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
-import urllib2
-import httplib
+from httplib import BadStatusLine
+from urllib2 import HTTPError
 import twitter
 import logging
 import config
@@ -38,16 +38,21 @@ class TwitterStatus(Source):
             self.logger.info("Getting Twitter tweets for %s" % self.owner)
             tweets = twitty.GetUserTimeline(self.name)
             for tweet in tweets:
-                self.author = tweet.user.name
-                self.summary = tweet.text
-                self.content = self.summary
-                self.logger.info("Twitter: '%s'" % self.summary)
-                self.url = self.get_tweet_url(tweet.id)
-                self.logger.debug("Twitter URL: %s" % self.url)
-                self.date = tweet.created_at
-        except httplib.BadStatusLine:
+                e = Quote()
+                e.source_name = self.name
+                e.source_url = self.url
+                e.author = tweet.user.name
+                e.summary = tweet.text
+                e.content = e.summary
+                e.citation = e.author
+                self.logger.info("Twitter: '%s'" % e.summary)
+                e.url = self.get_tweet_url(tweet.id)
+                self.logger.debug("Twitter URL: %s" % e.url)
+                e.date = tweet.created_at
+                self.entries.append(e)
+        except BadStatusLine:
             self.logger.exception("Twitter.com unexpectedly closed the connection!")
-        except urllib2.HTTPError, err:
+        except HTTPError, err:
             self.logger.exception("HTTP error: '%s'" % err)
         except:
             self.logger.exception("Unknown error while fetching Twitter tweet!")
