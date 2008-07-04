@@ -35,6 +35,8 @@ class Photostream(Source):
         photos = flickr.people_getPublicPhotos(user_id=self.flickr_id, extras=extras)
         for photo in photos:
             e = Photo()
+            # This only gets the most recent photo, which is really a bug, but 
+            # I like this behavior.  Too many photos clutter things up.
             p = photo.find('photo')
             #if p.get('media') == 'video':
             #    self.logger.info("Skipping Flickr video")

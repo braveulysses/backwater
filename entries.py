@@ -84,7 +84,8 @@ class Photo(Entry):
             self.logger.info("Fetching and caching photo '%s'" % self.title)
             content_types = [
                 'image/jpeg',
-                'image/gif'
+                'image/gif',
+                'image/png'
             ]
             resp, content = spider.fetch(self.photo_url, valid_content_types=content_types)
             self.logger.debug('HTTP Status: %s' % str(resp.status))
