@@ -89,19 +89,20 @@ logger.setLevel(logging.DEBUG)
 # File handler
 fn = config.LOG_DIR + config.LOG_NAME
 if os.path.exists(config.LOG_DIR):
-    fh = logging.handlers.RotatingFileHandler(fn, config.MAX_LOG_SIZE, config.MAX_LOGS)
+    #fh = logging.handlers.RotatingFileHandler(fn, config.MAX_LOG_SIZE, config.MAX_LOGS)
+    fh = logging.FileHandler(fn)
 else:
     raise "Log directory does not exist: '%s'" % config.LOG_DIR
     sys.exit(1)
 fh.setLevel(config.FH_LOG_LEVEL)
 # Console handler
-#ch = logging.StreamHandler(sys.stderr)
-#ch.setLevel(config.CH_LOG_LEVEL)
+ch = logging.StreamHandler(sys.stderr)
+ch.setLevel(config.CH_LOG_LEVEL)
 formatter = logging.Formatter(config.LOG_FORMAT)
 fh.setFormatter(formatter)
-#ch.setFormatter(formatter)
+ch.setFormatter(formatter)
 logger.addHandler(fh)
-#logger.addHandler(ch)
+logger.addHandler(ch)
 
 #############################################################################
 
