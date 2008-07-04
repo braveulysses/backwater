@@ -11,6 +11,7 @@ import os
 import logging
 import config
 import spider
+from urlparse import urlparse
 
 module_logger = logging.getLogger("backwater.entries")
 
@@ -77,14 +78,39 @@ class Photo(Entry):
         # self.photo_url is a URL for the photo itself
         # self.url is a URL for the photo's web page
         self.photo_url = ''
+        # The self.cache() method needs to know whether the photo originated from
+        # Tumblr or Flickr, so stick it in self.photo_type
+        self.photo_type = ''
 
     def get_cached_original_fn(self):
-        return "%s%s_%s_orig.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+        if self.photo_type == 'flickr':
+            return "%sflickr_orig_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+        elif self.photo_type == 'tumblr':
+            # We don't necessarily know that the photo will be a JPEG.  To be safe, let's 
+            # just take the path component of the URL and use that (after removing any
+            # slashes).
+            tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
+            return "%stumblr_orig_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
+        else:
+            # ???
+            raise Exception
 
     def get_cached_thumbnail_fn(self):
-        return "%s%s_%s_thumb.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+        if self.photo_type == 'flickr':
+            return "%sflickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+        elif self.photo_type == 'tumblr':
+            # See get_cached_original_fn()
+            tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
+            return "%stumblr_thumb_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
+        else:
+            # ???
+            raise Exception
 
     def cache(self):
+        """Fetches photo via HTTP and caches both the original and a thumbnail.
+        
+        Use the type argument to specify whether the photo originated from 
+        Flickr or Tumblr."""
         try:
             self.logger.info("Fetching and caching photo '%s'" % self.title)
             content_types = [
@@ -99,6 +125,7 @@ class Photo(Entry):
                 f = open(self.get_cached_original_fn(), 'w')
                 f.write(content)
                 f.close()
+            # TODO: create thumbnail
         except:
             self.logger.exception("Problem caching photo!")
 

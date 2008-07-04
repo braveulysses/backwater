@@ -59,8 +59,13 @@ class Tumblelog(Weblog):
                 elif post.type == 'photo':
                     self.logger.info("Tumblr post type: photo")
                     e = Photo()
+                    e.photo_type = 'tumblr'
                     e.summary = post.caption
-                    # TODO: fetch, resize, and cache photo
+                    # post.urls is a dictionary of photo URLs keyed by size.
+                    # Let's get the big one.
+                    e.photo_url = post.urls['500']
+                    self.logger.debug("Tumblr photo URL: '%s'" % e.photo_url)
+                    e.cache()
                 # Conversation, Video, and Audio post types aren't 
                 # going to be implemented for a while
                 # elif post.type = 'conversation':
@@ -84,6 +89,7 @@ class Tumblelog(Weblog):
                 e.date = post.date
                 self.logger.info("Entry title: '%s'" % e.title)
                 self.logger.debug("Entry content: '%s'" % e.content)
+                self.logger.debug("Entry URL: '%s'" % e.url)
                 self.entries.append(e)
             except AttributeError:
                 pass
