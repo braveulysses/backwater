@@ -11,6 +11,7 @@ import logging
 import config
 import spider
 import tumblr
+from feedparser import _parse_date as parse_date
 from source import Source
 from weblog import Weblog
 from entries import Entry
@@ -87,6 +88,7 @@ class Tumblelog(Weblog):
                 e.source_url = self.url
                 e.url = post.url
                 e.date = post.date
+                e.date_parsed = parse_date(post.date)
                 self.logger.info("Entry title: '%s'" % e.title)
                 self.logger.debug("Entry content: '%s'" % e.content)
                 self.logger.debug("Entry URL: '%s'" % e.url)

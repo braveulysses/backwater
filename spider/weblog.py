@@ -39,6 +39,11 @@ class Weblog(Source):
         self.http_response, self.http_content = spider.fetch(self.feed_url)
         self.logger.info("Parsing feed for entries...")
         feed_data = feedparser.parse(self.feed_url)
+        self.id = feed_data.feed.get('id', '')
+        self.name = feed_data.feed.get('title', self.name)
+        self.url = feed_data.feed.get('url', self.url)
+        self.updated = feed_data.feed.get('updated', None)
+        self.updated_parsed = feed_data.feed.get('updated_parsed', None)
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
             # sources; because we assume that the only difference between 

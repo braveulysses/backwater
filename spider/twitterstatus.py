@@ -7,11 +7,12 @@ Created by Jacob C. on 2008-06-22.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
-from httplib import BadStatusLine
-from urllib2 import HTTPError
 import twitter
 import logging
 import config
+from httplib import BadStatusLine
+from urllib2 import HTTPError
+from feedparser import _parse_date as parse_date
 from source import Source
 from entries import Quote
 
@@ -49,6 +50,7 @@ class TwitterStatus(Source):
                 e.url = self.get_tweet_url(tweet.id)
                 self.logger.debug("Twitter URL: %s" % e.url)
                 e.date = tweet.created_at
+                e.date_parsed = parse_date(e.date)
                 self.entries.append(e)
         except BadStatusLine:
             self.logger.exception("Twitter.com unexpectedly closed the connection!")

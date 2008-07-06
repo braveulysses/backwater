@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import flickrapi
 import logging
 import config
+from flickrapi.exceptions import FlickrError
 from source import Source
 from entries import Photo
 
@@ -29,39 +30,42 @@ class Photostream(Source):
         # Using flickrapi's 'etree' options requires ElementTree, which is standard with 
         # Python 2.5, but a separate install with Python 2.4.  The flickrapi module must 
         # also be patched using 'patches/flickrapi.patch' when using Python 2.4.
-        flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
-        extras = 'date_upload,owner_name,media'
-        self.logger.info("Getting photos for %s" % self.owner)
-        photos = flickr.people_getPublicPhotos(user_id=self.flickr_id, extras=extras)
-        for photo in photos:
-            e = Photo()
-            e.photo_type = 'flickr'
-            e.source_name = self.name
-            e.source_url = self.url
-            # This only gets the most recent photo, which is really a bug, but 
-            # I like this behavior.  Too many photos clutter things up.
-            p = photo.find('photo')
-            #if p.get('media') == 'video':
-            #    self.logger.info("Skipping Flickr video")
-            #    continue
-            e.title = p.get('title', 'untitled')
-            self.logger.info("Photo title: '%s'" % e.title)
-            e.id = p.get('id')
-            e.farm_id = p.get('farm')
-            e.secret = p.get('secret')
-            e.server = p.get('server')
-            e.photo_url = 'http://farm%s.static.flickr.com/%s/%s_%s.jpg' % (
-                e.farm_id, 
-                e.server, 
-                e.id, 
-                e.secret
-            )
-            self.logger.debug("Photo image URL: '%s'" % e.photo_url)
-            e.url = 'http://www.flickr.com/photos/%s/%s/' % (self.flickr_id, e.id)
-            self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
-            e.cache()
-            # TODO: Make photo thumbnails
-            self.entries.append(e)
+        try:
+            flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
+            extras = 'date_upload,owner_name,media'
+            self.logger.info("Getting photos for %s" % self.owner)
+            photos = flickr.people_getPublicPhotos(user_id=self.flickr_id, extras=extras)
+            for photo in photos:
+                e = Photo()
+                e.photo_type = 'flickr'
+                e.source_name = self.name
+                e.source_url = self.url
+                # This only gets the most recent photo, which is really a bug, but 
+                # I like this behavior.  Too many photos clutter things up.
+                p = photo.find('photo')
+                #if p.get('media') == 'video':
+                #    self.logger.info("Skipping Flickr video")
+                #    continue
+                e.title = p.get('title', 'untitled')
+                self.logger.info("Photo title: '%s'" % e.title)
+                e.id = p.get('id')
+                e.farm_id = p.get('farm')
+                e.secret = p.get('secret')
+                e.server = p.get('server')
+                e.photo_url = 'http://farm%s.static.flickr.com/%s/%s_%s.jpg' % (
+                    e.farm_id, 
+                    e.server, 
+                    e.id, 
+                    e.secret
+                )
+                self.logger.debug("Photo image URL: '%s'" % e.photo_url)
+                e.url = 'http://www.flickr.com/photos/%s/%s/' % (self.flickr_id, e.id)
+                self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
+                e.cache()
+                # TODO: Make photo thumbnails
+                self.entries.append(e)
+        except FlickrError, err:
+            self.logger.exception("Flickr API error: '%s'" % err)
 
 def main():
     pass

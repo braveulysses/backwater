@@ -24,13 +24,23 @@ class Source(object):
         super(Source, self).__init__()
         self.logger = logging.getLogger("backwater.source.Source")
         self.type = 'source'
+        # Entry type corresponds to the classes defined in entries.py
         self.entry_type = None
+        # This needs to unique; if a unique id is not provided, make one
+        self.id = None
+        # Name: AKA title
         self.name = name
+        # Owner: AKA author
         self.owner = owner
         self.url = url
+        # TODO: borrow or import date parsing logic from feedparser
+        self.updated = None
+        self.updated_parsed = None
         self.entries = []
         self.http_content = None
         self.http_response = None
+        # TODO: support Atom source element:
+        # http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
 
     def __str__(self):
         return source_string(self.name, self.type, self.owner, self.url)

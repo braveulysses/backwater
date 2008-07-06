@@ -87,7 +87,7 @@ Update the chompy.net aggregator.
 logger = logging.getLogger("backwater")
 logger.setLevel(logging.DEBUG)
 # File handler
-fn = config.LOG_DIR + config.LOG_NAME
+fn = config.LOG_DIR + os.sep + config.LOG_NAME
 if os.path.exists(config.LOG_DIR):
     #fh = logging.handlers.RotatingFileHandler(fn, config.MAX_LOG_SIZE, config.MAX_LOGS)
     fh = logging.FileHandler(fn)
