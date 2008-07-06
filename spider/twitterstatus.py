@@ -44,7 +44,7 @@ class TwitterStatus(Source):
                 e.source_url = self.url
                 e.author = tweet.user.name
                 e.summary = tweet.text
-                e.content = e.summary
+                #e.content = e.summary
                 e.citation = e.author
                 self.logger.info("Twitter: '%s'" % e.summary)
                 e.url = self.get_tweet_url(tweet.id)

@@ -72,12 +72,16 @@ def fetch(url, valid_content_types=None):
         raise URLNotFoundError
     if resp.status == 410:
         raise URLGoneError
+    if resp.status > 400 and resp.status < 500:
+        raise BackwaterHTTPError
     if resp.status == 500:
         raise InternalServerError
     if resp.status == 502:
         raise BadGatewayError
     if resp.status == 503:
         raise ServiceUnavailableError
+    if resp.status > 500 and resp.status < 600:
+        raise BackwaterHTTPError
     # Bail if proper content-type not given
     content_type, charset = parse_content_type(resp['content-type'])
     if content_type in valid_content_types:
@@ -88,3 +92,20 @@ def fetch(url, valid_content_types=None):
         module_logger.error(msg)
         raise UnsupportedContentTypeError(msg)
     return resp, content
+
+def update(sources):
+    all_entries = []
+    for src in sources:
+        # Spider and parse sources
+        try:
+            module_logger.info("Parsing '%s'" % src.name)
+            src.parse()
+            src.normalize()
+            for entry in src.entries:
+                entry.normalize()
+                all_entries.append(entry)
+        except UnsupportedContentTypeError, err:
+            module_logger.exception(err)
+        except BackwaterHTTPError:
+            module_logger.exception("HTTP error occurred!")
+    return all_entries

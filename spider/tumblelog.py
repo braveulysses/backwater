@@ -49,13 +49,13 @@ class Tumblelog(Weblog):
                     e = Link()
                     e.title = post.title
                     e.summary = post.content
-                    e.content = post.content
+                    #e.content = post.content
                     e.related = post.related
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
                     e.summary = post.content
-                    e.content = post.content
+                    #e.content = post.content
                     e.citation = post.source
                 elif post.type == 'photo':
                     self.logger.info("Tumblr post type: photo")
@@ -83,7 +83,7 @@ class Tumblelog(Weblog):
                     e = Post()
                     e.title = post.title
                     e.summary = post.content
-                    e.content = post.content
+                    #e.content = post.content
                 e.source_name = self.name
                 e.source_url = self.url
                 e.url = post.url

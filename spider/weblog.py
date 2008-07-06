@@ -41,9 +41,11 @@ class Weblog(Source):
         feed_data = feedparser.parse(self.feed_url)
         self.id = feed_data.feed.get('id', '')
         self.name = feed_data.feed.get('title', self.name)
+        self.generator = feed_data.feed.get('generator', None)
         self.url = feed_data.feed.get('url', self.url)
         self.updated = feed_data.feed.get('updated', None)
         self.updated_parsed = feed_data.feed.get('updated_parsed', None)
+        self.rights = feed_data.feed.get('rights', None)
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
             # sources; because we assume that the only difference between 
@@ -67,7 +69,14 @@ class Weblog(Source):
             e.url = entry.get('link', '')
             # TODO: get via URL
             # TODO: get comments URL
-            # TODO: dates
+            e.date = entry.get('date')
+            e.date_parsed = entry.get('date_parsed')
+            e.published = entry.get('published', e.date)
+            e.published_parsed = entry.get('published_parsed', e.date_parsed)
+            e.updated = entry.get('updated', e.date)
+            e.updated_parsed = entry.get('updated_parsed', e.date_parsed)
+            e.created = entry.get('created', e.date)
+            e.created_parsed = entry.get('created_parsed', e.date_parsed)
             # Done parsing this entry
             self.entries.append(e)
 

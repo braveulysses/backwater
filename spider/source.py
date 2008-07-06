@@ -9,6 +9,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import logging
 import config
+from feedparser import _parse_date as parse_date
 
 module_logger = logging.getLogger("backwater.source")
 
@@ -32,15 +33,14 @@ class Source(object):
         self.name = name
         # Owner: AKA author
         self.owner = owner
+        self.generator = None
         self.url = url
-        # TODO: borrow or import date parsing logic from feedparser
         self.updated = None
         self.updated_parsed = None
+        self.rights = None
         self.entries = []
         self.http_content = None
         self.http_response = None
-        # TODO: support Atom source element:
-        # http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
 
     def __str__(self):
         return source_string(self.name, self.type, self.owner, self.url)
@@ -49,6 +49,18 @@ class Source(object):
         """This is a kind of abstract method that does nothing.  Intended to be
         defined by child objects and called when parsing feeds or other data sources."""
         pass
+
+    def normalize(self):
+        """Checks that all attribute values are in order so that the source can be used
+        in an Atom feed."""
+        if self.id is None:
+            # TODO: generate unique ID
+            pass
+        if len(self.entries) > 0:
+            if self.updated is None:
+                self.updated = self.entries[0].updated
+            if self.updated_parsed is None:
+                self.updated_parsed = parse_date(self.updated)
 
 def main():
 	pass

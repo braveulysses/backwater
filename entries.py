@@ -12,6 +12,7 @@ import logging
 import config
 import spider
 from urlparse import urlparse
+from feedparser import _parse_date as parse_date
 
 module_logger = logging.getLogger("backwater.entries")
 
@@ -50,9 +51,30 @@ class Entry(object):
         self.categories = None
         # Rights is generally used for a copyright statement
         self.rights = None
+        # TODO: support Atom source element:
+        # http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
+        # This is not quite the same as a via reference.
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
+        
+    def normalize(self):
+        """Checks that all attribute values are in order so that the entry can be used
+        for output, particularly in an Atom feed."""
+        if self.content == '':
+            self.content == self.summary
+        if self.published is None:
+            self.published == self.date
+        if self.published_parsed is None:
+            self.published_parsed = parse_date(self.published)
+        if self.created is None:
+            self.created == self.date
+        if self.created_parsed is None:
+            self.created_parsed = parse_date(self.created)
+        if self.updated is None:
+            self.updated == self.date
+        if self.updated_parsed is None:
+            self.updated_parsed = parse_date(self.updated)
 
 class Post(Entry):
     def __init__(self):

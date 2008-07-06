@@ -24,6 +24,7 @@ import yaml
 import logging
 import logging.handlers
 import config
+import spider
 
 # Sources (feeds) and subtypes of sources
 
@@ -110,6 +111,7 @@ class UnknownSourceTypeError(Exception): pass
 
 def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
+    # TODO: Should this be put into a different source file?
     sources = []
     try:
         logger.debug("Opening '%s'" % sources_file)
@@ -235,21 +237,12 @@ def main(argv=None):
             logger.debug("Reading sources from '%s'" % sources_file)
             sources = get_sources(sources_file)
             if update:
+                entries = []
                 # Update sources
                 logger.debug("Starting parsing run")
-                for src in sources:
-                    # Spider and parse sources
-                    try:
-                        logger.info("Parsing '%s'" % src.name)
-                        src.parse()
-                        for entry in src.entries:
-                            pass
-                    except UnsupportedContentTypeError, err:
-                        logger.exception(err)
-                    except BackwaterHTTPError:
-                        logger.exception("HTTP error occurred!")
-                    # Merge, sort, and collate
-                    # Write output
+                entries = spider.update(sources)
+                # Sort and collate
+                # Write output
             else:
                 # List sources but don't do anything else
                 logger.debug("Listing sources; no parsing")
