@@ -8,6 +8,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import os
+import time 
 import logging
 import config
 import spider
@@ -57,6 +58,11 @@ class Entry(object):
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
+        
+    def date_as_string(self, t):
+        """Given a datetime tuple, returns a string representation.
+        Uses the format Month Day, YYYY HH:MM AM/PM"""
+        return time.strftime("%B %d, %Y %H:%M %p", t)
         
     def normalize(self):
         """Checks that all attribute values are in order so that the entry can be used

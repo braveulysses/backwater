@@ -71,6 +71,7 @@ class Weblog(Source):
             # TODO: get comments URL
             e.date = entry.get('date')
             e.date_parsed = entry.get('date_parsed')
+            self.logger.debug("Entry date: %s" % e.date_as_string(e.date_parsed))
             e.published = entry.get('published', e.date)
             e.published_parsed = entry.get('published_parsed', e.date_parsed)
             e.updated = entry.get('updated', e.date)

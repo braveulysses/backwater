@@ -89,6 +89,7 @@ class Tumblelog(Weblog):
                 e.url = post.url
                 e.date = post.date
                 e.date_parsed = parse_date(post.date)
+                self.logger.debug("Tumblr post date: %s" % e.date_as_string(e.date_parsed))
                 self.logger.info("Entry title: '%s'" % e.title)
                 self.logger.debug("Entry content: '%s'" % e.content)
                 self.logger.debug("Entry URL: '%s'" % e.url)

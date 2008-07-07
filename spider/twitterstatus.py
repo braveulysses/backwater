@@ -46,11 +46,12 @@ class TwitterStatus(Source):
                 e.summary = tweet.text
                 #e.content = e.summary
                 e.citation = e.author
-                self.logger.info("Twitter: '%s'" % e.summary)
+                self.logger.info("Tweet: '%s'" % e.summary)
                 e.url = self.get_tweet_url(tweet.id)
-                self.logger.debug("Twitter URL: %s" % e.url)
+                self.logger.debug("Tweet URL: %s" % e.url)
                 e.date = tweet.created_at
                 e.date_parsed = parse_date(e.date)
+                self.logger.debug("Tweet date: %s" % e.date_as_string(e.date_parsed))
                 self.entries.append(e)
         except BadStatusLine:
             self.logger.exception("Twitter.com unexpectedly closed the connection!")

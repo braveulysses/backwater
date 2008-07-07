@@ -63,6 +63,7 @@ class Photostream(Source):
                 self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
                 e.cache()
                 # TODO: Make photo thumbnails
+                # TODO: Get photo date
                 self.entries.append(e)
         except FlickrError, err:
             self.logger.exception("Flickr API error: '%s'" % err)
