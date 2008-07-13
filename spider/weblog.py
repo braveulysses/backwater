@@ -33,8 +33,8 @@ class Weblog(Source):
 
     def parse(self):
         """Fetches the contents of the weblog's feed and parses it.
-        Each entry in the feed becomes an Entry object, and each entry attribute
-        is normalized."""
+        Each entry in the feed becomes an Entry object, and each entry 
+        attribute is normalized."""
         self.logger.info("Fetching feed '%s'" % self.feed_url)
         self.http_response, self.http_content = spider.fetch(self.feed_url)
         self.logger.info("Parsing feed for entries...")
@@ -49,9 +49,10 @@ class Weblog(Source):
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
             # sources; because we assume that the only difference between 
-            # feeds of type Weblog, Linklog, and Commentlog is the presentation of 
-            # their entries, instantiating the appropriate entry class here means that 
-            # we don't have to write new parse() methods for Linklog and Commentlog.
+            # feeds of type Weblog, Linklog, and Commentlog is the 
+            # presentation of their entries, instantiating the appropriate 
+            # entry class here means that we don't have to write new 
+            # parse() methods for Linklog and Commentlog.
             if self.type == 'linklog':
                 e = Link()
             elif self.type == 'commentlog':

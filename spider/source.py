@@ -46,13 +46,14 @@ class Source(object):
         return source_string(self.name, self.type, self.owner, self.url)
 
     def parse(self):
-        """This is a kind of abstract method that does nothing.  Intended to be
-        defined by child objects and called when parsing feeds or other data sources."""
+        """This is a kind of abstract method that does nothing.  Intended to 
+        be defined by child objects and called when parsing feeds or other 
+        data sources."""
         pass
 
     def normalize(self):
-        """Checks that all attribute values are in order so that the source can be used
-        in an Atom feed."""
+        """Checks that all attribute values are in order so that the source 
+        can be used in an Atom feed."""
         if self.id is None:
             # TODO: generate unique ID
             pass

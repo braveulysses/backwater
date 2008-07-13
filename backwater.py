@@ -7,16 +7,6 @@ Created by Jacob C. on 2008-02-19.
 Copyright (c) 2008 SNF Labs. All rights reserved.
 """
 
-__TODO__ = """Things left to do:
-
-* Smarter caching
-* Filtering, sanitizing
-* Output
-* Catching HTTP exceptions
-* --no-cache flag doesn't work
-
-"""
-
 import os
 import sys
 import getopt
@@ -90,8 +80,7 @@ logger.setLevel(logging.DEBUG)
 # File handler
 fn = config.LOG_DIR + os.sep + config.LOG_NAME
 if os.path.exists(config.LOG_DIR):
-    #fh = logging.handlers.RotatingFileHandler(fn, config.MAX_LOG_SIZE, config.MAX_LOGS)
-    fh = logging.FileHandler(fn)
+    fh = logging.handlers.RotatingFileHandler(fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
 else:
     raise "Log directory does not exist: '%s'" % config.LOG_DIR
     sys.exit(1)

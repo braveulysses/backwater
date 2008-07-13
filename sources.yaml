@@ -7,11 +7,11 @@ sources:
       url: http://chompy.net/blogs/jacob/
       feed_url: http://chompy.net/blogs/jacob/feeds/index.atom
       
-#    - name: dark entries
-#      type: linklog
-#      owner: jacob
-#      url: http://chompy.net/blogs/jacob/darkentries/
-#      feed_url: http://chompy.net/blogs/jacob/feeds/darkentries.atom
+   # - name: dark entries
+   #   type: linklog
+   #   owner: jacob
+   #   url: http://chompy.net/blogs/jacob/darkentries/
+   #   feed_url: http://chompy.net/blogs/jacob/feeds/darkentries.atom
 
     - name: cobralibre
       type: twitter
@@ -120,10 +120,10 @@ sources:
       url: http://www.flickr.com/photos/setholdmixon/
     
     # Sarah Looney's stuff
-    - name: saraholdmixon
-      type: twitter
-      owner: Sarah
-      url: http://twitter.com/saraholdmixon
+    # - name: saraholdmixon
+    #   type: twitter
+    #   owner: Sarah
+    #   url: http://twitter.com/saraholdmixon
       
     - name: sarahloo's photostream
       type: photostream

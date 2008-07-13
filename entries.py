@@ -120,17 +120,17 @@ class Photo(Entry):
         # self.photo_url is a URL for the photo itself
         # self.url is a URL for the photo's web page
         self.photo_url = ''
-        # The self.cache() method needs to know whether the photo originated from
-        # Tumblr or Flickr, so stick it in self.photo_type
+        # The self.cache() method needs to know whether the photo originated 
+        # from Tumblr or Flickr, so stick it in self.photo_type
         self.photo_type = ''
 
     def get_cached_original_fn(self):
         if self.photo_type == 'flickr':
             return "%s/flickr_orig_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
         elif self.photo_type == 'tumblr':
-            # We don't necessarily know that the photo will be a JPEG.  To be safe, let's 
-            # just take the path component of the URL and use that (after removing any
-            # slashes).
+            # We don't necessarily know that the photo will be a JPEG.  To 
+            # be safe, let's just take the path component of the URL and 
+            # use that (after removing any slashes).
             tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
             return "%s/tumblr_orig_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
         else:
@@ -149,13 +149,13 @@ class Photo(Entry):
             raise Exception
 
     def resize(self):
+        # TODO: resize photos
         pass
 
     def cache(self):
-        """Fetches photo via HTTP and caches both the original and a thumbnail.
-        
-        Use the type argument to specify whether the photo originated from 
-        Flickr or Tumblr."""
+        """Fetches photo via HTTP and caches both the original and a 
+        thumbnail.
+        """
         try:
             self.logger.info("Fetching and caching photo '%s'" % self.title)
             content_types = [
