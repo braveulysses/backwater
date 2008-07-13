@@ -69,15 +69,18 @@ class Tumblelog(Weblog):
                     e.cache()
                 # Conversation, Video, and Audio post types aren't 
                 # going to be implemented for a while
-                # elif post.type = 'conversation':
-                #     self.logger.info("Tumblr post type: conversation")
-                #     e = Conversation()
-                # elif post.type = 'video':
-                #     self.logger.info("Tumblr post type: video")
-                #     e = Video()
-                # elif post.type = 'audio':
-                #     self.logger.info("Tumblr post type: audio")
-                #     e = Audio()
+                elif post.type == 'conversation':
+                    self.logger.info("Tumblr post type: conversation")
+                    continue
+                    #e = Conversation()
+                elif post.type == 'video':
+                    self.logger.info("Tumblr post type: video")
+                    continue
+                    #e = Video()
+                elif post.type == 'audio':
+                    self.logger.info("Tumblr post type: audio")
+                    continue
+                    #e = Audio()
                 else:
                     self.logger.info("Tumblr post type: regular")
                     e = Post()
@@ -95,6 +98,7 @@ class Tumblelog(Weblog):
                 self.logger.debug("Entry URL: '%s'" % e.url)
                 self.entries.append(e)
             except AttributeError:
+                # TODO: Why is this exception handler here???
                 pass
 
 def main():

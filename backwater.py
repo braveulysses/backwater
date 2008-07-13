@@ -28,14 +28,14 @@ from spider.twitterstatus import TwitterStatus
 
 # Entries and subtypes of entries.
 
-from entries import Entry
-from entries import Post
-from entries import Link
-from entries import Quote
-from entries import Conversation
-from entries import Song
-from entries import Video
-from entries import Photo
+# from entries import Entry
+# from entries import Post
+# from entries import Link
+# from entries import Quote
+# from entries import Conversation
+# from entries import Song
+# from entries import Video
+# from entries import Photo
 
 # HTTP exceptions
 
@@ -83,7 +83,6 @@ if os.path.exists(config.LOG_DIR):
     fh = logging.handlers.RotatingFileHandler(fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
 else:
     raise "Log directory does not exist: '%s'" % config.LOG_DIR
-    sys.exit(1)
 fh.setLevel(config.FH_LOG_LEVEL)
 # Console handler
 ch = logging.StreamHandler(sys.stderr)
@@ -185,11 +184,10 @@ def main(argv=None):
         try:
             opts, args = getopt.getopt(
                 argv[1:], 
-                "Vho:vs:nfl", 
+                "Vhvs:nfl", 
                 [ "version", 
                   "verbose", 
                   "help", 
-                  "output=", 
                   "sources=", 
                   "no-cache"
                   "flush", 
@@ -209,8 +207,6 @@ def main(argv=None):
                 verbose = True
             if option in ("-h", "--help"):
                 raise Usage(help_message)
-            if option in ("-o", "--output"):
-                output = value
             if option in ("-s", "--sources"):
                 sources_file = value
             if option in ("-n", "--no-cache"):

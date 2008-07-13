@@ -18,7 +18,9 @@ from feedparser import _parse_date as parse_date
 module_logger = logging.getLogger("backwater.entries")
 
 class Entry(object):
-    """Generic Entry object from which weblog posts, links, photos, etc. descend."""
+    """Generic Entry object from which weblog posts, links, photos, 
+    etc. descend.
+    """
     def __init__(self):
         super(Entry, self).__init__()
         self.source_name = ''
@@ -65,8 +67,8 @@ class Entry(object):
         return time.strftime("%B %d, %Y %H:%M %p", t)
         
     def normalize(self):
-        """Checks that all attribute values are in order so that the entry can be used
-        for output, particularly in an Atom feed."""
+        """Checks that all attribute values are in order so that the entry 
+        can be used for output, particularly in an Atom feed."""
         if self.content == '':
             self.content == self.summary
         if self.published is None:

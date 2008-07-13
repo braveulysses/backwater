@@ -64,8 +64,8 @@ class Source(object):
                 self.updated_parsed = parse_date(self.updated)
 
 def main():
-	pass
+    pass
 
 if __name__ == '__main__':
-	main()
+    main()
 

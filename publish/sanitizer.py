@@ -43,7 +43,7 @@ def sanitize(evil_html):
     whitelist = ['blockquote', 'em', 'i', 'img', 'strong', 'u', 'a', 'b', "p", "br", "code", "pre" ]
 
     # allow only these attributes on these tags. No other tags are allowed any attributes.
-    attr_whitelist = { 'a':['href','title','hreflang'], 'img':['src', 'width', 'height', 'alt', 'title'] }
+    attr_whitelist = { 'a': ['href', 'title', 'hreflang'], 'img': ['src', 'width', 'height', 'alt', 'title'] }
 
     # remove these tags, complete with contents.
     blacklist = [ 'script', 'style' ]
@@ -89,7 +89,7 @@ def sanitize(evil_html):
     # so we'll be paranoid and just get rid of all of them  
     # e.g. <!--[if lt IE 7]><script type="text/javascript">h4x0r();</script><![endif]-->  
     # TODO - I rather suspect that this is the weakest part of the operation..
-    safe_html = re.sub(r'<!--[.\n]*?-->','',safe_html)
+    safe_html = re.sub(r'<!--[.\n]*?-->', '', safe_html)
     
     return safe_html
         

@@ -14,8 +14,8 @@ from weblog import Weblog
 module_logger = logging.getLogger("backwater.linklog")
 
 class Linklog(Weblog):
-    def __init__(self, name, owner, url, feedUrl):
-        super(Linklog, self).__init__(name, owner, url, feedUrl)
+    def __init__(self, name, owner, url, feed_url):
+        super(Linklog, self).__init__(name, owner, url, feed_url)
         self.logger = logging.getLogger("backwater.linklog.Linklog")
         self.type = 'linklog'
         self.entry_type = 'link'

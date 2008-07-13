@@ -49,8 +49,8 @@ def main(argv=None):
             raise Usage(help_message)
         
         try:
-            id = get_flickr_id(username)
-            print id
+            flickr_id = get_flickr_id(username)
+            print flickr_id
         except flickrapi.exceptions.FlickrError, msg:
             print >> sys.stderr, "Error getting Flickr ID: '%s'" % msg
             print >> sys.stderr

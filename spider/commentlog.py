@@ -10,7 +10,6 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import logging
 from source import Source
 from weblog import Weblog
-from entries import Quote
 
 module_logger = logging.getLogger("backwater.commentlog")
 
