@@ -17,6 +17,8 @@ from feedparser import _parse_date as parse_date
 
 module_logger = logging.getLogger("backwater.entries")
 
+class NotAnEntryError(Exception): pass
+
 class Entry(object):
     """Generic Entry object from which weblog posts, links, photos, 
     etc. descend.
@@ -60,6 +62,12 @@ class Entry(object):
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
+    
+    def __cmp__(self, other):
+        if isinstance(other, Entry):
+            return cmp(self.date_parsed, other.date_parsed)
+        else:
+            raise NotAnEntryError
         
     def date_as_string(self, t):
         """Given a datetime tuple, returns a string representation.
@@ -126,7 +134,18 @@ class Photo(Entry):
         # from Tumblr or Flickr, so stick it in self.photo_type
         self.photo_type = ''
 
-    def get_cached_original_fn(self):
+    def _get_flickr_photo_url(self, farm_id, server, photo_id, secret):
+        return 'http://farm%s.static.flickr.com/%s/%s_%s.jpg' % (
+            farm_id, 
+            server, 
+            photo_id, 
+            secret
+        )
+
+    def _get_flickr_url(self, flickr_id, photo_id):
+        return 'http://www.flickr.com/photos/%s/%s/' % (flickr_id, photo_id)
+
+    def _get_cached_original_fn(self):
         if self.photo_type == 'flickr':
             return "%s/flickr_orig_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
         elif self.photo_type == 'tumblr':
@@ -139,7 +158,7 @@ class Photo(Entry):
             # ???
             raise Exception
 
-    def get_cached_thumbnail_fn(self):
+    def _get_cached_thumbnail_fn(self):
         if self.photo_type == 'flickr':
             return "%s/flickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
         elif self.photo_type == 'tumblr':
@@ -169,7 +188,7 @@ class Photo(Entry):
             self.logger.debug('HTTP Status: %s' % str(resp.status))
             if resp.status == 200:
                 self.logger.debug('Saving photo to cache')
-                f = open(self.get_cached_original_fn(), 'w')
+                f = open(self._get_cached_original_fn(), 'w')
                 f.write(content)
                 f.close()
             # TODO: create thumbnail

@@ -31,7 +31,6 @@ class Tumblelog(Weblog):
     def __init__(self, name, owner, url):
         super(Tumblelog, self).__init__(name, owner, url, feed_url=None)
         self.logger = logging.getLogger("backwater.tumblelog.Tumblelog")
-        self.logger.debug("Created an instance of Tumblelog: '%s'" % self.name)
         self.type = 'tumblelog'
         self.entry_type = None
         self.api_url = url + 'api/read'

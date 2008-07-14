@@ -226,7 +226,9 @@ def main(argv=None):
                 # Update sources
                 logger.debug("Starting parsing run")
                 entries = spider.update(sources)
-                # Sort and collate
+                # Sort
+                entries.sort()
+                entries.reverse()
                 # Write output
             else:
                 # List sources but don't do anything else
