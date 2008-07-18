@@ -9,38 +9,20 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import re
 from BeautifulSoup import BeautifulSoup
-# import html5lib
-# import html5lib.sanitizer
-# import html5lib.treebuilders
-# try:
-#     import cElementTree as ElementTree
-# except:
-#     import ElementTree as ElementTree
-
-# class BackwaterSanitizerMixin(html5lib.sanitizer.HTMLSanitizerMixin):
-#     acceptable_elements = [ 'a', 'abbr', 'acronym', 'address', 'b', 'big', 'code', 'br', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'tt', 'u', 'var' ]
-#     acceptable_protocols = [ 'http', 'https' ]
-#     
-#     allowed_elements = acceptable_elements
-#     # allowed_attributes = acceptable_attributes + mathml_attributes + svg_attributes
-#     # allowed_css_properties = acceptable_css_properties
-#     # allowed_css_keywords = acceptable_css_keywords
-#     # allowed_svg_properties = acceptable_svg_properties
-#     allowed_protocols = acceptable_protocols
-# 
-# class BackwaterSanitizer(html5lib.tokenizer.HTMLTokenizer, BackwaterSanitizerMixin):
-#     def __init__(self, stream, encoding=None, parseMeta=True, useChardet=True,
-#                  lowercaseElementName=False, lowercaseAttrName=False):
-#         super(BackwaterSanitizer, self).__init__(stream, encoding, parseMeta, useChardet, lowercaseElementName, lowercaseAttrName)
         
 def sanitize(evil_html):
     """Strips dangerous tags and attributes from HTML.
     
     Based on the work of Tom Insam:
     http://jerakeen.org/blog/2008/05/sanitizing-comments-with-python/
+    
+    The big flaw with this function is that non-whitelisted tags are 
+    replaced as bare <span> tags.  The better alternative is to remove 
+    the tag from the tree and replace it with its children.  But that's 
+    really hard.  The workaround is to wrap any output in a <div>.
     """
     # allow these tags. Other tags are removed, but their child elements remain
-    whitelist = ['blockquote', 'em', 'i', 'img', 'strong', 'u', 'a', 'b', "p", "br", "code", "pre" ]
+    whitelist = [ 'a', 'abbr', 'acronym', 'address', 'b', 'big', 'code', 'br', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'tt', 'u', 'var' ]
 
     # allow only these attributes on these tags. No other tags are allowed any attributes.
     attr_whitelist = { 'a': ['href', 'title', 'hreflang'], 'img': ['src', 'width', 'height', 'alt', 'title'] }
@@ -94,11 +76,11 @@ def sanitize(evil_html):
     return safe_html
         
 def main():
-    snippet = """<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean tortor diam, tempor quis, condimentum at, sodales non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula.</p><hr><p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat. Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>"""
+    snippet = """<h1>h1 tags are <span style="font-size: 50px;">not allowed</span></h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean tortor diam, tempor quis, condimentum at, <a href="http://safeurl.com/">sodales</a> non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula.</p>
+    <hr>
+    <p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat. Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>"""
     
-    # parser = html5lib.HTMLParser(tree=html5lib.treebuilders.getTreeBuilder("beautifulsoup"), tokenizer=BackwaterSanitizer)
-    # output = parser.parse(snippet)
-    # print output
     print sanitize(snippet)
 
 if __name__ == '__main__':
