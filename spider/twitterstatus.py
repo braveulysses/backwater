@@ -26,7 +26,7 @@ class TwitterStatus(Source):
         self.entry_type = 'quote'
 
     def get_tweet_url(self, tweet_id):
-        return 'http://twitter.com/' + self.name + '/tweets/' + str(tweet_id)
+        return 'http://twitter.com/' + self.name + '/statuses/' + str(tweet_id)
 
     def parse(self):
         """Fetches Twitter tweets using the Twitter API."""

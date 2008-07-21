@@ -15,6 +15,7 @@ import logging
 import logging.handlers
 import config
 import spider
+import publish
 
 # Sources (feeds) and subtypes of sources
 
@@ -229,7 +230,13 @@ def main(argv=None):
                 # Sort
                 entries.sort()
                 entries.reverse()
+                # TODO: truncate the list of entries
                 # Write output
+                publish.publish(
+                    config.HTML5_TEMPLATE, 
+                    config.HTML5_OUTPUT_FILE, 
+                    entries[:config.NUM_ENTRIES]
+                )
             else:
                 # List sources but don't do anything else
                 logger.debug("Listing sources; no parsing")

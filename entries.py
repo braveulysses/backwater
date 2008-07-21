@@ -25,6 +25,7 @@ class Entry(object):
     """
     def __init__(self):
         super(Entry, self).__init__()
+        self.type = None
         self.source_name = ''
         self.source_url = ''
         # Id needs to be a unique and permanent identifier
@@ -95,14 +96,17 @@ class Entry(object):
 class Post(Entry):
     def __init__(self):
         super(Post, self).__init__()
+        self.type = 'post'
 
 class Link(Entry):
     def __init__(self):
         super(Link, self).__init__()
+        self.type = 'link'
         
 class Quote(Entry):
     def __init__(self):
         super(Quote, self).__init__()
+        self.type = 'quote'
         # This is awkward, but since 'source' is already taken...
         # citation = source of the quote
         self.citation = ''
@@ -110,18 +114,22 @@ class Quote(Entry):
 class Conversation(Entry):
     def __init__(self):
         super(Conversation, self).__init__()
+        self.type = 'conversation'
 
 class Song(Entry):
     def __init__(self):
         super(Song, self).__init__()
+        self.type = 'song'
 
 class Video(Entry):
     def __init__(self):
         super(Video, self).__init__()
+        self.type = 'video'
 
 class Photo(Entry):
     def __init__(self):
         super(Photo, self).__init__()
+        self.type = 'photo'
         self.logger = logging.getLogger("backwater.entries.Photo")
         self.id = ''
         self.farm_id = ''

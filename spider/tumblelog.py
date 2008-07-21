@@ -53,6 +53,8 @@ class Tumblelog(Weblog):
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
+                    # TODO: chop the smart quotes that Tumblr automatically 
+                    # adds to to a quote
                     e.summary = post.content
                     #e.content = post.content
                     e.citation = post.source
@@ -97,7 +99,7 @@ class Tumblelog(Weblog):
                 self.logger.debug("Entry URL: '%s'" % e.url)
                 self.entries.append(e)
             except AttributeError:
-                # TODO: Why is this exception handler here???
+                # FIXME: Why is this exception handler here???
                 pass
 
 def main():
