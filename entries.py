@@ -12,6 +12,7 @@ import time
 import logging
 import config
 import spider
+import urllib
 from urlparse import urlparse
 from feedparser import _parse_date as parse_date
 
@@ -28,7 +29,10 @@ class Entry(object):
         self.type = None
         self.source_name = ''
         self.source_url = ''
-        # Id needs to be a unique and permanent identifier
+        # TODO: Generate GUID for each entry
+        # Id needs to be a unique and permanent identifier.
+        # Use Entry.getTagURI() unless the feed is Atom and 
+        # already has assigned an id to the entry.
         self.id = None
         self.title = ''
         self.author = ''
@@ -41,7 +45,18 @@ class Entry(object):
         self.related = None
         # Via is generally used for a source credit
         self.via = None
+        # TODO: Support Atom source element: http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
+        # This is not quite the same as a via reference.
+        self.atom_source = None
+        # TODO: If comments link is provided, capture that
         self.comments = None
+        # TODO: Detect enclosures
+        self.enclosures = None
+        # TODO: Get tags/categories
+        self.tags = None
+        self.categories = None
+        # Rights is generally used for a copyright statement
+        self.rights = None
         # Date is a synonym for Published
         self.date = None
         self.date_parsed = None
@@ -51,15 +66,7 @@ class Entry(object):
         self.created_parsed = None
         self.updated = None
         self.updated_parsed = None
-        self.comments = None
-        self.enclosures = None
-        self.tags = None
-        self.categories = None
-        # Rights is generally used for a copyright statement
-        self.rights = None
-        # TODO: support Atom source element:
-        # http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
-        # This is not quite the same as a via reference.
+        # FIXME: Make sure human-readable date formats are consistent
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
@@ -69,7 +76,31 @@ class Entry(object):
             return cmp(self.date_parsed, other.date_parsed)
         else:
             raise NotAnEntryError
-        
+
+    def getTagURI(self, date, url):
+        """Constructs a tag URI for use as a feed GUID.
+        Takes a date tuple and a URL as arguments."""
+        tagURI = []
+        url = url.replace('#', '/')
+        parsed_url = urlparse(url)
+        date = time.strftime("%Y-%m-%d", date)
+        tagURI.append('tag:chompy.net,')
+        tagURI.append(date)
+        tagURI.append(':')
+        tagURI.append(urllib.quote_plus(parsed_url[1]))
+        tagURI.append(':')
+        tagURI.append(urllib.quote_plus(parsed_url[2]))
+        if parsed_url[3] != '':
+            tagURI.append(urllib.quote_plus(parsed_url[3]))
+        if parsed_url[4] != '':
+            tagURI.append('?')
+            tagURI.append(urllib.quote_plus(parsed_url[4]))
+        if parsed_url[5] != '':
+            tagURI.append('#')
+            tagURI.append(urllib.quote_plus(parsed_url[5]))
+        #tagURI.append(urlnorm.normalize(parsed_url[2]))
+        return ''.join(tagURI)
+
     def date_as_string(self, t):
         """Given a datetime tuple, returns a string representation.
         Uses the format Month Day, YYYY HH:MM AM/PM"""

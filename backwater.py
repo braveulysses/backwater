@@ -65,11 +65,11 @@ Update the chompy.net aggregator.
 
     -h, --help              show this help message
     -V, --version           show version number
-    -v, --verbose           execute with verbose output
     -s, --sources=FILE      specify alternate sources file 
                             (default is 'sources.yaml')
-    -n, --no-cache          ignore the cache
-    -f, --flush             flush the cache
+    -n, --no-caching        ignore the HTTP cache
+    -f, --flush             flush the HTTP cache
+    -r, --rebuild           rebuild output files without updating feeds
     -l, --list              list all sources
 """ % sys.argv[0]
 
@@ -100,7 +100,7 @@ class UnknownSourceTypeError(Exception): pass
 
 def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
-    # TODO: Should this be put into a different source file?
+    # TODO: Allow per-feed options to be set, like disabling certain entry types
     sources = []
     try:
         logger.debug("Opening '%s'" % sources_file)
@@ -165,7 +165,7 @@ def get_sources(sources_file):
 
 class FlushCache(Exception):
     """Flushes the content cache."""
-    pass      
+    pass    
 
 class Version(Exception):
     """Outputs version information."""
@@ -185,13 +185,13 @@ def main(argv=None):
         try:
             opts, args = getopt.getopt(
                 argv[1:], 
-                "Vhvs:nfl", 
+                "Vhs:nfrl", 
                 [ "version", 
-                  "verbose", 
                   "help", 
                   "sources=", 
-                  "no-cache"
+                  "no-caching",
                   "flush", 
+                  "rebuild", 
                   "list" ]
             )
         except getopt.error, msg:
@@ -204,16 +204,17 @@ def main(argv=None):
         for option, value in opts:
             if option in ("-V", "--version"):
                 raise Version(version_message)
-            if option == "-v":
-                verbose = True
             if option in ("-h", "--help"):
                 raise Usage(help_message)
             if option in ("-s", "--sources"):
                 sources_file = value
-            if option in ("-n", "--no-cache"):
+            if option in ("-n", "--no-caching"):
                 config.HTTP_USE_CACHE = False
             if option in ("-f", "--flush"):
                 raise FlushCache()
+            if option in ("-r", "--rebuild"):
+                # TODO: add option to rebuild output w/o fetching
+                pass
             if option in ("-l", "--list"):
                 update = False
     
@@ -230,13 +231,16 @@ def main(argv=None):
                 # Sort
                 entries.sort()
                 entries.reverse()
-                # TODO: truncate the list of entries
-                # Write output
+                # TODO: Sanitize output -- remove dangerous markup
+                # TODO: Truncate long entries -- maybe do this while spidering?
+                # TODO: Pickle 'entries' so that 'rebuild' command can work
+                # Write HTML output
                 publish.publish(
                     config.HTML5_TEMPLATE, 
                     config.HTML5_OUTPUT_FILE, 
                     entries[:config.NUM_ENTRIES]
                 )
+                # TODO: Write Atom output
             else:
                 # List sources but don't do anything else
                 logger.debug("Listing sources; no parsing")
@@ -249,15 +253,16 @@ def main(argv=None):
             raise
 
     except FlushCache:
+        # TODO: Implement "flush" command to clear cache
         print "Flushing cache... (unimplemented)"
         return 0
 
     except Version, err:
-        print >> sys.stderr, str(err.msg)
+        print str(err.msg)
         return 2
     
     except Usage, err:
-        print >> sys.stderr, str(err.msg)
+        print str(err.msg)
         return 2
     
     except KeyboardInterrupt:

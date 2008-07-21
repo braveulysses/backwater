@@ -65,11 +65,16 @@ class Weblog(Source):
             self.logger.info("Entry title: '%s'" % e.title)
             e.author = entry.get('author', '')
             e.summary = entry.get('summary', '')
+            # TODO: Need to get 'content["value"]', not just 'content'
             e.content = entry.get('content', e.summary)
-            # TODO: normalize URLs
+            # TODO: Handle 'rel', 'alternate', and 'via' links correctly
+            # Atom weblog feeds should used 'rel="related"' for 
+            # the linked page, so need to make sure we get that link 
+            # and not the 'alternate' or 'via' link.
+            # TODO: Normalize URLs
             e.url = entry.get('link', '')
-            # TODO: get via URL
-            # TODO: get comments URL
+            # TODO: Get via URL
+            # TODO: Get comments URL
             e.date = entry.get('date')
             e.date_parsed = entry.get('date_parsed')
             self.logger.debug("Entry date: %s" % e.date_as_string(e.date_parsed))
