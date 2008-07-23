@@ -53,10 +53,13 @@ class Tumblelog(Weblog):
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
-                    # TODO: chop the smart quotes that Tumblr automatically 
-                    # adds to to a quote
                     e.summary = post.content
+                    # Chop the smart quotes that Tumblr automatically 
+                    # adds to to a quote                
+                    e.summary = e.summary.lstrip("&#8220;").rstrip("&#8221;")
+                    #e.summary.lstrip("“").rstrip("”")
                     #e.content = post.content
+                    # Pull a URL out of the post.source
                     e.citation = post.source
                 elif post.type == 'photo':
                     self.logger.info("Tumblr post type: photo")

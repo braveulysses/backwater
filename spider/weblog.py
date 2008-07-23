@@ -65,8 +65,11 @@ class Weblog(Source):
             self.logger.info("Entry title: '%s'" % e.title)
             e.author = entry.get('author', '')
             e.summary = entry.get('summary', '')
-            # TODO: Need to get 'content["value"]', not just 'content'
-            e.content = entry.get('content', e.summary)
+            # Need to get 'content[x]["value"]', not just 'content'
+            try:
+                e.content = entry['content'][0]['value']
+            except (KeyError, IndexError, AttributeError):
+                e.content = e.summary
             # TODO: Handle 'rel', 'alternate', and 'via' links correctly
             # Atom weblog feeds should used 'rel="related"' for 
             # the linked page, so need to make sure we get that link 

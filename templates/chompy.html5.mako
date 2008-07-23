@@ -7,7 +7,7 @@
 <title>chompy.net</title>
 <meta name="author" content="SNF Labs">
 <meta name="description" content="the Spaceship No Future annex" />
-<link rel="stylesheet" type="text/css" href="/css/chompy.css" title="Chompy" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="http://chompy.net/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
 <link rel="feed" type="application/atom+xml" title="chompy.net feed" href="/feeds/chompy.atom" />
 </head>
 
@@ -15,11 +15,11 @@
 	
 <section id="container">
 	
+<section id="content">
+
 <header>
 <h1>This is chompy.net, a part of Spaceship No Future.</h1>
 </header>
-	
-<section id="content">
 
 <ul id="entries">
 % for entry in entries:
@@ -44,7 +44,7 @@
 <li class="quote">
 <article>
 <blockquote cite="">
-<p><a href="${entry.url}"><span class="dquo">&#8220;</span>${entry.summary}</a></p>
+<p><a href="${entry.url}"><span class="dquo">&#8220;</span>${entry.summary}&#8221;</a></p>
 </blockquote>
 </article>
 </li>
