@@ -36,6 +36,8 @@ class Entry(object):
         self.id = None
         self.title = ''
         self.author = ''
+        # TODO: summary and content must be sanitized
+        # TODO: before sanitizing, summary and content should be truncated
         self.summary = ''
         self.content = ''
         # Url = permalink

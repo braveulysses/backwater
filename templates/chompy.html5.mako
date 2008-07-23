@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>chompy.net</title>
+<meta name="viewport" content="width=700">
 <meta name="author" content="SNF Labs">
 <meta name="description" content="the Spaceship No Future annex" />
 <link rel="stylesheet" type="text/css" href="http://chompy.net/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
@@ -18,10 +19,11 @@
 <section id="content">
 
 <header>
-<h1>This is chompy.net, a part of Spaceship No Future.</h1>
+<h1>This is <b>chompy.net</b>, a part of <a href="http://www.spaceshipnofuture.org"><b>Spaceship No Future</b></a>.</h1>
 </header>
 
 <ul id="entries">
+## TODO: Typogrify/smartypantsify entries
 % for entry in entries:
 % if entry.type == 'post':
 ## Post
