@@ -2,10 +2,7 @@ import httplib2
 import logging
 import config
 
-class BackwaterHTTPError(Exception):
-    def __init__(self, msg):
-        self.msg = msg
-
+class BackwaterHTTPError(Exception): pass
 class InternalServerError(BackwaterHTTPError): pass
 class BadGatewayError(BackwaterHTTPError): pass
 class ServiceUnavailableError(BackwaterHTTPError): pass
