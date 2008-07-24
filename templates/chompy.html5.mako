@@ -19,7 +19,9 @@
 <section id="content">
 
 <header>
-<h1>This is <b>chompy.net</b>, a part of <a href="http://www.spaceshipnofuture.org"><b>Spaceship No Future</b></a>.</h1>
+<div>
+<h1>This is <a href="http://chompy.net/">chompy.net</a>, a part of <a href="http://www.spaceshipnofuture.org">Spaceship No Future</a>.</h1>
+</div>
 </header>
 
 <ul id="entries">
