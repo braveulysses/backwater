@@ -28,6 +28,8 @@ class Source(object):
         self.atom = False
         # Entry type corresponds to the classes defined in entries.py
         self.entry_type = None
+        self.excluded_types = []
+        self.excluded_keywords = []
         # This needs to unique; if a unique id is not provided, make one
         self.id = None
         # Name: AKA title

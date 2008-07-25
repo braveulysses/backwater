@@ -28,12 +28,13 @@ tumblr.USER_AGENT = config.BOT_USER_AGENT
 module_logger = logging.getLogger("backwater.tumblelog")
 
 class Tumblelog(Weblog):
-    def __init__(self, name, owner, url):
+    def __init__(self, name, owner, url, excluded_types=None):
         super(Tumblelog, self).__init__(name, owner, url, feed_url=None)
         self.logger = logging.getLogger("backwater.tumblelog.Tumblelog")
         self.type = 'tumblelog'
         self.entry_type = None
         self.api_url = url + 'api/read'
+        self.excluded_types = excluded_types
 
     def parse(self):
         """Fetches Tumblr API data and parses it."""
@@ -43,13 +44,23 @@ class Tumblelog(Weblog):
         t = tumblr.parse(self.api_url)
         for post in t.posts:
             try:
-                if post.type == 'link':
-                    self.logger.info("Tumblr post type: link")
-                    e = Link()
+                if post.type == 'regular':
+                    self.logger.info("Tumblr post type: regular")
+                    e = Post()
                     e.title = post.title
                     e.summary = post.content
-                    #e.content = post.content
-                    e.related = post.related
+                    e.content = post.content
+                elif post.type == 'link':
+                    if 'link' in self.excluded_types:
+                        self.logger.debug("Skipping Tumblr link")
+                        continue
+                    else:
+                        self.logger.info("Tumblr post type: link")
+                        e = Link()
+                        e.title = post.title
+                        e.summary = post.content
+                        #e.content = post.content
+                        e.related = post.related
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
@@ -57,7 +68,6 @@ class Tumblelog(Weblog):
                     # Chop the smart quotes that Tumblr automatically 
                     # adds to to a quote                
                     e.summary = e.summary.lstrip("&#8220;").rstrip("&#8221;")
-                    #e.summary.lstrip("“").rstrip("”")
                     #e.content = post.content
                     # Pull a URL out of the post.source
                     e.citation = post.source
@@ -85,12 +95,6 @@ class Tumblelog(Weblog):
                     self.logger.info("Tumblr post type: audio")
                     continue
                     #e = Audio()
-                else:
-                    self.logger.info("Tumblr post type: regular")
-                    e = Post()
-                    e.title = post.title
-                    e.summary = post.content
-                    #e.content = post.content
                 e.source_name = self.name
                 e.source_url = self.url
                 e.url = post.url

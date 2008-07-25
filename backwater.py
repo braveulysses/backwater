@@ -100,7 +100,7 @@ class UnknownSourceTypeError(Exception): pass
 
 def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
-    # TODO: Allow per-feed options to be set, like disabling certain entry types
+    # TODO: Allow per-feed options to be set, like excluded_keywords and excluded_types
     sources = []
     try:
         logger.debug("Opening '%s'" % sources_file)
@@ -110,6 +110,16 @@ def get_sources(sources_file):
         f.close()
         for src in y['sources']:
             s = None
+            # Deal with special cases
+            try:
+                excluded_types = src['excluded_types']
+            except KeyError:
+                excluded_types = []
+            try:
+                excluded_keywords = src['excluded_keywords']
+            except KeyError:
+                excluded_keywords = []
+            # Instantiate each source
             try:
                 if src['type'] == 'weblog':
                     s = Weblog(
@@ -136,7 +146,8 @@ def get_sources(sources_file):
                     s = Tumblelog(
                         src['name'], 
                         src['owner'], 
-                        src['url']
+                        src['url'], 
+                        excluded_types
                     )
                 elif src['type'] == 'photostream':
                     s = Photostream(

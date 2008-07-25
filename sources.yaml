@@ -1,5 +1,14 @@
 ---
 sources:
+    ## Source Syntax
+    ## - name: name of source
+    ##   type: weblog/linklog/commentlog/tumblelog/twitter/photostream
+    ##   owner: source's owner
+    ##   url: human-readable URL
+    ##   feed_url: Atom/RSS URL, if applicable
+    ##   excluded_keywords: [ tags or categories to skip ]
+    ##   excluded_types: [ post/link/photo/conversation/quote/song/video to skip ]
+    
     # Jacob's stuff
     - name: remake/remodel
       type: weblog
@@ -22,6 +31,7 @@ sources:
       type: tumblelog
       owner: c.libre
       url: http://golden.cpl593h.net/
+      excluded_types: [ link ]
       
     - name: cobra libre's photostream
       type: photostream
