@@ -49,7 +49,6 @@ class Entry(object):
         # TODO: Support Atom source element: http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
         # This is not quite the same as a via reference.
         self.atom_source = None
-        # TODO: If comments link is provided, capture that
         self.comments = None
         # TODO: Detect enclosures
         self.enclosures = None
@@ -134,6 +133,8 @@ class Entry(object):
         # Truncate content for main page
         if publish.shorten.wc(self.content) > config.WORD_LIMIT:
             self.content_abridged = publish.shorten.shorten(self.content, config.WORD_LIMIT)
+        else:
+            self.content_abridged = self.content
         # Sanitize content
         self.title = publish.sanitizer.sanitize(self.title)
         self.summary = publish.sanitizer.sanitize(self.summary)

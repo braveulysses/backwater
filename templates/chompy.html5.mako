@@ -1,6 +1,6 @@
 <%!
 	from publish.typogrify import typogrify
-%>
+%>\
 <!DOCTYPE html>
 
 <html lang="en">
@@ -42,7 +42,7 @@
 <li class="link">
 <h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
 <article>
-${entry.summary | typogrify} 
+${entry.summary | typogrify}
 % if entry.comments is not None:
  <a href="${entry.comments}" class="comments">(#)</a>
 % endif

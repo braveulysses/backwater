@@ -79,11 +79,13 @@ def sanitize(evil_html):
         
 def main():
     snippet = """<h1>h1 tags are <span style="font-size: 50px;">not allowed</span></h1>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean tortor diam, tempor quis, condimentum at, <a href="http://safeurl.com/">sodales</a> non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br /> Aenean tortor diam, tempor quis, condimentum at, <a href="http://safeurl.com/">sodales</a> non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula.</p>
     <hr>
-    <p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat. Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>"""
+    <p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat.<br> Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>"""
+    snippet2 = u"<p><em>Bones:</em> Let's play the food word game!</p>\n\n<p><em>Me:</em> Sure! Plum!</p>\n\n<p><em>Bones:</em> Yaaay! Mango!</p>\n\n<p><em>Me:</em> Orange!</p>\n\n<p><em>Bones:</em> Eclair! Now the ball's in your court!</p>\n\n<p><em>Me:</em> Ramen!</p>\n\n<p><em>Bones:</em> Nightshirt!  Oh shit!  I'm sleepy!</p>"
     
     print sanitize(snippet)
+    print sanitize(snippet2)
 
 if __name__ == '__main__':
     main()

@@ -42,7 +42,8 @@ class Weblog(Source):
         self.id = feed_data.feed.get('id', '')
         self.name = feed_data.feed.get('title', self.name)
         self.generator = feed_data.feed.get('generator', None)
-        self.url = feed_data.feed.get('url', self.url)
+        self.url = feed_data.feed.get('link', self.url)
+        self.logger.debug("Weblog URL: '%s'" % self.url)
         self.updated = feed_data.feed.get('updated', None)
         self.updated_parsed = feed_data.feed.get('updated_parsed', None)
         self.rights = feed_data.feed.get('rights', None)
@@ -62,7 +63,6 @@ class Weblog(Source):
             else:
                 e = Post()
             e.source_name = self.name
-            # FIXME: e.source_url = my profile URL for SNF posts
             e.source_url = self.url
             e.atom = self.atom
             e.title = entry.get('title', '')
@@ -74,7 +74,6 @@ class Weblog(Source):
                 e.content = entry['content'][0]['value']
             except (KeyError, IndexError, AttributeError):
                 e.content = e.summary
-            # TODO: Handle 'rel', 'alternate', and 'via' links correctly
             # Atom weblog feeds should used 'rel="related"' for 
             # the linked page, so need to make sure we get that link 
             # and not the 'alternate' or 'via' link.
