@@ -59,8 +59,9 @@ class Tumblelog(Weblog):
                         e = Link()
                         e.title = post.title
                         e.summary = post.content
+                        e.url = post.related
+                        e.comments = post.url
                         #e.content = post.content
-                        e.related = post.related
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
@@ -97,12 +98,12 @@ class Tumblelog(Weblog):
                     #e = Audio()
                 e.source_name = self.name
                 e.source_url = self.url
-                e.url = post.url
+                if e.url == '':
+                    e.url = post.url
                 e.date = post.date
                 e.date_parsed = parse_date(post.date)
                 self.logger.debug("Tumblr post date: %s" % e.date_as_string(e.date_parsed))
                 self.logger.info("Entry title: '%s'" % e.title)
-                self.logger.debug("Entry content: '%s'" % e.content)
                 self.logger.debug("Entry URL: '%s'" % e.url)
                 self.entries.append(e)
             except AttributeError:

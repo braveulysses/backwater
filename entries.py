@@ -11,6 +11,7 @@ import os
 import time 
 import logging
 import urllib
+import md5
 import config
 import spider
 import publish.shorten
@@ -148,6 +149,12 @@ class Link(Entry):
     def __init__(self):
         super(Link, self).__init__()
         self.type = 'link'
+
+    def get_delicious_url(self):
+        """Gets the del.icio.us permalink for the current entry."""
+        m = md5.new()
+        m.update(self.url)
+        return 'http://del.icio.us/url/' + m.hexdigest()
         
 class Quote(Entry):
     def __init__(self):

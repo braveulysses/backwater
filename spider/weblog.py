@@ -92,7 +92,10 @@ class Weblog(Source):
                 else:
                     e.url = entry.link
             e.comments = entry.get('comments', None)
-            # 'alternate' represents the entry itself
+            # 'alternate' represents the linklog entry itself, 
+            # which is often a comments page
+            if self.type == 'linklog':
+                e.comments = e.get_delicious_url()
             if e.comments is None:
                 for link in entry.links:
                     if link['rel'] == 'alternate':

@@ -8,6 +8,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import logging
+from urlparse import urlparse
 from source import Source
 from weblog import Weblog
 
@@ -19,6 +20,12 @@ class Linklog(Weblog):
         self.logger = logging.getLogger("backwater.linklog.Linklog")
         self.type = 'linklog'
         self.entry_type = 'link'
+
+    def is_delicious(self):
+        if urlparse(self.url)[1] == 'del.icio.us':
+            return True
+        else:
+            return False
 
 def main():
     pass
