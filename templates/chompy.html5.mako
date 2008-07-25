@@ -34,7 +34,7 @@
 <li class="post">
 <h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
 <article>${entry.content_abridged | typogrify}</article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date_formatted}</span></p>
+<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'link':
@@ -50,7 +50,7 @@ ${entry.summary | typogrify}
  <a href="${entry.via}" class="via">(via)</a>
 % endif
 </article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date_formatted}</span></p>
+<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'quote':

@@ -66,15 +66,18 @@ class Entry(object):
         self.created_parsed = None
         self.updated = None
         self.updated_parsed = None
-        # Friendly-formatted date
+        # Friendly-formatted dates
         self.date_formatted = None
+        self.published_formatted = None
+        self.created_formatted = None
+        self.updated_formatted = None
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
     
     def __cmp__(self, other):
         if isinstance(other, Entry):
-            return cmp(self.date_parsed, other.date_parsed)
+            return cmp(self.published_parsed, other.published_parsed)
         else:
             raise NotAnEntryError
 
@@ -113,20 +116,23 @@ class Entry(object):
         """Checks that all attribute values are in order so that the entry 
         can be used for output, particularly in an Atom feed."""
         if self.content == '':
-            self.content == self.summary
+            self.content = self.summary
         if self.published is None:
-            self.published == self.date
+            self.published = self.date
         if self.published_parsed is None:
             self.published_parsed = parse_date(self.published)
         if self.created is None:
-            self.created == self.date
+            self.created = self.date
         if self.created_parsed is None:
             self.created_parsed = parse_date(self.created)
         if self.updated is None:
-            self.updated == self.date
+            self.updated = self.date
         if self.updated_parsed is None:
             self.updated_parsed = parse_date(self.updated)
         self.date_formatted = time.strftime("%A, %B %d", self.date_parsed)
+        self.published_formatted = time.strftime("%A, %B %d", self.published_parsed)
+        self.created_formatted = time.strftime("%A, %B %d", self.created_parsed)
+        self.updated_formatted = time.strftime("%A, %B %d", self.updated_parsed)
         # Build GUID
         if self.id is None:
             self.id = self.get_tag_uri(self.date_parsed, self.url)
