@@ -25,6 +25,7 @@ class Source(object):
         super(Source, self).__init__()
         self.logger = logging.getLogger("backwater.source.Source")
         self.type = 'source'
+        self.atom = False
         # Entry type corresponds to the classes defined in entries.py
         self.entry_type = None
         # This needs to unique; if a unique id is not provided, make one

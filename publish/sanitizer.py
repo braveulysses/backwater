@@ -9,6 +9,8 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import re
 from BeautifulSoup import BeautifulSoup
+
+# TODO: Entity-escape strings as appropriate
         
 def sanitize(evil_html):
     """Strips dangerous tags and attributes from HTML.
@@ -22,7 +24,7 @@ def sanitize(evil_html):
     really hard.  The workaround is to wrap any output in a <div>.
     """
     # allow these tags. Other tags are removed, but their child elements remain
-    whitelist = [ 'a', 'abbr', 'acronym', 'address', 'b', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'var' ]
+    whitelist = [ 'a', 'abbr', 'acronym', 'address', 'b', 'br', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'p', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'var' ]
 
     # allow only these attributes on these tags. No other tags are allowed any attributes.
     attr_whitelist = { 'a': ['href', 'title', 'hreflang'], 'img': ['src', 'width', 'height', 'alt', 'title'] }
@@ -70,7 +72,7 @@ def sanitize(evil_html):
     # HTML comments can contain executable scripts, depending on the browser,  
     # so we'll be paranoid and just get rid of all of them  
     # e.g. <!--[if lt IE 7]><script type="text/javascript">h4x0r();</script><![endif]-->  
-    # TODO - I rather suspect that this is the weakest part of the operation..
+    # TODO: I rather suspect that this is the weakest part of the operation..
     safe_html = re.sub(r'<!--[.\n]*?-->', '', safe_html)
     
     return safe_html

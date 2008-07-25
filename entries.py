@@ -10,9 +10,11 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import os
 import time 
 import logging
+import urllib
 import config
 import spider
-import urllib
+import publish.shorten
+import publish.sanitizer
 from urlparse import urlparse
 from feedparser import _parse_date as parse_date
 
@@ -29,17 +31,13 @@ class Entry(object):
         self.type = None
         self.source_name = ''
         self.source_url = ''
-        # TODO: Generate GUID for each entry
-        # Id needs to be a unique and permanent identifier.
-        # Use Entry.getTagURI() unless the feed is Atom and 
-        # already has assigned an id to the entry.
+        self.atom = False
         self.id = None
         self.title = ''
         self.author = ''
-        # TODO: summary and content must be sanitized
-        # TODO: before sanitizing, summary and content should be truncated
         self.summary = ''
         self.content = ''
+        self.content_abridged = ''
         # Url = permalink
         self.url = ''
         # Related is generally used as a pointer to the source link, 
@@ -68,7 +66,8 @@ class Entry(object):
         self.created_parsed = None
         self.updated = None
         self.updated_parsed = None
-        # FIXME: Make sure human-readable date formats are consistent
+        # Friendly-formatted date
+        self.date_formatted = None
 
     def __str__(self):
         return "'" + self.title + ",' by " + self.author
@@ -79,7 +78,7 @@ class Entry(object):
         else:
             raise NotAnEntryError
 
-    def getTagURI(self, date, url):
+    def get_tag_uri(self, date, url):
         """Constructs a tag URI for use as a feed GUID.
         Takes a date tuple and a URL as arguments."""
         tagURI = []
@@ -105,7 +104,9 @@ class Entry(object):
 
     def date_as_string(self, t):
         """Given a datetime tuple, returns a string representation.
-        Uses the format Month Day, YYYY HH:MM AM/PM"""
+        Uses the format: Month Day, YYYY HH:MM AM/PM
+        
+        Pretty much used when debugging."""
         return time.strftime("%B %d, %Y %H:%M %p", t)
         
     def normalize(self):
@@ -125,6 +126,18 @@ class Entry(object):
             self.updated == self.date
         if self.updated_parsed is None:
             self.updated_parsed = parse_date(self.updated)
+        self.date_formatted = time.strftime("%A, %B %d", self.date_parsed)
+        # Build GUID
+        if self.id is None:
+            self.id = self.get_tag_uri(self.date_parsed, self.url)
+        # Truncate content for main page
+        if publish.shorten.wc(self.content) > config.WORD_LIMIT:
+            self.content_abridged = publish.shorten.shorten(self.content, config.WORD_LIMIT)
+        # Sanitize content
+        self.title = publish.sanitizer.sanitize(self.title)
+        self.summary = publish.sanitizer.sanitize(self.summary)
+        self.content = publish.sanitizer.sanitize(self.content)
+        self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
 
 class Post(Entry):
     def __init__(self):
@@ -176,6 +189,7 @@ class Photo(Entry):
         self.photo_type = ''
 
     def _get_flickr_photo_url(self, farm_id, server, photo_id, secret):
+        # TODO: This needs to be a locally hosted URL, not a Flickr URL
         return 'http://farm%s.static.flickr.com/%s/%s_%s.jpg' % (
             farm_id, 
             server, 

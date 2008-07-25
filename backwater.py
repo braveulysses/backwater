@@ -231,8 +231,6 @@ def main(argv=None):
                 # Sort
                 entries.sort()
                 entries.reverse()
-                # TODO: Sanitize output -- remove dangerous markup
-                # TODO: Truncate long entries -- maybe do this while spidering?
                 # TODO: Pickle 'entries' so that 'rebuild' command can work
                 # Write HTML output
                 publish.publish(

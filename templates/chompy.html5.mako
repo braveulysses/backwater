@@ -1,3 +1,6 @@
+<%!
+	from publish.typogrify import typogrify
+%>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -25,22 +28,21 @@
 </header>
 
 <ul id="entries">
-## TODO: Typogrify/smartypantsify entries
 % for entry in entries:
 % if entry.type == 'post':
 ## Post
 <li class="post">
-<h2><a href="${entry.url}">${entry.title}</a></h2>
-<article>${entry.content}</article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date}</span></p>
+<h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
+<article>${entry.content | typogrify}</article>
+<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date_formatted}</span></p>
 </li>
 
 % elif entry.type == 'link':
 ## Link
 <li class="link">
-<h2><a href="${entry.url}">${entry.title}</a></h2>
-<article>${entry.summary}</article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date}</span></p>
+<h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
+<article>${entry.summary | typogrify}</article>
+<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.date_formatted}</span></p>
 </li>
 
 % elif entry.type == 'quote':
@@ -48,7 +50,7 @@
 <li class="quote">
 <article>
 <blockquote cite="">
-<p><a href="${entry.url}"><span class="dquo">&#8220;</span>${entry.summary}&#8221;</a></p>
+<p><a href="${entry.url}"><span class="dquo">&#8220;</span>${entry.summary | typogrify}&#8221;</a></p>
 </blockquote>
 </article>
 </li>

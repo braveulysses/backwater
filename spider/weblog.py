@@ -46,6 +46,8 @@ class Weblog(Source):
         self.updated = feed_data.feed.get('updated', None)
         self.updated_parsed = feed_data.feed.get('updated_parsed', None)
         self.rights = feed_data.feed.get('rights', None)
+        if feed_data.version.find('atom', 0, 4) == 0:
+            self.atom = True
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
             # sources; because we assume that the only difference between 
@@ -61,6 +63,7 @@ class Weblog(Source):
                 e = Post()
             e.source_name = self.name
             e.source_url = self.url
+            e.atom = self.atom
             e.title = entry.get('title', '')
             self.logger.info("Entry title: '%s'" % e.title)
             e.author = entry.get('author', '')
@@ -87,6 +90,11 @@ class Weblog(Source):
             e.updated_parsed = entry.get('updated_parsed', e.date_parsed)
             e.created = entry.get('created', e.date)
             e.created_parsed = entry.get('created_parsed', e.date_parsed)
+            # Build GUID
+            if e.atom:
+                e.id = entry.get('id')
+            else:
+                e.id = e.get_tag_uri(e.date_parsed, e.url)
             # Done parsing this entry
             self.entries.append(e)
 
