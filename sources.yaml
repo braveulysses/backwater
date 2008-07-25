@@ -263,4 +263,9 @@ sources:
 #      owner: SNF Labs
 #      url: http://www.spaceshipnofuture.org/shoplifters/
 #      feed_url: http://www.spaceshipnofuture.org/shoplifters/feeds/atom/
-    
+   
+    - name: chompy.net comments
+      type: commentlog
+      owner: SNF Labs
+      url: http://chompy.net/comments/
+      feed_url: http://chompy.net/comments/comments.feed.php?type=atom
