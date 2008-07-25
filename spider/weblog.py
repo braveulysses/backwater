@@ -62,6 +62,7 @@ class Weblog(Source):
             else:
                 e = Post()
             e.source_name = self.name
+            # FIXME: e.source_url = my profile URL for SNF posts
             e.source_url = self.url
             e.atom = self.atom
             e.title = entry.get('title', '')
@@ -77,10 +78,29 @@ class Weblog(Source):
             # Atom weblog feeds should used 'rel="related"' for 
             # the linked page, so need to make sure we get that link 
             # and not the 'alternate' or 'via' link.
+            e.url = entry.get('link', None)
+            for link in entry.links:
+                if link['rel'] == 'via':
+                    e.via = link['href']
+                    break
+                else:
+                    e.via = None
+            for link in entry.links:
+                if link['rel'] == 'related':
+                    e.url = link['href']
+                    break
+                else:
+                    e.url = entry.link
+            e.comments = entry.get('comments', None)
+            # 'alternate' represents the entry itself
+            if e.comments is None:
+                for link in entry.links:
+                    if link['rel'] == 'alternate':
+                        e.comments = link['href']
+            # Nix the comments property if it's the same link as the permalink
+            if e.url == e.comments:
+                e.comments = None
             # TODO: Normalize URLs
-            e.url = entry.get('link', '')
-            # TODO: Get via URL
-            # TODO: Get comments URL
             e.date = entry.get('date')
             e.date_parsed = entry.get('date_parsed')
             self.logger.debug("Entry date: %s" % e.date_as_string(e.date_parsed))

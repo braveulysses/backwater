@@ -187,6 +187,8 @@ class Photo(Entry):
         # The self.cache() method needs to know whether the photo originated 
         # from Tumblr or Flickr, so stick it in self.photo_type
         self.photo_type = ''
+        # TODO: Need to capture image height and width
+        # TODO: Need to store image alt text
 
     def _get_flickr_photo_url(self, farm_id, server, photo_id, secret):
         # TODO: This needs to be a locally hosted URL, not a Flickr URL
