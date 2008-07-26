@@ -44,7 +44,7 @@ def sanitize(evil_html):
     really hard.  The workaround is to wrap any output in a <div>.
     """
     # allow these tags. Other tags are removed, but their child elements remain
-    whitelist = [ 'a', 'abbr', 'acronym', 'address', 'b', 'br', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'p', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'var' ]
+    whitelist = [ 'a', 'abbr', 'acronym', 'address', 'b', 'blockquote', 'br', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 'p', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 'sup', 'var' ]
 
     # allow only these attributes on these tags. No other tags are allowed any attributes.
     attr_whitelist = { 'a': ['href', 'title', 'hreflang'], 'img': ['src', 'width', 'height', 'alt', 'title'] }

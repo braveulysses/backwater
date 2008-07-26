@@ -103,6 +103,7 @@ class Tumblelog(Weblog):
                 e.source_url = self.url
                 if e.url == '':
                     e.url = post.url
+                e.author = self.owner
                 e.date = post.date
                 e.date_parsed = parse_date(post.date)
                 self.logger.debug("Tumblr post date: %s" % e.date_as_string(e.date_parsed))

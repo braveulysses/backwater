@@ -43,6 +43,7 @@ class Photostream(Source):
                 e.photo_type = 'flickr'
                 e.source_name = self.name
                 e.source_url = self.url
+                e.author = self.owner
                 # This only gets the most recent photo, which is really 
                 # a bug, but I like this behavior.  Too many photos 
                 # clutter things up.

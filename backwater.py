@@ -249,7 +249,12 @@ def main(argv=None):
                     config.HTML5_OUTPUT_FILE, 
                     entries[:config.NUM_ENTRIES]
                 )
-                # TODO: Write Atom output
+                # Write Atom output
+                publish.publish(
+                    config.ATOM_TEMPLATE, 
+                    config.ATOM_OUTPUT_FILE, 
+                    entries[:config.NUM_ENTRIES]
+                )
             else:
                 # List sources but don't do anything else
                 logger.debug("Listing sources; no parsing")

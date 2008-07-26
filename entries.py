@@ -68,6 +68,11 @@ class Entry(object):
         self.created_parsed = None
         self.updated = None
         self.updated_parsed = None
+        # Atom formatted dates
+        self.date_atom = None
+        self.published_atom = None
+        self.created_atom = None
+        self.updated_atom = None
         # Friendly-formatted dates
         self.date_formatted = None
         self.published_formatted = None
@@ -131,10 +136,14 @@ class Entry(object):
             self.updated = self.date
         if self.updated_parsed is None:
             self.updated_parsed = parse_date(self.updated)
-        self.date_formatted = time.strftime("%A, %B %d", self.date_parsed)
-        self.published_formatted = time.strftime("%A, %B %d", self.published_parsed)
-        self.created_formatted = time.strftime("%A, %B %d", self.created_parsed)
-        self.updated_formatted = time.strftime("%A, %B %d", self.updated_parsed)
+        self.date_atom = time.strftime(config.ATOM_TIME_FORMAT, self.date_parsed)
+        self.published_atom = time.strftime(config.ATOM_TIME_FORMAT, self.published_parsed)
+        self.created_atom = time.strftime(config.ATOM_TIME_FORMAT, self.created_parsed)
+        self.updated_atom = time.strftime(config.ATOM_TIME_FORMAT, self.updated_parsed)            
+        self.date_formatted = time.strftime(config.HTML_TIME_FORMAT, self.date_parsed)
+        self.published_formatted = time.strftime(config.HTML_TIME_FORMAT, self.published_parsed)
+        self.created_formatted = time.strftime(config.HTML_TIME_FORMAT, self.created_parsed)
+        self.updated_formatted = time.strftime(config.HTML_TIME_FORMAT, self.updated_parsed)
         # Build GUID
         if self.id is None:
             self.id = self.get_tag_uri(self.date_parsed, self.url)
@@ -242,7 +251,7 @@ class Photo(Entry):
     def _get_cached_original_fn(self):
         """This returns the cached original photo's filename."""
         fn = self._get_cached_original_shortname()
-        return "%s\%s" % (config.IMAGE_CACHE_DIR, fn)
+        return "%s/%s" % (config.IMAGE_CACHE_DIR, fn)
 
     def _get_cached_thumbnail_fn(self):
         if self.photo_type == 'flickr':

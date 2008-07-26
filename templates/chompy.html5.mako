@@ -1,4 +1,9 @@
 <%!
+	from publish.typogrify import amp
+	from publish.typogrify import caps
+	from publish.typogrify import initial_quotes
+	from publish.typogrify import smartypants
+	from publish.typogrify import widont
 	from publish.typogrify import typogrify
 %>\
 <!DOCTYPE html>
@@ -9,6 +14,7 @@
 <meta charset="UTF-8">
 <title>chompy.net</title>
 <meta name="viewport" content="width=700">
+<meta name="generator" content="${generator}">
 <meta name="author" content="SNF Labs">
 <meta name="description" content="the Spaceship No Future annex" />
 <link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
@@ -58,7 +64,7 @@ ${entry.summary | typogrify}
 <li class="quote">
 <article>
 <blockquote>
-<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | typogrify}&#8221;</a></p>
+<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | amp,caps,smartypants}&#8221;</a></p>
 </blockquote>
 </article>
 </li>
@@ -104,6 +110,14 @@ ${entry.summary | typogrify}
 </section>
 
 <footer>
+<div>
+<p id="labs">
+Brought to you by <span class="caps snf">SNF</span> Labs.
+</p
+<p>
+<img src="http://chompy.net/images/tankcat_mini.gif" height="72" width="90" alt="SNF IS REAL" />
+</p>
+</div>
 </footer>
 
 </section>
