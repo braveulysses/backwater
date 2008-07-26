@@ -8,6 +8,8 @@ module_logger = logging.getLogger("backwater.publish")
 def publish(tmpl, outfile, entries):
     template = Template(filename=tmpl)
     template_values = {
+        'base_url': config.BASE_URL, 
+        'feeds_url': config.FEEDS_URL, 
         'entries': entries
     }
     try:

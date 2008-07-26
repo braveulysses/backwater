@@ -11,8 +11,8 @@
 <meta name="viewport" content="width=700">
 <meta name="author" content="SNF Labs">
 <meta name="description" content="the Spaceship No Future annex" />
-<link rel="stylesheet" type="text/css" href="http://chompy.net/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
-<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="/feeds/chompy.atom" />
+<link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
+<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom" />
 </head>
 
 <body>
@@ -32,33 +32,33 @@
 % if entry.type == 'post':
 ## Post
 <li class="post">
-<h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
+<h2><a href="${entry.url | h}">${entry.title | typogrify}</a></h2>
 <article>${entry.content_abridged | typogrify}</article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source_url | h}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'link':
 ## Link
 <li class="link">
-<h2><a href="${entry.url}">${entry.title | typogrify}</a></h2>
+<h2><a href="${entry.url | h}">${entry.title | typogrify}</a></h2>
 <article>
 ${entry.summary | typogrify}
 % if entry.comments is not None:
- <a href="${entry.comments}" class="comments">(#)</a>
+ <a href="${entry.comments | h}" class="comments">(#)</a>
 % endif
 % if entry.via is not None:
- <a href="${entry.via}" class="via">(via)</a>
+ <a href="${entry.via | h}" class="via">(via)</a>
 % endif
 </article>
-<p class="posted"><a href="${entry.source_url}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source_url | h}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'quote':
 ## Quote
 <li class="quote">
 <article>
-<blockquote cite="">
-<p><a href="${entry.url}"><span class="dquo">&#8220;</span>${entry.summary | typogrify}&#8221;</a></p>
+<blockquote>
+<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | typogrify}&#8221;</a></p>
 </blockquote>
 </article>
 </li>
@@ -67,7 +67,11 @@ ${entry.summary | typogrify}
 ## Photo
 <li class="photo">
 <article>
-<a href="${entry.url}"><img src="${entry.photo_url}" alt="" title="" height="" width="" /></a>
+% if entry.photo_type == 'flickr':
+<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="${entry.title}" title="'${entry.title},' by ${entry.author}" height="${entry.height}" width="${entry.width}" /></a>
+% else:
+<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="" height="${entry.height}" width="${entry.width}" /></a>
+% endif
 </article>
 </li>
 

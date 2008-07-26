@@ -64,8 +64,10 @@ class Photostream(Source):
                 )
                 self.logger.debug("Photo image URL: '%s'" % e.photo_url)
                 e.url = e._get_flickr_url(self.flickr_id, e.id)
+                e.cached_url = config.IMAGES_URL + '/' + e._get_cached_original_shortname()
                 self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
                 e.cache()
+                e.set_dimensions()
                 # TODO: Make photo thumbnails
                 e.date = p.get('dateupload')
                 e.date_parsed = datetime.datetime.utcfromtimestamp(float(e.date)).timetuple()

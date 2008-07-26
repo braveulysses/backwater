@@ -9,9 +9,29 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import re
 from BeautifulSoup import BeautifulSoup
+from xml.sax.saxutils import escape
 
-# TODO: Entity-escape strings as appropriate
-        
+def fix_amp_encoding(txt):
+    """Fixes the double encoding that can occur when a string containing named or numeric entities are passed through a typical entity escaping function."""
+    fixamps = re.compile('&amp;((#\w+;)|(amp;)|(lt;)|(gt;)|(ldquo;)|(rdquo;)|(lsquo;)|(rsquo;)|(quot;))')
+    txt = fixamps.sub(r'&\g<1>', txt)
+    return txt
+
+def escape_xml(txt):
+    """Simple escaping; replaces '"', '<', '>', and '&'."""
+    entities = {'"': '&quot;'}
+    txt = escape(txt, entities)
+    txt = fix_amp_encoding(txt)
+    return txt
+
+def escape_amps_only(txt):
+    """Only escapes ampersands. 
+    
+    Useful because we're allowing HTML, and thus '<' and '>'."""
+    txt = txt.replace('&', '&amp;')
+    txt = fix_amp_encoding(txt)
+    return txt
+  
 def sanitize(evil_html):
     """Strips dangerous tags and attributes from HTML.
     

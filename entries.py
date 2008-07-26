@@ -12,6 +12,7 @@ import time
 import logging
 import urllib
 import md5
+import Image
 import config
 import spider
 import publish.shorten
@@ -22,6 +23,7 @@ from feedparser import _parse_date as parse_date
 module_logger = logging.getLogger("backwater.entries")
 
 class NotAnEntryError(Exception): pass
+class NonexistentImageError(Exception): pass
 
 class Entry(object):
     """Generic Entry object from which weblog posts, links, photos, 
@@ -146,6 +148,11 @@ class Entry(object):
         self.summary = publish.sanitizer.sanitize(self.summary)
         self.content = publish.sanitizer.sanitize(self.content)
         self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
+        # Escape content
+        self.title = publish.sanitizer.escape_amps_only(self.title)
+        self.summary = publish.sanitizer.escape_amps_only(self.summary)
+        self.content = publish.sanitizer.escape_amps_only(self.content)
+        self.content_abridged = publish.sanitizer.escape_amps_only(self.content_abridged)
 
 class Post(Entry):
     def __init__(self):
@@ -196,16 +203,17 @@ class Photo(Entry):
         self.secret = ''
         self.server = ''
         # self.photo_url is a URL for the photo itself
+        # self.cached_url is a URL for a copy of the photo itself
         # self.url is a URL for the photo's web page
         self.photo_url = ''
+        self.cached_url = ''
         # The self.cache() method needs to know whether the photo originated 
         # from Tumblr or Flickr, so stick it in self.photo_type
         self.photo_type = ''
-        # TODO: Need to capture image height and width
-        # TODO: Need to store image alt text
+        self.height = 0
+        self.width = 0
 
     def _get_flickr_photo_url(self, farm_id, server, photo_id, secret):
-        # TODO: This needs to be a locally hosted URL, not a Flickr URL
         return 'http://farm%s.static.flickr.com/%s/%s_%s.jpg' % (
             farm_id, 
             server, 
@@ -216,18 +224,25 @@ class Photo(Entry):
     def _get_flickr_url(self, flickr_id, photo_id):
         return 'http://www.flickr.com/photos/%s/%s/' % (flickr_id, photo_id)
 
-    def _get_cached_original_fn(self):
+    def _get_cached_original_shortname(self):
+        """This returns the cached original photo's filename, without the leading path.
+        Useful when constructing a URL."""
         if self.photo_type == 'flickr':
-            return "%s/flickr_orig_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+            return "flickr_orig_%s_%s.jpg" % (self.id, self.secret)
         elif self.photo_type == 'tumblr':
             # We don't necessarily know that the photo will be a JPEG.  To 
             # be safe, let's just take the path component of the URL and 
             # use that (after removing any slashes).
             tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
-            return "%s/tumblr_orig_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
+            return "tumblr_orig_%s" % (tumblr_photo_path)
         else:
             # ???
             raise Exception
+
+    def _get_cached_original_fn(self):
+        """This returns the cached original photo's filename."""
+        fn = self._get_cached_original_shortname()
+        return "%s\%s" % (config.IMAGE_CACHE_DIR, fn)
 
     def _get_cached_thumbnail_fn(self):
         if self.photo_type == 'flickr':
@@ -239,6 +254,13 @@ class Photo(Entry):
         else:
             # ???
             raise Exception
+
+    def set_dimensions(self):
+        try:
+            image = Image.open(self._get_cached_original_fn())
+            (self.width, self.height) = image.size
+        except IOError:
+            raise NonexistentImageError
 
     def resize(self):
         # TODO: resize photos

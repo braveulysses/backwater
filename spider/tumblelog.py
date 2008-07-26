@@ -76,12 +76,15 @@ class Tumblelog(Weblog):
                     self.logger.info("Tumblr post type: photo")
                     e = Photo()
                     e.photo_type = 'tumblr'
+                    e.title = ''
                     e.summary = post.caption
                     # post.urls is a dictionary of photo URLs keyed by size.
                     # Let's get the big one.
                     e.photo_url = post.urls['500']
+                    e.cached_url = config.IMAGES_URL + '/' + e._get_cached_original_shortname()
                     self.logger.debug("Tumblr photo URL: '%s'" % e.photo_url)
                     e.cache()
+                    e.set_dimensions()
                 # Conversation, Video, and Audio post types aren't 
                 # going to be implemented for a while
                 elif post.type == 'conversation':
