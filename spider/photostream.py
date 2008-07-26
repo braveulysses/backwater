@@ -53,14 +53,14 @@ class Photostream(Source):
                 #    continue
                 e.title = p.get('title', 'untitled')
                 self.logger.info("Photo title: '%s'" % e.title)
-                e.id = p.get('id')
+                e.photo_id = p.get('id')
                 e.farm_id = p.get('farm')
                 e.secret = p.get('secret')
                 e.server = p.get('server')
                 e.photo_url = e._get_flickr_photo_url(
                     e.farm_id, 
                     e.server, 
-                    e.id, 
+                    e.photo_id, 
                     e.secret
                 )
                 self.logger.debug("Photo image URL: '%s'" % e.photo_url)

@@ -9,6 +9,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 
 import re
 from BeautifulSoup import BeautifulSoup
+from BeautifulSoup import BeautifulStoneSoup
 from xml.sax.saxutils import escape
 
 def fix_amp_encoding(txt):
@@ -32,7 +33,7 @@ def escape_amps_only(txt):
     txt = fix_amp_encoding(txt)
     return txt
   
-def sanitize(evil_html):
+def sanitize(untrusted_html):
     """Strips dangerous tags and attributes from HTML.
     
     Based on the work of Tom Insam:
@@ -56,7 +57,9 @@ def sanitize(evil_html):
 
     # BeautifulSoup is catching out-of-order and unclosed tags, so markup
     # can't leak out of comments and break the rest of the page.
-    soup = BeautifulSoup(evil_html)
+    # TODO: If double-encoding problems arise, convert entities to Unicode.
+    # http://www.crummy.com/software/BeautifulSoup/documentation.html#Entity%20Conversion
+    soup = BeautifulSoup(untrusted_html)
 
     # now strip HTML we don't like.
     for tag in soup.findAll():
@@ -96,16 +99,23 @@ def sanitize(evil_html):
     safe_html = re.sub(r'<!--[.\n]*?-->', '', safe_html)
     
     return safe_html
+
+def strip(untrusted_html):
+    """Strips out all tags from untrusted_html, leaving only text.
+    Converts XML entities to Unicode characters."""
+    soup = BeautifulStoneSoup(untrusted_html, convertEntities=BeautifulStoneSoup.ALL_ENTITIES)
+    safe_html = ''.join(soup.findAll(text=True))
+    return safe_html
         
 def main():
     snippet = """<h1>h1 tags are <span style="font-size: 50px;">not allowed</span></h1>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br /> Aenean tortor diam, tempor quis, condimentum at, <a href="http://safeurl.com/">sodales</a> non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula.</p>
     <hr>
-    <p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat.<br> Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>"""
-    snippet2 = u"<p><em>Bones:</em> Let's play the food word game!</p>\n\n<p><em>Me:</em> Sure! Plum!</p>\n\n<p><em>Bones:</em> Yaaay! Mango!</p>\n\n<p><em>Me:</em> Orange!</p>\n\n<p><em>Bones:</em> Eclair! Now the ball's in your court!</p>\n\n<p><em>Me:</em> Ramen!</p>\n\n<p><em>Bones:</em> Nightshirt!  Oh shit!  I'm sleepy!</p>"
+    <p>Aenean at ante in <a href="javascript:alert('yo');">odio mollis</a> consequat.<br> Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>
+    <blockquote><p>I&#8217;ve seen Plato&apos;s cups &amp; tables, but not his <i>cupness</i> &amp; <i>tableness</i>.</p></blockquote>"""
     
-    print sanitize(snippet)
-    print sanitize(snippet2)
+    print "SANITIZED: %s" % sanitize(snippet)
+    print "STRIPPED: %s" % strip(snippet)
 
 if __name__ == '__main__':
     main()

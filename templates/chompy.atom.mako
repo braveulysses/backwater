@@ -17,12 +17,23 @@
         <title>${entry.title | x}</title>
 % endif
         <link rel="alternate" type="text/html" href="${entry.url}"/>
+% if entry.via is not None:
+        <link rel="via" type="text/html" href="${entry.via}"/>
+% endif
         <published>${entry.published_atom}</published>
         <updated>${entry.updated_atom}</updated>
         <id>${entry.id}</id>
+% if entry.type == 'quote':
+        <summary type="text">"${entry.summary | x}"</summary>
+% else:
         <summary type="text">${entry.summary | x}</summary>
-% if entry.content != '':
+% endif
+% if entry.content != '' and entry.content != entry.summary:
+    % if entry.type == 'quote':
+        <content type="text/html"><div>"${entry.content | x}"</div></content>
+    % else:
         <content type="text/html"><div>${entry.content | x}</div></content>
+    % endif
 % endif
         <author>
             <name>${entry.author}</name>

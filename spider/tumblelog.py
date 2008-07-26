@@ -12,6 +12,7 @@ import config
 import spider
 import tumblr
 from feedparser import _parse_date as parse_date
+from BeautifulSoup import BeautifulSoup
 from source import Source
 from weblog import Weblog
 from entries import Entry
@@ -59,9 +60,9 @@ class Tumblelog(Weblog):
                         e = Link()
                         e.title = post.title
                         e.summary = post.content
+                        e.content = post.content
                         e.url = post.related
                         e.comments = post.url
-                        #e.content = post.content
                 elif post.type == 'quote':
                     self.logger.info("Tumblr post type: quote")
                     e = Quote()
@@ -69,15 +70,22 @@ class Tumblelog(Weblog):
                     # Chop the smart quotes that Tumblr automatically 
                     # adds to to a quote                
                     e.summary = e.summary.lstrip("&#8220;").rstrip("&#8221;")
-                    #e.content = post.content
-                    # Pull a URL out of the post.source
+                    e.content = e.summary
+                    # Get the quote's citation, and, if possible its source
                     e.citation = post.source
+                    try:
+                        soup = BeautifulSoup(e.citation)
+                        e.citation_url = soup.find('a').get('href')
+                        e.via = e.citation_url
+                    except AttributeError:
+                        e.citation_url = None
                 elif post.type == 'photo':
                     self.logger.info("Tumblr post type: photo")
                     e = Photo()
                     e.photo_type = 'tumblr'
                     e.title = ''
                     e.summary = post.caption
+                    e.content = e.summary
                     # post.urls is a dictionary of photo URLs keyed by size.
                     # Let's get the big one.
                     e.photo_url = post.urls['500']

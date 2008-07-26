@@ -145,6 +145,7 @@ class Entry(object):
         self.created_formatted = time.strftime(config.HTML_TIME_FORMAT, self.created_parsed)
         self.updated_formatted = time.strftime(config.HTML_TIME_FORMAT, self.updated_parsed)
         # Build GUID
+        # FIXME: Not every entry has an id
         if self.id is None:
             self.id = self.get_tag_uri(self.date_parsed, self.url)
         # Truncate content for main page
@@ -154,12 +155,13 @@ class Entry(object):
             self.content_abridged = self.content
         # Sanitize content
         self.title = publish.sanitizer.sanitize(self.title)
-        self.summary = publish.sanitizer.sanitize(self.summary)
+        self.summary = publish.sanitizer.strip(self.summary)
+        #self.summary = publish.sanitizer.sanitize(self.summary)
         self.content = publish.sanitizer.sanitize(self.content)
         self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
         # Escape content
-        self.title = publish.sanitizer.escape_amps_only(self.title)
-        self.summary = publish.sanitizer.escape_amps_only(self.summary)
+        self.title = publish.sanitizer.escape(self.title)
+        self.summary = publish.sanitizer.escape(self.summary)
         self.content = publish.sanitizer.escape_amps_only(self.content)
         self.content_abridged = publish.sanitizer.escape_amps_only(self.content_abridged)
 
@@ -186,6 +188,7 @@ class Quote(Entry):
         # This is awkward, but since 'source' is already taken...
         # citation = source of the quote
         self.citation = ''
+        self.citation_url = None
 
 class Conversation(Entry):
     def __init__(self):
@@ -207,7 +210,7 @@ class Photo(Entry):
         super(Photo, self).__init__()
         self.type = 'photo'
         self.logger = logging.getLogger("backwater.entries.Photo")
-        self.id = ''
+        self.photo_id = ''
         self.farm_id = ''
         self.secret = ''
         self.server = ''

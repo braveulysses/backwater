@@ -113,7 +113,7 @@ ${entry.summary | typogrify}
 <div>
 <p id="labs">
 Brought to you by <span class="caps snf">SNF</span> Labs.
-</p
+</p>
 <p>
 <img src="http://chompy.net/images/tankcat_mini.gif" height="72" width="90" alt="SNF IS REAL" />
 </p>
@@ -121,6 +121,18 @@ Brought to you by <span class="caps snf">SNF</span> Labs.
 </footer>
 
 </section>
+
+<!-- Google Analytics tracking code -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3678757-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
 
 </body>
 
