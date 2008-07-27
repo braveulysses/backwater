@@ -1,15 +1,13 @@
-# from django.conf import settings
 import re
-# from django.conf import settings
-# from django import template
-# from django.template.defaultfilters import stringfilter
 
-# register = template.Library()
+# TODO: Reduce reliance on regexps by using a proper parser.
 
 def amp(text):
     """Wraps apersands in HTML with ``<span class="amp">`` so they can be
     styled with CSS. Apersands are also normalized to ``&amp;``. Requires 
     ampersands to have whitespace or an ``&nbsp;`` on both sides.
+    
+    Note that ``&#160;`` == ``&nbsp;``.
     
     >>> amp('One & two')
     'One <span class="amp">&amp;</span> two'
@@ -191,6 +189,8 @@ def widont(text):
     Works in these block tags ``(h1-h6, p, li, dd, dt)`` and also accounts for 
     potential closing inline elements ``a, em, strong, span, b, i``
     
+    Note that ``&#160;`` == ``&nbsp;``.
+    
     >>> widont('A very simple test')
     'A very simple&nbsp;test'
 
@@ -233,15 +233,7 @@ def widont(text):
                                    (</(a|em|span|strong|i|b)>\s*)* # optional closing inline tags with optional white space after each
                                    ((</(p|h[1-6]|li|dt|dd)>)|$))                 # end with a closing p, h1-6, li or the end of the string
                                    """, re.VERBOSE)
-    return widont_finder.sub(r'\1&nbsp;\2', text)
-# widont = stringfilter(widont)
-
-# register.filter('amp', amp)
-# register.filter('caps', caps)
-# register.filter('initial_quotes', initial_quotes)
-# register.filter('smartypants', smartypants)
-# register.filter('typogrify', typogrify)
-# register.filter('widont', widont)
+    return widont_finder.sub(r'\1&#160;\2', text)
 
 def _test():
     import doctest
