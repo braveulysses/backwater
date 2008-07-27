@@ -37,20 +37,26 @@ def escape_amps_only(txt):
     txt = fix_amp_encoding(txt)
     return txt
   
-def sanitize(untrusted_html):
+def sanitize(untrusted_html, additional_tags=None):
     """Strips potentially harmful tags and attributes from HTML.
+    
+    Passing the list additional_tags will add the specified tags to the whitelist.
     
     Based on the work of:
      - Tom Insam <http://jerakeen.org/blog/2008/05/sanitizing-comments-with-python/>
      - akaihola <http://www.djangosnippets.org/snippets/169/>
     """
-    # Allow these tags. This can be changed to whatever you please, of course.
+    # Allow these tags. This can be changed to whatever you please, of course, 
+    # either by changing the list in code or by passing alt_whitelist.
     tag_whitelist = [ 
         'a', 'abbr', 'address', 'b', 'blockquote', 
         'br', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 
         'p', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 
         'sup', 'var' 
     ]
+    
+    if additional_tags is not None:
+        tag_whitelist.extend(additional_tags)
     
     # Allow only these attributes on these tags. No other tags are allowed 
     # any attributes.

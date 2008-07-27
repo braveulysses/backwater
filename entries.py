@@ -141,7 +141,11 @@ class Entry(object):
     def normalize(self):
         """Checks that all attribute values are in order so that the entry 
         can be used for output, particularly in an Atom feed."""
-        if self.content == '':
+        if self.title is None:
+            self.title = ''
+        if self.summary is None:
+            self.summary = ''
+        if self.content == '' or self.content is None:
             self.content = self.summary
         if self.published is None:
             self.published = self.date
@@ -175,7 +179,11 @@ class Entry(object):
         self.title = publish.sanitizer.sanitize(self.title)
         self.summary = publish.sanitizer.strip(self.summary)
         #self.summary = publish.sanitizer.sanitize(self.summary)
-        self.content = publish.sanitizer.sanitize(self.content)
+        # If the entry is a photo, allow <img> tag
+        if self.type == 'photo':
+            self.content = publish.sanitizer.sanitize(self.content, additional_tags=[ 'img' ])
+        else:
+            self.content = publish.sanitizer.sanitize(self.content)
         self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
         # Escape content
         #self.title = publish.sanitizer.escape(self.title)
@@ -258,7 +266,7 @@ class Photo(Entry):
         """This returns the cached original photo's filename, without the leading path.
         Useful when constructing a URL."""
         if self.photo_type == 'flickr':
-            return "flickr_orig_%s_%s.jpg" % (self.id, self.secret)
+            return "flickr_orig_%s_%s.jpg" % (self.photo_id, self.secret)
         elif self.photo_type == 'tumblr':
             # We don't necessarily know that the photo will be a JPEG.  To 
             # be safe, let's just take the path component of the URL and 
@@ -276,7 +284,7 @@ class Photo(Entry):
 
     def _get_cached_thumbnail_fn(self):
         if self.photo_type == 'flickr':
-            return "%s/flickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.id, self.secret)
+            return "%s/flickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.photo_id, self.secret)
         elif self.photo_type == 'tumblr':
             # See get_cached_original_fn()
             tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
@@ -317,6 +325,15 @@ class Photo(Entry):
             # TODO: create thumbnail
         except:
             self.logger.exception("Problem caching photo!")
+    
+    def set_content(self):
+        """Creates a content value suitable for using in a feed."""
+        try:
+            self.content = """<img src="%s" height="%s" width="%s" alt="" /><br />%s""" % (config.BASE_URL + self.cached_url, self.height, self.width, self.summary)
+            self.logger.debug("Content: '%s'" % self.content)
+        except:
+            self.logger.exception("Error occurred while creating content attribute!")
+            self.content = ''
 
 def main():
     pass

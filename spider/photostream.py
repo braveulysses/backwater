@@ -43,7 +43,7 @@ class Photostream(Source):
                 e.photo_type = 'flickr'
                 e.source.name = self.name
                 e.source.url = self.url
-                e.author = self.owner
+                #e.author = self.owner
                 # This only gets the most recent photo, which is really 
                 # a bug, but I like this behavior.  Too many photos 
                 # clutter things up.
@@ -53,7 +53,6 @@ class Photostream(Source):
                 #    continue
                 e.title = p.get('title', 'untitled')
                 self.logger.info("Photo title: '%s'" % e.title)
-                # TODO: Get photo description
                 e.photo_id = p.get('id')
                 e.farm_id = p.get('farm')
                 e.secret = p.get('secret')
@@ -65,7 +64,7 @@ class Photostream(Source):
                     e.secret
                 )
                 self.logger.debug("Photo image URL: '%s'" % e.photo_url)
-                e.url = e._get_flickr_url(self.flickr_id, e.id)
+                e.url = e._get_flickr_url(self.flickr_id, e.photo_id)
                 e.cached_url = config.IMAGES_URL + '/' + e._get_cached_original_shortname()
                 self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
                 e.cache()
@@ -82,6 +81,12 @@ class Photostream(Source):
                     e.created_parsed = parse_date(e.created)
                 e.updated = p.get('lastupdate', e.date)
                 e.updated_parsed = datetime.datetime.utcfromtimestamp(float(e.updated)).timetuple()
+                # Okay, now get the detailed photo info
+                self.logger.debug("Making photos.getInfo API call...")
+                photo_info = flickr.photos_getInfo(photo_id=e.photo_id, secret=e.secret)
+                e.summary = photo_info.find('photo').find('description').text
+                e.author = photo_info.find('photo').find('owner').get('realname')
+                e.set_content()
                 self.entries.append(e)
         except FlickrError, err:
             self.logger.exception("Flickr API error: '%s'" % err)

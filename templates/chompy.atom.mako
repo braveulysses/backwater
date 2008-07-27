@@ -35,9 +35,9 @@
 % endif
 % if entry.content != '' and entry.content != entry.summary:
     % if entry.type == 'quote':
-        <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">"${entry.content | x}"</div></content>
+        <content type="html">"${entry.content | x}"</content>
     % else:
-        <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">${entry.content | x}</div></content>
+        <content type="html">${entry.content | x}</content>
     % endif
 % elif entry.summary == '' and entry.content == '':
         <content type="text/html" src="${entry.url}"/>
