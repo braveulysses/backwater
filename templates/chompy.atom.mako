@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">chompy.net</title>
     <link rel="alternate" type="text/html" href="http://chompy.net/"/>
-    <link rel="self" type="application/atom+xml" href="http://chompy.net/feeds/index.atom"/>
+    <link rel="self" type="application/atom+xml" href="http://chompy.net/feeds/chompy.atom"/>
     <updated>${now}</updated>
     <subtitle>more rocks and garbage</subtitle>
     <id>tag:chompy.net,2008://1</id>

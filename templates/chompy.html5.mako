@@ -16,9 +16,12 @@
 <meta name="viewport" content="width=700">
 <meta name="generator" content="${generator}">
 <meta name="author" content="SNF Labs">
-<meta name="description" content="the Spaceship No Future annex" />
-<link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" title="Chompy" media="screen,projection" />
-<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom" />
+<meta name="description" content="the Spaceship No Future annex">
+<link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" media="screen">
+<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom">
+<link rel="alternate" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 
 <body>
@@ -33,6 +36,8 @@
 </div>
 </header>
 
+## TODO: Rejigger entry markup using Sam Ruby's HTML 5 markup as a model.
+## See: <http://intertwingly.net/blog/>
 <ul id="entries">
 % for entry in entries:
 % if entry.type == 'post':
@@ -40,7 +45,7 @@
 <li class="post">
 <h2><a href="${entry.url | h}">${entry.title | typogrify,escape_amps_only}</a></h2>
 <article>${entry.content_abridged | typogrify,escape_amps_only}</article>
-<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <time datetime="${entry.published_atom}">${entry.published_formatted}</time></p>
 </li>
 
 % elif entry.type == 'link':
@@ -56,7 +61,7 @@ ${entry.summary | typogrify,escape_amps_only}
  <a href="${entry.via | h}" class="via">(via)</a>
 % endif
 </article>
-<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <time datetime="${entry.published_atom}">${entry.published_formatted}</time></p>
 </li>
 
 % elif entry.type == 'quote':
