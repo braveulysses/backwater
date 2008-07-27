@@ -76,7 +76,7 @@ ${entry.summary | typogrify,escape_amps_only}
 % else:
 <blockquote>
 % endif
-<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | amp,caps,smartypants,escape_amps_only}&#8221;</a></p>
+<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.content | amp,caps,smartypants,escape_amps_only}&#8221;</a></p>
 </blockquote>
 </article>
 </li>
