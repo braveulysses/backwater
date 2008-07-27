@@ -8,20 +8,24 @@
     from publish.sanitizer import escape_amps_only
 %><!DOCTYPE html>
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
 <meta charset="UTF-8">
 <title>chompy.net</title>
-<meta name="viewport" content="width=700">
-<meta name="generator" content="${generator}">
-<meta name="author" content="SNF Labs">
-<meta name="description" content="the Spaceship No Future annex">
-<link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" media="screen">
-<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom">
-<link rel="alternate" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=700" />
+<meta name="generator" content="${generator}" />
+<meta name="author" content="SNF Labs" />
+<meta name="description" content="the Spaceship No Future annex" />
+<link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" media="screen" />
+<link rel="feed" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom" />
+<link rel="alternate" type="application/atom+xml" title="chompy.net feed" href="${feeds_url}/chompy.atom" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<script type="text/javascript" src="/js/chompy.js"></script>
+<script type="text/javascript">
+    Chompy.html5_fix();
+</script>
 </head>
 
 <body>
@@ -116,7 +120,7 @@ ${entry.summary | typogrify,escape_amps_only}
 % endfor
 </ul>
 
-</section>
+</section> <!--/content -->
 
 <footer>
 <div>
@@ -129,7 +133,7 @@ Brought to you by <span class="caps snf">SNF</span> Labs.
 </div>
 </footer>
 
-</section>
+</section> <!--/container -->
 
 <!-- Google Analytics tracking code -->
 
