@@ -1,12 +1,12 @@
 <%!
-	from publish.typogrify import amp
-	from publish.typogrify import caps
-	from publish.typogrify import initial_quotes
-	from publish.typogrify import smartypants
-	from publish.typogrify import widont
-	from publish.typogrify import typogrify
-%>\
-<!DOCTYPE html>
+    from publish.typogrify import amp
+    from publish.typogrify import caps
+    from publish.typogrify import initial_quotes
+    from publish.typogrify import smartypants
+    from publish.typogrify import widont
+    from publish.typogrify import typogrify
+    from publish.sanitizer import escape_amps_only
+%><!DOCTYPE html>
 
 <html lang="en">
 
@@ -22,9 +22,9 @@
 </head>
 
 <body>
-	
+    
 <section id="container">
-	
+    
 <section id="content">
 
 <header>
@@ -38,17 +38,17 @@
 % if entry.type == 'post':
 ## Post
 <li class="post">
-<h2><a href="${entry.url | h}">${entry.title | typogrify}</a></h2>
-<article>${entry.content_abridged | typogrify}</article>
+<h2><a href="${entry.url | h}">${entry.title | typogrify,escape_amps_only}</a></h2>
+<article>${entry.content_abridged | typogrify,escape_amps_only}</article>
 <p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'link':
 ## Link
 <li class="link">
-<h2><a href="${entry.url | h}">${entry.title | typogrify}</a></h2>
+<h2><a href="${entry.url | h}">${entry.title | typogrify,escape_amps_only}</a></h2>
 <article>
-${entry.summary | typogrify}
+${entry.summary | typogrify,escape_amps_only}
 % if entry.comments is not None:
  <a href="${entry.comments | h}" class="comments">(#)</a>
 % endif
@@ -68,7 +68,7 @@ ${entry.summary | typogrify}
 % else:
 <blockquote>
 % endif
-<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | amp,caps,smartypants}&#8221;</a></p>
+<p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | amp,caps,smartypants,escape_amps_only}&#8221;</a></p>
 </blockquote>
 </article>
 </li>
