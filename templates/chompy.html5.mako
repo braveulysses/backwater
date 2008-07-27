@@ -24,6 +24,11 @@
 <script type="text/javascript" src="/js/chompy.js"></script>
 <script type="text/javascript">
     Chompy.html5_fix();
+    if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', Chompy.inject_ga_script, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('onload', Chompy.inject_ga_script);
+    }
 </script>
 </head>
 
@@ -133,18 +138,6 @@ Brought to you by <span class="caps snf">SNF</span> Labs.
 </footer>
 
 </section> <!--/container -->
-
-<!-- Google Analytics tracking code -->
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3678757-3");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 
 </body>
 
