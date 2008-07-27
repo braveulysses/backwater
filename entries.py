@@ -164,7 +164,6 @@ class Entry(object):
         self.created_formatted = time.strftime(config.HTML_TIME_FORMAT, self.created_parsed)
         self.updated_formatted = time.strftime(config.HTML_TIME_FORMAT, self.updated_parsed)
         # Build GUID
-        # FIXME: Not every entry has an id
         if self.id is None:
             self.id = self.get_tag_uri(self.date_parsed, self.url)
         # Truncate content for main page

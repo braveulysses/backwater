@@ -18,7 +18,7 @@ from xml.sax.saxutils import escape
 def fix_amp_encoding(txt):
     """Fixes the double encoding that can occur when a string containing named or 
     numeric entities are passed through a typical entity escaping function."""
-    fixamps = re.compile('&amp;((#\w+;)|(amp;)|(lt;)|(gt;)|(ldquo;)|(rdquo;)|(lsquo;)|(rsquo;)|(quot;))')
+    fixamps = re.compile('&amp;((#\w+;)|(amp;)|(lt;)|(gt;)|(apos;)|(nbsp;)|(ldquo;)|(rdquo;)|(lsquo;)|(rsquo;)|(quot;)|(middot;))')
     txt = fixamps.sub(r'&\g<1>', txt)
     return txt
 
