@@ -16,12 +16,12 @@
 % else:
         <title type="html">${entry.title | x}</title>
 % endif
-        <link rel="alternate" type="text/html" href="${entry.url}"/>
+        <link rel="alternate" type="text/html" href="${entry.url | x}"/>
 % if entry.via is not None:
-        <link rel="via" type="text/html" href="${entry.via}"/>
+        <link rel="via" type="text/html" href="${entry.via | x}"/>
 % endif
 % if entry.comments is not None:
-        <link rel="related" type="text/html" href="${entry.comments}"/>
+        <link rel="related" type="text/html" href="${entry.comments | x}"/>
 % endif
         <published>${entry.published_atom}</published>
         <updated>${entry.updated_atom}</updated>
@@ -39,8 +39,6 @@
     % else:
         <content type="html">${entry.content | x}</content>
     % endif
-% elif entry.summary == '' and entry.content == '':
-        <content type="text/html" src="${entry.url}"/>
 % endif
         <author>
             <name>${entry.author}</name>
@@ -52,7 +50,7 @@
         <source>
             <id>${entry.atom_source.id}</id>
             <title>${entry.atom_source.title | x}</title>
-            <link rel="self" href="${entry.atom_source.url}"/>
+            <link rel="self" href="${entry.atom_source.url | x}"/>
             <updated>${entry.atom_source.updated}</updated>
         </source>
 % endif

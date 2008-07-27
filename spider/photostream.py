@@ -43,7 +43,6 @@ class Photostream(Source):
                 e.photo_type = 'flickr'
                 e.source.name = self.name
                 e.source.url = self.url
-                #e.author = self.owner
                 # This only gets the most recent photo, which is really 
                 # a bug, but I like this behavior.  Too many photos 
                 # clutter things up.
@@ -86,6 +85,8 @@ class Photostream(Source):
                 photo_info = flickr.photos_getInfo(photo_id=e.photo_id, secret=e.secret)
                 e.summary = photo_info.find('photo').find('description').text
                 e.author = photo_info.find('photo').find('owner').get('realname')
+                if e.author == '':
+                    e.author = self.owner
                 e.set_content()
                 self.entries.append(e)
         except FlickrError, err:
