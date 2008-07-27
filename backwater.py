@@ -207,7 +207,13 @@ class Usage(Exception):
         self.msg = msg
 
 def main(argv=None):
-    update = True
+    # If this is true, enables normal processing.
+    # Otherwise, all that is skipped.
+    do_update = True
+    # If this is true, forces backwater to use the pickled entries 
+    # to rebuild output.  Skips HTTP fetching.
+    # Otherwise, normal processing occurs.
+    force_rebuild = False
     if argv is None:
         argv = sys.argv
     try:
@@ -242,23 +248,23 @@ def main(argv=None):
             if option in ("-f", "--flush"):
                 raise FlushCache()
             if option in ("-r", "--rebuild"):
-                # TODO: add option to rebuild output w/o fetching
-                pass
+                print "Skipping HTTP fetching, rebuilding output..."
+                force_rebuild = True
             if option in ("-l", "--list"):
                 update = False
     
         # Okay, GO
         # Parse sources.yaml and instantiate sources
         try:
-            logger.debug("Reading sources from '%s'" % sources_file)
-            sources = get_sources(sources_file)
-            if update:
+            if do_update:
                 entries = []
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
-                if entries_cache.is_fresh(config.CACHE_THRESHOLD):
+                if force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD):
                     logger.info("Using cached entries...")
                     entries = entries_cache.restore()
                 else:
+                    logger.debug("Reading sources from '%s'" % sources_file)
+                    sources = get_sources(sources_file)
                     # Update sources
                     logger.debug("Entries cache is stale...")
                     logger.debug("Starting parsing run")
@@ -273,9 +279,11 @@ def main(argv=None):
                         entry.logger = None
                     entries_cache.save(entries)
                 write_output(entries)
-                logger.debug("DONE")
+                logger.info("Finished processing.")
             else:
                 # List sources but don't do anything else
+                logger.debug("Reading sources from '%s'" % sources_file)
+                sources = get_sources(sources_file)
                 logger.debug("Listing sources; no parsing")
                 for src in sources:
                     print src
