@@ -17,6 +17,8 @@ import config
 import spider
 import publish
 
+from vlassic import BackwaterCache
+
 # Sources (feeds) and subtypes of sources
 
 from spider.source import Source
@@ -174,6 +176,22 @@ def get_sources(sources_file):
         logger.critical("Couldn't load the sources file '%s'!" % sources_file)
         raise
 
+def write_output(entries):
+    # Write HTML output
+    logger.debug("Publishing HTML 5 file...")
+    publish.publish(
+        config.HTML5_TEMPLATE, 
+        config.HTML5_OUTPUT_FILE, 
+        entries[:config.NUM_ENTRIES]
+    )
+    # Write Atom output
+    logger.debug("Publishing Atom file...")
+    publish.publish(
+        config.ATOM_TEMPLATE, 
+        config.ATOM_OUTPUT_FILE, 
+        entries[:config.NUM_ENTRIES]
+    )
+
 class FlushCache(Exception):
     """Flushes the content cache."""
     pass    
@@ -236,25 +254,26 @@ def main(argv=None):
             sources = get_sources(sources_file)
             if update:
                 entries = []
-                # Update sources
-                logger.debug("Starting parsing run")
-                entries = spider.update(sources)
-                # Sort
-                entries.sort()
-                entries.reverse()
-                # TODO: Pickle 'entries' so that 'rebuild' command can work
-                # Write HTML output
-                publish.publish(
-                    config.HTML5_TEMPLATE, 
-                    config.HTML5_OUTPUT_FILE, 
-                    entries[:config.NUM_ENTRIES]
-                )
-                # Write Atom output
-                publish.publish(
-                    config.ATOM_TEMPLATE, 
-                    config.ATOM_OUTPUT_FILE, 
-                    entries[:config.NUM_ENTRIES]
-                )
+                entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
+                if entries_cache.is_fresh(config.CACHE_THRESHOLD):
+                    logger.info("Using cached entries...")
+                    entries = entries_cache.restore()
+                else:
+                    # Update sources
+                    logger.debug("Entries cache is stale...")
+                    logger.debug("Starting parsing run")
+                    entries = spider.update(sources)
+                    # Sort
+                    entries.sort()
+                    entries.reverse()
+                    logger.debug("Caching entries...")
+                    # The pickler can't save anything with logger objects 
+                    # because of thread locks, so zap them
+                    for entry in entries:
+                        entry.logger = None
+                    entries_cache.save(entries)
+                write_output(entries)
+                logger.debug("DONE")
             else:
                 # List sources but don't do anything else
                 logger.debug("Listing sources; no parsing")
