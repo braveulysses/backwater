@@ -68,7 +68,6 @@ class Photostream(Source):
                 self.logger.debug("Photo Flickr page URL: '%s'" % e.url)
                 e.cache()
                 e.set_dimensions()
-                # TODO: Make photo thumbnails
                 e.date = p.get('dateupload')
                 e.date_parsed = datetime.datetime.utcfromtimestamp(float(e.date)).timetuple()
                 e.published = e.date
@@ -84,6 +83,8 @@ class Photostream(Source):
                 self.logger.debug("Making photos.getInfo API call...")
                 photo_info = flickr.photos_getInfo(photo_id=e.photo_id, secret=e.secret)
                 e.summary = photo_info.find('photo').find('description').text
+                if e.summary is None:
+                    e.summary = ''
                 e.author = photo_info.find('photo').find('owner').get('realname')
                 if e.author == '':
                     e.author = self.owner

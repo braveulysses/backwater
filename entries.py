@@ -282,16 +282,16 @@ class Photo(Entry):
         fn = self._get_cached_original_shortname()
         return "%s/%s" % (config.IMAGE_CACHE_DIR, fn)
 
-    def _get_cached_thumbnail_fn(self):
-        if self.photo_type == 'flickr':
-            return "%s/flickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.photo_id, self.secret)
-        elif self.photo_type == 'tumblr':
-            # See get_cached_original_fn()
-            tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
-            return "%s/tumblr_thumb_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
-        else:
-            # ???
-            raise Exception
+    # def _get_cached_thumbnail_fn(self):
+    #     if self.photo_type == 'flickr':
+    #         return "%s/flickr_thumb_%s_%s.jpg" % (config.IMAGE_CACHE_DIR, self.photo_id, self.secret)
+    #     elif self.photo_type == 'tumblr':
+    #         # See get_cached_original_fn()
+    #         tumblr_photo_path = urlparse(self.photo_url)[2].replace('/', '')
+    #         return "%s/tumblr_thumb_%s" % (config.IMAGE_CACHE_DIR, tumblr_photo_path)
+    #     else:
+    #         # ???
+    #         raise Exception
 
     def set_dimensions(self):
         try:
@@ -305,9 +305,7 @@ class Photo(Entry):
         pass
 
     def cache(self):
-        """Fetches photo via HTTP and caches both the original and a 
-        thumbnail.
-        """
+        """Fetches photo via HTTP and caches it."""
         try:
             self.logger.info("Fetching and caching photo '%s'" % self.title)
             content_types = [
@@ -322,7 +320,6 @@ class Photo(Entry):
                 f = open(self._get_cached_original_fn(), 'w')
                 f.write(content)
                 f.close()
-            # TODO: create thumbnail
         except:
             self.logger.exception("Problem caching photo!")
     
