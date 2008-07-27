@@ -40,7 +40,7 @@
 <li class="post">
 <h2><a href="${entry.url | h}">${entry.title | typogrify}</a></h2>
 <article>${entry.content_abridged | typogrify}</article>
-<p class="posted"><a href="${entry.source_url | h}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'link':
@@ -56,14 +56,18 @@ ${entry.summary | typogrify}
  <a href="${entry.via | h}" class="via">(via)</a>
 % endif
 </article>
-<p class="posted"><a href="${entry.source_url | h}">${entry.source_name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
+<p class="posted"><a href="${entry.source.url | h}">${entry.source.name}</a> &#183; <span class="timestamp">${entry.published_formatted}</span></p>
 </li>
 
 % elif entry.type == 'quote':
 ## Quote
 <li class="quote">
 <article>
+% if entry.via is not None:
+<blockquote cite="${entry.via}">
+% else:
 <blockquote>
+% endif
 <p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.summary | amp,caps,smartypants}&#8221;</a></p>
 </blockquote>
 </article>

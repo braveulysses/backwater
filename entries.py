@@ -25,6 +25,27 @@ module_logger = logging.getLogger("backwater.entries")
 class NotAnEntryError(Exception): pass
 class NonexistentImageError(Exception): pass
 
+class EntrySource(object):
+    """Stores attributes pertaining to an entry's source (i.e., weblog, tumblelog, etc.).
+    We don't store a reference to the Source object to allow for garbage collection.
+    """
+    def __init__(self):
+        super(EntrySource, self).__init__()
+        self.name = ''
+        self.url = ''
+
+class AtomSource(object):
+    """Representation of an Atom <source> element.
+    
+    See <http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source>
+    """
+    def __init__(self):
+        super(AtomSource, self).__init__()
+        self.id = None
+        self.title = None
+        self.url = None
+        self.updated = None
+
 class Entry(object):
     """Generic Entry object from which weblog posts, links, photos, 
     etc. descend.
@@ -32,12 +53,12 @@ class Entry(object):
     def __init__(self):
         super(Entry, self).__init__()
         self.type = None
-        self.source_name = ''
-        self.source_url = ''
+        self.source = EntrySource()
         self.atom = False
         self.id = None
         self.title = ''
         self.author = ''
+        self.author_url = None
         self.summary = ''
         self.content = ''
         self.content_abridged = ''
@@ -48,8 +69,6 @@ class Entry(object):
         self.related = None
         # Via is generally used for a source credit
         self.via = None
-        # TODO: Support Atom source element: http://www.atomenabled.org/developers/syndication/atom-format-spec.php#element.source
-        # This is not quite the same as a via reference.
         self.atom_source = None
         self.comments = None
         # TODO: Detect enclosures
@@ -160,10 +179,10 @@ class Entry(object):
         self.content = publish.sanitizer.sanitize(self.content)
         self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
         # Escape content
-        self.title = publish.sanitizer.escape(self.title)
-        self.summary = publish.sanitizer.escape(self.summary)
-        self.content = publish.sanitizer.escape_amps_only(self.content)
-        self.content_abridged = publish.sanitizer.escape_amps_only(self.content_abridged)
+        #self.title = publish.sanitizer.escape(self.title)
+        #self.summary = publish.sanitizer.escape(self.summary)
+        #self.content = publish.sanitizer.escape_amps_only(self.content)
+        #self.content_abridged = publish.sanitizer.escape_amps_only(self.content_abridged)
 
 class Post(Entry):
     def __init__(self):

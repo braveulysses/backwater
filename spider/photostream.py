@@ -41,8 +41,8 @@ class Photostream(Source):
             for photo in photos:
                 e = Photo()
                 e.photo_type = 'flickr'
-                e.source_name = self.name
-                e.source_url = self.url
+                e.source.name = self.name
+                e.source.url = self.url
                 e.author = self.owner
                 # This only gets the most recent photo, which is really 
                 # a bug, but I like this behavior.  Too many photos 
@@ -53,6 +53,7 @@ class Photostream(Source):
                 #    continue
                 e.title = p.get('title', 'untitled')
                 self.logger.info("Photo title: '%s'" % e.title)
+                # TODO: Get photo description
                 e.photo_id = p.get('id')
                 e.farm_id = p.get('farm')
                 e.secret = p.get('secret')

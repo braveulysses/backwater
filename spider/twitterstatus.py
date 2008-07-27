@@ -40,8 +40,8 @@ class TwitterStatus(Source):
             tweets = twitty.GetUserTimeline(self.name)
             for tweet in tweets:
                 e = Quote()
-                e.source_name = self.name
-                e.source_url = self.url
+                e.source.name = self.name
+                e.source.url = self.url
                 e.author = tweet.user.name
                 e.title = "Tweet from %s" % e.author
                 e.summary = tweet.text

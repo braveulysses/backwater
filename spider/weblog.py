@@ -12,10 +12,12 @@ import feedparser
 import logging
 import spider
 from source import Source
+from entries import AtomSource
 from entries import Entry
 from entries import Post
 from entries import Link
 from entries import Quote
+from publish.sanitizer import sanitize
 
 feedparser.USER_AGENT = config.BOT_USER_AGENT
 
@@ -62,16 +64,32 @@ class Weblog(Source):
                 e = Quote()
             else:
                 e = Post()
-            e.source_name = self.name
-            e.source_url = self.url
+            e.source.name = self.name
+            e.source.url = self.url
             e.atom = self.atom
             e.title = entry.get('title', '')
             self.logger.info("Entry title: '%s'" % e.title)
-            e.author = entry.get('author', '')
-            e.summary = entry.get('summary', '')
-            # Need to get 'content[x]["value"]', not just 'content'
+            e.author = entry.get('author', self.owner)
             try:
-                e.content = entry['content'][0]['value']
+                e.author_url = entry.author_detail['href']
+            except (AttributeError, KeyError):
+                e.author_url = None
+            e.summary = entry.get('summary', '')
+            # Need to get 'content[x]["value"]', not just 'content', 
+            # and we prefer something marked "text/html"
+            try:
+                #e.content = entry['content'][0]['value']
+                html_types = [
+                    'text/html',
+                    'application/xhtml+xml',
+                    'application/xml',
+                    'text/xml',
+                    'text/plain'
+                ]
+                for content in entry['content']:
+                    if content['type'] in html_types:
+                        e.content = content['value']
+                        continue
             except (KeyError, IndexError, AttributeError):
                 e.content = e.summary
             # Atom weblog feeds should used 'rel="related"' for 
@@ -102,7 +120,20 @@ class Weblog(Source):
             # Nix the comments property if it's the same link as the permalink
             if e.url == e.comments:
                 e.comments = None
-            # TODO: Normalize URLs
+            # Put together the Atom <source> info, if applicable
+            if e.atom:
+                e.atom_source = AtomSource()
+                try:
+                    e.atom_source.id = self.id
+                    e.atom_source.title = sanitize(self.name)
+                    e.atom_source.url = self.url
+                    e.atom_source.updated = self.updated
+                except AttributeError:
+                    self.logger.exception("Trouble getting Atom source for '%s'!" % self.name)
+                    e.atom_source = None
+            else:
+                e.atom_source = None
+            # DATES!
             e.date = entry.get('date')
             e.date_parsed = entry.get('date_parsed')
             self.logger.debug("Entry date: %s" % e.date_as_string(e.date_parsed))

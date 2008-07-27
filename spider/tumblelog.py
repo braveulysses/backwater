@@ -107,8 +107,8 @@ class Tumblelog(Weblog):
                     self.logger.info("Tumblr post type: audio")
                     continue
                     #e = Audio()
-                e.source_name = self.name
-                e.source_url = self.url
+                e.source.name = self.name
+                e.source.url = self.url
                 if e.url == '':
                     e.url = post.url
                 e.author = self.owner
