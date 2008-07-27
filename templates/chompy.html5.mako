@@ -11,7 +11,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-<meta charset="UTF-8">
 <title>chompy.net</title>
 <meta name="viewport" content="width=700" />
 <meta name="generator" content="${generator}" />
