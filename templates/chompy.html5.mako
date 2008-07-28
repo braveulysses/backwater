@@ -34,9 +34,9 @@
 
 <body>
     
-<section id="container">
+<div id="container">
     
-<section id="content">
+<div id="content">
 
 <header>
 <div>
@@ -124,7 +124,7 @@ ${entry.summary | typogrify,escape_amps_only}
 % endfor
 </ul>
 
-</section> <!--/content -->
+</div> <!--/content -->
 
 <footer>
 <div>
@@ -137,7 +137,7 @@ Brought to you by <span class="caps snf">SNF</span> Labs.
 </div>
 </footer>
 
-</section> <!--/container -->
+</div> <!--/container -->
 
 </body>
 

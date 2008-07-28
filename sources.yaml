@@ -73,7 +73,13 @@ sources:
       type: tumblelog
       owner: sentry
       url: http://industry.tumblr.com/
-      
+    
+    - name: del.icio.us/mpgomez
+      type: linklog
+      owner: Michael Gomez
+      url: http://del.icio.us/mpgomez
+      feed_url: http://del.icio.us/rss/mpgomez
+    
     - name: tenorune
       type: twitter
       owner: sentry
@@ -117,6 +123,12 @@ sources:
       owner: Seth
       url: http://www.carefullyselectedgarbage.com/
       feed_url: http://www.carefullyselectedgarbage.com/feeds/posts/default
+
+    # -name: Carefully Selected Garbage: Comments
+    #  type: commentlog
+    #  owner: Seth
+    #  url: http://www.carefullyselectedgarbage.com/
+    #  feed_url: http://www.carefullyselectedgarbage.com/feed/comments/default
 
     - name: setholdmixon
       type: twitter
