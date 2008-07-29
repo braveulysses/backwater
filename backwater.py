@@ -205,7 +205,7 @@ def write_output(entries):
     publish.publish(
         config.ATOM_TEMPLATE,
         config.ATOM_LINKS_OUTPUT_FILE,
-        entries[:config.NUM_ENTRIES], 
+        links[:config.NUM_ENTRIES], 
         opt_template_values = {
             'feed_title': config.ATOM_LINKS_FEED_TITLE, 
             'feed_subtitle': config.ATOM_LINKS_FEED_SUBTITLE, 
