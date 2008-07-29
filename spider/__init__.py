@@ -61,23 +61,23 @@ def fetch(url, valid_content_types=None):
     # Throw exceptions for various HTTP error codes
     if resp.status == 400:
         raise BadRequestError
-    if resp.status == 401:
+    elif resp.status == 401:
         raise NotAuthorizedError
-    if resp.status == 403:
+    elif resp.status == 403:
         raise URLForbiddenError
-    if resp.status == 404:
+    elif resp.status == 404:
         raise URLNotFoundError
-    if resp.status == 410:
+    elif resp.status == 410:
         raise URLGoneError
-    if resp.status > 400 and resp.status < 500:
+    elif resp.status > 400 and resp.status < 500:
         raise BackwaterHTTPError
-    if resp.status == 500:
+    elif resp.status == 500:
         raise InternalServerError
-    if resp.status == 502:
+    elif resp.status == 502:
         raise BadGatewayError
-    if resp.status == 503:
+    elif resp.status == 503:
         raise ServiceUnavailableError
-    if resp.status > 500 and resp.status < 600:
+    elif resp.status > 500 and resp.status < 600:
         raise BackwaterHTTPError
     # Bail if proper content-type not given
     content_type, charset = parse_content_type(resp['content-type'])

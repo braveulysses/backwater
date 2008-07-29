@@ -61,7 +61,7 @@
 <li class="link">
 <h2><a href="${entry.url | h}">${entry.title | typogrify,escape_amps_only}</a></h2>
 <article>
-${entry.summary | typogrify,escape_amps_only}
+${entry.content | typogrify,escape_amps_only}
 % if entry.comments is not None:
  <a href="${entry.comments | h}" class="comments">(#)</a>
 % endif
