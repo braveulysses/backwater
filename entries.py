@@ -112,6 +112,7 @@ class Entry(object):
         Takes a date tuple and a URL as arguments."""
         # TODO: Issue IDs in canonical form
         # http://validator.w3.org/feed/docs/warning/NonCanonicalURI.html
+        # http://feedvalidator.org/docs/warning/NonCanonicalURI.html
         tagURI = []
         url = url.replace('#', '/')
         parsed_url = urlparse(url)

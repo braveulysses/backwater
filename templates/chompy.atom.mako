@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title type="text">chompy.net</title>
-    <link rel="alternate" type="text/html" href="http://chompy.net/"/>
-    <link rel="self" type="application/atom+xml" href="http://chompy.net/feeds/chompy.atom"/>
+    <title type="text">${feed_title}</title>
+    <link rel="alternate" type="text/html" href="${base_url}/"/>
+    <link rel="self" type="application/atom+xml" href="${feed_url}"/>
     <updated>${now}</updated>
-    <subtitle>more rocks and garbage</subtitle>
+    <subtitle>${feed_subtitle}</subtitle>
     <id>tag:chompy.net,2008://1</id>
     <generator>${generator}</generator>
     <rights>SNF Labs has asserted the moral right of the author of each post to be identified as the author of that post.</rights>
@@ -32,6 +32,7 @@
     % else:
         <summary type="text">${entry.summary | x}</summary>
     % endif
+    ## TODO: Keywords/tags/categories
 % endif
 % if entry.content != '' and entry.content != entry.summary:
     % if entry.type == 'quote':

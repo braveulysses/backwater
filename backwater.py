@@ -189,7 +189,28 @@ def write_output(entries):
     publish.publish(
         config.ATOM_TEMPLATE, 
         config.ATOM_OUTPUT_FILE, 
-        entries[:config.NUM_ENTRIES]
+        entries[:config.NUM_ENTRIES], 
+        opt_template_values = {
+            'feed_title': config.ATOM_FEED_TITLE, 
+            'feed_subtitle': config.ATOM_FEED_SUBTITLE, 
+            'feed_url': config.ATOM_FEED_URL
+        }
+    )
+    # Write a link-only feed
+    links = []
+    for entry in entries:
+        if entry.type == 'link':
+            links.append(entry)
+    logger.debug("Publishing Atom links file...")
+    publish.publish(
+        config.ATOM_TEMPLATE,
+        config.ATOM_LINKS_OUTPUT_FILE,
+        entries[:config.NUM_ENTRIES], 
+        opt_template_values = {
+            'feed_title': config.ATOM_LINKS_FEED_TITLE, 
+            'feed_subtitle': config.ATOM_LINKS_FEED_SUBTITLE, 
+            'feed_url': config.ATOM_LINKS_FEED_URL
+        }
     )
 
 class FlushCache(Exception):
