@@ -75,6 +75,9 @@ Update the chompy.net aggregator.
     -l, --list              list all sources
 """ % sys.argv[0]
 
+# TODO: Add option to ignore the entries cache
+# TODO: Add option to flush the entries cache
+
 #############################################################################
 
 # Set up logging
@@ -264,6 +267,7 @@ def main(argv=None):
             if option in ("-h", "--help"):
                 raise Usage(help_message)
             if option in ("-s", "--sources"):
+                logger.debug("Using sources file: '%s'" % value)
                 sources_file = value
             if option in ("-n", "--no-caching"):
                 config.HTTP_USE_CACHE = False
@@ -273,7 +277,7 @@ def main(argv=None):
                 print "Skipping HTTP fetching, rebuilding output..."
                 force_rebuild = True
             if option in ("-l", "--list"):
-                update = False
+                do_update = False
     
         # Okay, GO
         # Parse sources.yaml and instantiate sources
@@ -314,6 +318,9 @@ def main(argv=None):
                     print src
         except CacheNotFoundError:
             print >> sys.stderr, "ERROR: Entries cache not found!"
+            return 1
+        except yaml.parser.ParserError, e:
+            print >> sys.stderr, "ERROR: Couldn't parse sources file: %s" % e
             return 1
         except IOError:
             return 1

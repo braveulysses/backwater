@@ -21,7 +21,8 @@ class Linklog(Weblog):
         self.type = 'linklog'
 
     def is_delicious(self):
-        if urlparse(self.url)[1] == 'del.icio.us':
+        domain = urlparse(self.url)[1]
+        if domain == 'del.icio.us' or domain == 'delicious.com':
             return True
         else:
             return False
