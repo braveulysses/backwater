@@ -52,6 +52,8 @@ class Entry(object):
     """
     def __init__(self):
         super(Entry, self).__init__()
+        # self.type identifies the entry type, which is cheesy, because 
+        # that could also be done with self.__class__
         self.type = None
         self.source = EntrySource()
         self.atom = False
@@ -74,8 +76,7 @@ class Entry(object):
         # TODO: Detect enclosures
         self.enclosures = None
         # TODO: Get tags/categories
-        self.tags = None
-        self.categories = None
+        self.tags = []
         # Rights is generally used for a copyright statement
         self.rights = None
         # Date is a synonym for Published
@@ -113,6 +114,8 @@ class Entry(object):
         # TODO: Issue IDs in canonical form
         # http://validator.w3.org/feed/docs/warning/NonCanonicalURI.html
         # http://feedvalidator.org/docs/warning/NonCanonicalURI.html
+        #
+        # Mark Nottingham's urlnorm.py would do the trick.
         tagURI = []
         url = url.replace('#', '/')
         parsed_url = urlparse(url)
@@ -303,10 +306,6 @@ class Photo(Entry):
         except IOError:
             raise NonexistentImageError
 
-    def resize(self):
-        # TODO: resize photos
-        pass
-
     def cache(self):
         """Fetches photo via HTTP and caches it."""
         try:
@@ -330,7 +329,7 @@ class Photo(Entry):
         """Creates a content value suitable for using in a feed."""
         try:
             self.content = """<img src="%s" height="%s" width="%s" alt="" /><br />%s""" % (config.BASE_URL + self.cached_url, self.height, self.width, self.summary)
-            self.logger.debug("Content: '%s'" % self.content)
+            #self.logger.debug("Content: '%s'" % self.content)
         except:
             self.logger.exception("Error occurred while creating content attribute!")
             self.content = ''

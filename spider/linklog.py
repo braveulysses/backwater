@@ -19,7 +19,6 @@ class Linklog(Weblog):
         super(Linklog, self).__init__(name, owner, url, feed_url)
         self.logger = logging.getLogger("backwater.linklog.Linklog")
         self.type = 'linklog'
-        self.entry_type = 'link'
 
     def is_delicious(self):
         if urlparse(self.url)[1] == 'del.icio.us':

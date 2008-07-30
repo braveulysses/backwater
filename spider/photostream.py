@@ -23,7 +23,6 @@ class Photostream(Source):
         super(Photostream, self).__init__(name, owner, url)
         self.logger = logging.getLogger("backwater.photostream.Photostream")
         self.type = 'photostream'
-        self.entry_type = 'photo'
         self.flickr_id = flickr_id
 
     def parse(self):

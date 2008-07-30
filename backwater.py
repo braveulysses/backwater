@@ -99,6 +99,7 @@ logger.addHandler(ch)
 #############################################################################
 
 class UnknownSourceTypeError(Exception): pass
+class CacheNotFoundError(Exception): pass
 
 def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
@@ -282,7 +283,10 @@ def main(argv=None):
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
                 if force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD):
                     logger.info("Using cached entries...")
-                    entries = entries_cache.restore()
+                    try:
+                        entries = entries_cache.restore()
+                    except IOError:
+                        raise CacheNotFoundError()
                 else:
                     logger.debug("Reading sources from '%s'" % sources_file)
                     sources = get_sources(sources_file)
@@ -308,6 +312,9 @@ def main(argv=None):
                 logger.debug("Listing sources; no parsing")
                 for src in sources:
                     print src
+        except CacheNotFoundError:
+            print >> sys.stderr, "ERROR: Entries cache not found!"
+            return 1
         except IOError:
             return 1
         except:

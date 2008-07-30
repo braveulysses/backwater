@@ -30,7 +30,6 @@ class Weblog(Source):
         #self.logger.debug("Created an instance of Weblog: '%s'" % self.name)
         self.type = 'weblog'
         self.feed_url = feed_url
-        self.entry_type = 'post'
         self.tagline = ''
 
     def parse(self):
@@ -45,6 +44,7 @@ class Weblog(Source):
         self.name = feed_data.feed.get('title', self.name)
         self.generator = feed_data.feed.get('generator', None)
         self.url = feed_data.feed.get('link', self.url)
+        self.tagline = feed_data.feed.get('tagline', '')
         self.logger.debug("Weblog URL: '%s'" % self.url)
         self.updated = feed_data.feed.get('updated', None)
         self.updated_parsed = feed_data.feed.get('updated_parsed', None)
@@ -78,7 +78,6 @@ class Weblog(Source):
             # Need to get 'content[x]["value"]', not just 'content', 
             # and we prefer something marked "text/html"
             try:
-                #e.content = entry['content'][0]['value']
                 html_types = [
                     'text/html',
                     'application/xhtml+xml',
@@ -117,6 +116,19 @@ class Weblog(Source):
                 for link in entry.links:
                     if link['rel'] == 'alternate':
                         e.comments = link['href']
+            # Now, get tags/categories
+            try:
+                if len(entry.tags) > 0:
+                    if e.type == 'link' and self.is_delicious():
+                        # del.icio.us tags need to be coaxed out...
+                        # See: http://code.google.com/p/feedparser/issues/detail?id=34
+                        e.tags = entry.tags[0].term.split()
+                    else:
+                        for tag in entry.tags:
+                            e.tags.append(tag.term)
+            except AttributeError:
+                # No tags! Forget it.
+                pass
             # Nix the comments property if it's the same link as the permalink
             if e.url == e.comments:
                 e.comments = None

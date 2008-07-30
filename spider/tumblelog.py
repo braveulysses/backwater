@@ -33,7 +33,6 @@ class Tumblelog(Weblog):
         super(Tumblelog, self).__init__(name, owner, url, feed_url=None)
         self.logger = logging.getLogger("backwater.tumblelog.Tumblelog")
         self.type = 'tumblelog'
-        self.entry_type = None
         self.api_url = url + 'api/read'
         self.excluded_types = excluded_types
 
@@ -97,14 +96,17 @@ class Tumblelog(Weblog):
                 # Conversation, Video, and Audio post types aren't 
                 # going to be implemented for a while
                 elif post.type == 'conversation':
+                    # TODO: Support Tumblr conversations
                     self.logger.info("Tumblr post type: conversation")
                     continue
                     #e = Conversation()
                 elif post.type == 'video':
+                    # TODO: Support Tumblr videos
                     self.logger.info("Tumblr post type: video")
                     continue
                     #e = Video()
                 elif post.type == 'audio':
+                    # TODO: Support Tumblr audio
                     self.logger.info("Tumblr post type: audio")
                     continue
                     #e = Audio()

@@ -26,8 +26,6 @@ class Source(object):
         self.logger = logging.getLogger("backwater.source.Source")
         self.type = 'source'
         self.atom = False
-        # Entry type corresponds to the classes defined in entries.py
-        self.entry_type = None
         self.excluded_types = []
         self.excluded_keywords = []
         # This needs to unique; if a unique id is not provided, make one
@@ -58,7 +56,7 @@ class Source(object):
         """Checks that all attribute values are in order so that the source 
         can be used in an Atom feed."""
         if self.id is None:
-            # TODO: generate unique ID
+            # TODO: Generate unique ID (maybe unnecessary)
             pass
         if len(self.entries) > 0:
             if self.updated is None:

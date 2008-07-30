@@ -18,7 +18,6 @@ class Commentlog(Weblog):
         super(Commentlog, self).__init__(name, owner, url, feed_url)
         self.logger = logging.getLogger("backwater.commentlog.Commentlog")
         self.type = 'commentlog'
-        self.entry_type = 'quote'
 
 def main():
     pass

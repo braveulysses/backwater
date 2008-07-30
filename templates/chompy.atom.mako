@@ -41,6 +41,11 @@
         <content type="html">${entry.content | x}</content>
     % endif
 % endif
+% if len(entry.tags) > 0:
+    % for tag in entry.tags:
+        <category term="${tag | x}"/>
+    % endfor
+% endif
         <author>
             <name>${entry.author}</name>
 % if entry.author_url is not None:

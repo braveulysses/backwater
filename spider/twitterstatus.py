@@ -23,7 +23,6 @@ class TwitterStatus(Source):
         super(TwitterStatus, self).__init__(name, owner, url)
         self.logger = logging.getLogger("backwater.twitterstatus.TwitterStatus")
         self.type = 'twitterstatus'
-        self.entry_type = 'quote'
 
     def get_tweet_url(self, tweet_id):
         return 'http://twitter.com/' + self.name + '/statuses/' + str(tweet_id)
