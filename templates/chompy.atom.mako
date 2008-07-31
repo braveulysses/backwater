@@ -16,12 +16,14 @@
 % else:
         <title type="html">${entry.title | x}</title>
 % endif
+% if entry.comments is not None:
         <link rel="related" type="text/html" href="${entry.url | x}"/>
+        <link rel="alternate" type="text/html" href="${entry.comments | x}"/>
+% else:
+        <link rel="alternate" type="text/html" href="${entry.url | x}"/>
+% endif
 % if entry.via is not None:
         <link rel="via" type="text/html" href="${entry.via | x}"/>
-% endif
-% if entry.comments is not None:
-        <link rel="alternate" type="text/html" href="${entry.comments | x}"/>
 % endif
         <published>${entry.published_atom}</published>
         <updated>${entry.updated_atom}</updated>
