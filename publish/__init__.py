@@ -14,7 +14,9 @@ def publish(tmpl, outfile, entries, opt_template_values=None):
     template = Template(filename=tmpl)
     template_values = {
         'now':  current_timestamp, 
-        'generator': config.BOT_USER_AGENT, 
+        'generator': config.BOT_NAME, 
+        'generator_url': config.BOT_URL, 
+        'generator_version': config.__version__, 
         'base_url': config.BASE_URL, 
         'feeds_url': config.FEEDS_URL, 
         'entries': entries

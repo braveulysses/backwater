@@ -1,8 +1,10 @@
+import socket
 import httplib2
 import logging
 import config
 
-class BackwaterHTTPError(Exception): pass
+class BackwaterNetworkError(Exception): pass
+class BackwaterHTTPError(BackwaterNetworkError): pass
 class InternalServerError(BackwaterHTTPError): pass
 class BadGatewayError(BackwaterHTTPError): pass
 class ServiceUnavailableError(BackwaterHTTPError): pass
@@ -55,9 +57,15 @@ def fetch(url, valid_content_types=None):
     except IOError:
         # An IOError can happen, for example, when httplib2 can't write 
         # to its cache.
-        # For now, just re-raise the exception.
-        module_logger.error("IOError when fetching content!")
+        # For now, just re-raise the exception. If it happens, it's bad.
+        module_logger.critical("IOError when fetching content!")
         raise
+    except socket.error, e:
+        module_logger.warning("Socket error while fetching '%s': '%s'" % (url, e))
+        raise BackwaterNetworkError()
+    except httplib2.ServerNotFoundError, e:
+        module_logger.warning("Server not found: '%s'" % e)
+        raise BackwaterNetworkError()
     # Throw exceptions for various HTTP error codes
     if resp.status == 400:
         raise BadRequestError
@@ -105,4 +113,6 @@ def update(sources):
             module_logger.exception(err)
         except BackwaterHTTPError:
             module_logger.exception("HTTP error occurred!")
+        except BackwaterNetworkError:
+            module_logger.exception("Network error occurred!")
     return all_entries

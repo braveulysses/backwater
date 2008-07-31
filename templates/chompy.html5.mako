@@ -13,7 +13,7 @@
 <head>
 <title>chompy.net</title>
 <meta name="viewport" content="width=700" />
-<meta name="generator" content="${generator}" />
+<meta name="generator" content="${generator}/${generator_version}" />
 <meta name="author" content="SNF Labs" />
 <meta name="description" content="the Spaceship No Future annex" />
 <link rel="stylesheet" type="text/css" href="${base_url}/css/chompy-jul2008.css" media="screen" />

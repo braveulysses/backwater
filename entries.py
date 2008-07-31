@@ -43,8 +43,10 @@ class AtomSource(object):
         super(AtomSource, self).__init__()
         self.id = None
         self.title = None
+        self.subtitle = None
         self.url = None
         self.updated = None
+        self.rights = None
 
 class Entry(object):
     """Generic Entry object from which weblog posts, links, photos, 
@@ -69,13 +71,12 @@ class Entry(object):
         # Related is generally used as a pointer to the source link, 
         # especially in linklogs
         self.related = None
+        self.comments = None
         # Via is generally used for a source credit
         self.via = None
         self.atom_source = None
-        self.comments = None
         # TODO: Detect enclosures
         self.enclosures = None
-        # TODO: Get tags/categories
         self.tags = []
         # Rights is generally used for a copyright statement
         self.rights = None

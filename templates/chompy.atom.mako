@@ -7,8 +7,8 @@
     <updated>${now}</updated>
     <subtitle>${feed_subtitle}</subtitle>
     <id>tag:chompy.net,2008://1</id>
-    <generator>${generator}</generator>
-    <rights>SNF Labs has asserted the moral right of the author of each post to be identified as the author of that post.</rights>
+    <generator uri="${generator_url}" version="${generator_version}">${generator}</generator>
+    <rights type="text">SNF Labs has asserted the moral right of the author of each post to be identified as the author of that post.</rights>
 % for entry in entries:
     <entry>
 % if entry.title is None or entry.title == '':
@@ -16,12 +16,12 @@
 % else:
         <title type="html">${entry.title | x}</title>
 % endif
-        <link rel="alternate" type="text/html" href="${entry.url | x}"/>
+        <link rel="related" type="text/html" href="${entry.url | x}"/>
 % if entry.via is not None:
         <link rel="via" type="text/html" href="${entry.via | x}"/>
 % endif
 % if entry.comments is not None:
-        <link rel="related" type="text/html" href="${entry.comments | x}"/>
+        <link rel="alternate" type="text/html" href="${entry.comments | x}"/>
 % endif
         <published>${entry.published_atom}</published>
         <updated>${entry.updated_atom}</updated>
@@ -32,7 +32,6 @@
     % else:
         <summary type="text">${entry.summary | x}</summary>
     % endif
-    ## TODO: Keywords/tags/categories
 % endif
 % if entry.content != '' and entry.content != entry.summary:
     % if entry.type == 'quote':

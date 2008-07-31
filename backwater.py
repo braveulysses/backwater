@@ -329,7 +329,7 @@ def main(argv=None):
             raise
 
     except FlushCache:
-        # TODO: Implement "flush" command to clear cache
+        # TODO: Implement "flush" command to clear HTTP cache
         print "Flushing cache... (unimplemented)"
         return 0
 
