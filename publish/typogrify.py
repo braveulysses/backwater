@@ -3,7 +3,7 @@ import re
 # TODO: Reduce reliance on regexps by using a proper parser.
 
 def amp(text):
-    """Wraps apersands in HTML with ``<span class="amp">`` so they can be
+    """Wraps ampersands in HTML with ``<span class="amp">`` so they can be
     styled with CSS. Apersands are also normalized to ``&amp;``. Requires 
     ampersands to have whitespace or an ``&nbsp;`` on both sides.
     

@@ -11,6 +11,7 @@ import logging
 module_logger = logging.getLogger("backwater.publish.shorten")
 
 def wc(text):
+    """Returns the number of words in a string."""
     try:
         return len(text.split())
     except:
@@ -18,13 +19,12 @@ def wc(text):
         raise
 
 def shorten(text, limit):
+    """Truncates text to a certain number of words."""
     try:
         if (wc(text) > limit):
             words = text.split()
             text = ''
-            for i in range(limit):
-                text = text + ' ' + words[i]
-            text = text + '&#8230;'
+            text = " ".join(words[:limit]) + '&#8230;'
         return text
     except:
         module_logger.exception("Trouble truncating string: '%s'" % text)
