@@ -64,9 +64,147 @@ class PhotoTestCases(unittest.TestCase):
     def setUp(self):
         pass
 
-class SanitizerTestCases(unittest.TestCase):
+class StripperTestCases(unittest.TestCase):
     def setUp(self):
-        pass
+        self.basic_txt = """<h1>Change <em>alone</em> is unchanging.</h1>"""
+        self.plain_txt = "The dead body is useless even as manure."
+        self.txt_with_attrs = """Law gives the people a <a href="http://example.com/">single will</a> to obey."""
+        self.txt_with_entities = """<blockquote><p>I&#8217;ve seen Plato&apos;s cups &amp; tables, but not his <i>cupness</i> &amp; <i>tableness</i>.</p></blockquote>"""
+        self.style_tag = """The <span style="font-family: 'Comic Sans';">same road</span> goes both up and down."""
+        self.script_tag = """Men are not intellligent. <script type="text/javascript">alert('Not enough and too much.');</script> The gods are intelligent."""
+        self.script_url = """The <a href="javascript:alert('boo');">untrained mind</a> shivers with excitement at everything it hears."""
+        self.self_closed_html_tag = """To God all is beautiful, good, and as it should be.<br> Man must see things as either good or bad."""
+        self.self_closed_xhtml_tag = """To God all is beautiful, good, and as it should be.<br /> Man must see things as either good or bad."""
+        self.nested_tags = """Having cut, <a href="http://example.com"><b>burned</b> and <font style="color: #CCC;">poisoned</font></a> the sick, the doctor then submits <strong>his bill</strong>."""
+        self.unbalanced_tags = """<h1>Extinguish <q>pride <b>as</q> quickly</b> as you would a fire."""
+        
+    def testStripTags(self):
+        """HTML tags are stripped from text."""
+        result = publish.sanitizer.strip(self.basic_txt)
+        assert result == 'Change alone is unchanging.'
+    
+    def testStripPlainText(self):
+        """HTML stripper leaves plain text as is."""
+        result = publish.sanitizer.strip(self.plain_txt)
+        assert result == self.plain_txt
+    
+    def testStripTagsWithAttributes(self):
+        """HTML tags containing attributes are stripped."""
+        result = publish.sanitizer.strip(self.txt_with_attrs)
+        assert result == "Law gives the people a single will to obey."
+    
+    def testStripTagsWIthEntities(self):
+        """HTML entities are converted to Unicode characters by the HTML stripper."""
+        result = publish.sanitizer.strip(self.txt_with_entities)
+        assert result == "I’ve seen Plato's cups & tables, but not his cupness & tableness."
+    
+    def testStripStyleTags(self):
+        """HTML <style> tags are stripped."""
+        result = publish.sanitizer.strip(self.style_tag)
+        assert result == "The same road goes both up and down."
+    
+    def testStripScriptTags(self):
+        """HTML <script> tags are stripped."""
+        result = publish.sanitizer.strip(self.script_tag)
+        assert result == "Men are not intellligent. alert('Not enough and too much.'); The gods are intelligent."
+    
+    def testStripSelfClosedHtmlTags(self):
+        """Self-closed tags such as <br> are stripped."""
+        result = publish.sanitizer.strip(self.self_closed_html_tag)
+        assert result == """To God all is beautiful, good, and as it should be. Man must see things as either good or bad."""
+        
+    def testStripSelfClosedXhtmlTags(self):
+        """Self-closed tags such as <br /> are stripped."""
+        result = publish.sanitizer.strip(self.self_closed_xhtml_tag)
+        assert result == """To God all is beautiful, good, and as it should be. Man must see things as either good or bad."""
+        
+    def testStripNestedTags(self):
+        """Nested HTML tags are stripped."""
+        result = publish.sanitizer.strip(self.nested_tags)
+        assert result == """Having cut, burned and poisoned the sick, the doctor then submits his bill."""
+
+    def testStripUnbalancedTags(self):
+        """Unbalanced HTML tags are stripped."""
+        result = publish.sanitizer.strip(self.unbalanced_tags)
+        assert result == "Extinguish pride as quickly as you would a fire."
+
+class SanitizeTestCases(unittest.TestCase):
+    def setUp(self):
+        # FIXME: The default whitelist is assumed. 
+        # It would be better to specify the whitelist.
+        self.basic_txt = """<h1>Change <em>alone</em> is unchanging."""
+        self.plain_txt = "The dead body is useless even as manure."
+        self.txt_with_attrs = """Law gives the people a <a href="http://example.com/">single will</a> to obey."""
+        self.txt_with_entities = """<blockquote><p>I&#8217;ve seen Plato&apos;s cups &amp; tables, but not his <i>cupness</i> &amp; <i>tableness</i>.</p></blockquote>"""
+        self.style_tag = """The <span style="font-family: 'Comic Sans';">same road</span> goes both up and down."""
+        self.script_tag = """Men are not intellligent. <script type="text/javascript">alert('Not enough and too much.');</script> The gods are intelligent."""
+        self.script_url = """The <a href="javascript:alert('boo');">untrained mind</a> shivers with excitement at everything it hears."""
+        self.html_br = """To God all is beautiful, good, and as it should be.<br> Man must see things as either good or bad."""
+        self.html_hr = """To God all is beautiful, good, and as it should be.<hr> Man must see things as either good or bad."""
+        self.xhtml_br = """To God all is beautiful, good, and as it should be.<br /> Man must see things as either good or bad."""
+        self.xhtml_hr = """To God all is beautiful, good, and as it should be.<hr /> Man must see things as either good or bad."""
+        self.nested_tags = """Having cut, <a href="http://example.com"><b>burned</b> and <font style="color: #CCC;">poisoned</font></a> the sick, the doctor then submits <strong>his bill</strong>."""
+        self.unbalanced_tags = """<h1>Extinguish <q>pride <b>as</q> quickly</b> as you would a fire."""
+
+    def testSanitizedTags(self):
+        """HTML tags are sanitized using a whitelist."""
+        result = publish.sanitizer.sanitize(self.basic_txt)
+        assert result == 'Change <em>alone</em> is unchanging.'
+
+    def testSanitizePlainText(self):
+        """HTML sanitizer leaves plain text as is."""
+        result = publish.sanitizer.sanitize(self.plain_txt)
+        assert result == self.plain_txt
+
+    def testSanitizeLinks(self):
+        """Links with safe URLs are preserved by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.txt_with_attrs)
+        assert result == """Law gives the people a <a href="http://example.com/">single will</a> to obey."""
+
+    def testSanitizeTagsWIthEntities(self):
+        """HTML entities are preserved by the HTML sanitizer and not double-encoded."""
+        result = publish.sanitizer.sanitize(self.txt_with_entities)
+        assert result == """<blockquote><p>I&#8217;ve seen Plato&apos;s cups &amp; tables, but not his <i>cupness</i> &amp; <i>tableness</i>.</p></blockquote>"""
+
+    def testSanitizeStyleTags(self):
+        """HTML <style> tags are stripped by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.style_tag)
+        assert result == "The same road goes both up and down."
+
+    def testSanitizeScriptTags(self):
+        """HTML <script> tags are stripped by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.script_tag)
+        assert result == "Men are not intellligent.  The gods are intelligent."
+
+    def testSanitizeHtmlBrs(self):
+        """Self-closed tags such as <br> are converted to <br /> by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.html_br)
+        assert result == """To God all is beautiful, good, and as it should be.<br /> Man must see things as either good or bad."""
+
+    def testSanitizeHtmlHrs(self):
+        """Self-closed tags such as <hr> are removed by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.html_hr)
+        assert result == """To God all is beautiful, good, and as it should be. Man must see things as either good or bad."""
+
+    def testSanitizeXhtmlBrs(self):
+        """Self-closed tags such as <br /> are preserved by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.xhtml_br)
+        assert result == """To God all is beautiful, good, and as it should be.<br /> Man must see things as either good or bad."""
+        
+    def testSanitizeXhtmlHrs(self):
+        """Self-closed tags such as <hr /> are removed by the sanitizer."""
+        result = publish.sanitizer.sanitize(self.xhtml_hr)
+        assert result == """To God all is beautiful, good, and as it should be. Man must see things as either good or bad."""
+
+    def testSanitizeNestedTags(self):
+        """Nested HTML tags are sanitized."""
+        result = publish.sanitizer.sanitize(self.nested_tags)
+        assert result == """Having cut, <a href="http://example.com"><b>burned</b> and poisoned</a> the sick, the doctor then submits <strong>his bill</strong>."""
+        
+    def testSanitizeUnbalancedTags(self):
+        """Unbalanced HTML tags are sanitized and balanced."""
+        result = publish.sanitizer.sanitize(self.unbalanced_tags)
+        assert result == """Extinguish <q>pride <b>as</b></q> quickly as you would a fire.""" 
 
 class ShortenTestCases(unittest.TestCase):
     def setUp(self):
@@ -82,7 +220,6 @@ class ShortenTestCases(unittest.TestCase):
     def testShortenText(self):
         """A string can be truncated to an arbitrary number of words."""
         result = publish.shorten.shorten(self.txt, 10)
-        print result
         assert result == 'there are five new tomato plants, all in new places;&#8230;'
 
     def testShortenShortTest(self):

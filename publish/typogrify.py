@@ -174,7 +174,7 @@ def typogrify(text):
     Applies the following filters: widont, smartypants, caps, amp, initial_quotes
     
     >>> typogrify('<h2>"Jayhawks" & KU fans act extremely obnoxiously</h2>')
-    '<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&nbsp;obnoxiously</h2>'
+    '<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&#160;obnoxiously</h2>'
     """
     text = amp(text)
     text = widont(text)
@@ -192,7 +192,7 @@ def widont(text):
     Note that ``&#160;`` == ``&nbsp;``.
     
     >>> widont('A very simple test')
-    'A very simple&nbsp;test'
+    'A very simple&#160;test'
 
     Single word items shouldn't be changed
     >>> widont('Test')
@@ -205,13 +205,13 @@ def widont(text):
     '<ul><li> Test</p></li><ul>'
     
     >>> widont('<p>In a couple of paragraphs</p><p>paragraph two</p>')
-    '<p>In a couple of&nbsp;paragraphs</p><p>paragraph&nbsp;two</p>'
+    '<p>In a couple of&#160;paragraphs</p><p>paragraph&#160;two</p>'
     
     >>> widont('<h1><a href="#">In a link inside a heading</i> </a></h1>')
-    '<h1><a href="#">In a link inside a&nbsp;heading</i> </a></h1>'
+    '<h1><a href="#">In a link inside a&#160;heading</i> </a></h1>'
     
     >>> widont('<h1><a href="#">In a link</a> followed by other text</h1>')
-    '<h1><a href="#">In a link</a> followed by other&nbsp;text</h1>'
+    '<h1><a href="#">In a link</a> followed by other&#160;text</h1>'
 
     Empty HTMLs shouldn't error
     >>> widont('<h1><a href="#"></a></h1>') 
@@ -224,7 +224,7 @@ def widont(text):
     '<pre>Neither do PREs</pre>'
     
     >>> widont('<div><p>But divs with paragraphs do!</p></div>')
-    '<div><p>But divs with paragraphs&nbsp;do!</p></div>'
+    '<div><p>But divs with paragraphs&#160;do!</p></div>'
     """
     widont_finder = re.compile(r"""((?:</?(?:a|em|span|strong|i|b)[^>]*>)|[^<>\s]) # must be proceeded by an approved inline opening or closing tag or a nontag/nonspace
                                    \s+                                # the space to replace

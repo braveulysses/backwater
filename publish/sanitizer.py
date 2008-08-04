@@ -7,8 +7,6 @@ Created by Jacob C. on 2008-07-04.
 Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
-# TODO: The sanitizer absolutely needs unit tests.
-
 import re
 from BeautifulSoup import Comment
 from BeautifulSoup import BeautifulSoup
@@ -38,9 +36,13 @@ def escape_amps_only(txt):
     return txt
   
 def sanitize(untrusted_html, additional_tags=None):
-    """Strips potentially harmful tags and attributes from HTML.
+    """Strips potentially harmful tags and attributes from HTML, but preserves 
+    all tags in a whitelist.
     
     Passing the list additional_tags will add the specified tags to the whitelist.
+    
+    The sanitizer does NOT encode reserved characters into XML entities.  It is up 
+    to the template code, if any, to take care of that.
     
     Based on the work of:
      - Tom Insam <http://jerakeen.org/blog/2008/05/sanitizing-comments-with-python/>
@@ -100,24 +102,16 @@ def sanitize(untrusted_html, additional_tags=None):
 
 def strip(untrusted_html):
     """Strips out all tags from untrusted_html, leaving only text.
-    Converts XML entities to Unicode characters."""
+
+    Converts XML entities to Unicode characters.  This is desirable because it 
+    reduces the likelihood that a filter further down the text processing chain 
+    will double-encode the XML entities."""
     soup = BeautifulStoneSoup(untrusted_html, convertEntities=BeautifulStoneSoup.ALL_ENTITIES)
     safe_html = ''.join(soup.findAll(text=True))
     return safe_html
         
 def main():
-    # This is a shitty substitute for a unit test suite.
-    snippet = """<h1>h1 tags are not allowed, nor are <span style="font-size: 50px;">style attributes</span></h1>
-    <h2>h2 tags aren't allowed, but <b>bold</b> tags are</h2>
-    <script type="text/javascript">alert("Script tags are out of the question");</script>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br /> Aenean tortor diam, tempor quis, condimentum at, <a href="http://safeurl.com/">totally safe link</a> non, magna. Duis laoreet nulla non mi. Sed scelerisque nunc a mauris. Fusce pharetra. Aenean sodales augue id ligula. An hr follows.</p>
-    <hr>
-    <p>Aenean at ante in <a href="javascript:alert('yo');">Javascript link</a> consequat.<br> Cras id risus. Cras facilisis congue orci. Vestibulum eleifend, quam imperdiet ultrices tincidunt, justo leo porta ligula, faucibus aliquet ante <b>quam et odio</b>. Donec eros est, placerat a, eleifend ac, <span style="font-family: 'Comic Sans';">luctus ac</span>, velit. Proin vel dui in erat volutpat porttitor. Suspendisse potenti.</p>
-    <blockquote><p>I&#8217;ve seen Plato&apos;s cups &amp; tables, but not his <i>cupness</i> &amp; <i>tableness</i>.</p></blockquote>"""
-    
-    print "SANITIZED: %s" % sanitize(snippet)
-    print "***************************************"
-    print "STRIPPED: %s" % strip(snippet)
+    pass
 
 if __name__ == '__main__':
     main()
