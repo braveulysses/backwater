@@ -24,11 +24,7 @@
 <script type="text/javascript" src="/js/chompy.js"></script>
 <script type="text/javascript">
     Chompy.html5_fix();
-    if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', Chompy.inject_ga_script, false);
-    } else if (document.attachEvent) {
-        document.attachEvent('onload', Chompy.inject_ga_script);
-    }
+    Chompy.attach_ga_script();
 </script>
 </head>
 
