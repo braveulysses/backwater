@@ -119,13 +119,8 @@ class Weblog(Source):
             # Now, get tags/categories
             try:
                 if len(entry.tags) > 0:
-                    if e.type == 'link' and self.is_delicious():
-                        # del.icio.us tags need to be coaxed out...
-                        # See: http://code.google.com/p/feedparser/issues/detail?id=34
-                        e.tags = entry.tags[0].term.split()
-                    else:
-                        for tag in entry.tags:
-                            e.tags.append(tag.term)
+                    for tag in entry.tags:
+                        e.tags.append(tag.term)
             except AttributeError:
                 # No tags! Forget it.
                 pass
