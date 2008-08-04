@@ -32,6 +32,12 @@ class Weblog(Source):
         self.feed_url = feed_url
         self.tagline = ''
 
+    def is_atom(self, version):
+        if version.find('atom', 0, 4) == 0:
+            return True
+        else:
+            return False
+
     def parse(self):
         """Fetches the contents of the weblog's feed and parses it.
         Each entry in the feed becomes an Entry object, and each entry 
@@ -49,8 +55,7 @@ class Weblog(Source):
         self.updated = feed_data.feed.get('updated', None)
         self.updated_parsed = feed_data.feed.get('updated_parsed', None)
         self.rights = feed_data.feed.get('rights', None)
-        if feed_data.version.find('atom', 0, 4) == 0:
-            self.atom = True
+        self.atom = self.is_atom(feed_data.version)
         for entry in feed_data.entries:
             # This method will be inherited by all other feed-based 
             # sources; because we assume that the only difference between 
@@ -60,6 +65,10 @@ class Weblog(Source):
             # parse() methods for Linklog and Commentlog.
             if self.type == 'linklog':
                 e = Link()
+                # NOTE: The following is a workaround for a feedparser bug.
+                # http://code.google.com/p/feedparser/issues/detail?id=129
+                if self.is_delicious():
+                    self.atom = False
             elif self.type == 'commentlog':
                 e = Quote()
             else:
@@ -151,10 +160,9 @@ class Weblog(Source):
             e.created = entry.get('created', e.date)
             e.created_parsed = entry.get('created_parsed', e.date_parsed)
             # Build GUID
-            if e.atom:
-                e.id = entry.get('id')
-            else:
-                e.id = e.get_tag_uri(e.date_parsed, e.url)
+            # Use backup_id if feed doesn't provide one already
+            backup_id = e.get_tag_uri(e.date_parsed, e.url)
+            e.id = entry.get('id', backup_id)
             # Done parsing this entry
             self.entries.append(e)
 

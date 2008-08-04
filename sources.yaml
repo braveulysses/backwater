@@ -195,8 +195,8 @@ sources:
     - name: del.icio.us/seanmason
       type: linklog
       owner: Sean
-      url: http://del.icio.us/seanmason
-      feed_url: http://del.icio.us/rss/seanmason
+      url: http://delicious.com/seanmason
+      feed_url: http://feeds.delicious.com/v2/rss/seanmason
       
     - name: pusgums' photostream
       type: photostream
