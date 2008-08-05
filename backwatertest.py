@@ -233,9 +233,12 @@ class ShortenTestCases(unittest.TestCase):
         assert result == self.really_short_txt
 
 class TypogrifyTestCases(unittest.TestCase):
-    def setUp(self):
-        pass
-    
+	def testTypogrify(self):
+		"""The typogrify() function prepares text for fancy CSS."""
+		result = publish.typogrify.typogrify('<h2>"Jayhawks" & KU fans act extremely obnoxiously</h2>')
+		assert result == '<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&#160;obnoxiously</h2>'
+
+class TypogrifyAmpTestCases(unittest.TestCase):
     def testWrapAmp(self):
         """Ampersands are entity-encoded and wrapped in the 'amp' class."""
         txt = 'One & two'
@@ -277,6 +280,120 @@ class TypogrifyTestCases(unittest.TestCase):
         txt = '<link href="xyz.html" title="One & Two">xyz</link>'
         result = publish.typogrify.amp(txt)
         assert result == '<link href="xyz.html" title="One & Two">xyz</link>'
+
+class TypogrifyCapsTestCases(unittest.TestCase):
+	def testWrapsCaps(self):
+		"""Capital letters are typogrified."""
+		result = publish.typogrify.caps("A message from KU")
+		assert result == 'A message from <span class="caps">KU</span>'
+
+	def testDontWrapPre(self):
+		"""Capital letters in a <pre> block are not typogrified."""
+		result = publish.typogrify.caps("<PRE>CAPS</pre> more CAPS")
+		assert result == '<PRE>CAPS</pre> more <span class="caps">CAPS</span>'
+
+	def testWrapCapsWithNumbers(self):
+		"""Capital letters with numbers are typogrified."""
+		result = publish.typogrify.caps("A message from 2KU2 with digits")
+		assert result == 'A message from <span class="caps">2KU2</span> with digits'
+
+	def testDottedCapsWithSpaces(self):
+		"""The spaces following dotted caps are not typogrified."""
+		result = publish.typogrify.caps("Dotted caps followed by spaces should never include them in the wrap D.O.T.   like so.")
+		assert result == 'Dotted caps followed by spaces should never include them in the wrap <span class="caps">D.O.T.</span>  like so.'
+
+	def testCapsNestedInTags(self):
+		"""Capital letters nested in other tags are typogrified."""
+		result = publish.typogrify.caps("<i>D.O.T.</i>HE34T<b>RFID</b>")
+		assert result == '<i><span class="caps">D.O.T.</span></i><span class="caps">HE34T</span><b><span class="caps">RFID</span></b>'
+
+class TypogrifyInitialQuotesTestCases(unittest.TestCase):
+	def testInitialDoubleQuotes(self):
+		"""Initial double quotes are typogrified."""
+		result = publish.typogrify.initial_quotes('"With primes"')
+		assert result == '<span class="dquo">"</span>With primes"'
+
+	def testInitialSingleQuotes(self):
+		"""Initial single quotes are typogrified."""
+		result = publish.typogrify.initial_quotes("'With single primes'")
+		assert result == """<span class="quo">'</span>With single primes'"""
+
+	def testInitialDoubleQuotesWithLink(self):
+		"""Initial double quotes in a link are typogrified."""
+		result = publish.typogrify.initial_quotes('<a href="#">"With primes and a link"</a>')
+		assert result == '<a href="#"><span class="dquo">"</span>With primes and a link"</a>'
+
+	def testInitialSmartQuotes(self):
+		"""Initial smart quotes are typogrified."""
+		result = publish.typogrify.initial_quotes('&#8220;With smartypanted quotes&#8221;')
+		assert result == '<span class="dquo">&#8220;</span>With smartypanted quotes&#8221;'
+
+class TypogrifySmartypantsTestCases(unittest.TestCase):
+	def testSmartypants(self):
+		"""ASCII punctuation is converted to 'smart' punctuation."""
+		result = publish.typogrify.smartypants('The "Green" man')
+		assert result == 'The &#8220;Green&#8221; man'
+
+class TypogrifyWidontTestCases(unittest.TestCase):
+	def testWidont(self):
+		"""Textual widows are prevented."""
+		result = publish.typogrify.widont('A very simple test')
+		assert result == 'A very simple&#160;test'
+
+	def testWidontSingleWord(self):
+		"""Widont processing is skipped for single-word strings."""
+		result = publish.typogrify.widont('Test')
+		assert result == 'Test'
+
+	def testWidontInitialSpace(self):
+		"""Widont processing is skipped for single words preceded by a space."""
+		result = publish.typogrify.widont(' Test')
+		assert result == ' Test'
+
+	def testWidontSingleWordInTags(self):
+		"""Widont processing is skipped for single-word strings in markup."""
+		result = publish.typogrify.widont('<ul><li>Test</p></li><ul>')
+		assert result == '<ul><li>Test</p></li><ul>'
+
+	def testWidont04(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<ul><li> Test</p></li><ul>')
+		assert result == '<ul><li> Test</p></li><ul>'
+
+	def testWidont05(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<p>In a couple of paragraphs</p><p>paragraph two</p>')
+		assert result == '<p>In a couple of&#160;paragraphs</p><p>paragraph&#160;two</p>'
+
+	def testWidont06(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<h1><a href="#">In a link inside a heading</i> </a></h1>')
+		assert result == '<h1><a href="#">In a link inside a&#160;heading</i> </a></h1>'
+
+	def testWidont07(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<h1><a href="#">In a link</a> followed by other text</h1>')
+		assert result == '<h1><a href="#">In a link</a> followed by other&#160;text</h1>'
+
+	def testWidont08(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<h1><a href="#"></a></h1>')
+		assert result == '<h1><a href="#"></a></h1>'
+
+	def testWidont09(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<div>Divs get no love!</div>')
+		assert result == '<div>Divs get no love!</div>'
+
+	def testWidont10(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<pre>Neither do PREs</pre>')
+		assert result == '<pre>Neither do PREs</pre>'
+
+	def testWidont11(self):
+		"""Describe what the test does here."""
+		result = publish.typogrify.widont('<div><p>But divs with paragraphs do!</p></div>')
+		assert result == '<div><p>But divs with paragraphs&#160;do!</p></div>'
 
 if __name__ == '__main__':
     unittest.main()
