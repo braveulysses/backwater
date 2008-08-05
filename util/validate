@@ -1,0 +1,17 @@
+#!/bin/sh
+
+SCRIPTS_DIR="/Users/jacob/Documents/Scripts"
+BW_DIR=$SCRIPTS_DIR/backwater
+BW_DATA_DIR=$BW_DIR/data
+
+echo Validating HTML 5 output...
+$SCRIPTS_DIR/html5check -x $BW_DATA_DIR/output/chompy.html
+echo
+
+echo Validating main feed...
+$SCRIPTS_DIR/feedcheck $BW_DATA_DIR/output/chompy.atom
+echo
+
+echo Validating links feed...
+$SCRIPTS_DIR/feedcheck $BW_DATA_DIR/output/links.atom
+echo
