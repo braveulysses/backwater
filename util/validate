@@ -1,7 +1,22 @@
 #!/bin/sh
 
-SCRIPTS_DIR="/Users/jacob/Documents/Scripts"
-BW_DIR=$SCRIPTS_DIR/backwater
+if [ -d $HOME/bin ]; then
+    SCRIPTS_DIR="$HOME/bin"
+elif [ -d $HOME/Scripts ]; then
+    SCRIPTS_DIR="$HOME/Scripts"
+else
+    echo "A scripts directory couldn't be found!"
+    exit 1
+fi
+
+if [ -d $HOME/backwater ]; then
+    BW_DIR=$HOME/backwater
+elif [ -d $HOME/Scripts ]; then
+    BW_DIR=$SCRIPTS_DIR/backwater
+else
+    echo "A backwater directory couldn't be found!"
+    exit 1
+fi
 BW_DATA_DIR=$BW_DIR/data
 
 echo Validating HTML 5 output...
