@@ -75,7 +75,7 @@ class FeedTestCases(unittest.TestCase):
         w = Weblog('test', 'testy', self.url, self.atom_url)
         w.parse()
         w.normalize()
-        for entry in w.entries():
+        for entry in w.entries:
             entry.normalize()
         assert w.atom == True
         
