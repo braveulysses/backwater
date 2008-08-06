@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title type="text">atom feed</title>
+    <link rel="self" type="application/atom+xml" href="http://chompy.net/lab/backwater/test/sources/weblog/atom.atom"/>
+    <updated>2008-08-04T23:27:13Z</updated>
+    <subtitle>the great atomic power</subtitle>
+    <id>tag:chompy.net,2008://test/atom.atom</id>
+    <generator uri="http://labs.spaceshipnofuture.org/backwater/" version="0.9">chompybot</generator>
+    <rights type="text">SNF Labs has asserted the moral right of the author of each post to be identified as the author of that post.</rights>
+    <entry>
+        <title type="html">Panini</title>
+        <summary type="text">The third season begins as Tim inherits a special gift from the grave, Dr. Brule helps advertise a panini press, and Tim and Eric start a business.</summary>
+        <content type="html">The third season begins as Tim inherits a &lt;em&gt;special gift&lt;/em&gt; from the grave, Dr. Brule helps advertise a panini press, and Tim and Eric start a business.</content>
+        <link rel="related" type="text/html" href="http://example.com/panini"/>
+        <link rel="alternate" type="text/html" href="http://del.icio.us/url/f8dfe37256e05393d842bfe28d024441"/>
+        <published>2008-08-05T04:05:10Z</published>
+        <updated>2008-08-05T04:05:10Z</updated>
+        <id>http://delicious.com/url/f8dfe37256e05393d842bfe28d024441#mpgomez</id>
+        <category term="panini"/>
+        <category term="tigers"/>
+        <category term="miracles"/>
+        <category term="murder"/>
+        <author>
+            <name>Eric</name>
+            <uri>http://example.com/eric</uri>
+        </author>
+    </entry>
+</feed>

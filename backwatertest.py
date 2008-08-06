@@ -8,6 +8,14 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import unittest
+import spider
+from spider.source import Source
+from spider.weblog import Weblog
+from spider.linklog import Linklog
+from spider.commentlog import Commentlog
+from spider.tumblelog import Tumblelog
+from spider.photostream import Photostream
+from spider.twitterstatus import TwitterStatus
 import publish.sanitizer
 import publish.shorten
 import publish.typogrify
@@ -46,13 +54,32 @@ class SanityTestCases(unittest.TestCase):
 
 class FeedTestCases(unittest.TestCase):
     def setUp(self):
-        pass
+        self.url = 'http://example.com/test'
+        self.base_url = 'http://chompy.net/lab/backwater/tests/weblog/'
+        self.atom_url = self.base_url + 'atom.atom'
+        self.rss_url = self.base_url + 'rss.rss'
+        self.rdf_url = self.base_url + 'rdf.rdf'
+        self.no_title_url = self.base_url + 'no_title.atom'
+        self.no_summary_url = self.base_url + 'no_summary.atom'
+        self.no_content_url = self.base_url + 'no_content.atom'
+        self.author_details_url = self.base_url + 'author_details.atom'
+        self.no_author_details_url = self.base_url + 'no_author_details.atom'
+        self.multiple_alternate_links_url = self.base_url + 'multple_alternate_links.atom'
+        self.related_link_url = self.base_url + 'related_link_url.atom'
+        self.via_link_url = self.base_url + 'via_link_url.atom'
+        self.comments_url = self.base_url + 'comments_url.rss'
+        self.atom_source_url = self.base_url + 'atom_source_url.atom'
     
-    def isAtom(self):
+    def testIsAtom(self):
         """An Atom feed can be detected."""
-        pass
+        w = Weblog('test', 'testy', self.url, self.atom_url)
+        w.parse()
+        w.normalize()
+        for entry in w.entries():
+            entry.normalize()
+        assert w.atom == True
         
-    def isNotAtom(self):
+    def testIsNotAtom(self):
         """A non-Atom feed can be detected."""
         pass
 
