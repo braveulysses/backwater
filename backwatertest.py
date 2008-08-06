@@ -55,7 +55,7 @@ class SanityTestCases(unittest.TestCase):
 class FeedTestCases(unittest.TestCase):
     def setUp(self):
         self.url = 'http://example.com/test'
-        self.base_url = 'http://chompy.net/lab/backwater/tests/weblog/'
+        self.base_url = 'http://chompy.net/lab/backwater/tests/sources/weblog/'
         self.atom_url = self.base_url + 'atom.atom'
         self.rss_url = self.base_url + 'rss.rss'
         self.rdf_url = self.base_url + 'rdf.rdf'
