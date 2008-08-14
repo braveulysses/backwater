@@ -87,9 +87,9 @@ ${entry.content | typogrify,escape_amps_only}
 <li class="photo">
 <article>
 % if entry.photo_type == 'flickr':
-<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="${entry.title}" title="'${entry.title},' by ${entry.author}" height="${entry.height}" width="${entry.width}" /></a>
+<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="${entry.title | x}" title="'${entry.title | x},' by ${entry.author | x}" height="${entry.height}" width="${entry.width}" /></a>
 % else:
-<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="" height="${entry.height}" width="${entry.width}" /></a>
+<a href="${entry.url | h}"><img src="${base_url}${entry.cached_url}" alt="{user-provided image}" height="${entry.height}" width="${entry.width}" /></a>
 % endif
 </article>
 </li>
