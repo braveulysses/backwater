@@ -50,6 +50,8 @@ class Photostream(Source):
                 #    self.logger.info("Skipping Flickr video")
                 #    continue
                 e.title = p.get('title', 'untitled')
+                if e.title.strip() == '':
+                    e.title = 'untitled'
                 self.logger.info("Photo title: '%s'" % e.title)
                 e.photo_id = p.get('id')
                 e.farm_id = p.get('farm')
