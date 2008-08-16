@@ -69,14 +69,12 @@ Update the chompy.net aggregator.
     -V, --version           show version number
     -s, --sources=FILE      specify alternate sources file 
                             (default is 'sources.yaml')
-    -n, --no-caching        ignore the HTTP cache
-    -f, --flush             flush the HTTP cache
+        --no-http-cache     ignore the HTTP cache
+        --no-entries-cache  ignore the entries cache
+    -f  --flush             flush all caches
     -r, --rebuild           rebuild output files without updating feeds
     -l, --list              list all sources
 """ % sys.argv[0]
-
-# TODO: Add option to ignore the entries cache
-# TODO: Add option to flush the entries cache
 
 #############################################################################
 
@@ -245,11 +243,12 @@ def main(argv=None):
         try:
             opts, args = getopt.getopt(
                 argv[1:], 
-                "Vhs:nfrl", 
+                "Vhs:frl", 
                 [ "version", 
                   "help", 
                   "sources=", 
-                  "no-caching",
+                  "no-http-cache",
+                  "no-entries-cache",
                   "flush", 
                   "rebuild", 
                   "list" ]
@@ -269,8 +268,10 @@ def main(argv=None):
             if option in ("-s", "--sources"):
                 logger.debug("Using sources file: '%s'" % value)
                 sources_file = value
-            if option in ("-n", "--no-caching"):
-                config.HTTP_USE_CACHE = False
+            if option in ("--no-http-cache"):
+                config.HTTP_CHECK_CACHE = False
+            if option in ("--no-entries-cache"):
+                config.CHECK_ENTRIES_CACHE = False
             if option in ("-f", "--flush"):
                 raise FlushCache()
             if option in ("-r", "--rebuild"):
@@ -285,7 +286,8 @@ def main(argv=None):
             if do_update:
                 entries = []
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
-                if force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD):
+                if (force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD)) and \
+                    (config.CHECK_ENTRIES_CACHE == True):
                     logger.info("Using cached entries...")
                     try:
                         entries = entries_cache.restore()
@@ -295,7 +297,10 @@ def main(argv=None):
                     logger.debug("Reading sources from '%s'" % sources_file)
                     sources = get_sources(sources_file)
                     # Update sources
-                    logger.debug("Entries cache is stale...")
+                    if config.CHECK_ENTRIES_CACHE:
+                        logger.debug("Entries cache is stale...")
+                    else:
+                        logger.debug("Skipping entries cache...")
                     logger.debug("Starting parsing run")
                     entries = spider.update(sources)
                     # Sort
@@ -303,7 +308,7 @@ def main(argv=None):
                     entries.reverse()
                     logger.debug("Caching entries...")
                     # The pickler can't save anything with logger objects 
-                    # because of thread locks, so zap them
+                    # because of thread locks (?), so zap them
                     for entry in entries:
                         entry.logger = None
                     entries_cache.save(entries)
@@ -329,8 +334,11 @@ def main(argv=None):
             raise
 
     except FlushCache:
-        # TODO: Implement "flush" command to clear HTTP cache
-        print "Flushing cache... (unimplemented)"
+        # TODO: Implement "flush" command to clear HTTP and entries cache
+        print "Flushing the cache is currently unimplemented."
+        print "To manually flush the cache delete the contents of "
+        print "the directory %s." % (config.CACHE_DIR)
+        print
         return 0
 
     except Version, err:

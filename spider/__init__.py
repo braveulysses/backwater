@@ -47,8 +47,8 @@ def fetch(url, valid_content_types=None):
             'application/rdf+xml'
         ]
     http_headers = { "User-Agent": config.BOT_USER_AGENT }
-    # Setting HTTP_USE_CACHE to false tells httplib2 to ignore its cache
-    if config.HTTP_USE_CACHE == False:
+    # Setting HTTP_CHECK_CACHE to false tells httplib2 to ignore its cache
+    if config.HTTP_CHECK_CACHE == False:
         module_logger.debug("Skipping the httplib2 cache")
         http_headers['cache-control'] = 'no-cache'
     h = httplib2.Http(cache=config.CACHE_DIR)
