@@ -77,7 +77,12 @@ ${entry.content | typogrify,escape_amps_only}
 % else:
 <blockquote>
 % endif
+## Make sure that quote nesting is appropriate
+% if entry.content.find('"') == 0 or entry.content.find("&#8220;") == 0:
+<p><a href="${entry.url | h}"><span class="dquo">&#8216;</span>${entry.content | amp,caps,smartypants,escape_amps_only}&#8217;</a></p>
+% else:
 <p><a href="${entry.url | h}"><span class="dquo">&#8220;</span>${entry.content | amp,caps,smartypants,escape_amps_only}&#8221;</a></p>
+% endif
 </blockquote>
 </article>
 </li>

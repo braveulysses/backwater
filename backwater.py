@@ -271,7 +271,7 @@ def main(argv=None):
             if option in ("--no-http-cache"):
                 config.HTTP_CHECK_CACHE = False
             if option in ("--no-entries-cache"):
-                config.CHECK_ENTRIES_CACHE = False
+                config.ENTRIES_CHECK_CACHE = False
             if option in ("-f", "--flush"):
                 raise FlushCache()
             if option in ("-r", "--rebuild"):
@@ -287,7 +287,7 @@ def main(argv=None):
                 entries = []
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
                 if (force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD)) and \
-                    (config.CHECK_ENTRIES_CACHE == True):
+                    (config.ENTRIES_CHECK_CACHE == True):
                     logger.info("Using cached entries...")
                     try:
                         entries = entries_cache.restore()
@@ -297,7 +297,7 @@ def main(argv=None):
                     logger.debug("Reading sources from '%s'" % sources_file)
                     sources = get_sources(sources_file)
                     # Update sources
-                    if config.CHECK_ENTRIES_CACHE:
+                    if config.ENTRIES_CHECK_CACHE:
                         logger.debug("Entries cache is stale...")
                     else:
                         logger.debug("Skipping entries cache...")
