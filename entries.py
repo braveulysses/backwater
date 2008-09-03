@@ -150,10 +150,16 @@ class Entry(object):
         can be used for output, particularly in an Atom feed."""
         if self.title is None:
             self.title = ''
+        else:
+            self.title = self.title.strip()
         if self.summary is None:
             self.summary = ''
+        else:
+            self.summary = self.summary.strip()
         if self.content == '' or self.content is None:
             self.content = self.summary
+        else:
+            self.content = self.content.strip()
         if self.published is None:
             self.published = self.date
         if self.published_parsed is None:
@@ -189,9 +195,14 @@ class Entry(object):
         # If the entry is a photo, allow <img> tag
         if self.type == 'photo':
             self.content = publish.sanitizer.sanitize(self.content, additional_tags=[ 'img' ])
+        elif self.type == 'quote':
+            self.content = publish.sanitizer.block_to_break(self.content)
+            self.content = publish.sanitizer.sanitize(self.content, additional_tags = [ 'br' ])
         else:
-            self.content = publish.sanitizer.sanitize(self.content)
-        self.content_abridged = publish.sanitizer.sanitize(self.content_abridged)
+            self.content = publish.sanitizer.heading_to_bold(self.content)
+            self.content = publish.sanitizer.sanitize(self.content, additional_tags = [ 'p', 'br', 'blockquote' ])
+        self.content_abridged = publish.sanitizer.heading_to_bold(self.content_abridged)
+        self.content_abridged = publish.sanitizer.sanitize(self.content_abridged, additional_tags = [ 'p', 'br', 'blockquote' ])
         # Escape content
         #self.title = publish.sanitizer.escape(self.title)
         #self.summary = publish.sanitizer.escape(self.summary)

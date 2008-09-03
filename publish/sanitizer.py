@@ -8,6 +8,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 """
 
 import re
+from BeautifulSoup import Tag
 from BeautifulSoup import Comment
 from BeautifulSoup import BeautifulSoup
 from BeautifulSoup import BeautifulStoneSoup
@@ -34,7 +35,36 @@ def escape_amps_only(txt):
     txt = txt.replace('&', '&amp;')
     txt = fix_amp_encoding(txt)
     return txt
-  
+
+def heading_to_bold(txt, add_break=False):
+    """Replaces heading tags (<h1>, <h2>, etc.) with <b> tags.
+    
+    Optionally appends two <br>s."""
+    soup = BeautifulSoup(txt)
+    headers = soup.findAll([ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+    for header in headers:
+        bold_tag = Tag(soup, "b", [])
+        bold_tag.insert(0, ''.join(header.contents))
+        header.replaceWith(bold_tag)
+        if add_break:
+            header.append(Tag(soup, "br"))
+            header.append(Tag(soup, "br"))
+    return unicode(soup)
+
+def block_to_break(txt):
+    """Removes block-level tags and, where two block tags meet, inserts two <br>s."""
+    soup = BeautifulSoup(txt)
+    blocks = soup.findAll([ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'footer', 'nav', 'section', 'article', 'blockquote', 'div', 'p' ])
+    counter = 1
+    end = len(blocks)
+    for block in blocks:
+        if end > 1 and counter != end:
+            block.append(Tag(soup, "br"))
+            block.append(Tag(soup, "br"))
+        block.hidden = True
+        counter = counter + 1
+    return unicode(soup)
+
 def sanitize(untrusted_html, additional_tags=None):
     """Strips potentially harmful tags and attributes from HTML, but preserves 
     all tags in a whitelist.
@@ -51,9 +81,9 @@ def sanitize(untrusted_html, additional_tags=None):
     # Allow these tags. This can be changed to whatever you please, of course, 
     # either by changing the list in code or by passing alt_whitelist.
     tag_whitelist = [ 
-        'a', 'abbr', 'address', 'b', 'blockquote', 
-        'br', 'code', 'cite', 'code', 'em', 'i', 'ins', 'kbd', 
-        'p', 'q', 'samp', 'small', 'strike', 'strong', 'sub', 
+        'a', 'abbr', 'address', 'b', 'code', 
+        'cite', 'code', 'em', 'i', 'ins', 'kbd', 
+        'q', 'samp', 'small', 'strike', 'strong', 'sub', 
         'sup', 'var' 
     ]
     

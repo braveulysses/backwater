@@ -167,6 +167,37 @@ class StripperTestCases(unittest.TestCase):
         result = publish.sanitizer.strip(self.unknown_tags)
         assert result == """Law gives the people a single will to obey."""
 
+class TagSubtitutionTestCases(unittest.TestCase):
+    def setUp(self):
+        self.one_paragraph = "<p>The falcon cannot hear the falconer.</p>"
+        self.two_paragraphs = "<p>A doll in the doll-maker's house</p><p>Looks at the cradle and bawls</p>"
+        self.mixed_blocks = """<p>Cuchulain has killed kings</p><h1>Kings and sons of kings</h1><p>Dragons out of the water</p>"""
+        self.with_newline = """<p>Witches that steal the milk</p>\n<p>Fomor that steal the children</p>"""
+        self.h1 = """<h1>Sailing to Byzantium</h1>"""
+    
+    def testHeadingToBold(self):
+        """Block-level <h1> tags are replaced with inline <b> tags."""
+        result = publish.sanitizer.heading_to_bold(self.h1)
+        assert result == """<b>Sailing to Byzantium</b>"""
+    
+    def testBlocktoBrWithOneParagraph(self):
+        """block_to_break() strips a lone <p> tag."""
+        result = publish.sanitizer.block_to_break(self.one_paragraph)
+        print result
+        assert result == """The falcon cannot hear the falconer."""
+
+    def testBlockToBreakWithTwoParagraphs(self):
+        """block_to_break() strips two <p> tags and places two <br>s between them."""
+        result = publish.sanitizer.block_to_break(self.two_paragraphs)
+        print result
+        assert result == """A doll in the doll-maker's house<br /><br />Looks at the cradle and bawls"""
+
+    def testBlockToBreakWithMixedBlocks(self):
+        """block_to_break() deals correctly with mixed block tags."""
+        result = publish.sanitizer.block_to_break(self.mixed_blocks)
+        print result
+        assert result == """Cuchulain has killed kings<br /><br />Kings and sons of kings<br /><br />Dragons out of the water"""
+
 class SanitizeTestCases(unittest.TestCase):
     def setUp(self):
         # FIXME: The default whitelist is assumed. 
