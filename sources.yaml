@@ -15,7 +15,13 @@ sources:
       owner: jacob
       url: http://chompy.net/blogs/jacob/
       feed_url: http://chompy.net/blogs/jacob/feeds/index.atom
-      
+
+    - name: by my green candle
+      type: weblog
+      owner: jacob
+      url: http://candle.cpl593h.net/
+      feed_url: http://candle.cpl593h.net/feeds/posts/default
+
     - name: dark entries
       type: linklog
       owner: jacob
@@ -222,7 +228,14 @@ sources:
       owner: iamedithpiaf
       flickr_id: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
-      
+
+    # Meredith's stuff
+    - name: Silent Drape Runners
+      type: weblog
+      owner: Meredith
+      url: http://inanna242.blogspot.com/
+      feed_url: http://inanna242.blogspot.com/feeds/posts/default
+
     # Alan Hampton's stuff
     - name: austin tx's photostream
       type: photostream
