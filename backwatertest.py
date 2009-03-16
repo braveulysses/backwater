@@ -326,6 +326,11 @@ class TypogrifyTestCases(unittest.TestCase):
         result = publish.typogrify.typogrify('<h2>"Jayhawks" & KU fans act extremely obnoxiously</h2>')
         assert result == '<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&#160;obnoxiously</h2>'
 
+    def testItsPowerLevelIs9000(self):
+        """Dakota's bizarre phrase "IT'S POWER LEVEL IS 9000" must survive Typogrify."""
+        result = publish.typogrify.typogrify("IT'S POWER LEVEL IS 9000")
+        assert result == """<span class="caps">IT</span>&#8217;S <span class="caps">POWER</span> <span class="caps">LEVEL</span> <span class="caps">IS</span>&#160;9000"""
+
 class TypogrifyAmpTestCases(unittest.TestCase):
     def testWrapAmp(self):
         """Ampersands are entity-encoded and wrapped in the 'amp' class."""
@@ -426,6 +431,11 @@ class TypogrifySmartypantsTestCases(unittest.TestCase):
         """ASCII punctuation is converted to 'smart' punctuation."""
         result = publish.typogrify.smartypants('The "Green" man')
         assert result == 'The &#8220;Green&#8221; man'
+        
+    def testItsPowerLevelIs9000(self):
+        """Dakota's bizarre phrase "IT'S POWER LEVEL IS 9000" must survive SmartyPants."""
+        result = publish.typogrify.smartypants("IT'S POWER LEVEL IS 9000")
+        assert result == "IT&#8217;S POWER LEVEL IS 9000"
 
 class TypogrifyWidontTestCases(unittest.TestCase):
     def testWidont(self):

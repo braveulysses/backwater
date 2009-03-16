@@ -18,6 +18,10 @@ from entries import Photo
 
 module_logger = logging.getLogger("backwater.photostream")
 
+SAFESEARCH_SAFE = 1
+SAFESEARCH_MODERATE = 2
+SAFESEARCH_RESTRICTED = 3
+
 class Photostream(Source):
     def __init__(self, name, owner, url, flickr_id):
         super(Photostream, self).__init__(name, owner, url)
@@ -36,7 +40,11 @@ class Photostream(Source):
             flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
             extras = 'date_upload,date_taken,last_update,owner_name,media,tags,license'
             self.logger.info("Getting photos for %s" % self.owner)
-            photos = flickr.people_getPublicPhotos(user_id=self.flickr_id, extras=extras)
+            photos = flickr.people_getPublicPhotos(
+                        user_id=self.flickr_id, 
+                        safe_search=SAFESEARCH_RESTRICTED, 
+                        extras=extras
+            )
             for photo in photos:
                 e = Photo()
                 e.photo_type = 'flickr'
