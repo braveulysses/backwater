@@ -11,7 +11,8 @@ def publish(tmpl, outfile, entries, opt_template_values=None):
     
     opt_template_values must be a dictionary."""
     current_timestamp = time.strftime(config.ATOM_TIME_FORMAT, time.localtime())
-    template = Template(filename=tmpl)
+    #template = Template(filename=tmpl, default_filters=['decode.utf8'])
+    template = Template(filename=tmpl, output_encoding='utf-8')
     template_values = {
         'now':  current_timestamp, 
         'generator': config.BOT_NAME, 

@@ -174,11 +174,11 @@ sources:
       url: http://www.flickr.com/photos/junklab/
     
     # Dakota's stuff
-    - name: del.icio.us/dakotasmith
-      type: linklog
-      owner: Dakota
-      url: http://delicious.com/dakotasmith
-      feed_url: http://feeds.delicious.com/v2/rss/dakotasmith
+    #- name: del.icio.us/dakotasmith
+    #  type: linklog
+    #  owner: Dakota
+    #  url: http://delicious.com/dakotasmith
+    #  feed_url: http://feeds.delicious.com/v2/rss/dakotasmith
     
     - name: dakotasmith
       type: twitter

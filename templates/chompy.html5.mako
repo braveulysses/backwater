@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%!
     from publish.typogrify import amp
     from publish.typogrify import caps
