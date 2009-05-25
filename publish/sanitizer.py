@@ -44,7 +44,7 @@ def heading_to_bold(txt, add_break=False):
     headers = soup.findAll([ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
     for header in headers:
         bold_tag = Tag(soup, "b", [])
-        bold_tag.insert(0, ''.join(header.contents))
+        bold_tag.contents = header.contents
         header.replaceWith(bold_tag)
         if add_break:
             header.append(Tag(soup, "br"))

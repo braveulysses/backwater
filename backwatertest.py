@@ -167,18 +167,30 @@ class StripperTestCases(unittest.TestCase):
         result = publish.sanitizer.strip(self.unknown_tags)
         assert result == """Law gives the people a single will to obey."""
 
-class TagSubtitutionTestCases(unittest.TestCase):
+class TagSubstitutionTestCases(unittest.TestCase):
     def setUp(self):
         self.one_paragraph = "<p>The falcon cannot hear the falconer.</p>"
         self.two_paragraphs = "<p>A doll in the doll-maker's house</p><p>Looks at the cradle and bawls</p>"
         self.mixed_blocks = """<p>Cuchulain has killed kings</p><h1>Kings and sons of kings</h1><p>Dragons out of the water</p>"""
         self.with_newline = """<p>Witches that steal the milk</p>\n<p>Fomor that steal the children</p>"""
         self.h1 = """<h1>Sailing to Byzantium</h1>"""
+        self.h1_with_attr = """<h1 id="ct_130213948">Celtic Twilight</h1>"""
+        self.h1_with_nested_anchor = """<h1><a href="http://example.com/">Easter 1918</a></h1>"""
     
     def testHeadingToBold(self):
         """Block-level <h1> tags are replaced with inline <b> tags."""
         result = publish.sanitizer.heading_to_bold(self.h1)
         assert result == """<b>Sailing to Byzantium</b>"""
+        
+    def testHeadingWithAttributesToBold(self):
+        """<h1> tags with attributes are replaced with <b> tags."""
+        result = publish.sanitizer.heading_to_bold(self.h1_with_attr)
+        assert result == """<b>Celtic Twilight</b>"""
+        
+    def testHeadingWithNestedAnchorToBold(self):
+        """<h1> tags with nested anchors are replaced with <b> tags."""
+        result = publish.sanitizer.heading_to_bold(self.h1_with_nested_anchor)
+        assert result == """<b><a href="http://example.com/">Easter 1918</a></b>"""
     
     def testBlocktoBrWithOneParagraph(self):
         """block_to_break() strips a lone <p> tag."""
