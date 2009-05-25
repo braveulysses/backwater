@@ -402,8 +402,8 @@ class TypogrifyCapsTestCases(unittest.TestCase):
 
     def testCapsPossessivesAndContractions(self):
         """Capital letters in possessives and contractions are typogrified."""
-        result = publish.typogrify.caps("FEI-HUNG'S DRUNKEN BOXING CAN'T BEAT MY KUNG FU")
-        assert result == """<span class="caps">FEI-HUNG'S</span> <span class="caps">DRUNKEN</span> <span class="caps">BOXING</span> <span class="caps">CAN'T</span> <span class="caps">BEAT</span> <span class="caps">MY</span> <span class="caps">KUNG</span> <span class="caps">FU</span>"""
+        result = publish.typogrify.caps("JACKIE'S DRUNKEN BOXING CAN'T BEAT MY KUNG FU")
+        assert result == """<span class="caps">JACKIE'S</span> <span class="caps">DRUNKEN</span> <span class="caps">BOXING</span> <span class="caps">CAN'T</span> <span class="caps">BEAT</span> <span class="caps">MY</span> <span class="caps">KUNG</span> <span class="caps">FU</span>"""
 
 class TypogrifyInitialQuotesTestCases(unittest.TestCase):
     def testInitialDoubleQuotes(self):

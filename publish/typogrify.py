@@ -1,4 +1,4 @@
-# This library is based on version 0.2 of the typogrify library, but has 
+# This library is based on version 1.0 of the typogrify library, but has 
 # all of the Django-specific code removed.
 # 
 # Copyright (c) 2007, Christian Metts
@@ -73,7 +73,6 @@ def amp(text):
         suffix = groups.group('suffix') or ''
         return prefix + text + suffix
     return intra_tag_finder.sub(_amp_process, text)
-# amp = stringfilter(amp)
 
 def caps(text):
     """Wraps multiple capital letters in ``<span class="caps">`` 
@@ -95,12 +94,15 @@ def caps(text):
 
     >>> caps("<i>D.O.T.</i>HE34T<b>RFID</b>")
     '<i><span class="caps">D.O.T.</span></i><span class="caps">HE34T</span><b><span class="caps">RFID</span></b>'
+    
+    All caps with with apostrophes in them shouldn't break. Only handles dump apostrophes though.
+    
+    >>> caps("JIMMY'S")
+    u'<span class="caps">JIMMY\\'S</span>'
     """
     try:
         import smartypants
     except ImportError:
-        # if settings.DEBUG:
-        #             raise template.TemplateSyntaxError, "Error in {% caps %} filter: The Python SmartyPants library isn't installed."
         return text
         
     tokens = smartypants._tokenize(text)
@@ -110,7 +112,7 @@ def caps(text):
     cap_finder = re.compile(r"""(
                             (\b[A-Z\d]*        # Group 2: Any amount of caps and digits
                             [A-Z]\d*[A-Z]      # A cap string much at least include two caps (but they can have digits between them)
-                            [A-Z\d]*\b)        # Any amount of caps and digits
+                            [A-Z\d']*\b)       # Any amount of caps and digits or dumb apostsrophes
                             | (\b[A-Z]+\.\s?   # OR: Group 3: Some caps, followed by a '.' and an optional space
                             (?:[A-Z]+\.\s?)+)  # Followed by the same thing at least once more
                             (?:\s|\b|$))
@@ -148,7 +150,6 @@ def caps(text):
                 result.append(cap_finder.sub(_cap_wrapper, token[1]))
             
     return "".join(result)
-# caps = stringfilter(caps)
 
 def initial_quotes(text):
     """Wraps initial quotes in ``class="dquo"`` for double quotes or  
@@ -182,7 +183,6 @@ def initial_quotes(text):
         return """%s<span class="%s">%s</span>""" % (matchobj.group(1), classname, quote) 
         
     return quote_finder.sub(_quote_wrapper, text)
-# initial_quotes = stringfilter(initial_quotes)
 
 def smartypants(text):
     """Applies smarty pants to curl quotes.
@@ -193,12 +193,26 @@ def smartypants(text):
     try:
         import smartypants
     except ImportError:
-        # if settings.DEBUG:
-        #             raise template.TemplateSyntaxError, "Error in {% smartypants %} filter: The Python smartypants library isn't installed."
         return text
     else:
         return smartypants.smartyPants(text)
-# smartypants = stringfilter(smartypants)
+
+def titlecase(text):
+    """Support for titlecase.py's titlecasing
+
+    >>> titlecase("this V that")
+    u'This v That'
+
+    >>> titlecase("this is just an example.com")
+    u'This Is Just an example.com'
+    """
+    text = force_unicode(text)
+    try:
+        import titlecase
+    except ImportError:
+        return text
+    else:
+        return titlecase.titlecase(text)
 
 def typogrify(text):
     """The super typography filter
@@ -206,7 +220,11 @@ def typogrify(text):
     Applies the following filters: widont, smartypants, caps, amp, initial_quotes
     
     >>> typogrify('<h2>"Jayhawks" & KU fans act extremely obnoxiously</h2>')
-    '<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&#160;obnoxiously</h2>'
+    u'<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&nbsp;obnoxiously</h2>'
+
+    Each filters properly handles autoescaping.
+    >>> conditional_escape(typogrify('<h2>"Jayhawks" & KU fans act extremely obnoxiously</h2>'))
+    u'<h2><span class="dquo">&#8220;</span>Jayhawks&#8221; <span class="amp">&amp;</span> <span class="caps">KU</span> fans act extremely&nbsp;obnoxiously</h2>'
     """
     text = amp(text)
     text = widont(text)
@@ -214,7 +232,6 @@ def typogrify(text):
     text = caps(text)
     text = initial_quotes(text)
     return text
-# typogrify = stringfilter(typogrify)
 
 def widont(text):
     """Replaces the space between the last two words in a string with ``&nbsp;``
