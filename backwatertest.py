@@ -21,6 +21,7 @@ import publish.shorten
 import publish.typogrify
 
 class SanityTestCases(unittest.TestCase):
+    # TODO: Sanity test URLs need to be placed in a data structure like the sources.yaml file
     def setUp(self):
         self.live_urls = (
             'http://chompy.net/blogs/jacob/feeds/index.atom',
@@ -34,7 +35,8 @@ class SanityTestCases(unittest.TestCase):
             'http://headcrab.org/feed/atom/',
             'http://benkerishan.blogspot.com/feeds/posts/default',
             'http://www.tbray.org/ongoing/ongoing.atom',
-            'http://wileywiggins.blogspot.com/feeds/posts/default'
+            'http://wileywiggins.blogspot.com/feeds/posts/default',
+            'http://feeds.feedburner.com/greeninterfaces'
         )
         self.test_urls = (
             'http://chompy.net/lab/backwater/tests/sanity/remakeremodel.xml',
