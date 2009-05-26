@@ -81,20 +81,33 @@ Update the chompy.net aggregator.
 # Set up logging
 logger = logging.getLogger("backwater")
 logger.setLevel(logging.DEBUG)
-# File handler
-fn = config.LOG_DIR + os.sep + config.LOG_NAME
+
+# Default file handler
+default_fn = config.LOG_DIR + os.sep + config.DEFAULT_LOG_NAME
 if os.path.exists(config.LOG_DIR):
-    fh = logging.handlers.RotatingFileHandler(fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
+    default_fh = logging.handlers.RotatingFileHandler(default_fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
 else:
     raise "Log directory does not exist: '%s'" % config.LOG_DIR
-fh.setLevel(config.FH_LOG_LEVEL)
+default_fh.setLevel(config.DEFAULT_LOG_LEVEL)
+
+# Error file handler
+# error_fn = config.LOG_DIR + os.sep + config.ERROR_LOG_NAME
+# if os.path.exists(config.LOG_DIR):
+#     error_fh = logging.handlers.RotatingFileHandler(error_fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
+# else:
+#     raise "Log directory does not exist: '%s'" % config.LOG_DIR
+# error_fh.setLevel(config.DEFAULT_LOG_LEVEL)
+
 # Console handler
 ch = logging.StreamHandler(sys.stderr)
 ch.setLevel(config.CH_LOG_LEVEL)
+
 formatter = logging.Formatter(config.LOG_FORMAT)
-fh.setFormatter(formatter)
+default_fh.setFormatter(formatter)
+# error_fh.setFormatter(formatter)
 ch.setFormatter(formatter)
-logger.addHandler(fh)
+logger.addHandler(default_fh)
+# logger.addHandler(error_fh)
 logger.addHandler(ch)
 
 #############################################################################
