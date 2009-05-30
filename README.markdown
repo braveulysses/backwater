@@ -1,19 +1,19 @@
 # backwater #
 
-_We're all talking_
-
-_To keep the conversation alive_
+> _We're all talking_  
+> _To keep the conversation alive_
 
 Backwater aggregates activity from Atom/RSS feeds, Twitter status feeds, 
 Tumblr blogs, and Flickr photostreams.  Input is sanitized and output in 
 valid, standards-compliant HTML 5 and Atom.
 
-It has been used for some time to update the site
-[chompy.net](http://chompy.net/).
+It's not without problems, but has been in use for quite some time 
+with the site [chompy.net](http://chompy.net/).
 
 ## Usage ##
 
-Running backwater without arguments will cause it to fetch and 
+Running backwater without arguments will cause it to fetch and process 
+its sources, then spew out some output files.
 
     python backwater.py
 
@@ -23,7 +23,7 @@ Output is stored in _data/output_.
 Logs are stored in _data/logs_.
 Caches are stored in _data/cache_.
 
-Configuration can be adjusted by edited *config.py*.
+Configuration can be adjusted by editing *config.py*.
 The *--help* switch will list other options.
 
 	$ python backwater.py --help
