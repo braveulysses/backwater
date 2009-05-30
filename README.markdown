@@ -1,6 +1,7 @@
 # backwater #
 
 _We're all talking_
+
 _To keep the conversation alive_
 
 Backwater aggregates activity from Atom/RSS feeds, Twitter status feeds, 
@@ -43,20 +44,20 @@ A couple of these haven't been implemented yet.
 
 ## Dependencies ##
 
-[httplib2](http://code.google.com/p/httplib2/)
-[Feed Parser](http://feedparser.org/)
-[Python FlickrAPI](http://flickrapi.sourceforge.net/)
-[python-twitter](http://code.google.com/p/python-twitter/)
-[Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
-[Mako](http://www.makotemplates.org/)
-[Smartypants](http://web.chad.org/projects/smartypants.py/)
-[Typogrify](http://code.google.com/p/typogrify/)
-[PyYAML](http://pyyaml.org/wiki/PyYAML)
-[TumblrAPI](https://github.com/cobralibre/tumblr-api/tree)
+* [httplib2](http://code.google.com/p/httplib2/)
+* [Feed Parser](http://feedparser.org/)
+* [Python FlickrAPI](http://flickrapi.sourceforge.net/)
+* [python-twitter](http://code.google.com/p/python-twitter/)
+* [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
+* [Mako](http://www.makotemplates.org/)
+* [Smartypants](http://web.chad.org/projects/smartypants.py/)
+* [Typogrify](http://code.google.com/p/typogrify/)
+* [PyYAML](http://pyyaml.org/wiki/PyYAML)
+* [TumblrAPI](https://github.com/cobralibre/tumblr-api/tree)
 
 A modififed version of Typogrify is included. Other dependencies should be 
 installable using *easy\_install*.
 
 ## License ##
 
-I don't know yet.
+???
