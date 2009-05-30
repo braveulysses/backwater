@@ -45,7 +45,7 @@ sources:
       flickr_id: 35034350056@N01
       url: http://www.flickr.com/photos/cobra/
       
-    # Tamara's stuff
+    # T.'s stuff
     - name: peeny wally
       type: weblog
       owner: pogo
@@ -153,7 +153,7 @@ sources:
       flickr_id: 30872993@N00
       url: http://www.flickr.com/photos/setholdmixon/
     
-    # Sarah Looney's stuff
+    # Sarah L.O.'s stuff
     # - name: saraholdmixon
     #   type: twitter
     #   owner: Sarah
@@ -165,14 +165,14 @@ sources:
       flickr_id: 66594479@N00
       url: http://www.flickr.com/photos/sarahloo/
     
-    # Sarah Knight's stuff
+    # Sarah K.T.'s stuff
     - name: cyndi laupest's photostream
       type: photostream
       owner: cyndi laupest
       flickr_id: 78616686@N00
       url: http://www.flickr.com/photos/78616686@N00/
     
-    # Scott Talkington's stuff
+    # Scott T.'s stuff
     - name: junklab's photostream
       type: photostream
       owner: junklab
@@ -242,7 +242,7 @@ sources:
       url: http://inanna242.blogspot.com/
       feed_url: http://inanna242.blogspot.com/feeds/posts/default
 
-    # Alan Hampton's stuff
+    # Alan H.'s stuff
     - name: austin tx's photostream
       type: photostream
       owner: austin tx
