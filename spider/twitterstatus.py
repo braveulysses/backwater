@@ -19,10 +19,11 @@ from entries import Quote
 module_logger = logging.getLogger("backwater.twitterstatus")
 
 class TwitterStatus(Source):
-    def __init__(self, name, owner, url):
+    def __init__(self, name, owner, url, excluded_keywords=None):
         super(TwitterStatus, self).__init__(name, owner, url)
         self.logger = logging.getLogger("backwater.twitterstatus.TwitterStatus")
         self.type = 'twitterstatus'
+        self.excluded_keywords = excluded_keywords
 
     def get_tweet_url(self, tweet_id):
         return 'http://twitter.com/' + self.name + '/statuses/' + str(tweet_id)
@@ -38,6 +39,7 @@ class TwitterStatus(Source):
             self.logger.info("Getting Twitter tweets for %s" % self.owner)
             tweets = twitty.GetUserTimeline(self.name)
             for tweet in tweets:
+                skip = False
                 e = Quote()
                 e.source.name = self.name
                 e.source.url = self.url
@@ -52,7 +54,17 @@ class TwitterStatus(Source):
                 e.date = tweet.created_at
                 e.date_parsed = parse_date(e.date)
                 self.logger.debug("Tweet date: %s" % e.date_as_string(e.date_parsed))
-                self.entries.append(e)
+                # Skip this tweet if it's in the exclusion list
+                if self.excluded_keywords is not None:
+                    for keyword in self.excluded_keywords:
+                        self.logger.debug("Checking for excluded keyword: '%s'" % keyword)
+                        if e.summary.lower().find(keyword.lower()) > -1:
+                            self.logger.debug("Skipping tweet with excluded keyword: '%s'" % keyword)
+                            skip = True
+                if skip:
+                    continue
+                else:
+                    self.entries.append(e)
         except BadStatusLine:
             self.logger.exception("Twitter.com unexpectedly closed the connection!")
         except HTTPError, err:

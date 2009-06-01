@@ -87,6 +87,7 @@ default_fn = config.LOG_DIR + os.sep + config.DEFAULT_LOG_NAME
 if os.path.exists(config.LOG_DIR):
     default_fh = logging.handlers.RotatingFileHandler(default_fn, 'a', config.MAX_LOG_SIZE, config.MAX_LOGS)
 else:
+    # TODO: Don't raise a string exception, make a class
     raise "Log directory does not exist: '%s'" % config.LOG_DIR
 default_fh.setLevel(config.DEFAULT_LOG_LEVEL)
 
@@ -117,7 +118,6 @@ class CacheNotFoundError(Exception): pass
 
 def get_sources(sources_file):
     """Retrieves and parses the sources.yaml file for source information."""
-    # TODO: Allow per-feed options to be set, like excluded_keywords and excluded_types
     sources = []
     try:
         logger.debug("Opening '%s'" % sources_file)
@@ -177,7 +177,8 @@ def get_sources(sources_file):
                     s = TwitterStatus(
                         src['name'], 
                         src['owner'], 
-                        src['url']
+                        src['url'],
+                        excluded_keywords
                     )
                 else:
                     raise UnknownSourceTypeError
