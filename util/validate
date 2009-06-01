@@ -9,7 +9,9 @@ else
     exit 1
 fi
 
-if [ -d $HOME/backwater ]; then
+if [ -d ./data/output ]; then
+    BW_DIR=.
+elif [ -d $HOME/backwater ]; then
     BW_DIR=$HOME/backwater
 elif [ -d $HOME/Scripts ]; then
     BW_DIR=$SCRIPTS_DIR/backwater
