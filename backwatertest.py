@@ -83,7 +83,17 @@ class FeedTestCases(unittest.TestCase):
         
     def testIsNotAtom(self):
         """A non-Atom feed can be detected."""
-        pass
+        w = Weblog('test', 'testy', self.url, self.rss_url)
+        w.parse()
+        w.normalize()
+        for entry in w.entries:
+            entry.normalize()
+        assert w.atom == False
+    
+    def testFeedWithMissingEntryLinks(self):
+        """Feed items with entry.links missing can be parsed."""
+        w = Weblog('test', 'testy', self.url, self.rss_url)
+        w.parse()
 
 class TumblelogTestCases(unittest.TestCase):
     def setUp(self):
