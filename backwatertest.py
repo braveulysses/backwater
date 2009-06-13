@@ -103,6 +103,47 @@ class PhotoTestCases(unittest.TestCase):
     def setUp(self):
         pass
 
+class TwitterTestCases(unittest.TestCase):
+    def setUp(self):
+        self.plain_ol_tweet = """I'm preparing a delicious sandwich!"""
+        self.tweet_with_hashtag = """This caprese has changed my life! #inspirationalsalads"""
+        self.tweet_with_username = """@mozzarella Are you buffalo or garden variety?"""
+        self.tweet_with_username_and_punctuation = """RT @NuerOb: I am like a pot roast, but better!"""
+        self.tweet_with_url = "What an outstanding website! http://chompy.net"
+        self.tweet_with_the_works = ""
+        self.example_account = "setholdmixon"
+
+    def testLinkHashtag(self):
+        """Twitter hashtags are automatically linked."""
+        expected = """This caprese has changed my life! <a href="http://twitter.com/search?q=%23inspirationalsalads">#inspirationalsalads</a>"""
+        result = TwitterStatus.link_hashtags(self.tweet_with_hashtag)
+        assert result == expected
+
+    def testLinkUsername(self):
+        """Twitter usernames are automatically linked."""
+        expected = """@<a href="http://twitter.com/mozzarella/">mozzarella</a> Are you buffalo or garden variety?"""
+        result = TwitterStatus.link_users(self.tweet_with_username)
+        assert result == expected
+        
+    def testLinkUsernameWithPunctuation(self):
+        """A Twitter username with trailing punctuation can be linked."""
+        expected = """RT @<a href="http://twitter.com/NuerOb/">NuerOb</a>: I am like a pot roast, but better!"""
+        result = TwitterStatus.link_users(self.tweet_with_username)
+        assert result == expected
+    
+    def testLinkUrl(self):
+        """URLs within tweets are automatically linked."""
+        expected = """What an outstanding website! <a href="http://chompy.net">http://chompy.net</a>"""
+        # TODO: Finish this test case
+    
+    def parseTwitterStatus(self):
+        """A real-world Twitter status feed can be parsed."""
+        name = self.example_account
+        owner = self.example_account
+        url = "http://twitter.com/" + self.example_account
+        t = TwitterStatus(name, owner, url)
+        t.parse()
+
 class StripperTestCases(unittest.TestCase):
     def setUp(self):
         self.basic_txt = """<h1>Change <em>alone</em> is unchanging.</h1>"""

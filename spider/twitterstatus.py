@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import twitter
 import logging
 import config
+import re
 from httplib import BadStatusLine
 from urllib2 import HTTPError
 from feedparser import _parse_date as parse_date
@@ -27,6 +28,18 @@ class TwitterStatus(Source):
 
     def get_tweet_url(self, tweet_id):
         return 'http://twitter.com/' + self.name + '/statuses/' + str(tweet_id)
+    
+    @classmethod
+    def link_users(cls, txt):
+        rx = re.compile(r"@(\S+)")
+        repl = r"""@<a href="http://twitter.com/\g<1>/">\g<1></a>"""
+        return rx.sub(repl, txt)    
+    
+    @classmethod
+    def link_hashtags(cls, txt):
+        rx = re.compile(r"#(\S+)")
+        repl = r"""<a href="http://twitter.com/search?q=%23\g<1>">#\g<1></a>"""
+        return rx.sub(repl, txt)
 
     def parse(self):
         """Fetches Twitter tweets using the Twitter API."""
@@ -47,6 +60,9 @@ class TwitterStatus(Source):
                 e.title = "Tweet from %s" % e.author
                 e.summary = tweet.text
                 e.content = e.summary
+                # Add hyperlinks
+                # e.content = TwitterStatus.link_users(e.content)
+                # e.content = TwitterStatus.link_hashtags(e.content)
                 e.citation = e.author
                 self.logger.info("Tweet: '%s'" % e.summary)
                 e.url = self.get_tweet_url(tweet.id)
