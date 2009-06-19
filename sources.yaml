@@ -146,7 +146,7 @@ sources:
       type: twitter
       owner: Seth
       url: http://twitter.com/setholdmixon
-      excluded_keywords: [ "#afn" ]
+      excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats" ]
       
     - name: setholdmixon's photostream
       type: photostream
@@ -235,6 +235,11 @@ sources:
       owner: iamedithpiaf
       flickr_id: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
+
+    - name: nichtviel
+      type: twitter
+      owner: Karla
+      url: http://twitter.com/nichtviel
 
     # Meredith's stuff
     - name: Silent Drape Runners
