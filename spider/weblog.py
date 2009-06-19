@@ -104,27 +104,35 @@ class Weblog(Source):
             # the linked page, so need to make sure we get that link 
             # and not the 'alternate' or 'via' link.
             e.url = entry.get('link', None)
-            for link in entry.links:
-                if link['rel'] == 'via':
-                    e.via = link['href']
-                    break
-                else:
-                    e.via = None
-            for link in entry.links:
-                if link['rel'] == 'related':
-                    e.url = link['href']
-                    break
-                else:
-                    e.url = entry.link
+            try:
+                for link in entry.links:
+                    if link['rel'] == 'via':
+                        e.via = link['href']
+                        break
+                    else:
+                        e.via = None
+                for link in entry.links:
+                    if link['rel'] == 'related':
+                        e.url = link['href']
+                        break
+                    else:
+                        e.url = entry.link
+            except AttributeError:
+                # In rare cases, entry.links is not populated
+                pass
             e.comments = entry.get('comments', None)
             # 'alternate' represents the linklog entry itself, 
             # which is often a comments page
             if self.type == 'linklog':
                 e.comments = e.get_delicious_url()
             if e.comments is None:
-                for link in entry.links:
-                    if link['rel'] == 'alternate':
-                        e.comments = link['href']
+                try:
+                    for link in entry.links:
+                        if link['rel'] == 'alternate':
+                            e.comments = link['href']
+                except AttributeError:
+                    # In rare cases, entry.links is not populated
+                    pass
             # Now, get tags/categories
             try:
                 if len(entry.tags) > 0:

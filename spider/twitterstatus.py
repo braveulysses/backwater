@@ -10,6 +10,7 @@ Copyright (c) 2008 Spaceship No Future. All rights reserved.
 import twitter
 import logging
 import config
+import re
 from httplib import BadStatusLine
 from urllib2 import HTTPError
 from feedparser import _parse_date as parse_date
@@ -24,9 +25,39 @@ class TwitterStatus(Source):
         self.logger = logging.getLogger("backwater.twitterstatus.TwitterStatus")
         self.type = 'twitterstatus'
         self.excluded_keywords = excluded_keywords
+        self.ignore_replies = config.TWITTER_IGNORE_REPLIES
+        self.ignore_retweets = config.TWITTER_IGNORE_RETWEETS
 
     def get_tweet_url(self, tweet_id):
         return 'http://twitter.com/' + self.name + '/statuses/' + str(tweet_id)
+
+    @classmethod
+    def is_reply(cls, txt):
+        rx = re.compile(r"^@(\S+)\s+")
+        if rx.match(txt):
+            return True
+        else:
+            return False
+    
+    @classmethod
+    def is_retweet(cls, txt):
+        rx = re.compile(r"^RT\s+@(\S+):?")
+        if rx.match(txt):
+            return True
+        else:
+            return False
+    
+    @classmethod
+    def link_users(cls, txt):
+        rx = re.compile(r"@(\w+)", re.UNICODE)
+        repl = r"""@<a href="http://twitter.com/\g<1>/">\g<1></a>"""
+        return rx.sub(repl, txt)    
+    
+    @classmethod
+    def link_hashtags(cls, txt):
+        rx = re.compile(r"#(\S+)")
+        repl = r"""<a href="http://twitter.com/search?q=%23\g<1>">#\g<1></a>"""
+        return rx.sub(repl, txt)
 
     def parse(self):
         """Fetches Twitter tweets using the Twitter API."""
@@ -47,6 +78,9 @@ class TwitterStatus(Source):
                 e.title = "Tweet from %s" % e.author
                 e.summary = tweet.text
                 e.content = e.summary
+                # Add hyperlinks
+                # e.content = TwitterStatus.link_users(e.content)
+                # e.content = TwitterStatus.link_hashtags(e.content)
                 e.citation = e.author
                 self.logger.info("Tweet: '%s'" % e.summary)
                 e.url = self.get_tweet_url(tweet.id)
@@ -54,6 +88,12 @@ class TwitterStatus(Source):
                 e.date = tweet.created_at
                 e.date_parsed = parse_date(e.date)
                 self.logger.debug("Tweet date: %s" % e.date_as_string(e.date_parsed))
+                # Skip this tweet if replies are turned off
+                if self.ignore_replies and TwitterStatus.is_reply(e.summary):
+                    skip = True
+                # Skip this tweet if replies are turned off
+                if self.ignore_retweets and TwitterStatus.is_retweet(e.summary):
+                    skip = True
                 # Skip this tweet if it's in the exclusion list
                 if self.excluded_keywords is not None:
                     for keyword in self.excluded_keywords:

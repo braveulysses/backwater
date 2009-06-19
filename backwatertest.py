@@ -83,7 +83,17 @@ class FeedTestCases(unittest.TestCase):
         
     def testIsNotAtom(self):
         """A non-Atom feed can be detected."""
-        pass
+        w = Weblog('test', 'testy', self.url, self.rss_url)
+        w.parse()
+        w.normalize()
+        for entry in w.entries:
+            entry.normalize()
+        assert w.atom == False
+    
+    def testFeedWithMissingEntryLinks(self):
+        """Feed items with entry.links missing can be parsed."""
+        w = Weblog('test', 'testy', self.url, self.rss_url)
+        w.parse()
 
 class TumblelogTestCases(unittest.TestCase):
     def setUp(self):
@@ -92,6 +102,57 @@ class TumblelogTestCases(unittest.TestCase):
 class PhotoTestCases(unittest.TestCase):
     def setUp(self):
         pass
+
+class TwitterTestCases(unittest.TestCase):
+    def setUp(self):
+        self.plain_ol_tweet = """I'm preparing a delicious sandwich!"""
+        self.tweet_with_hashtag = """This caprese has changed my life! #inspirationalsalads"""
+        self.tweet_with_username = """@mozzarella Are you buffalo or garden variety?"""
+        self.tweet_with_username_and_punctuation = """@NuerOb: I am like a pot roast, but better!"""
+        self.tweet_with_url = "What an outstanding website! http://chompy.net"
+        self.tweet_with_reply = "@lemmycaution What do you love above all?"
+        self.tweet_with_retweet = "RT @lemmycaution I refuse to become what you call normal."
+        self.tweet_with_the_works = ""
+        self.example_account = "setholdmixon"
+
+    def testLinkHashtag(self):
+        """Twitter hashtags are automatically linked."""
+        expected = """This caprese has changed my life! <a href="http://twitter.com/search?q=%23inspirationalsalads">#inspirationalsalads</a>"""
+        result = TwitterStatus.link_hashtags(self.tweet_with_hashtag)
+        assert result == expected
+
+    def testLinkUsername(self):
+        """Twitter usernames are automatically linked."""
+        expected = """@<a href="http://twitter.com/mozzarella/">mozzarella</a> Are you buffalo or garden variety?"""
+        result = TwitterStatus.link_users(self.tweet_with_username)
+        assert result == expected
+        
+    def testLinkUsernameWithPunctuation(self):
+        """A Twitter username with trailing punctuation can be linked."""
+        expected = """@<a href="http://twitter.com/NuerOb/">NuerOb</a>: I am like a pot roast, but better!"""
+        result = TwitterStatus.link_users(self.tweet_with_username)
+        assert result == expected
+    
+    def testLinkUrl(self):
+        """URLs within tweets are automatically linked."""
+        expected = """What an outstanding website! <a href="http://chompy.net">http://chompy.net</a>"""
+        # TODO: Finish this test case
+    
+    def testIgnoreReply(self):
+        """Twitter replies can be ignored."""
+        self.assertTrue(TwitterStatus.is_reply(self.tweet_with_reply))
+    
+    def testIgnoreRetweet(self):
+        """Twitter retweets, which are annoying, can be ignored."""
+        self.assertTrue(TwitterStatus.is_retweet(self.tweet_with_retweet))
+    
+    def parseTwitterStatus(self):
+        """A real-world Twitter status feed can be parsed."""
+        name = self.example_account
+        owner = self.example_account
+        url = "http://twitter.com/" + self.example_account
+        t = TwitterStatus(name, owner, url)
+        t.parse()
 
 class StripperTestCases(unittest.TestCase):
     def setUp(self):
