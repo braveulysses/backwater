@@ -136,6 +136,11 @@ sources:
       url: http://www.carefullyselectedgarbage.com/
       feed_url: http://www.carefullyselectedgarbage.com/feeds/posts/default
 
+    - name: Carefully Selected Garbage
+      type: tumblelog
+      owner: Seth
+      url: http://carefullyselectedgarbage.tumblr.com/
+
     # -name: Carefully Selected Garbage: Comments
     #  type: commentlog
     #  owner: Seth
@@ -146,7 +151,7 @@ sources:
       type: twitter
       owner: Seth
       url: http://twitter.com/setholdmixon
-      excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats" ]
+      excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats", "#followfriday" ]
       
     - name: setholdmixon's photostream
       type: photostream
