@@ -115,6 +115,8 @@ def update(sources):
                 all_entries.append(entry)
         except UnsupportedContentTypeError, err:
             module_logger.exception(err)
+        except BackwaterEmptySourceError:
+            module_logger.exception("Source '%s' is empty!" % src.name)
         except BackwaterHTTPError:
             module_logger.exception("HTTP error occurred!")
         except BackwaterNetworkError:
