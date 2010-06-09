@@ -3,6 +3,7 @@ import httplib2
 import logging
 import config
 
+class BackwaterEmptySourceError(Exception): pass
 class BackwaterNetworkError(Exception): pass
 class BackwaterHTTPError(BackwaterNetworkError): pass
 class InternalServerError(BackwaterHTTPError): pass
@@ -54,6 +55,9 @@ def fetch(url, valid_content_types=None):
     h = httplib2.Http(cache=config.CACHE_DIR)
     try:
         resp, content = h.request(url, method="GET", headers=http_headers)
+        # Make sure that the content isn't zero-length
+        if (len(content) <= 0) or (content is None):
+            raise BackwaterEmptySourceError
     except IOError:
         # An IOError can happen, for example, when httplib2 can't write 
         # to its cache.
