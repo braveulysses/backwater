@@ -350,7 +350,6 @@ def main(argv=None):
             print >> sys.stderr, "ERROR: Complete configuration data not found!"
             print >> sys.stderr, "Be sure to define all of the following environment variables:"
             print >> sys.stderr
-            print >> sys.stderr, "    BACKWATER_SECRET_WORD"
             print >> sys.stderr, "    BACKWATER_FLICKR_KEY"
             print >> sys.stderr, "    BACKWATER_TWITTER_ACCOUNT"
             print >> sys.stderr, "    BACKWATER_TWITTER_PASSWORD"

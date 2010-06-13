@@ -85,7 +85,6 @@ TWITTER_IGNORE_RETWEETS = True
 #######################################################################
 
 #### Keys, API accounts ####
-SECRET_WORD = os.getenv("BACKWATER_SECRET_WORD")
 FLICKR_KEY = os.getenv("BACKWATER_FLICKR_KEY")
 TWITTER_ACCOUNT = os.getenv("BACKWATER_TWITTER_ACCOUNT")
 TWITTER_PASSWORD = os.getenv("BACKWATER_TWITTER_PASSWORD")
@@ -94,7 +93,6 @@ class ConfigurationError(Exception): pass
 
 def check_environment():
     sensitive_configs = [
-        SECRET_WORD,
         FLICKR_KEY,
         TWITTER_ACCOUNT,
         TWITTER_PASSWORD
