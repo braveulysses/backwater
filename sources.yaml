@@ -151,11 +151,7 @@ sources:
       type: twitter
       owner: Seth
       url: http://twitter.com/setholdmixon
-<<<<<<< HEAD
-      excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats", "#followfriday" ]
-=======
       excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats", "#followfriday", "#polc2010" ]
->>>>>>> aee807629cceea992c0af607c09868ed1a807faf
       
     - name: setholdmixon's photostream
       type: photostream
