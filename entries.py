@@ -11,7 +11,6 @@ import os
 import time 
 import logging
 import urllib
-import md5
 import Image
 import config
 import spider
@@ -19,6 +18,13 @@ import publish.shorten
 import publish.sanitizer
 from urlparse import urlparse
 from feedparser import _parse_date as parse_date
+
+try:
+    import hashlib
+    HASH_LIBRARY = "hashlib"
+except ImportError:
+    import md5
+    HASH_LIBRARY = "md5"
 
 module_logger = logging.getLogger("backwater.entries")
 
@@ -221,7 +227,10 @@ class Link(Entry):
 
     def get_delicious_url(self):
         """Gets the del.icio.us permalink for the current entry."""
-        m = md5.new()
+        if HASH_LIBRARY == "hashlib":
+            m = hashlib.md5()
+        else:
+            m = md5.new()
         m.update(self.url)
         return 'http://del.icio.us/url/' + m.hexdigest()
         
