@@ -83,6 +83,9 @@ Update the chompy.net aggregator.
 
 #############################################################################
 
+# Check for and create data directories
+setup.create_data_directories()
+
 # Set up logging
 logger = logging.getLogger("backwater")
 logger.setLevel(logging.DEBUG)
@@ -305,8 +308,6 @@ def main(argv=None):
             if do_update:
                 # First, make sure the environment is initialized
                 config.check_environment()
-                # Also, make sure that the data directories exist
-                setup.create_data_directories()
                 
                 entries = []
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
