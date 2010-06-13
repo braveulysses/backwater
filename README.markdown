@@ -23,7 +23,17 @@ Output is stored in _data/output_.
 Logs are stored in _data/logs_.
 Caches are stored in _data/cache_.
 
-Configuration can be adjusted by editing *config.py*.
+Configuration can be adjusted by editing *config.py*. 
+Note that a handful of sensitive settings must be defined 
+as environment variables.  These are:
+
+* *BACKWATER\_FLICKR\_KEY*, your Flickr API key
+* *BACKWATER\_TWITTER\_ACCOUNT*, a Twitter account wit access to any Twitter accounts that you plan to follow
+* *BACKWATER\_TWITTER\_PASSWORD*, the system Twitter account's password
+
+The easiest way to handle this is to define the above variables in a shell 
+script which calls backwater.py.
+
 The *--help* switch will list other options.
 
 	$ python backwater.py --help
@@ -60,4 +70,15 @@ installable using *easy\_install*.
 
 ## License ##
 
-???
+Backwater is BSD-licensed.
+
+Copyright (c) 2010, SNF Labs, Jacob Childress
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the name of SNF Labs nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
