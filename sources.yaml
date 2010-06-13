@@ -235,6 +235,12 @@ sources:
       owner: iamedithpiaf
       flickr_id: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
+     
+    - name: nichtviel's photostream
+      type: photostream
+      owner: nichtviel
+      flickr_id: 89984665@N00
+      url: http://www.flickr.com/photos/89984665@N00/
 
     # Meredith's stuff
     # - name: Silent Drape Runners
