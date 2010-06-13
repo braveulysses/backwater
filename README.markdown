@@ -72,7 +72,7 @@ installable using *easy\_install*.
 
 Backwater is BSD-licensed.
 
-Copyright (c) 2010, SNF Labs, Jacob Childress
+Copyright (c) 2010, SNF Labs, Jacob Childress  
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
