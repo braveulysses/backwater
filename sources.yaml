@@ -136,6 +136,11 @@ sources:
       url: http://www.carefullyselectedgarbage.com/
       feed_url: http://www.carefullyselectedgarbage.com/feeds/posts/default
 
+    - name: Carefully Selected Garbage
+      type: tumblelog
+      owner: Seth
+      url: http://carefullyselectedgarbage.tumblr.com/
+
     # -name: Carefully Selected Garbage: Comments
     #  type: commentlog
     #  owner: Seth
@@ -146,7 +151,11 @@ sources:
       type: twitter
       owner: Seth
       url: http://twitter.com/setholdmixon
+<<<<<<< HEAD
+      excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats", "#followfriday" ]
+=======
       excluded_keywords: [ "#afn", "#vagov", "#horns", "#nats", "#followfriday", "#polc2010" ]
+>>>>>>> aee807629cceea992c0af607c09868ed1a807faf
       
     - name: setholdmixon's photostream
       type: photostream
@@ -241,6 +250,11 @@ sources:
       owner: nichtviel
       flickr_id: 89984665@N00
       url: http://www.flickr.com/photos/89984665@N00/
+
+    - name: nichtviel
+      type: twitter
+      owner: Karla
+      url: http://twitter.com/nichtviel
 
     # Meredith's stuff
     # - name: Silent Drape Runners
