@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # This library is based on version 1.0 of the typogrify library, but has 
 # all of the Django-specific code removed.
 # 

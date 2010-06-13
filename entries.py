@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 """
 entries.py
 
 Created by Jacob C. on 2008-06-26.
-Copyright (c) 2008 Spaceship No Future. All rights reserved.
+Copyright (c) 2010 Spaceship No Future. All rights reserved.
 """
 
 import os
