@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 """
 vlassic.py
 
@@ -7,7 +7,7 @@ Backwater pickling routines. Not to be confused with the HTTP caching
 performed by httplib2.
 
 Created by Jacob C. on 2008-07-27.
-Copyright (c) 2008 Spaceship No Future. All rights reserved.
+Copyright (c) 2010 Spaceship No Future. All rights reserved.
 """
 
 import os
