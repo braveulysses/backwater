@@ -237,18 +237,18 @@ sources:
       url: http://www.flickr.com/photos/89984665@N00/
 
     # Meredith's stuff
-    - name: Silent Drape Runners
-      type: weblog
-      owner: Meredith
-      url: http://inanna242.blogspot.com/
-      feed_url: http://inanna242.blogspot.com/feeds/posts/default
+    # - name: Silent Drape Runners
+    #   type: weblog
+    #   owner: Meredith
+    #   url: http://inanna242.blogspot.com/
+    #   feed_url: http://inanna242.blogspot.com/feeds/posts/default
 
     # Alan H.'s stuff
-    - name: austin tx's photostream
-      type: photostream
-      owner: austin tx
-      flickr_id: 33356186@N00
-      url: http://www.flickr.com/photos/austintx/
+    # - name: austin tx's photostream
+    #   type: photostream
+    #   owner: austin tx
+    #   flickr_id: 33356186@N00
+    #   url: http://www.flickr.com/photos/austintx/
     
     # Spaceship No Future
     - name: Spaceship No Future
