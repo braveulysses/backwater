@@ -1,17 +1,17 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 """
 flickrid.py
 Utility to get the Flickr ID from a Flickr username.
 
 Created by Jacob C. on 2008-06-29.
-Copyright (c) 2008 Spaceship No Future. All rights reserved.
+Copyright (c) 2010 Spaceship No Future. All rights reserved.
 """
 
+import os
 import sys
 import getopt
 import flickrapi
-import config
 
 
 help_message = '''
@@ -25,7 +25,7 @@ class Usage(Exception):
         self.msg = msg
 
 def get_flickr_id(username):
-    flickr = flickrapi.FlickrAPI(config.FLICKR_KEY, format='etree')
+    flickr = flickrapi.FlickrAPI(os.getenv("BACKWATER_FLICKR_KEY"), format='etree')
     user = flickr.people_findByUsername(username=username)
     return user.find('user').get('nsid')
 

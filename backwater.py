@@ -53,6 +53,10 @@ from spider import URLForbiddenError
 from spider import URLGoneError
 from spider import UnsupportedContentTypeError
 
+# Other exceptions
+
+from config import ConfigurationError
+
 #############################################################################
 
 from config import __version__
@@ -298,6 +302,9 @@ def main(argv=None):
         # Parse sources.yaml and instantiate sources
         try:
             if do_update:
+                # First, make sure the environment is initialized
+                config.check_environment()
+                
                 entries = []
                 entries_cache = BackwaterCache(config.ENTRIES_CACHE_FILE)
                 if (force_rebuild or entries_cache.is_fresh(config.CACHE_THRESHOLD)) and \
@@ -335,6 +342,16 @@ def main(argv=None):
                 logger.debug("Listing sources; no parsing")
                 for src in sources:
                     print src
+        except ConfigurationError:
+            print >> sys.stderr, "ERROR: Complete configuration data not found!"
+            print >> sys.stderr, "Be sure to define all of the following environment variables:"
+            print >> sys.stderr
+            print >> sys.stderr, "    BACKWATER_SECRET_WORD"
+            print >> sys.stderr, "    BACKWATER_FLICKR_KEY"
+            print >> sys.stderr, "    BACKWATER_TWITTER_ACCOUNT"
+            print >> sys.stderr, "    BACKWATER_TWITTER_PASSWORD"
+            print >> sys.stderr
+            return 1
         except CacheNotFoundError:
             print >> sys.stderr, "ERROR: Entries cache not found!"
             return 1
