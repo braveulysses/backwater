@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 """
 backwater.py
 
 Created by Jacob C. on 2008-02-19.
-Copyright (c) 2008 SNF Labs. All rights reserved.
+Copyright (c) 2010 SNF Labs. All rights reserved.
 """
 
 import os
